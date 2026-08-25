@@ -1,0 +1,33 @@
+/* .arabic-button {
+  display: block;
+  width: 440px;
+  height: 52px;
+  margin: 35px auto;
+
+  background: #8bcf32;
+  color: white;
+
+  border: none;
+  border-radius: 7px;
+
+  font-size: 20px;
+  font-weight: 600;
+  font-family: "Arial", sans-serif;
+
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.arabic-button:hover {
+  background: #79bd25;
+  transform: translateY(-2px);
+}
+
+/* Mobile */
+/* @media (max-width: 600px) {
+  .arabic-button {
+    width: 85%;
+    height: 48px;
+    font-size: 18px;
+  }
+} */ 

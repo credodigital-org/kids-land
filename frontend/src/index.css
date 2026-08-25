@@ -1,0 +1,51 @@
+/* ============================================
+   DESIGN TOKENS - fill these in from Figma FIRST
+   Click each element in Figma, copy exact values
+   from the inspect panel on the right side
+   ============================================ */
+
+:root {
+  /* Colors - copy exact hex codes from Figma */
+  --color-primary: #000000;
+  --color-secondary: #000000;
+  --color-text: #000000;
+  --color-background: #ffffff;
+
+  /* Fonts - copy exact font names/sizes from Figma */
+  --font-heading: 'Arial', sans-serif;
+  --font-body: 'Arial', sans-serif;
+  --fs-h1: 32px;
+  --fs-h2: 24px;
+  --fs-body: 16px;
+
+  /* Spacing - copy exact px values from Figma */
+  --space-sm: 8px;
+  --space-md: 16px;
+  --space-lg: 32px;
+}
+
+/* Use the variables above everywhere - don't hardcode new colors/sizes in component CSS files */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  width: 100%;
+  min-height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+.app {
+  width: 100%;
+  min-height: 100vh;
+}

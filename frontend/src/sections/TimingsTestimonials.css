@@ -1,0 +1,592 @@
+/* =========================================
+   TIMINGS + TESTIMONIALS
+========================================= */
+
+.timings-testimonials {
+  width: 100%;
+  background: #ffffff;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #292332;
+  overflow: hidden;
+}
+
+/* =========================================
+   NURSERY TIMINGS SECTION
+========================================= */
+
+.timings-container {
+  width: 100%;
+  max-width: 1000px;
+  min-height: 385px;
+  margin: 0 auto;
+
+  padding: 105px 0 65px;
+
+  display: grid;
+  grid-template-columns: 410px 1fr;
+  column-gap: 40px;
+
+  box-sizing: border-box;
+}
+
+/* =========================================
+   LEFT INTRO
+========================================= */
+
+.timings-intro {
+  position: relative;
+  padding-left: 0;
+}
+
+.timings-title {
+  margin: 0;
+
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  color: #35208f;
+  font-size: 29px;
+  font-weight: 900;
+  font-family: Nunito;
+  line-height: 1.2;
+  letter-spacing: -0.5px;
+}
+.timings-clock-icon {
+  font-size: 50px !important;
+  font-weight: 400 !important;
+}
+
+.timings-title span {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 32px;
+  height: 32px;
+
+  color: #35208f;
+
+  font-size: 32px;
+  font-weight: 400;
+  line-height: 1;
+}
+
+.timings-description {
+  margin: 13px 0 0;
+
+  color: #5a5362;
+
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 26px;
+  letter-spacing: 0.1px;
+}
+
+/* =========================================
+   RAINBOW
+========================================= */
+
+.timings-rainbow {
+  width: 225px;
+  height: 105px;
+
+  margin-top: 9px;
+  margin-left: 45px;
+
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+.timings-rainbow img {
+  display: block;
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: contain;
+  object-position: center bottom;
+}
+
+/* =========================================
+   TIMING CARDS
+========================================= */
+
+.timing-cards {
+  display: flex;
+  gap: 24px;
+  align-items: flex-start;
+}
+
+.timing-card {
+  width: 292px;
+  height: 214px;
+
+  padding: 22px 22px 20px;
+
+  box-sizing: border-box;
+
+  border-radius: 14px;
+
+  background: #fff8ff;
+
+  box-shadow:
+    0 7px 12px rgba(84, 52, 130, 0.12),
+    0 2px 3px rgba(84, 52, 130, 0.08);
+
+  position: relative;
+}
+
+/* subtle bottom border */
+.timing-card-green {
+  border-bottom: 5px solid #65d6df;
+}
+
+.timing-card-blue {
+  border-bottom: 5px solid #6ac8ed;
+}
+
+/* =========================================
+   CARD TOP
+========================================= */
+
+.timing-card-top {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+}
+
+.timing-icon {
+  width: 63px;
+  height: 63px;
+
+  flex: 0 0 53px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+  /* background: #ead8ff; */
+}
+
+.timing-icon img {
+  width: 63px;
+  height: 63px;
+
+  object-fit: contain;
+}
+
+.timing-card-top h3 {
+  margin: 0;
+
+  color: #24212a;
+
+  font-size: 21px;
+  font-weight: 700;
+  line-height: 22px;
+}
+
+.timing-card-top p {
+  margin: 2px 0 0;
+
+  color: #6a6470;
+
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 14px;
+  white-space: nowrap;
+}
+
+/* =========================================
+   TIME AREA
+========================================= */
+
+.timing-hours {
+  margin-top: 17px;
+
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.time-symbol {
+  width: 37px;
+  height: 37px;
+
+  flex: 0 0 37px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+}
+.sun-symbol {
+  background: transparent;
+}
+
+.time-symbol img {
+  width: 100%;
+  height: 100%;
+
+  object-fit: contain;
+}
+
+.time-value {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  position: relative;
+}
+
+.time-value strong {
+  color: #5122a9;
+
+  font-size: 21px;
+  font-weight: 700;
+  line-height: 35px;
+  letter-spacing: 0;
+}
+ .to-text {
+  position: relative;
+  z-index: 2;
+  left: 29px;
+
+  width: 28px;
+  height: 14px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin: -1px 0;
+
+  background: #ffffff;
+  border: 1px solid #d8d8d8;
+  border-radius: 7px;
+
+  color: #777777;
+  font-size: 9px;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.to-text::before,
+.to-text::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  width: 29px;
+  height: 1px;
+  background: #d8d8d8;
+}
+
+.to-text::before {
+  right: 100%;
+}
+
+.to-text::after {
+  left: 100%;
+}
+
+/* =========================================
+   TESTIMONIALS
+========================================= */
+
+.testimonials-container {
+  width: 100%;
+
+  padding: 3px 0 103px;
+
+  box-sizing: border-box;
+}
+
+.testimonials-heading {
+  margin-bottom: 67px;
+
+  text-align: center;
+
+  color: #12a957;
+  font-family: Be Vietnam Pro;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 20px;
+}
+
+/* =========================================
+   TESTIMONIAL GRID
+========================================= */
+
+.testimonial-grid {
+  width: calc(100% - 54px);
+
+  margin: 0 auto;
+
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 22px;
+}
+
+/* =========================================
+   TESTIMONIAL CARD
+========================================= */
+
+.testimonial-card {
+  min-height: 393px;
+
+  padding: 30px 30px 27px;
+
+  box-sizing: border-box;
+
+  border-radius: 10px;
+
+  overflow: hidden;
+}
+
+.testimonial-purple {
+  background: #e5d8ff;
+}
+
+.testimonial-green {
+  background: #ddebaf;
+}
+
+.testimonial-coral {
+  background: #ffd5ce;
+}
+
+/* =========================================
+   PERSON
+========================================= */
+
+.testimonial-person {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.testimonial-avatar {
+  width: 78px;
+  height: 78px;
+
+  flex: 0 0 78px;
+
+  padding: 3px;
+
+  /* box-sizing: border-box; */
+
+  /* background: #ffffff; */
+
+  border-radius: 50%;
+}
+
+.testimonial-avatar img {
+  display: block;
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  border-radius: 50%;
+}
+
+.testimonial-person h3 {
+  margin: 0;
+
+  font-size: 19px;
+  font-weight: 700;
+  line-height: 23px;
+}
+
+.testimonial-purple .testimonial-person h3 {
+  color: #9661e8;
+}
+
+.testimonial-green .testimonial-person h3 {
+  color: #667447;
+}
+
+.testimonial-coral .testimonial-person h3 {
+  color: #f27667;
+}
+
+.testimonial-person p {
+  margin: 2px 0 0;
+
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 17px;
+  letter-spacing: 0.3px;
+}
+
+.testimonial-purple .testimonial-person p {
+  color: #7252ad;
+}
+
+.testimonial-green .testimonial-person p {
+  color: #68734a;
+}
+
+.testimonial-coral .testimonial-person p {
+  color: #a95d55;
+}
+
+/* =========================================
+   STARS
+========================================= */
+
+.stars {
+  margin-top: 17px;
+
+  font-size: 17px;
+  letter-spacing: 2px;
+  line-height: 20px;
+}
+
+.testimonial-purple .stars {
+  color: #5d594f;
+}
+
+.testimonial-green .stars {
+  color: #93423c;
+}
+
+.testimonial-coral .stars {
+  color: #69714b;
+}
+
+/* =========================================
+   TESTIMONIAL TEXT
+========================================= */
+
+.testimonial-text {
+  margin: 17px 0 0;
+
+  color: #272332;
+
+  font-size: 15px;
+  font-weight: 400;
+  font-style: italic;
+
+  line-height: 24px;
+  letter-spacing: 0.05px;
+}
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 950px) {
+
+  .timings-container {
+    max-width: 900px;
+    padding-left: 30px;
+    padding-right: 30px;
+
+    grid-template-columns: 1fr;
+    row-gap: 35px;
+  }
+
+  .timing-cards {
+    justify-content: center;
+  }
+
+  .testimonial-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .testimonial-card:last-child {
+    grid-column: 1 / -1;
+  }
+}
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 650px) {
+
+  .timings-container {
+    padding: 55px 22px 55px;
+
+    display: flex;
+    flex-direction: column;
+  }
+
+  .timings-title {
+    font-size: 25px;
+  }
+
+  .timings-description {
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  .timings-description br {
+    display: none;
+  }
+
+  .timings-rainbow {
+    margin-left: 0;
+    width: 200px;
+  }
+
+  .timing-cards {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .timing-card {
+    width: 100%;
+    max-width: 367px;
+  }
+
+  .testimonials-heading {
+    margin-bottom: 40px;
+  }
+
+  .testimonial-grid {
+    width: calc(100% - 32px);
+
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+  }
+
+  .testimonial-card {
+    width: 100%;
+  }
+}
+
+/* =========================================
+   SMALL MOBILE
+========================================= */
+
+@media (max-width: 400px) {
+
+  .timings-container {
+    padding-left: 18px;
+    padding-right: 18px;
+  }
+
+  .timing-card {
+    padding: 20px;
+  }
+
+  .testimonial-card {
+    padding: 25px 22px;
+  }
+
+  .testimonial-person h3 {
+    font-size: 17px;
+  }
+
+  .testimonial-text {
+    font-size: 14px;
+    line-height: 22px;
+  }
+}

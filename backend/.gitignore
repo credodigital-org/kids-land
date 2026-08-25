@@ -1,0 +1,13 @@
+# Environment - contains live secrets (DB, Django SECRET_KEY, R2 credentials)
+.env
+.env.*
+!.env.example
+
+# Python
+__pycache__/
+*.pyc
+venv/
+db.sqlite3
+
+# Media uploaded locally (not used once R2 is configured)
+media/

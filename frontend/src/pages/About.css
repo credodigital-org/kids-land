@@ -1,0 +1,837 @@
+/* =========================================================
+   ABOUT PAGE
+========================================================= */
+
+.about-page {
+  width: 100%;
+  overflow: hidden;
+  background: #ffffff;
+  color: #111111;
+  font-family: "Nunito", sans-serif;
+}
+
+.about-page * {
+  box-sizing: border-box;
+}
+
+.section-title {
+  margin: 0;
+  text-align: center;
+  color: #38229a;
+  font-size: 44px;
+  line-height: 1.15;
+  font-weight: 800;
+}
+
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.about-hero {
+  width: 100%;
+  padding: 145px 6% 80px;
+  background: #ffffff;
+}
+
+.about-hero-content {
+  max-width: 1080px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 350px;
+  align-items: center;
+  gap: 35px;
+}
+
+.about-hero-left {
+  text-align: center;
+}
+
+.about-hero-left h1 {
+  margin: 0 0 30px;
+  color: #38229a;
+  font-size: 43px;
+  line-height: 1.1;
+  font-weight: 900;
+  letter-spacing: -0.5px;
+}
+
+.hero-description {
+  max-width: 550px;
+  margin: 0 auto;
+  color: #414141;
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+.why-section {
+  margin-top: 90px;
+}
+
+.why-section h2 {
+  margin: 0 0 20px;
+  color: #38229a;
+  font-size: 29px;
+  line-height: 1;
+  font-weight: 800;
+}
+
+.why-section p {
+  margin: 0 auto 8px;
+  max-width: 690px;
+  color: #222222;
+  font-size: 13px;
+  line-height: 1.75;
+  text-align: left;
+  letter-spacing: 0.3px;
+}
+
+.about-hero-image-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.about-building-image {
+  width: 315px;
+  height: 365px;
+  /* object-fit: cover; */
+
+  /* border-radius: 50% 50% 50% 50% / 35% 35% 65% 65%; */
+
+  /* transform: rotate(8deg); */
+
+  /* box-shadow:
+    0 10px 0 #ffffff,
+    0 14px 25px rgba(0, 0, 0, 0.18); */
+}
+
+
+/* =========================================================
+   VALUES
+========================================================= */
+
+.values-section {
+  width: 100%;
+  padding: 30px 0 90px;
+  background: #f5edf8;
+  border-radius: 32px;
+  overflow: hidden;
+}
+
+.values-section .section-title {
+  margin-bottom: 40px;
+}
+
+.values-slider {
+  width: max-content;
+  max-width: 100%;
+  display: flex;
+  gap: 20px;
+  padding-left: 50px;
+  padding-right: 50px;
+
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: thin;
+}
+
+.value-card {
+  flex: 0 0 199px;
+  height: 238px;
+
+  background: #ffffff;
+  border: 1.5px solid;
+  border-radius: 17px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  padding: 13px 14px 15px;
+  text-align: center;
+}
+
+.value-card.purple {
+  border-color: #d98bfa;
+}
+
+.value-card.orange {
+  border-color: #ffbf92;
+}
+
+.value-card.green {
+  border-color: #83ca00;
+}
+
+.value-card.yellow {
+  border-color: #e2dc00;
+}
+
+.value-card.blue {
+  border-color: #73d0e9;
+}
+
+.value-card.pink {
+  border-color: #ff9999;
+}
+
+.value-icon {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  margin-bottom: 12px;
+}
+
+.value-icon svg {
+  width: 35px;
+  height: 35px;
+  stroke-width: 2;
+}
+
+.value-card h3 {
+  margin: 0 0 7px;
+  font-size: 16px;
+  font-weight: 800;
+}
+
+.value-card.purple h3 {
+  color: #7700b7;
+}
+
+.value-card.orange h3 {
+  color: #ff6c18;
+}
+
+.value-card.green h3 {
+  color: #74c500;
+}
+
+.value-card.yellow h3 {
+  color: #e5c800;
+}
+
+.value-card.blue h3 {
+  color: #008fb4;
+}
+
+.value-card.pink h3 {
+  color: #d44d73;
+}
+
+.value-card p {
+  margin: 0;
+  color: #171717;
+  font-size: 11.5px;
+  line-height: 1.25;
+}
+
+.value-line {
+  width: 30px;
+  height: 2px;
+  margin-top: auto;
+}
+
+.purple .value-line {
+  background: #7700b7;
+}
+
+.orange .value-line {
+  background: #ff6c18;
+}
+
+.green .value-line {
+  background: #74c500;
+}
+
+.yellow .value-line {
+  background: #e5c800;
+}
+
+.blue .value-line {
+  background: #008fb4;
+}
+
+.pink .value-line {
+  background: #d44d73;
+}
+
+
+/* =========================================================
+   EYFS
+========================================================= */
+
+.eyfs-section {
+  padding: 130px 5% 80px;
+  background: #ffffff;
+}
+
+.eyfs-description {
+  max-width: 700px;
+  margin: 32px auto 80px;
+
+  text-align: center;
+  color: #111111;
+
+  font-size: 14px;
+  line-height: 1.35;
+}
+
+.curriculum-grid {
+  max-width: 1025px;
+  margin: 0 auto;
+
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.curriculum-card {
+  min-height: 145px;
+
+  background: #fbf5fd;
+
+  padding: 34px 30px;
+
+  text-align: center;
+
+  border-radius: 0 0 38px 0;
+
+  box-shadow:
+    2px 5px 6px rgba(0, 0, 0, 0.18);
+}
+
+.curriculum-card h3 {
+  margin: 0 0 20px;
+
+  color: #38229a;
+
+  font-size: 27px;
+  font-weight: 700;
+}
+
+.curriculum-card p {
+  margin: 0;
+
+  color: #111111;
+
+  font-size: 20px;
+  line-height: 1.45;
+}
+
+
+/* =========================================================
+   TEAM
+========================================================= */
+
+.team-section {
+  padding: 28px 5% 52px;
+  background: #f6f3ff;
+}
+
+.team-description {
+  max-width: 720px;
+  margin: 15px auto 80px;
+
+  text-align: center;
+
+  color: #111111;
+  font-size: 14px;
+  line-height: 1.25;
+}
+
+.team-grid {
+  max-width: 815px;
+  margin: 0 auto;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px 10px;
+}
+
+.team-card {
+  position: relative;
+
+  min-height: 216px;
+
+  border-radius: 21px;
+
+  padding: 37px 23px;
+
+  overflow: hidden;
+
+  box-shadow: 0 5px 12px rgba(0, 0, 0, 0.08);
+}
+
+.team-card.leadership {
+  background: #a984e6;
+}
+
+.team-card.educational {
+  background: #caf77d;
+}
+
+.team-card.specialists {
+  background: #f0d857;
+  min-height: 240px;
+}
+
+.team-card.support {
+  background: #f2c5d2;
+  min-height: 240px;
+}
+
+.team-icon {
+  width: 47px;
+  height: 47px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  border-radius: 50%;
+
+  margin-bottom: 15px;
+
+  background: #ffffff55;
+}
+
+.team-icon svg {
+  width: 25px;
+  height: 25px;
+}
+
+.team-card h3 {
+  margin: 0 0 20px;
+
+  color: #3d2396;
+
+  font-size: 20px;
+  font-weight: 800;
+}
+
+.educational h3 {
+  color: #4e7300;
+}
+
+.specialists h3 {
+  color: #514500;
+}
+
+.support h3 {
+  color: #a53d63;
+}
+
+.team-tags {
+  display: flex;
+  gap: 5px;
+  flex-wrap: wrap;
+}
+
+.team-tags span {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+
+  padding: 8px 11px;
+
+  border-radius: 9px;
+
+  background: rgba(255, 255, 255, 0.45);
+
+  color: #4d2caa;
+
+  font-size: 12px;
+}
+
+.team-tags svg {
+  width: 18px;
+  height: 18px;
+  fill: #5c20c7;
+}
+
+.specialist-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+}
+
+.specialist-grid span {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+
+  padding: 7px 10px;
+
+  border-radius: 9px;
+
+  background: rgba(255, 255, 255, 0.42);
+
+  color: #5d5013;
+  font-size: 11px;
+}
+
+.specialist-grid svg {
+  width: 13px;
+  height: 13px;
+}
+
+.support-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.support-list span {
+  width: fit-content;
+
+  padding: 7px 12px;
+
+  background: #ffffffd9;
+
+  border-radius: 8px;
+
+  color: #a53d63;
+
+  font-size: 11px;
+}
+
+
+/* =========================================================
+   SERVICES
+========================================================= */
+
+.services-section {
+  padding: 65px 5% 110px;
+  background: #ffffff;
+}
+
+.services-description {
+  max-width: 760px;
+
+  margin: 30px auto 70px;
+
+  text-align: center;
+
+  font-size: 14px;
+  line-height: 1.35;
+}
+
+.services-grid {
+  max-width: 1050px;
+
+  margin: 0 auto;
+
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 16px;
+}
+
+.service-card {
+  text-align: center;
+}
+
+.service-card img {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+
+  object-fit: cover;
+
+  border-radius: 50%;
+
+  display: block;
+}
+
+.service-card h3 {
+  margin: 16px 0 0;
+
+  color: #111111;
+
+  font-size: 18px;
+  font-weight: 500;
+
+  line-height: 1.25;
+}
+
+
+/* =========================================================
+   FACILITIES
+========================================================= */
+
+.facilities-section {
+  padding: 75px 5% 100px;
+
+  background: #f5edf8;
+}
+
+.facilities-section .section-title {
+  margin-bottom: 65px;
+}
+
+.facilities-grid {
+  max-width: 1015px;
+
+  margin: 0 auto;
+
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 45px 7px;
+}
+
+.facility-card {
+  min-height: 275px;
+
+  padding: 16px;
+
+  background: #ffffff;
+
+  border-radius: 20px;
+
+  box-shadow: 0 8px 20px rgba(92, 54, 131, 0.08);
+}
+
+.facility-card img {
+  width: 100%;
+  height: 132px;
+
+  display: block;
+
+  object-fit: cover;
+
+  border-radius: 50% 50% 45% 45%;
+}
+
+.facility-card h3 {
+  margin: 17px 0 10px;
+
+  color: #38229a;
+
+  font-size: 14px;
+  font-weight: 800;
+}
+
+.facility-card p {
+  margin: 0;
+
+  color: #55505d;
+
+  font-size: 11.5px;
+  line-height: 1.55;
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1000px) {
+
+  .about-hero {
+    padding-top: 100px;
+  }
+
+  .about-hero-content {
+    grid-template-columns: 1fr;
+  }
+
+  .about-hero-image-wrapper {
+    order: -1;
+  }
+
+  .about-building-image {
+    width: 280px;
+    height: 320px;
+  }
+
+  .services-grid {
+    grid-template-columns: repeat(3, 1fr);
+    row-gap: 35px;
+  }
+
+  .facilities-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 700px) {
+
+  .section-title {
+    font-size: 34px;
+  }
+
+  .about-hero {
+    padding: 70px 20px 60px;
+  }
+
+  .about-hero-left h1 {
+    font-size: 34px;
+  }
+
+  .about-building-image {
+    width: 230px;
+    height: 280px;
+  }
+
+  .why-section {
+    margin-top: 55px;
+  }
+
+  .why-section h2 {
+    font-size: 25px;
+  }
+
+  .why-section p {
+    font-size: 13px;
+  }
+
+
+  /* VALUES */
+
+  .values-section {
+    padding: 35px 0 55px;
+    border-radius: 25px;
+  }
+
+  .values-slider {
+    width: 100%;
+    padding: 0 20px;
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+
+  .value-card {
+    width: 100%;
+    min-width: 0;
+    height: 220px;
+  }
+
+
+  /* EYFS */
+
+  .eyfs-section {
+    padding: 75px 20px;
+  }
+
+  .eyfs-description {
+    margin-bottom: 45px;
+    font-size: 13px;
+  }
+
+  .curriculum-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .curriculum-card {
+    min-height: auto;
+  }
+
+  .curriculum-card h3 {
+    font-size: 23px;
+  }
+
+  .curriculum-card p {
+    font-size: 17px;
+  }
+
+
+  /* TEAM */
+
+  .team-section {
+    padding: 55px 20px;
+  }
+
+  .team-description {
+    margin-bottom: 45px;
+  }
+
+  .team-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .specialist-grid {
+    grid-template-columns: 1fr;
+  }
+
+
+  /* SERVICES */
+
+  .services-section {
+    padding: 60px 20px;
+  }
+
+  .services-description {
+    margin-bottom: 45px;
+  }
+
+  .services-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px 15px;
+  }
+
+  .service-card h3 {
+    font-size: 15px;
+  }
+
+
+  /* FACILITIES */
+
+  .facilities-section {
+    padding: 60px 20px;
+  }
+
+  .facilities-section .section-title {
+    margin-bottom: 40px;
+  }
+
+  .facilities-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .facility-card {
+    min-height: auto;
+  }
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 420px) {
+
+  .about-hero-left h1 {
+    font-size: 29px;
+  }
+
+  .section-title {
+    font-size: 30px;
+  }
+
+  .values-slider {
+    grid-template-columns: 1fr;
+  }
+
+  .value-card {
+    height: 210px;
+  }
+
+  .services-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+}

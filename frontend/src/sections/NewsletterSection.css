@@ -1,0 +1,213 @@
+/* =========================================
+   NEWSLETTER SECTION
+========================================= */
+
+.newsletter-section {
+  width: 100%;
+  min-height: 460px;
+  position: relative;
+  background: #e7d5ff;
+  padding: 74px 20px 105px;
+  overflow: hidden;
+}
+
+
+/* =========================================
+   CONTAINER
+========================================= */
+
+.newsletter-container {
+  width: 100%;
+  max-width: 1015px;
+  margin: 0 auto;
+  text-align: center;
+  position: relative;
+  z-index: 2;
+}
+
+
+/* =========================================
+   LABEL
+========================================= */
+
+.newsletter-label {
+  display: block;
+  margin-bottom: 17px;
+
+  color: #00a35a;
+
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: 1.8px;
+}
+
+
+/* =========================================
+   CARD
+========================================= */
+
+.newsletter-card {
+  width: 100%;
+  min-height: 307px;
+
+  padding: 40px 35px;
+
+  background: #ffffff;
+
+  border: 1px solid #d5c9df;
+  border-radius: 27px;
+
+  box-shadow:
+    0 10px 16px rgba(72, 53, 95, 0.15);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+
+/* =========================================
+   TITLE
+========================================= */
+
+.newsletter-title {
+  margin: 0;
+
+  color: #38219a;
+
+  font-family: "Nunito", sans-serif;
+  font-size: 40px;
+  font-weight: 900;
+  line-height: 1.15;
+}
+
+
+/* =========================================
+   DESCRIPTION
+========================================= */
+
+.newsletter-description {
+  max-width: 850px;
+
+  margin: 20px 0 37px;
+
+  color: #5c5866;
+
+  font-size: 17px;
+  line-height: 1.5;
+  font-weight: 400;
+}
+
+
+/* =========================================
+   DOWNLOAD BUTTON
+========================================= */
+
+.newsletter-download-button {
+  width: 155px;
+  height: 65px;
+
+  border: none;
+  border-radius: 34px;
+
+  background: #20ad58;
+  color: #ffffff;
+
+  font-family: inherit;
+  font-size: 15px;
+  font-weight: 800;
+  letter-spacing: 0.3px;
+
+  cursor: pointer;
+
+  box-shadow:
+    0 5px 9px rgba(22, 130, 65, 0.18);
+
+  transition:
+    transform 0.2s ease,
+    background 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+
+.newsletter-download-button:hover {
+  background: #169b4c;
+
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 8px 14px rgba(22, 130, 65, 0.25);
+}
+
+
+.newsletter-download-button:active {
+  transform: translateY(0);
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 900px) {
+  .newsletter-section {
+    min-height: 450px;
+    padding: 65px 20px 90px;
+  }
+
+  .newsletter-card {
+    min-height: 290px;
+  }
+
+  .newsletter-title {
+    font-size: 36px;
+  }
+
+  .newsletter-description {
+    font-size: 15px;
+  }
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 600px) {
+  .newsletter-section {
+    min-height: 430px;
+    padding: 60px 15px 80px;
+  }
+
+  .newsletter-label {
+    font-size: 11px;
+    margin-bottom: 14px;
+  }
+
+  .newsletter-card {
+    min-height: 300px;
+    padding: 35px 20px;
+    border-radius: 23px;
+  }
+
+  .newsletter-title {
+    font-size: 30px;
+  }
+
+  .newsletter-description {
+    max-width: 330px;
+
+    margin: 15px auto 30px;
+
+    font-size: 13px;
+    line-height: 1.65;
+  }
+
+  .newsletter-download-button {
+    width: 135px;
+    height: 52px;
+
+    font-size: 13px;
+  }
+}

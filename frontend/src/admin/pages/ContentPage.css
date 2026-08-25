@@ -1,0 +1,49 @@
+.content-upload-form {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  align-items: center;
+  background: #fff;
+  padding: 16px;
+  border-radius: 12px;
+  margin-bottom: 24px;
+}
+
+.content-upload-form input {
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  font-family: inherit;
+}
+
+.content-upload-form button {
+  padding: 10px 20px;
+  border-radius: 8px;
+  border: none;
+  background: #8bc63f;
+  color: #fff;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.content-upload-form button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.content-page-error {
+  color: #d92d20;
+  margin-bottom: 16px;
+}
+
+.content-page-hint {
+  color: #6b7280;
+  margin-bottom: 16px;
+  font-size: 14px;
+}
+
+.data-table-wrapper {
+  background: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+}

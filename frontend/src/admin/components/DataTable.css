@@ -1,0 +1,31 @@
+.data-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.data-table th,
+.data-table td {
+  text-align: left;
+  padding: 12px;
+  border-bottom: 1px solid #eee;
+}
+
+.data-table th {
+  color: #6b7280;
+  font-size: 13px;
+  text-transform: uppercase;
+}
+
+.data-table-empty {
+  padding: 40px;
+  text-align: center;
+  color: #6b7280;
+}
+
+.data-table-delete-btn {
+  background: none;
+  border: none;
+  color: #d92d20;
+  cursor: pointer;
+  font-weight: 600;
+}

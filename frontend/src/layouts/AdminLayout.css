@@ -1,0 +1,14 @@
+.admin-layout {
+  display: flex;
+  min-height: 100vh;
+  background: #f7f8fb;
+  font-family: "Nunito", sans-serif;
+}
+
+.admin-content {
+  flex: 1;
+}
+
+.admin-content-body {
+  padding: 24px 32px;
+}

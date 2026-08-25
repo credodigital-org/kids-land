@@ -1,0 +1,379 @@
+/* Footer.css */
+
+.kids-footer {
+  position: relative;
+  width: 100%;
+  min-height: 450px;
+  background: #ffffff;
+  overflow: hidden;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #111111;
+}
+
+/* =========================
+   MAIN FOOTER
+========================= */
+
+.footer-main {
+  position: relative;
+  z-index: 2;
+
+  min-height: 375px;
+  padding: 67px 9% 90px;
+
+  display: grid;
+  grid-template-columns: 1.2fr 0.9fr 1.2fr;
+  column-gap: 70px;
+}
+
+/* =========================
+   COLUMNS
+========================= */
+
+.footer-column {
+  position: relative;
+  z-index: 3;
+}
+
+.footer-column h3 {
+  margin: 0 0 14px;
+
+  color: #5A3CB8;
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 53.03px;
+  font-family: "Be Vietnam Pro" Bold;
+}
+
+.footer-about p {
+  margin: 0;
+  /* font-family: "Be Vietnam Pro" Regular; */
+
+  font-size: 21.89px;
+  line-height: 35.03px;
+  font-weight: 400;
+  letter-spacing: 0px;
+}
+
+/* =========================
+   SOCIAL ICONS
+========================= */
+
+.footer-socials {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  margin-top: 7px;
+  margin-left: 5px;
+}
+
+.footer-socials a {
+  display: flex;
+}
+
+/* Instagram */
+.footer-socials .instagram {
+  border-radius: 5px;
+  width: 30px;
+  height: 30px;
+  line-height: 20px;
+}
+
+/* Facebook */
+.footer-socials .facebook {
+  border-radius: 5px;
+  width: 50px;
+  height: 50px;
+}
+
+/* WhatsApp */
+.footer-socials .whatsapp {
+  border-radius: 5px;
+  width: 32px;
+  height: 32px;
+}
+
+/* YouTube */
+.footer-socials .youtube {
+  border-radius: 5px;
+  width: 60px;
+  height: 60px;
+}
+.footer-socials .snapchat {
+  border-radius: 5px;
+  width: 35px;
+  height: 35px;
+}
+.footer-socials .tiktok {
+  border-radius: 5px;
+  width: 35px;
+  height: 35px;
+}
+
+/* =========================
+   QUICK LINKS
+========================= */
+
+.footer-links {
+  padding-left: 5px;
+}
+
+.footer-links h3 {
+  margin-bottom: 15px;
+}
+
+.footer-links ul {
+  margin: 0;
+  padding: 0 0 0 34px;
+
+  list-style: none;
+}
+
+.footer-links li {
+  margin-bottom: 7px;
+}
+
+.footer-links a {
+  color: #111111;
+  text-decoration: none;
+
+  font-size: 20px;
+  line-height: 35.03px;
+  font-weight: 400;
+
+  transition: color 0.2s ease;
+}
+
+.footer-links a:hover {
+  color: #5839c9;
+}
+
+/* =========================
+   CONTACT
+========================= */
+
+.footer-contact {
+  padding-left: 0;
+}
+
+.footer-contact h3 {
+  margin-bottom: 9px;
+}
+
+.footer-contact-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+}
+
+.contact-icon {
+  display: flex;
+  width: 15px;
+  height: 15px;
+}
+
+.footer-contact-item p {
+  margin: 0 0 6px;
+
+  font-size: 14px;
+  line-height: 15px;
+  color: #111111;
+}
+
+/* =========================
+   LEFT DECORATION
+========================= */
+
+.footer-left-decoration {
+  position: absolute;
+  z-index: 1;
+
+  left: 0;
+  bottom: 68px;
+
+  width: 310px;
+  height: 170px;
+
+  pointer-events: none;
+}
+
+.footer-left-decoration img {
+  display: block;
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: contain;
+  object-position: left bottom;
+}
+
+/* =========================
+   RIGHT DECORATION
+========================= */
+
+.footer-right-decoration {
+  position: absolute;
+  z-index: 1;
+
+  right: 0;
+  bottom: 73px;
+
+  width: 185px;
+  height: 270px;
+
+  pointer-events: none;
+}
+
+.footer-right-decoration img {
+  display: block;
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: contain;
+  object-position: right bottom;
+}
+
+/* =========================
+   BOTTOM COPYRIGHT
+========================= */
+
+.footer-bottom {
+  position: absolute;
+  z-index: 4;
+
+  left: 0;
+  bottom: 0;
+
+  width: 100%;
+  height: 74px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: #eeeaff;
+
+  color: #45404f;
+
+  font-size: 15px;
+  font-weight: 400;
+
+  border-top: 1px solid rgba(88, 57, 201, 0.04);
+}
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 900px) {
+  .footer-main {
+    padding-left: 7%;
+    padding-right: 7%;
+
+    grid-template-columns: 1fr 0.8fr 1fr;
+    column-gap: 30px;
+  }
+
+  .footer-left-decoration {
+    width: 240px;
+  }
+
+  .footer-right-decoration {
+    width: 150px;
+  }
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 700px) {
+  .kids-footer {
+    min-height: auto;
+  }
+
+  .footer-main {
+    min-height: auto;
+
+    padding: 45px 25px 120px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+  }
+
+  .footer-column {
+    padding-left: 0;
+  }
+
+  .footer-column h3 {
+    font-size: 32px;
+  }
+
+  .footer-about p {
+    font-size: 14px;
+    line-height: 35.03px;
+  }
+
+  .footer-socials {
+    margin-left: 0;
+    margin-top: 25px;
+  }
+
+  .footer-links ul {
+    padding-left: 0;
+  }
+
+  .footer-links li {
+    margin-bottom: 8px;
+  }
+
+  .footer-contact-item {
+    margin-bottom: 20px;
+  }
+
+  .footer-left-decoration {
+    width: 190px;
+    height: 120px;
+    bottom: 74px;
+  }
+
+  .footer-right-decoration {
+    width: 125px;
+    height: 190px;
+    bottom: 74px;
+  }
+
+  .footer-bottom {
+    height: 74px;
+
+    padding: 0 20px;
+
+    text-align: center;
+    font-size: 13px;
+  }
+}
+
+/* =========================
+   SMALL MOBILE
+========================= */
+
+@media (max-width: 450px) {
+  .footer-main {
+    padding: 40px 20px 130px;
+  }
+
+  .footer-left-decoration {
+    width: 150px;
+  }
+
+  .footer-right-decoration {
+    width: 105px;
+  }
+
+  .footer-bottom {
+    font-size: 12px;
+  }
+}

@@ -1,0 +1,726 @@
+/* =========================================
+   VISION & MISSION SECTION
+========================================= */
+
+.vision-mission-section {
+  position: relative;
+  width: 100%;
+  height: 820px;
+  overflow: hidden;
+  background: #ffffff;
+}
+
+
+/* =========================================
+   TOP PURPLE BACKGROUND
+========================================= */
+
+.vision-mission-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 116px;
+
+  background: #f3efff;
+
+  z-index: 0;
+}
+
+
+/* =========================================
+   MAIN CONTAINER
+========================================= */
+
+.vision-mission-container {
+  position: relative;
+
+  width: 100%;
+  max-width: 1107px;
+  height: 820px;
+
+  margin: 0 auto;
+}
+
+
+/* =========================================
+   VISION CARD
+========================================= */
+
+.vision-card {
+  position: absolute;
+
+  top: 204px;
+  left: 55px;
+
+  width: 502px;
+  height: 361px;
+
+  box-sizing: border-box;
+
+  padding: 44px 45px;
+
+  background: #fff9ff;
+
+  border: 3px solid #f1e6f4;
+
+  border-radius: 54px;
+
+  box-shadow:
+    0 15px 35px rgba(95, 66, 120, 0.035);
+
+  z-index: 3;
+}
+
+
+/* =========================================
+   SCHOOL IMAGE
+========================================= */
+
+.vision-image {
+  position: absolute;
+
+  top: -47px;
+  right: -33px;
+
+  width: 186px;
+  height: 186px;
+
+  padding: 8px;
+
+  box-sizing: border-box;
+
+  /* background: #ffffff; */
+
+  border-radius: 50%;
+
+  /* box-shadow:
+    0 4px 12px rgba(70, 50, 80, 0.16); */
+
+  z-index: 10;
+}
+
+.vision-image img {
+  width: 100%;
+  height: 100%;
+
+  display: block;
+
+  object-fit: cover;
+
+  border-radius: 50%;
+}
+
+
+/* =========================================
+   VISION HEADING
+========================================= */
+
+.vision-heading {
+  display: flex;
+  align-items: center;
+
+  gap: 12px;
+
+  margin: 0 0 31px 0;
+}
+
+.vision-icon {
+  width: 67px;
+  height: 67px;
+
+  flex-shrink: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background: #b5f05c;
+
+  color: #527e14;
+}
+
+.vision-icon svg {
+  width: 21px;
+  height: 21px;
+
+  stroke-width: 3;
+}
+
+.vision-heading h2 {
+  margin: 0;
+
+  color: #5d28b5;
+
+  font-family: Arial, sans-serif;
+
+  font-size: 23px;
+  font-weight: 400;
+
+  line-height: 1.2;
+}
+
+
+/* =========================================
+   VISION TEXT
+========================================= */
+
+.vision-description {
+  margin: 0;
+
+  width: 420px;
+
+  color: #514b59;
+
+  font-family: Arial, sans-serif;
+
+  font-size: 21px;
+  font-weight: 400;
+
+  line-height: 1.72;
+
+  letter-spacing: 0.15px;
+}
+
+
+/* =========================================
+   VISION ARABIC BUTTON
+========================================= */
+
+.vision-arabic-button {
+  display: block;
+
+  margin-top: 31px;
+
+  padding: 3px 10px 4px;
+
+  border: none;
+  border-radius: 5px;
+
+  background: #87c63f;
+
+  color: #ffffff;
+
+  font-family: Arial, sans-serif;
+
+  font-size: 13px;
+  font-weight: 700;
+
+  line-height: 1.2;
+
+  cursor: pointer;
+}
+
+
+/* =========================================
+   MISSION CARD
+========================================= */
+
+.mission-card {
+  position: absolute;
+
+  top: 185px;
+  left: 588px;
+
+  width: 413px;
+  height: 543px;
+
+  box-sizing: border-box;
+
+  padding: 38px 37px;
+
+  background: #fff9ff;
+
+  border: 3px solid #f1e6f4;
+
+  border-radius: 58px;
+
+  box-shadow:
+    0 15px 35px rgba(95, 66, 120, 0.035);
+
+  z-index: 4;
+}
+
+
+/* =========================================
+   TOP KIDS IMAGE
+========================================= */
+
+.mission-top-image {
+  position: absolute;
+
+  top: -41px;
+  right: 17px;
+
+  width: 98px;
+  height: 98px;
+
+  padding: 6px;
+
+  box-sizing: border-box;
+
+  /* background: #ffffff; */
+
+  border-radius: 50%;
+
+  /* box-shadow:
+    0 4px 12px rgba(70, 50, 80, 0.16); */
+
+  z-index: 10;
+}
+
+.mission-top-image img {
+  width: 100%;
+  height: 100%;
+
+  display: block;
+
+  object-fit: cover;
+
+  border-radius: 50%;
+}
+
+
+/* =========================================
+   MISSION HEADING
+========================================= */
+
+.mission-heading {
+  display: flex;
+  align-items: center;
+
+  gap: 11px;
+
+  margin: 0 0 28px 0;
+}
+
+.mission-icon {
+  width: 56px;
+  height: 56px;
+
+  flex-shrink: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background: #7037c5;
+
+  color: #ffffff;
+}
+
+.mission-icon svg {
+  width: 19px;
+  height: 19px;
+
+  stroke-width: 2.2;
+}
+
+.mission-heading h2 {
+  margin: 0;
+
+  color: #5d28b5;
+
+  font-family: Arial, sans-serif;
+
+  font-size: 20px;
+  font-weight: 400;
+
+  line-height: 1.2;
+}
+
+
+/* =========================================
+   MISSION TEXT
+========================================= */
+
+.mission-description {
+  margin: 0;
+
+  width: 338px;
+
+  color: #514b59;
+
+  font-family: Arial, sans-serif;
+
+  font-size: 18px;
+  font-weight: 400;
+
+  line-height: 1.67;
+
+  letter-spacing: 0.15px;
+}
+
+
+/* =========================================
+   MISSION ARABIC BUTTON
+========================================= */
+
+.mission-arabic-button {
+  display: block;
+
+  margin-top: 27px;
+
+  padding: 3px 10px 4px;
+
+  border: none;
+  border-radius: 5px;
+
+  background: #87c63f;
+
+  color: #ffffff;
+
+  font-family: Arial, sans-serif;
+
+  font-size: 13px;
+  font-weight: 700;
+
+  line-height: 1.2;
+
+  cursor: pointer;
+}
+
+
+/* =========================================
+   BOTTOM KIDS IMAGE
+========================================= */
+
+.mission-bottom-image {
+  position: absolute;
+
+  left: -39px;
+  bottom: -54px;
+
+  width: 108px;
+  height: 108px;
+
+  padding: 7px;
+
+  box-sizing: border-box;
+
+  /* background: #ffffff; */
+
+  border-radius: 50%;
+
+  /* box-shadow:
+    0 4px 12px rgba(70, 50, 80, 0.16); */
+
+  z-index: 10;
+}
+
+.mission-bottom-image img {
+  width: 100%;
+  height: 100%;
+
+  display: block;
+
+  object-fit: cover;
+
+  border-radius: 50%;
+}
+
+
+/* =========================================
+   STAR
+========================================= */
+
+.vision-star {
+  position: absolute;
+
+  left: 118px;
+  top: 657px;
+
+  width: 34px;
+  height: 34px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background: #f2a3c5;
+
+  color: #ffffff;
+
+  z-index: 8;
+}
+
+.vision-star svg {
+  width: 24px;
+  height: 24px;
+
+  stroke-width: 2;
+}
+
+
+/* =========================================
+   BOTTOM PURPLE STRIP
+========================================= */
+
+.vision-mission-section::after {
+  content: "";
+
+  position: absolute;
+
+  left: 0;
+  bottom: 0;
+
+  width: 100%;
+  height: 0;
+
+  background: #f3efff;
+
+  z-index: 0;
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 900px) {
+
+  .vision-mission-section {
+    height: auto;
+    min-height: 950px;
+  }
+
+  .vision-mission-container {
+    height: 950px;
+  }
+
+  .vision-card {
+    left: 5%;
+    width: 46%;
+    height: auto;
+    min-height: 360px;
+  }
+
+  .mission-card {
+    left: 51%;
+    width: 44%;
+    height: auto;
+    min-height: 543px;
+  }
+
+  .vision-description {
+    width: 100%;
+    font-size: 19px;
+  }
+
+  .mission-description {
+    width: 100%;
+    font-size: 17px;
+  }
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 700px) {
+
+  .vision-mission-section {
+    height: auto;
+
+    padding: 90px 18px 120px;
+
+    box-sizing: border-box;
+  }
+
+  .vision-mission-section::before {
+    height: 70px;
+  }
+
+  .vision-mission-container {
+    height: auto;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 80px;
+  }
+
+
+  /* Rainbow */
+
+  .vision-rainbow {
+    top: 0;
+    right: -10px;
+
+    width: 85px;
+    height: 95px;
+  }
+
+
+  /* Vision */
+
+  .vision-card {
+    position: relative;
+
+    top: auto;
+    left: auto;
+
+    width: 100%;
+    height: auto;
+
+    min-height: 350px;
+
+    padding: 38px 26px 35px;
+
+    border-radius: 40px;
+  }
+
+  .vision-image {
+    width: 100px;
+    height: 100px;
+
+    top: -43px;
+    right: 10px;
+  }
+
+  .vision-heading {
+    margin-bottom: 25px;
+  }
+
+  .vision-icon {
+    width: 58px;
+    height: 58px;
+  }
+
+  .vision-heading h2 {
+    font-size: 21px;
+  }
+
+  .vision-description {
+    width: 100%;
+
+    font-size: 18px;
+    line-height: 1.65;
+  }
+
+
+  /* Mission */
+
+  .mission-card {
+    position: relative;
+
+    top: auto;
+    left: auto;
+
+    width: 100%;
+    height: auto;
+
+    min-height: 520px;
+
+    padding: 38px 26px 45px;
+
+    border-radius: 40px;
+  }
+
+  .mission-top-image {
+    width: 75px;
+    height: 75px;
+
+    top: -40px;
+    right: 12px;
+  }
+
+  .mission-heading {
+    margin-bottom: 25px;
+  }
+
+  .mission-icon {
+    width: 55px;
+    height: 55px;
+  }
+
+  .mission-heading h2 {
+    font-size: 20px;
+  }
+
+  .mission-description {
+    width: 100%;
+
+    font-size: 17px;
+    line-height: 1.65;
+  }
+
+  .mission-bottom-image {
+    width: 82px;
+    height: 82px;
+
+    left: 18px;
+    bottom: -50px;
+  }
+
+
+  /* Star */
+
+  .vision-star {
+    position: absolute;
+
+    left: 20px;
+    top: 48%;
+
+    width: 32px;
+    height: 32px;
+  }
+}
+
+
+/* =========================================
+   SMALL MOBILE
+========================================= */
+
+@media (max-width: 420px) {
+
+  .vision-mission-section {
+    padding-left: 14px;
+    padding-right: 14px;
+  }
+
+  .vision-card,
+  .mission-card {
+    padding-left: 21px;
+    padding-right: 21px;
+
+    border-radius: 34px;
+  }
+
+  .vision-description {
+    font-size: 17px;
+  }
+
+  .mission-description {
+    font-size: 16px;
+  }
+
+  .vision-image {
+    width: 90px;
+    height: 90px;
+
+    top: -39px;
+    right: 7px;
+  }
+
+  .mission-top-image {
+    width: 68px;
+    height: 68px;
+
+    top: -36px;
+  }
+
+  .mission-bottom-image {
+    width: 75px;
+    height: 75px;
+  }
+}

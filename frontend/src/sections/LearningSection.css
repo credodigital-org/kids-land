@@ -1,0 +1,384 @@
+/* =========================================
+   LEARNING SECTION
+========================================= */
+
+.learning-section {
+  width: 100%;
+  min-height: 625px;
+
+  background: #faf7ff;
+
+  font-family: Arial, Helvetica, sans-serif;
+  color: #17152a;
+
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+
+/* =========================================
+   MAIN CONTAINER
+========================================= */
+
+.learning-container {
+  width: 100%;
+  max-width: 1410px;
+
+  margin: 0 auto;
+
+  padding: 71px 22px 28px;
+
+  box-sizing: border-box;
+}
+
+
+/* =========================================
+   HEADER
+========================================= */
+
+.learning-header {
+  text-align: center;
+
+  margin-bottom: 56px;
+}
+
+.learning-label {
+  display: block;
+
+  margin-bottom: 7px;
+
+  color: #0aa65a;
+
+  font-size: 13px;
+  font-weight: 700;
+  font-family: Nunito;
+
+  line-height: 16px;
+
+  letter-spacing: 1.4px;
+}
+
+.learning-title {
+  margin: 0;
+
+  color: #3c209c;
+
+  font-size: 40px;
+  font-weight: 900;
+  font-family: Nunito;
+
+  line-height: 48px;
+
+  letter-spacing: -0.8px;
+}
+
+.learning-subtitle {
+  margin: 17px auto 0;
+
+  color: #5c5667;
+
+  font-size: 15px;
+  font-weight: 400;
+  font-family: Nunito;
+
+  line-height: 22px;
+
+  letter-spacing: 0.05px;
+}
+
+
+/* =========================================
+   PROGRAM GRID
+========================================= */
+
+.learning-grid {
+  width: 100%;
+
+  display: grid;
+
+  grid-template-columns: repeat(4, 1fr);
+
+  gap: 21px;
+}
+
+
+/* =========================================
+   PROGRAM CARD
+========================================= */
+
+.learning-card {
+  width: 100%;
+  height: 417px;
+
+  padding: 22px 21px 20px;
+
+  box-sizing: border-box;
+
+  border-radius: 14px;
+
+  text-align: center;
+
+  overflow: hidden;
+}
+
+
+/* Card colors */
+
+.learning-card.little-angels {
+  background: #ffccb9;
+}
+
+.learning-card.toddlers {
+  background: #fff9c4;
+}
+
+.learning-card.discoveries {
+  background: #dcefc7;
+}
+
+.learning-card.inventors {
+  background: #b9ddfa;
+}
+
+
+/* =========================================
+   IMAGE
+========================================= */
+
+.learning-image-wrapper {
+  width: 100%;
+  height: 222px;
+
+  overflow: hidden;
+
+  /* border: 3px solid #ffffff; */
+
+  border-radius: 11px;
+
+  /* background: #eeeeee; */
+
+  box-sizing: border-box;
+
+  /* box-shadow:
+    0 1px 3px rgba(0, 0, 0, 0.08); */
+}
+
+.learning-image {
+  display: block;
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  object-position: center;
+}
+
+
+/* =========================================
+   CARD CONTENT
+========================================= */
+
+.learning-card-content {
+  padding-top: 23px;
+}
+
+.learning-card h3 {
+  margin: 0;
+
+  color: #17152a;
+
+  font-size: 16px;
+  font-weight: 700;
+
+  line-height: 20px;
+}
+
+.learning-age {
+  margin: 8px 0 0;
+
+  color: #22202c;
+
+  font-size: 12px;
+  font-weight: 400;
+
+  line-height: 16px;
+}
+
+.learning-description {
+  max-width: 215px;
+
+  margin: 11px auto 0;
+
+  color: #5a5660;
+
+  font-size: 11px;
+  font-weight: 400;
+
+  line-height: 15px;
+}
+
+
+/* =========================================
+   LEARN MORE
+========================================= */
+
+.learning-more {
+  display: inline-block;
+
+  margin-top: 21px;
+
+  text-decoration: none;
+
+  font-size: 13px;
+  font-weight: 700;
+  font-family: Nunito;
+
+  line-height: 17px;
+
+  letter-spacing: 0.7px;
+}
+
+
+/* Individual link colors */
+
+.little-angels .learning-more {
+  color: #f04b47;
+}
+
+.toddlers .learning-more {
+  color: #b87500;
+}
+
+.discoveries .learning-more {
+  color: #15934c;
+}
+
+.inventors .learning-more {
+  color: #2575e8;
+}
+
+
+/* Hover */
+
+.learning-more:hover {
+  text-decoration: underline;
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 950px) {
+
+  .learning-container {
+    padding-left: 25px;
+    padding-right: 25px;
+  }
+
+  .learning-grid {
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 20px;
+  }
+
+  .learning-card {
+    height: 360px;
+  }
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 600px) {
+
+  .learning-section {
+    min-height: auto;
+  }
+
+  .learning-container {
+    padding: 55px 18px 45px;
+  }
+
+  .learning-header {
+    margin-bottom: 38px;
+  }
+
+  .learning-label {
+    font-size: 11px;
+  }
+
+  .learning-title {
+    font-size: 30px;
+
+    line-height: 38px;
+  }
+
+  .learning-subtitle {
+    margin-top: 14px;
+
+    font-size: 14px;
+
+    line-height: 21px;
+  }
+
+  .desktop-break {
+    display: none;
+  }
+
+  .learning-grid {
+    grid-template-columns: 1fr;
+
+    gap: 18px;
+  }
+
+  .learning-card {
+    height: auto;
+
+    min-height: 360px;
+
+    padding: 22px 22px 25px;
+  }
+
+  .learning-image-wrapper {
+    height: 190px;
+  }
+
+  .learning-card-content {
+    padding-top: 21px;
+  }
+}
+
+
+/* =========================================
+   SMALL MOBILE
+========================================= */
+
+@media (max-width: 400px) {
+
+  .learning-container {
+    padding-left: 14px;
+    padding-right: 14px;
+  }
+
+  .learning-title {
+    font-size: 27px;
+
+    line-height: 34px;
+  }
+
+  .learning-card {
+    min-height: 350px;
+  }
+
+  .learning-image-wrapper {
+    height: 175px;
+  }
+
+  .learning-description {
+    font-size: 11px;
+  }
+}

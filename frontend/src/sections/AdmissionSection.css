@@ -1,0 +1,505 @@
+/* =========================================
+   ADMISSION SECTION
+========================================= */
+
+.admission-section {
+  position: relative;
+
+  width: 100%;
+  min-height: 375px;
+
+  background: #ffffff;
+
+  overflow: hidden;
+
+  font-family: Arial, Helvetica, sans-serif;
+
+  box-sizing: border-box;
+}
+
+
+/* =========================================
+   MAIN CONTAINER
+========================================= */
+
+.admission-container {
+  position: relative;
+  z-index: 5;
+
+  width: 100%;
+  max-width: 900px;
+
+  margin: 0 auto;
+
+  padding-top: 64px;
+
+  text-align: center;
+
+  box-sizing: border-box;
+}
+
+
+/* =========================================
+   ADMISSION LABEL
+========================================= */
+
+.admission-label {
+  display: block;
+
+  margin-bottom: 5px;
+
+  color: #0baa59;
+
+  font-size: 20px;
+  font-weight: 600;
+  font-family: Work Sans;
+
+  line-height: 16px;
+
+  letter-spacing: 1.8px;
+}
+
+
+/* =========================================
+   TITLE
+========================================= */
+
+.admission-title {
+  margin: 0;
+
+  color: #3d209d;
+
+  font-size: 50px;
+  font-weight: 900;
+  font-family: Nunito;
+
+  line-height: 68px;
+
+  letter-spacing: -0.8px;
+}
+
+
+/* =========================================
+   DESCRIPTION
+========================================= */
+
+.admission-description {
+  margin: 20px auto 0;
+
+  max-width: 650px;
+
+  color: #5c5665;
+
+  font-size: 15px;
+  font-weight: 400;
+
+  line-height: 23px;
+
+  letter-spacing: 0.1px;
+}
+
+
+/* =========================================
+   BUTTON
+========================================= */
+
+.admission-button {
+  width: 218px;
+  height: 41px;
+
+  margin: 29px auto 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 7px;
+
+  box-sizing: border-box;
+
+  border-radius: 24px;
+
+  background: #3e1e9d;
+
+  color: #ffffff;
+
+  text-decoration: none;
+
+  font-size: 12px;
+  font-weight: 700;
+
+  letter-spacing: 0.3px;
+
+  box-shadow:
+    0 7px 13px rgba(60, 30, 150, 0.20);
+
+  transition:
+    transform 0.2s ease,
+    background 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.admission-button:hover {
+  background: #321681;
+
+  transform: translateY(-1px);
+
+  box-shadow:
+    0 9px 16px rgba(60, 30, 150, 0.25);
+}
+
+.admission-button:active {
+  transform: translateY(0);
+}
+
+.admission-button svg {
+  width: 16px;
+  height: 16px;
+
+  stroke-width: 2.5;
+}
+
+
+/* =========================================
+   RESOURCE CARDS (Parent's Guide / Academic Calendar)
+========================================= */
+
+.admission-resources {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+
+  margin: 48px auto 0;
+
+  max-width: 820px;
+}
+
+.resource-card {
+  flex: 1;
+
+  background: #f9f8fd;
+  border: 1px solid #ece8fb;
+  border-radius: 20px;
+
+  padding: 28px 24px;
+
+  text-align: left;
+
+  box-sizing: border-box;
+}
+
+.resource-icon {
+  width: 46px;
+  height: 46px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  margin-bottom: 14px;
+}
+
+.resource-icon-purple {
+  background: #ece5ff;
+  color: #3e1e9d;
+}
+
+.resource-icon-green {
+  background: #dcf5e6;
+  color: #0baa59;
+}
+
+.resource-title {
+  margin: 0 0 8px;
+
+  color: #211547;
+
+  font-size: 19px;
+  font-weight: 800;
+  font-family: Nunito;
+}
+
+.resource-description {
+  margin: 0 0 20px;
+
+  color: #5c5665;
+
+  font-size: 13.5px;
+  line-height: 20px;
+}
+
+.resource-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+
+  padding: 10px 18px;
+
+  border-radius: 20px;
+
+  background: #3e1e9d;
+  color: #ffffff;
+
+  text-decoration: none;
+
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.3px;
+
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.resource-button:hover {
+  background: #321681;
+  transform: translateY(-1px);
+}
+
+.resource-unavailable {
+  display: inline-block;
+
+  color: #9992a8;
+
+  font-size: 12.5px;
+  font-style: italic;
+}
+
+/* =========================================
+   GLOBE / CHARACTER
+========================================= */
+
+.admission-character {
+  position: absolute;
+
+  z-index: 3;
+
+  left: 20px;
+  bottom: 0;
+
+  width: 145px;
+  height: 180px;
+
+  pointer-events: none;
+}
+
+.character-globe {
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+.character-globe img {
+  display: block;
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: contain;
+
+  object-position: bottom left;
+}
+
+
+/* =========================================
+   PAPER AIRPLANE
+========================================= */
+
+.admission-plane {
+  position: absolute;
+
+  z-index: 2;
+
+  left: 190px;
+  top: 195px;
+
+  width: 70px;
+  height: 65px;
+
+  pointer-events: none;
+}
+
+.admission-plane img {
+  display: block;
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: contain;
+}
+
+
+/* =========================================
+   SUN
+========================================= */
+
+.admission-sun {
+  position: absolute;
+
+  z-index: 2;
+
+  right: 178px;
+  top: 92px;
+
+  width: 55px;
+  height: 55px;
+
+  pointer-events: none;
+}
+
+.admission-sun img {
+  display: block;
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: contain;
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 900px) {
+
+  .admission-container {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+
+  .admission-character {
+    left: 10px;
+
+    width: 125px;
+    height: 165px;
+  }
+
+  .admission-plane {
+    left: 155px;
+  }
+
+  .admission-sun {
+    right: 80px;
+  }
+
+  .admission-resources {
+    flex-direction: column;
+    gap: 16px;
+
+    margin-top: 36px;
+  }
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 600px) {
+
+  .admission-section {
+    min-height: 480px;
+  }
+
+  .admission-container {
+    padding: 55px 20px 130px;
+  }
+
+  .admission-label {
+    font-size: 11px;
+
+    letter-spacing: 1.5px;
+  }
+
+  .admission-title {
+    font-size: 30px;
+
+    line-height: 38px;
+  }
+
+  .admission-description {
+    margin-top: 15px;
+
+    font-size: 14px;
+
+    line-height: 22px;
+  }
+
+  .admission-desktop-break {
+    display: none;
+  }
+
+  .admission-button {
+    margin-top: 25px;
+
+    width: 215px;
+  }
+
+  .admission-character {
+    left: 5px;
+    bottom: 0;
+
+    width: 105px;
+    height: 140px;
+  }
+
+  .admission-plane {
+    left: 115px;
+    top: 215px;
+
+    width: 55px;
+    height: 50px;
+  }
+
+  .admission-sun {
+    right: 25px;
+    top: 75px;
+
+    width: 45px;
+    height: 45px;
+  }
+}
+
+
+/* =========================================
+   SMALL MOBILE
+========================================= */
+
+@media (max-width: 400px) {
+
+  .admission-section {
+    min-height: 450px;
+  }
+
+  .admission-container {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .admission-title {
+    font-size: 27px;
+
+    line-height: 34px;
+  }
+
+  .admission-description {
+    font-size: 13px;
+  }
+
+  .admission-character {
+    width: 90px;
+    height: 125px;
+  }
+
+  .admission-plane {
+    left: 100px;
+  }
+
+  .admission-sun {
+    right: 15px;
+  }
+}

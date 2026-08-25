@@ -1,0 +1,670 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@600;700;800;900&display=swap');
+/* =========================================
+   COMPACT NAVBAR (Matches Figma proportions)
+========================================= */
+/* .navbar-container, 
+.header-container,
+header {
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 12px 24px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-sizing: border-box;
+} */
+
+/* Logo */
+/* .navbar-logo img,
+.logo img {
+  height: 48px;
+  width: auto;
+  object-fit: contain;
+} */
+
+/* Nav Menu Capsule */
+/* .nav-menu,
+.navbar-links {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  background: #ffffff;
+  border: 1px solid #ededed;
+  padding: 4px 6px 4px 6px;
+  border-radius: 9999px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.04);
+}
+
+.nav-link {
+  font-family: 'Nunito', sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  color: #4b5563;
+  text-decoration: none;
+  padding: 6px 14px;
+  border-radius: 9999px;
+  transition: all 0.2s ease;
+}
+
+.nav-link.active {
+  background: #6b43b5;
+  color: #ffffff;
+} */
+
+/* =========================================
+   HERO SECTION
+========================================= */
+
+.hero-section {
+  position: relative;
+  width: 100%;
+  min-height: 890px;
+
+  background: #ffffff;
+
+  overflow: hidden;
+
+  box-sizing: border-box;
+
+  font-family: 'Nunito', sans-serif;
+}
+
+
+/* =========================================
+   HERO CONTENT
+========================================= */
+
+.hero-content {
+  position: relative;
+
+  width: 100%;
+  max-width: 1102px;
+  height: 967px;
+
+  margin: 0 auto;
+
+  box-sizing: border-box;
+}
+
+
+/* =========================================
+   HERO ROW
+========================================= */
+
+.hero-row {
+  position: relative;
+
+  width: 100%;
+  height: 620px;
+
+  box-sizing: border-box;
+}
+
+
+/* =========================================
+   LEFT WELCOME CARD
+========================================= */
+
+.hero-card {
+  position: absolute;
+
+  margin-top: 10px;
+  margin-left: -100px;
+  width: 682px;
+  height: 680px;
+
+  flex-shrink: 0;
+
+  border-radius: 25px;
+
+  overflow: visible;
+
+  z-index: 3;
+}
+
+
+/* =========================================
+   WELCOME CARD IMAGE
+========================================= */
+
+.card-bg-img {
+  position: absolute;
+
+  left: 0;
+  top: 0;
+
+  width: 100%;
+  height: 100%;
+
+  display: block;
+
+  object-fit: cover;
+
+  border-radius: 25px;
+
+  z-index: 1;
+}
+
+
+/* =========================================
+   REGISTER YOUR INTEREST BUTTON
+========================================= */
+
+.hero-cta-btn {
+  position: absolute;
+
+  left: 230px;
+  bottom: 56px;
+
+  width: 246px;
+  height: 58px;
+
+  padding: 0 10px 0 27px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  box-sizing: border-box;
+
+  background: #8ec33e;
+
+  color: #ffffff;
+
+  border-radius: 999px;
+
+  text-decoration: none;
+
+  font-family: 'Nunito', sans-serif;
+
+  font-size: 14px;
+  font-weight: 700;
+
+  white-space: nowrap;
+
+  box-shadow: 0 4px 10px rgba(142, 195, 62, 0.25);
+
+  z-index: 10;
+
+  transition: transform 0.2s ease;
+}
+
+.hero-cta-btn:hover {
+  transform: translateY(-2px);
+}
+
+
+/* =========================================
+   CTA ARROW
+========================================= */
+
+.cta-arrow {
+  width: 35px;
+  height: 35px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  flex-shrink: 0;
+
+  background: #ffffff;
+
+  color: #8ec33e;
+
+  border-radius: 50%;
+}
+
+.cta-arrow svg {
+  width: 14px;
+  height: 14px;
+}
+
+
+/* =========================================
+   RIGHT SIDE IMAGE COLLAGE
+========================================= */
+
+.hero-collage {
+  position: absolute;
+
+  /* Position relative to .hero-content */
+  top: 80px;
+  right: -100px;
+
+  width: 530px;
+  height: 600px;
+
+  display: block;
+
+  z-index: 5;
+}
+
+
+/* =========================================
+   IMAGE BOX
+========================================= */
+
+.hero-img-box {
+  position: absolute;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  overflow: visible;
+}
+
+.hero-photo {
+  width: 456px;
+  height: 823px;
+
+  display: block;
+
+  object-fit: contain;
+}
+
+
+/* =========================================
+   FLOWER CHILD
+========================================= */
+
+.img-flower {
+  position: absolute;
+
+  left: 0;
+  top: 70px;
+
+  width: 255px;
+  height: 405px;
+
+  z-index: 2;
+}
+
+
+/* =========================================
+   JUMPING + PAINTING IMAGE
+========================================= */
+
+.img-combined {
+  position: absolute;
+
+  right: 0;
+  top: 70px;
+
+  width: 255px;
+  height: 590px;
+
+  z-index: 3;
+}
+
+
+/* =========================================
+   DOODLES
+========================================= */
+
+.doodle {
+  position: absolute;
+
+  pointer-events: none;
+
+  z-index: 10;
+}
+
+
+/* Paper plane */
+.doodle-plane {
+  top: -44px;
+  left: 70px;
+
+  color: #9d83df;
+
+  transform: rotate(7deg);
+}
+
+
+/* Purple star */
+.doodle-star-top {
+  top: -90px;
+  right: 165px;
+
+  color: #b58ee7;
+}
+
+
+/* Yellow star */
+.doodle-star-right {
+  top: 300px;
+  right: -25px;
+
+  color: #f7bb32;
+}
+
+/* =========================================
+   STATISTICS CARD
+========================================= */
+.hero-stats {
+  width: 100%;
+  max-width: 1247px;
+  height: 160px;
+  margin-top: 80px;
+  margin-left: -150px;
+  position: relative;
+  z-index: 10;
+  
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  
+  background: #ffffff;
+  padding: 10px 24px;
+  border-radius: 26px;
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.06);
+  border: 1px solid #f2f2f2;
+}
+
+.stat-box {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.stat-circle {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.stat-circle img {
+  width: 56px;
+  height: 56px;
+  object-fit: contain;
+}
+
+.stat-purple { background: #f3ecfb; }
+.stat-green  { background: #ebf7ec; }
+.stat-pink   { background: #fdeaf1; }
+
+.stat-meta {
+  display: flex;
+  flex-direction: column;
+}
+
+.stat-num {
+  font-size: 32px;
+  font-weight: 900;
+  line-height: 1.1;
+}
+
+.color-purple { color: #6b43b5; }
+.color-green  { color: #43a453; }
+.color-pink   { color: #e92f6b; }
+
+.stat-text {
+  margin-top: 1px;
+  font-size: 7.8px;
+  font-weight: 700;
+  line-height: 1.25;
+  color: #8c93a0;
+  letter-spacing: 0.2px;
+}
+
+.stat-line {
+  width: 1px;
+  height: 70px;
+  background: #ebebeb;
+}
+
+.hero-arabic-button {
+  display: block;
+  width: 343px;
+  height: 42px;
+  margin: 18px auto 0;
+
+  background: #8bcf32;
+  color: #ffffff;
+
+  border: none;
+  border-radius: 6px;
+
+  font-size: 17px;
+  font-weight: 600;
+  font-family: Arial, sans-serif;
+
+  text-align: center;
+  line-height: 42px;
+
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.hero-arabic-button:hover {
+  background: #79bd25;
+  transform: translateY(-2px);
+}
+
+
+/* =========================================
+   RESPONSIVE - HERO SECTION
+   The desktop layout above is fixed-pixel and
+   absolutely-positioned with negative margins
+   (by design, to match Figma). Below 1024px we
+   switch the row to normal static/flex flow so
+   nothing overlaps or gets clipped by
+   .hero-section's overflow: hidden.
+========================================= */
+
+@media (max-width: 1024px) {
+  .hero-section {
+    min-height: auto;
+    padding: 40px 0;
+  }
+
+  .hero-content {
+    height: auto;
+    padding: 0 20px;
+  }
+
+  .hero-row {
+    position: static;
+    height: auto;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 48px;
+  }
+
+  .hero-card {
+    position: relative;
+    margin: 0;
+
+    width: 100%;
+    max-width: 480px;
+    aspect-ratio: 682 / 680;
+    height: auto;
+  }
+
+  .hero-cta-btn {
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 28px;
+
+    width: 90%;
+    max-width: 246px;
+  }
+
+  .hero-cta-btn:hover {
+    transform: translateX(-50%) translateY(-2px);
+  }
+
+  .hero-collage {
+    position: relative;
+    top: 0;
+    right: 0;
+
+    width: 100%;
+    max-width: 480px;
+    height: auto;
+
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 16px;
+  }
+
+  /* Below 1024px the collage becomes a simple flex row instead of
+     absolutely-positioned images - avoids leftover top/left/right
+     offsets from the desktop layout (682px canvas) misplacing
+     things inside a much smaller box. */
+  .hero-img-box {
+    position: static;
+  }
+
+  .img-flower,
+  .img-combined {
+    position: static;
+
+    left: auto;
+    right: auto;
+    top: auto;
+
+    width: 45%;
+    height: auto;
+    max-width: 200px;
+  }
+
+  .hero-photo {
+    width: 100%;
+    height: auto;
+  }
+
+  .doodle-star-right {
+    display: none;
+  }
+
+  .hero-stats {
+    width: 100%;
+    max-width: 640px;
+    height: auto;
+
+    margin: 0 auto;
+    padding: 20px;
+
+    flex-wrap: wrap;
+    row-gap: 16px;
+  }
+
+  .hero-arabic-button {
+    position: static;
+    width: 90%;
+    max-width: 343px;
+    margin: 24px auto 0;
+  }
+}
+
+
+@media (max-width: 768px) {
+  .doodle-plane,
+  .doodle-star-top {
+    display: none;
+  }
+
+  .hero-stats {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .stat-line {
+    width: 60%;
+    height: 1px;
+  }
+
+  .stat-box {
+    justify-content: center;
+    width: 100%;
+  }
+}
+
+
+@media (max-width: 576px) {
+  .hero-card {
+    max-width: 100%;
+  }
+
+  .hero-cta-btn {
+    height: 50px;
+    padding: 0 8px 0 20px;
+    font-size: 13px;
+  }
+
+  .cta-arrow {
+    width: 30px;
+    height: 30px;
+  }
+
+  .img-flower,
+  .img-combined {
+    max-width: 160px;
+  }
+
+  .stat-num {
+    font-size: 26px;
+  }
+
+  .stat-text {
+    font-size: 7.4px;
+  }
+
+  .stat-circle {
+    width: 52px;
+    height: 52px;
+  }
+
+  .stat-circle img {
+    width: 48px;
+    height: 48px;
+  }
+
+  .hero-arabic-button {
+    width: 100%;
+    font-size: 14px;
+    height: 40px;
+    line-height: 40px;
+  }
+}
+
+
+@media (max-width: 380px) {
+  .img-flower,
+  .img-combined {
+    max-width: 130px;
+  }
+
+  .hero-stats {
+    padding: 16px 12px;
+  }
+
+  .stat-num {
+    font-size: 22px;
+  }
+
+  .stat-text {
+    font-size: 6.8px;
+  }
+
+  .stat-circle {
+    width: 46px;
+    height: 46px;
+  }
+
+  .stat-circle img {
+    width: 42px;
+    height: 42px;
+  }
+}

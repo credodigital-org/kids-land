@@ -1,0 +1,546 @@
+/* =========================================
+   ABOUT SECTION
+========================================= */
+
+.about-section {
+  position: relative;
+
+  width: 100%;
+  min-height: 635px;
+
+  background: #F5F2FF;
+
+  overflow: hidden;
+
+  font-family: Arial, Helvetica, sans-serif;
+
+  box-sizing: border-box;
+}
+
+
+/* =========================================
+   MAIN CONTAINER
+========================================= */
+
+.about-container {
+  position: relative;
+
+  width: 100%;
+  max-width: 970px;
+
+  min-height: 665px;
+
+  margin: 0 auto;
+
+  display: grid;
+
+  grid-template-columns: 470px 1fr;
+
+  column-gap: 38px;
+
+  align-items: center;
+
+  box-sizing: border-box;
+
+  padding: 0 15px;
+}
+
+
+/* =========================================
+   LEFT IMAGE AREA
+========================================= */
+
+.about-image-area {
+  position: relative;
+
+  width: 470px;
+  height: 420px;
+
+  display: flex;
+
+  left: -60px;
+  
+
+  align-items: center;
+  justify-content: center;
+
+  box-sizing: border-box;
+}
+
+/* =========================================
+   MAIN IMAGE
+========================================= */
+
+.about-main-image {
+  display: block;
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  object-position: center;
+
+  border-radius: inherit;
+
+  box-sizing: border-box;
+}
+
+
+/* =========================================
+   RIGHT CONTENT
+========================================= */
+
+.about-content {
+  position: relative;
+
+  z-index: 5;
+
+  width: 100%;
+
+  padding-top: 3px;
+
+  box-sizing: border-box;
+}
+
+
+/* =========================================
+   LABEL
+========================================= */
+
+.about-label {
+  display: block;
+
+  margin-bottom: 6px;
+  font-family: Nunito;
+
+  color: #0aa65a;
+
+  font-size: 13px;
+
+  font-weight: 700;
+
+  line-height: 17px;
+
+  letter-spacing: 1.2px;
+}
+
+
+/* =========================================
+   TITLE
+========================================= */
+
+.about-title {
+  margin: 0;
+
+  color: #3d209d;
+
+  font-size: 40px;
+
+  font-weight: 900;
+
+  font-family: Nunito;
+
+  line-height: 37px;
+
+  letter-spacing: -0.8px;
+}
+
+
+/* =========================================
+   DESCRIPTION
+========================================= */
+
+.about-description {
+  max-width: 510px;
+
+  margin: 21px 0 0;
+
+  color: #575264;
+
+  font-size: 13px;
+
+  font-weight: 400;
+
+  line-height: 19px;
+
+  font-family: Nunito;
+
+  letter-spacing: 0.05px;
+}
+
+.about-description + .about-description {
+  margin-top: 14px;
+}
+
+
+/* =========================================
+   FEATURES
+========================================= */
+
+.about-features {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 13px;
+
+  margin-top: 25px;
+}
+
+
+.about-feature {
+  display: flex;
+
+  align-items: center;
+
+  min-height: 18px;
+
+  gap: 12px;
+
+  color: #373348;
+
+  font-size: 12px;
+
+  font-weight: 400;
+
+  line-height: 18px;
+}
+
+
+/* =========================================
+   FEATURE ICON
+========================================= */
+
+.feature-icon {
+  width: 14px;
+  height: 18px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  flex-shrink: 0;
+
+  color: #a44fff;
+}
+
+.feature-icon svg {
+  width: 15px;
+  height: 15px;
+
+  stroke-width: 2;
+}
+
+
+/* =========================================
+   BUTTON
+========================================= */
+
+.about-button {
+  width: 195px;
+  height: 41px;
+
+  margin-top: 30px;
+
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 7px;
+
+  border: 1.8px solid #3d209d;
+
+  border-radius: 22px;
+
+  background: transparent;
+
+  color: #3d209d;
+
+  text-decoration: none;
+
+  font-size: 12px;
+
+  font-weight: 700;
+
+  line-height: 16px;
+
+  box-sizing: border-box;
+
+  transition:
+    background 0.2s ease,
+    color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.about-button svg {
+  width: 15px;
+  height: 15px;
+
+  stroke-width: 2.3;
+}
+
+.about-button:hover {
+  background: #3d209d;
+
+  color: #ffffff;
+
+  transform: translateY(-1px);
+}
+
+
+/* =========================================
+   GARDEN DECORATION
+========================================= */
+
+.about-garden {
+  position: absolute;
+
+  z-index: 2;
+
+  right: -270px;
+  bottom: -27px;
+  
+
+  width: 355px;
+  height: 355px;
+
+  pointer-events: none;
+}
+
+
+.garden {
+  width: 100%;
+  height: 100%;
+}
+
+
+.garden img {
+  display: block;
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: contain;
+
+  object-position: bottom right;
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 1000px) {
+
+  .about-container {
+    max-width: 900px;
+
+    grid-template-columns: 420px 1fr;
+
+    column-gap: 30px;
+  }
+
+  .about-image-area {
+    width: 420px;
+    height: 390px;
+  }
+
+  .about-image-border {
+    width: 405px;
+    height: 375px;
+  }
+
+  .about-title {
+    font-size: 36px;
+    line-height: 35px;
+  }
+
+  .about-garden {
+    width: 210px;
+    height: 210px;
+  }
+}
+
+
+/* =========================================
+   TABLET / SMALL LAPTOP
+========================================= */
+
+@media (max-width: 800px) {
+
+  .about-section {
+    min-height: auto;
+  }
+
+  .about-container {
+    min-height: auto;
+
+    grid-template-columns: 1fr;
+
+    gap: 40px;
+
+    padding: 65px 30px 180px;
+
+    text-align: center;
+  }
+
+  .about-image-area {
+    width: 430px;
+    max-width: 100%;
+
+    height: 380px;
+
+    margin: 0 auto;
+  }
+
+  .about-image-border {
+    width: 410px;
+    max-width: 100%;
+
+    height: 365px;
+  }
+
+  .about-content {
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+  }
+
+  .about-description {
+    max-width: 600px;
+  }
+
+  .about-feature {
+    justify-content: center;
+  }
+
+  .about-garden {
+    width: 220px;
+    height: 220px;
+  }
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 600px) {
+
+  .about-container {
+    padding: 50px 18px 150px;
+
+    gap: 30px;
+  }
+
+  .about-image-area {
+    width: 100%;
+    height: 300px;
+  }
+
+  .about-image-border {
+    width: 330px;
+    max-width: 90%;
+
+    height: 285px;
+  }
+
+  .about-label {
+    font-size: 11px;
+
+    letter-spacing: 1.3px;
+  }
+
+  .about-title {
+    font-size: 30px;
+
+    line-height: 32px;
+
+    letter-spacing: -0.4px;
+  }
+
+  .about-description {
+    margin-top: 17px;
+
+    font-size: 13px;
+
+    line-height: 20px;
+  }
+
+  .about-description + .about-description {
+    margin-top: 12px;
+  }
+
+  .about-features {
+    gap: 12px;
+
+    margin-top: 22px;
+
+    text-align: left;
+  }
+
+  .about-feature {
+    justify-content: flex-start;
+
+    font-size: 12px;
+  }
+
+  .about-button {
+    margin-top: 25px;
+  }
+
+  .about-garden {
+    width: 170px;
+    height: 170px;
+
+    right: -8px;
+  }
+}
+
+
+/* =========================================
+   SMALL MOBILE
+========================================= */
+
+@media (max-width: 400px) {
+
+  .about-container {
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+
+  .about-image-area {
+    height: 260px;
+  }
+
+  .about-image-border {
+    width: 290px;
+    height: 250px;
+  }
+
+  .about-title {
+    font-size: 27px;
+
+    line-height: 30px;
+  }
+
+  .about-description {
+    font-size: 12px;
+
+    line-height: 19px;
+  }
+
+  .about-feature {
+    font-size: 11px;
+  }
+
+  .about-garden {
+    width: 145px;
+    height: 145px;
+  }
+}

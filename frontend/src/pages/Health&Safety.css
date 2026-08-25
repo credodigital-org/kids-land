@@ -1,0 +1,1454 @@
+/* =========================================================
+   KIDS LAND - HEALTH & SAFETY PAGE
+========================================================= */
+
+.health-page {
+  width: 100%;
+  min-height: 100vh;
+  background: #ffffff;
+  color: #222;
+  overflow-x: hidden;
+
+  font-family: "Poppins", sans-serif;
+
+  box-sizing: border-box;
+}
+
+.health-page *,
+.health-page *::before,
+.health-page *::after {
+  box-sizing: border-box;
+}
+
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.health-hero {
+  width: 100%;
+  min-height: 535px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+
+  text-align: center;
+
+  padding: 92px 30px 80px;
+
+  background: #ffffff;
+}
+
+
+/* HERO TITLE */
+
+.health-hero h1 {
+  margin: 0;
+
+  color: #3b1f9e;
+
+  font-family: "Nunito", sans-serif;
+
+  font-size: 60.99px;
+  line-height: 1.15;
+
+  font-weight: 900;
+
+  letter-spacing: -1.5px;
+
+  opacity: 0;
+
+  transform: translateY(35px);
+
+  animation: heroTitle 0.9s cubic-bezier(0.22, 1, 0.36, 1)
+    0.15s forwards;
+}
+
+
+/* HERO DESCRIPTION */
+
+.health-hero p {
+  width: min(720px, 90%);
+
+  margin: 48px auto 0;
+
+  color: #222;
+
+  font-size: 24px;
+  line-height: 1.7;
+
+  font-weight: 300;
+
+  opacity: 0;
+
+  transform: translateY(30px);
+
+  animation: heroText 0.9s cubic-bezier(0.22, 1, 0.36, 1)
+    0.35s forwards;
+}
+
+
+/* =========================================================
+   SAFETY SECTION
+========================================================= */
+
+.safety-section {
+  width: 100%;
+
+  background: #f4ecf8;
+
+  border-radius: 65px 65px 0 0;
+
+  padding: 84px 55px 75px;
+
+  position: relative;
+}
+
+
+/* TOP SOFT EFFECT */
+
+.safety-section::before {
+  content: "";
+
+  position: absolute;
+
+  top: -1px;
+  left: 0;
+
+  width: 100%;
+  height: 70px;
+
+  pointer-events: none;
+
+  border-radius: 65px 65px 0 0;
+
+  background: linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0.15),
+    transparent
+  );
+}
+
+
+/* =========================================================
+   SAFETY GRID
+========================================================= */
+
+.safety-grid {
+  width: 100%;
+  max-width: 1100px;
+
+  margin: 0 auto;
+
+  display: grid;
+
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+
+  gap: 18px 28px;
+}
+
+
+/* =========================================================
+   SAFETY CARDS
+========================================================= */
+
+.safety-card {
+  position: relative;
+
+  min-height: 278px;
+
+  background: #ffffff;
+
+  border-radius: 15px;
+
+  border: 1px solid;
+
+  padding: 36px 40px 30px;
+
+  box-shadow:
+    0 3px 5px rgba(0, 0, 0, 0.06);
+
+  overflow: visible;
+
+  opacity: 0;
+
+  transform:
+    translateY(55px)
+    scale(0.96);
+
+  animation:
+    cardReveal 0.8s cubic-bezier(0.22, 1, 0.36, 1)
+    var(--delay)
+    forwards;
+
+  transition:
+    transform 0.35s ease,
+    box-shadow 0.35s ease,
+    border-color 0.35s ease;
+}
+
+
+/* HOVER */
+
+.safety-card:hover {
+  transform:
+    translateY(-10px)
+    scale(1.015);
+
+  box-shadow:
+    0 18px 35px rgba(70, 35, 140, 0.12);
+
+  z-index: 5;
+}
+
+
+/* CARD TITLE */
+
+.safety-card h2 {
+  margin: 2px 0 38px;
+
+  color: #5b20d9;
+
+  font-size: 20px;
+  font-family: "Plus Jakarta Sans",sans-serif;
+
+  line-height: 1.35;
+
+  font-weight: 700;
+
+  text-align: center;
+
+  transition:
+    transform 0.3s ease,
+    color 0.3s ease;
+}
+
+.safety-card:hover h2 {
+  transform: translateY(-2px);
+}
+
+
+/* CARD TEXT */
+
+.safety-card p {
+  margin: 0;
+
+  color: #575263;
+
+  font-size: 13px;
+  font-family: "Work Sans",sans-serif;
+
+  line-height: 25.6px;
+
+  font-weight: 400;
+}
+
+
+/* =========================================================
+   CARD BORDERS
+========================================================= */
+
+.card-purple {
+  border-color: #d8c6ff;
+}
+
+.card-green {
+  border-color: #b6ec50;
+}
+
+.card-yellow {
+  border-color: #ffe48a;
+}
+
+.card-pink {
+  border-color: #efb7ec;
+}
+
+.card-red {
+  border-color: #ffb9bd;
+}
+
+.card-cyan {
+  border-color: #a9eeee;
+}
+
+.card-beige {
+  border-color: #ddd3cc;
+}
+
+.card-blue {
+  border-color: #a9bcff;
+}
+
+
+/* =========================================================
+   SAFETY ICON
+========================================================= */
+
+.safety-icon {
+  position: absolute;
+
+  top: -10px;
+  left: -10px;
+
+  width: 42px;
+  height: 42px;
+
+  border-radius: 50%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  transition:
+    transform 0.4s cubic-bezier(0.22, 1, 0.36, 1),
+    box-shadow 0.3s ease;
+}
+
+.safety-card:hover .safety-icon {
+  transform:
+    rotate(12deg)
+    scale(1.15);
+
+  box-shadow:
+    0 7px 15px rgba(0, 0, 0, 0.12);
+}
+
+
+/* =========================================================
+   ICON COLORS
+========================================================= */
+
+.icon-purple {
+  background: #e9d8ff;
+  color: #6725dc;
+}
+
+.icon-green {
+  background: #b8f34b;
+  color: #315d00;
+}
+
+.icon-yellow {
+  background: #ffdd62;
+  color: #765e00;
+}
+
+.icon-pink {
+  background: #f39bea;
+  color: #6e1a75;
+}
+
+.icon-red {
+  background: #ffb6b8;
+  color: #a51f27;
+}
+
+.icon-cyan {
+  background: #9bf0ea;
+  color: #007d79;
+}
+
+.icon-beige {
+  background: #ddd3ce;
+  color: #795f59;
+}
+
+.icon-blue {
+  background: #a9bcff;
+  color: #3152ba;
+}
+
+
+/* =========================================================
+   CHILD PROTECTION INTRO
+========================================================= */
+
+.protection-intro {
+  width: 100%;
+
+  min-height: 450px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  text-align: center;
+
+  padding: 125px 30px 70px;
+
+  background: #ffffff;
+}
+
+
+/* TITLE */
+
+.protection-intro h1 {
+  margin: 0;
+
+  color: #3b1f9e;
+
+  font-family: "Nunito", sans-serif;
+
+  font-size: clamp(38px, 4.6vw, 52px);
+
+  line-height: 1.15;
+
+  font-weight: 900;
+
+  letter-spacing: -1.5px;
+}
+
+
+/* TEXT */
+
+.protection-intro p {
+  width: min(770px, 90%);
+
+  margin: 55px auto 0;
+
+  color: #171717;
+
+  font-size: 20px;
+  font-family: Nunito;
+
+  line-height: 2;
+
+  font-weight: 400;
+}
+
+
+/* =========================================================
+   PROTECTION SECTION
+========================================================= */
+
+.protection-section {
+  width: 100%;
+  padding: 0 0 70px;
+}
+
+
+/* =========================================================
+   PROTECTION GRID
+========================================================= */
+
+
+
+.protection-grid {
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+
+  display: grid;
+
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+
+  column-gap: 26px;
+  row-gap: 22px;
+
+  align-items: stretch;
+}
+
+/* =========================================================
+   PROTECTION CARD
+========================================================= */
+
+.protection-card {
+  position: relative;
+
+  width: 100%;
+  min-height: 304px;
+
+  padding: 24px 30px 30px;
+
+  border-radius: 28px;
+
+  box-sizing: border-box;
+
+  overflow: hidden;
+
+  box-shadow:
+    0 3px 5px rgba(0, 0, 0, 0.18);
+
+  opacity: 0;
+
+  transform:
+    translateY(55px)
+    scale(0.97);
+
+  animation:
+    protectionReveal
+    0.85s
+    cubic-bezier(0.22, 1, 0.36, 1)
+    var(--delay)
+    forwards;
+
+  transition:
+    transform 0.4s ease,
+    box-shadow 0.4s ease;
+}
+
+
+/* =========================================================
+   EXACT CARD POSITIONS
+========================================================= */
+
+/* =========================================================
+   EXACT CARD POSITIONS
+========================================================= */
+
+/* TOP LEFT — WIDE */
+.protection-card:nth-child(1) {
+  grid-column: 1 / span 2;
+  width: 100%;
+}
+
+/* TOP RIGHT — NARROW */
+.protection-card:nth-child(2) {
+  grid-column: 3;
+  width: 100%;
+}
+
+/* BOTTOM LEFT — NARROW */
+.protection-card:nth-child(3) {
+  grid-column: 1;
+  width: 100%;
+}
+
+/* BOTTOM RIGHT — WIDE */
+.protection-card:nth-child(4) {
+  grid-column: 2 / span 2;
+  width: 100%;
+}
+
+/* =========================================================
+   CARD HEIGHT
+========================================================= */
+
+.protection-card:nth-child(1),
+.protection-card:nth-child(2) {
+  min-height: 304px;
+}
+
+.protection-card:nth-child(3),
+.protection-card:nth-child(4) {
+  min-height: 304px;
+}
+
+
+/* =========================================================
+   HOVER
+========================================================= */
+
+.protection-card:hover {
+  transform:
+    translateY(-8px)
+    scale(1.012);
+
+  box-shadow:
+    0 16px 32px rgba(65, 40, 100, 0.15);
+
+  z-index: 5;
+}
+
+
+/* =========================================================
+   TITLE
+========================================================= */
+
+.protection-card h2 {
+  position: relative;
+  z-index: 2;
+
+  margin: 50px 0 14px;
+
+  color: #32169a;
+
+  font-family: "Nunito", sans-serif;
+
+  font-size: 23px;
+
+  line-height: 1.35;
+
+  font-weight: 800;
+
+  white-space: normal;
+
+  transition:
+    transform 0.3s ease;
+}
+
+.protection-card:hover h2 {
+  transform: translateX(3px);
+}
+
+
+/* =========================================================
+   TEXT
+========================================================= */
+
+.protection-card p {
+  position: relative;
+  z-index: 2;
+
+  margin: 0;
+
+  color: #161616;
+
+  font-family: "Nunito", sans-serif;
+
+  font-size: 15px;
+
+  line-height: 1.7;
+
+  font-weight: 400;
+}
+
+
+/* =========================================================
+   COLORS
+========================================================= */
+
+.protection-yellow {
+  background: #fffdd7;
+}
+
+.protection-purple {
+  background: #f5d8ff;
+}
+
+.protection-green {
+  background: #dcffcc;
+}
+
+.protection-pink {
+  background: #ffe9ef;
+}
+
+
+/* =========================================================
+   TOP ROUND ICON
+========================================================= */
+
+.protection-icon {
+  position: absolute;
+
+  top: 22px;
+  left: 19px;
+
+  width: 45px;
+  height: 45px;
+
+  border-radius: 50%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  z-index: 3;
+
+  box-shadow:
+    0 2px 4px rgba(0, 0, 0, 0.13);
+
+  transition:
+    transform 0.4s cubic-bezier(0.22, 1, 0.36, 1),
+    box-shadow 0.3s ease;
+}
+
+
+/* =========================================================
+   ICON HOVER
+========================================================= */
+
+.protection-card:hover .protection-icon {
+  transform:
+    rotate(-8deg)
+    scale(1.08);
+
+  box-shadow:
+    0 8px 16px rgba(0, 0, 0, 0.12);
+}
+
+
+/* =========================================================
+   ICON COLORS
+========================================================= */
+
+.protection-yellow .protection-icon {
+  background: #fff078;
+  color: #827100;
+}
+
+.protection-purple .protection-icon {
+  background: #e9a9f5;
+  color: #8526a3;
+}
+
+.protection-green .protection-icon {
+  background: #a9fa88;
+  color: #387625;
+}
+
+.protection-pink .protection-icon {
+  background: #f68cab;
+  color: #a3224c;
+}
+
+
+/* =========================================================
+   LARGE BACKGROUND ICON
+========================================================= */
+
+.background-icon {
+  position: absolute;
+
+  right: 25px;
+  bottom: 18px;
+
+  opacity: 0.065;
+
+  color: #6c48a7;
+
+  z-index: 1;
+
+  pointer-events: none;
+
+  transition:
+    transform 0.8s ease,
+    opacity 0.4s ease;
+}
+
+.protection-card:hover .background-icon {
+  opacity: 0.10;
+
+  transform:
+    scale(1.08)
+    rotate(-5deg);
+}
+
+
+/* =========================================================
+   REVEAL ANIMATION
+========================================================= */
+
+@keyframes protectionReveal {
+
+  0% {
+    opacity: 0;
+
+    transform:
+      translateY(55px)
+      scale(0.97);
+  }
+
+  100% {
+    opacity: 1;
+
+    transform:
+      translateY(0)
+      scale(1);
+  }
+
+}
+
+
+/* =========================================================
+   ANIMATIONS
+========================================================= */
+
+@keyframes heroTitle {
+
+  0% {
+    opacity: 0;
+
+    transform:
+      translateY(35px)
+      scale(0.96);
+  }
+
+  100% {
+    opacity: 1;
+
+    transform:
+      translateY(0)
+      scale(1);
+  }
+}
+
+
+@keyframes heroText {
+
+  0% {
+    opacity: 0;
+
+    transform: translateY(30px);
+  }
+
+  100% {
+    opacity: 1;
+
+    transform: translateY(0);
+  }
+}
+
+
+@keyframes cardReveal {
+
+  0% {
+    opacity: 0;
+
+    transform:
+      translateY(55px)
+      scale(0.96);
+  }
+
+  70% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 1;
+
+    transform:
+      translateY(0)
+      scale(1);
+  }
+}
+
+
+@keyframes protectionReveal {
+
+  0% {
+    opacity: 0;
+
+    transform:
+      translateY(55px)
+      scale(0.97);
+  }
+
+  100% {
+    opacity: 1;
+
+    transform:
+      translateY(0)
+      scale(1);
+  }
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1024px) {
+
+  .health-hero {
+    min-height: 500px;
+
+    padding-top: 80px;
+  }
+
+
+  .health-hero h1 {
+    font-size: 46px;
+  }
+
+
+  .health-hero p {
+    width: 680px;
+
+    margin-top: 38px;
+  }
+
+
+  .safety-section {
+    padding:
+      75px
+      35px
+      65px;
+
+    border-radius:
+      55px
+      55px
+      0
+      0;
+  }
+
+
+  .safety-grid {
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+
+    gap: 20px;
+  }
+
+
+  .safety-card {
+    min-height: 275px;
+
+    padding:
+      36px
+      30px
+      30px;
+  }
+
+
+  .protection-intro {
+    min-height: 420px;
+
+    padding:
+      105px
+      25px
+      65px;
+  }
+
+
+  .protection-section {
+    padding:
+      0
+      45px
+      80px;
+  }
+
+
+  .protection-grid {
+    max-width: 900px;
+
+    gap: 20px;
+  }
+
+
+  .protection-card {
+    min-height: 290px;
+
+    padding:
+      30px
+      25px
+      30px;
+  }
+}
+
+
+/* =========================================================
+   SMALL TABLET / LARGE MOBILE
+========================================================= */
+
+@media (max-width: 768px) {
+
+  .health-hero {
+    min-height: auto;
+
+    padding:
+      70px
+      25px
+      80px;
+  }
+
+
+  .health-hero h1 {
+    font-size: 40px;
+
+    letter-spacing: -1px;
+  }
+
+
+  .health-hero p {
+    width: 100%;
+
+    max-width: 620px;
+
+    margin-top: 30px;
+
+    font-size: 17px;
+
+    line-height: 1.75;
+  }
+
+
+  .safety-section {
+    padding:
+      65px
+      25px
+      65px;
+
+    border-radius:
+      45px
+      45px
+      0
+      0;
+  }
+
+
+  .safety-grid {
+    grid-template-columns: 1fr;
+
+    max-width: 600px;
+
+    gap: 20px;
+  }
+
+
+  .safety-card {
+    min-height: 250px;
+
+    padding:
+      38px
+      32px
+      32px;
+  }
+
+
+  .safety-card h2 {
+    margin-bottom: 28px;
+
+    font-size: 19px;
+  }
+
+
+  .safety-card p {
+    font-size: 13px;
+
+    line-height: 1.9;
+  }
+
+
+  .protection-intro {
+    min-height: auto;
+
+    padding:
+      90px
+      25px
+      75px;
+  }
+
+
+  .protection-intro h1 {
+    font-size: 40px;
+  }
+
+
+  .protection-intro p {
+    width: 100%;
+
+    max-width: 620px;
+
+    margin-top: 35px;
+
+    font-size: 16px;
+
+    line-height: 1.9;
+  }
+
+
+  .protection-section {
+    padding:
+      0
+      25px
+      70px;
+  }
+
+
+  /* .protection-grid {
+    grid-template-columns: 1fr;
+
+    max-width: 600px;
+
+    gap: 22px;
+  }
+
+
+  .protection-card {
+    min-height: 275px;
+
+    padding:
+      30px
+      28px
+      35px;
+  } */
+
+  .protection-grid {
+  grid-template-columns: 1fr;
+
+  max-width: 600px;
+
+  gap: 22px;
+}
+
+.protection-card,
+.protection-card:nth-child(1),
+.protection-card:nth-child(2),
+.protection-card:nth-child(3),
+.protection-card:nth-child(4) {
+  grid-column: 1 !important;
+  width: 100% !important;
+  max-width: 100% !important;
+
+  min-height: 275px;
+
+  padding:
+    30px
+    28px
+    35px;
+}
+
+
+  .protection-card h2 {
+    margin-top: 48px;
+
+    font-size: 20px;
+  }
+
+
+  .protection-card p {
+    font-size: 14px;
+
+    line-height: 1.85;
+  }
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 576px) {
+
+  .health-page {
+    width: 100%;
+  }
+
+
+  /* HERO */
+
+  .health-hero {
+    padding:
+      55px
+      18px
+      65px;
+  }
+
+
+  .health-hero h1 {
+    width: 100%;
+
+    font-size: 32px;
+
+    line-height: 1.2;
+
+    letter-spacing: -0.7px;
+  }
+
+
+  .health-hero p {
+    width: 100%;
+
+    margin-top: 25px;
+
+    font-size: 15px;
+
+    line-height: 1.75;
+  }
+
+
+  /* SAFETY */
+
+  .safety-section {
+    padding:
+      55px
+      16px
+      60px;
+
+    border-radius:
+      35px
+      35px
+      0
+      0;
+  }
+
+
+  .safety-grid {
+    width: 100%;
+
+    gap: 18px;
+  }
+
+
+  .safety-card {
+    width: 100%;
+
+    min-height: 0;
+
+    padding:
+      38px
+      25px
+      28px;
+
+    border-radius: 15px;
+  }
+
+
+  .safety-card h2 {
+    margin:
+      3px 0
+      25px;
+
+    padding:
+      0
+      5px;
+
+    font-size: 18px;
+
+    line-height: 1.4;
+  }
+
+
+  .safety-card p {
+    font-size: 12.5px;
+
+    line-height: 1.9;
+  }
+
+
+  .safety-icon {
+    top: -9px;
+    left: -4px;
+
+    width: 40px;
+    height: 40px;
+  }
+
+
+  /* PROTECTION INTRO */
+
+  .protection-intro {
+    padding:
+      75px
+      18px
+      60px;
+  }
+
+
+  .protection-intro h1 {
+    font-size: 34px;
+
+    letter-spacing: -0.8px;
+  }
+
+
+  .protection-intro p {
+    width: 100%;
+
+    margin-top: 30px;
+
+    font-size: 15px;
+
+    line-height: 1.8;
+  }
+
+
+  /* PROTECTION */
+
+  .protection-section {
+    padding:
+      0
+      16px
+      60px;
+  }
+
+
+  .protection-grid {
+    width: 100%;
+
+    gap: 18px;
+  }
+
+
+  /* .protection-card {
+    width: 100%;
+
+    min-height: 0;
+
+    padding:
+      30px
+      23px
+      30px;
+
+    border-radius: 24px;
+  } */
+
+  .protection-card,
+.protection-card:nth-child(1),
+.protection-card:nth-child(2),
+.protection-card:nth-child(3),
+.protection-card:nth-child(4) {
+  grid-column: 1 !important;
+  width: 100% !important;
+  max-width: 100% !important;
+
+  min-height: 0;
+
+  padding:
+    30px
+    23px
+    30px;
+
+  border-radius: 24px;
+}
+
+
+  .protection-card h2 {
+    margin:
+      48px 0 16px;
+
+    font-size: 19px;
+
+    line-height: 1.4;
+  }
+
+
+  .protection-card p {
+    font-size: 13px;
+
+    line-height: 1.85;
+  }
+
+
+  .protection-icon {
+    top: 18px;
+    left: 18px;
+
+    width: 44px;
+    height: 44px;
+  }
+
+
+  .background-icon {
+    right: 12px;
+    bottom: 12px;
+
+    transform: scale(0.75);
+  }
+}
+
+
+/* =========================================================
+   VERY SMALL PHONES
+========================================================= */
+
+@media (max-width: 380px) {
+
+  .health-hero {
+    padding:
+      45px
+      14px
+      55px;
+  }
+
+
+  .health-hero h1 {
+    font-size: 28px;
+  }
+
+
+  .health-hero p {
+    font-size: 14px;
+  }
+
+
+  .safety-section {
+    padding:
+      45px
+      12px
+      50px;
+  }
+
+
+  .safety-card {
+    padding:
+      35px
+      20px
+      25px;
+  }
+
+
+  .safety-card h2 {
+    font-size: 17px;
+  }
+
+
+  .safety-card p {
+    font-size: 12px;
+  }
+
+
+  .protection-intro {
+    padding:
+      60px
+      14px
+      50px;
+  }
+
+
+  .protection-intro h1 {
+    font-size: 30px;
+  }
+
+
+  .protection-intro p {
+    font-size: 14px;
+  }
+
+
+  .protection-section {
+    padding:
+      0
+      12px
+      50px;
+  }
+
+
+  .protection-card {
+    padding:
+      28px
+      18px
+      28px;
+  }
+
+
+  .protection-card h2 {
+    font-size: 18px;
+  }
+
+
+  .protection-card p {
+    font-size: 12.5px;
+  }
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .health-page *,
+  .health-page *::before,
+  .health-page *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+
+    transition-duration: 0.01ms !important;
+  }
+
+  .health-hero h1,
+  .health-hero p,
+  .safety-card,
+  .protection-card {
+    opacity: 1;
+
+    transform: none;
+  }
+}

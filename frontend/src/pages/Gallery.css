@@ -1,0 +1,608 @@
+/* =========================================
+   GALLERY PAGE
+========================================= */
+
+.gallery-page {
+  width: 100%;
+  min-height: 100vh;
+
+  background: #ffffff;
+
+  color: #222;
+
+  font-family: "Poppins", sans-serif;
+
+  overflow-x: hidden;
+}
+
+.gallery-page h1,
+.gallery-page h2,
+.gallery-page h3,
+.gallery-page p {
+  margin: 0;
+}
+
+
+/* =========================================
+   HERO
+========================================= */
+
+.gallery-hero {
+  width: 100%;
+
+  text-align: center;
+
+  padding-top: 96px;
+  padding-bottom: 55px;
+
+  box-sizing: border-box;
+}
+
+.gallery-hero h1 {
+  color: #39249a;
+
+  font-size: 53px;
+
+  line-height: 1.1;
+
+  font-weight: 700;
+
+  letter-spacing: -1px;
+
+  margin-bottom: 18px;
+}
+
+.gallery-hero p {
+  color: #222;
+
+  font-size: 20px;
+
+  line-height: 1.75;
+
+  font-weight: 400;
+}
+
+
+/* =========================================
+   FILTER
+========================================= */
+
+.gallery-filter-section {
+  width: 100%;
+
+  display: flex;
+  justify-content: center;
+
+  padding-bottom: 100px;
+}
+
+.gallery-filters {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 12px;
+}
+
+.gallery-filter {
+  height: 45px;
+
+  padding: 0 38px;
+
+  border: 1px solid #d8d8d8;
+
+  border-radius: 25px;
+
+  background: #ffffff;
+
+  color: #686868;
+
+  font-family: inherit;
+
+  font-size: 26px;
+
+  font-weight: 400;
+
+  line-height: 1;
+
+  cursor: pointer;
+
+  transition:
+    background 0.2s ease,
+    color 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.gallery-filter:hover {
+  border-color: #39249a;
+
+  color: #39249a;
+}
+
+.gallery-filter.active {
+  background: #39249a;
+
+  border-color: #39249a;
+
+  color: #ffffff;
+
+  padding-left: 39px;
+  padding-right: 39px;
+}
+
+
+/* =========================================
+   GALLERY SECTION
+========================================= */
+
+.gallery-grid-section {
+  width: 100%;
+
+  max-width: 1000px;
+
+  margin: 0 auto;
+
+  padding: 0 20px 80px;
+
+  box-sizing: border-box;
+}
+
+
+/* =========================================
+   MASONRY GALLERY
+========================================= */
+
+.gallery-grid {
+  width: 100%;
+
+  height: 735px;
+
+  position: relative;
+}
+
+
+/* =========================================
+   COMMON IMAGE
+========================================= */
+
+.gallery-item {
+  position: absolute;
+
+  overflow: hidden;
+
+  background: #eee;
+
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+
+  cursor: pointer;
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 100%;
+
+  display: block;
+
+  object-fit: cover;
+
+  transition: transform 0.4s ease;
+}
+
+.gallery-item:hover img {
+  transform: scale(1.04);
+}
+
+
+/* =========================================
+   IMAGE 1
+   TOP LEFT
+========================================= */
+
+.shape-one {
+  width: 350px;
+  height: 185px;
+
+  left: 0;
+  top: 0;
+
+  border-radius:
+    36px
+    36px
+    42px
+    42px;
+}
+
+
+/* =========================================
+   IMAGE 2
+   CENTER CIRCLE
+========================================= */
+
+.shape-two {
+  width: 295px;
+  height: 295px;
+
+  left: 350px;
+  top: 47px;
+
+  border-radius: 50%;
+}
+
+
+/* =========================================
+   IMAGE 3
+   TOP RIGHT
+========================================= */
+
+.shape-three {
+  width: 350px;
+  height: 185px;
+
+  right: 0;
+  top: 0;
+
+  border-radius:
+    36px
+    36px
+    40px
+    40px;
+}
+
+
+/* =========================================
+   IMAGE 4
+   LEFT MIDDLE
+========================================= */
+
+.shape-four {
+  width: 350px;
+  height: 185px;
+
+  left: 0;
+  top: 218px;
+
+  border-radius:
+    32px
+    32px
+    40px
+    40px;
+}
+
+
+/* =========================================
+   IMAGE 5
+   RIGHT MIDDLE
+========================================= */
+
+.shape-five {
+  width: 350px;
+  height: 185px;
+
+  right: 0;
+  top: 218px;
+
+  border-radius:
+    35px
+    35px
+    42px
+    42px;
+}
+
+
+/* =========================================
+   IMAGE 6
+   BOTTOM LEFT
+========================================= */
+
+.shape-six {
+  width: 300px;
+  height: 320px;
+
+  left: 0;
+  top: 438px;
+
+  border-radius:
+    75px
+    55px
+    65px
+    75px;
+}
+
+
+/* =========================================
+   IMAGE 7
+   CENTER MIDDLE
+========================================= */
+
+.shape-seven {
+  width: 380px;
+  height: 190px;
+
+  left: 315px;
+  top: 340px;
+
+  border-radius:
+    55px
+    55px
+    40px
+    55px;
+}
+
+
+/* =========================================
+   IMAGE 8
+   CENTER BOTTOM
+========================================= */
+
+.shape-eight {
+  width: 365px;
+  height: 190px;
+
+  left: 315px;
+  top: 535px;
+
+  border-radius:
+    65px
+    45px
+    55px
+    45px;
+}
+
+
+/* =========================================
+   IMAGE 9
+   RIGHT BOTTOM
+========================================= */
+
+.shape-nine {
+  width: 300px;
+  height: 320px;
+
+  right: 0;
+  top: 438px;
+
+  border-radius:
+    65px
+    70px
+    70px
+    65px;
+}
+
+
+/* =========================================
+   LOAD MORE
+========================================= */
+
+.load-more-btn {
+  width: 315px;
+  height: 92px;
+
+  margin: 65px auto 0;
+
+  border: 1.5px solid #39249a;
+
+  border-radius: 50px;
+
+  background: #ffffff;
+
+  color: #39249a;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 28px;
+
+  font-family: inherit;
+
+  font-size: 29px;
+
+  font-weight: 650;
+
+  cursor: pointer;
+
+  box-shadow:
+    0 3px 3px rgba(0, 0, 0, 0.22);
+
+  transition:
+    background 0.2s ease,
+    color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.load-more-btn:hover {
+  background: #39249a;
+
+  color: #ffffff;
+
+  transform: translateY(-2px);
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 1000px) {
+
+  .gallery-hero {
+    padding-top: 70px;
+  }
+
+  .gallery-hero h1 {
+    font-size: 45px;
+  }
+
+  .gallery-hero p {
+    font-size: 17px;
+  }
+
+  .gallery-grid-section {
+    max-width: 850px;
+  }
+
+  .gallery-grid {
+    height: 650px;
+  }
+
+  .shape-one,
+  .shape-three,
+  .shape-four,
+  .shape-five {
+    width: 290px;
+    height: 155px;
+  }
+
+  .shape-two {
+    width: 245px;
+    height: 245px;
+    left: 302px;
+  }
+
+  .shape-four,
+  .shape-five {
+    top: 185px;
+  }
+
+  .shape-six,
+  .shape-nine {
+    width: 250px;
+    height: 280px;
+    top: 370px;
+  }
+
+  .shape-seven {
+    width: 320px;
+    height: 160px;
+    left: 265px;
+    top: 290px;
+  }
+
+  .shape-eight {
+    width: 320px;
+    height: 160px;
+    left: 265px;
+    top: 450px;
+  }
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 700px) {
+
+  .gallery-hero {
+    padding:
+      50px
+      20px
+      35px;
+  }
+
+  .gallery-hero h1 {
+    font-size: 38px;
+  }
+
+  .gallery-hero p {
+    font-size: 15px;
+    line-height: 1.6;
+  }
+
+  .desktop-break {
+    display: none;
+  }
+
+  .gallery-filter-section {
+    padding-bottom: 55px;
+    overflow-x: auto;
+  }
+
+  .gallery-filters {
+    width: max-content;
+    padding: 0 20px;
+  }
+
+  .gallery-filter {
+    height: 42px;
+
+    padding: 0 25px;
+
+    font-size: 19px;
+  }
+
+  .gallery-filter.active {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+
+  .gallery-grid-section {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .gallery-grid {
+    height: auto;
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 12px;
+
+    position: static;
+  }
+
+  .gallery-item {
+    position: static !important;
+
+    width: 100% !important;
+
+    height: 180px !important;
+
+    border-radius: 25px !important;
+  }
+
+  .shape-two {
+    border-radius: 50% !important;
+  }
+
+  .shape-six,
+  .shape-nine {
+    height: 230px !important;
+  }
+
+  .load-more-btn {
+    width: 260px;
+
+    height: 70px;
+
+    margin-top: 45px;
+
+    font-size: 23px;
+
+    gap: 18px;
+  }
+}
+
+
+@media (max-width: 450px) {
+
+  .gallery-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .gallery-item {
+    height: 220px !important;
+  }
+
+  .shape-two {
+    border-radius: 40px !important;
+  }
+}

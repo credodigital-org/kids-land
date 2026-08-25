@@ -1,0 +1,323 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@500;600;700;800;900&display=swap');
+
+/* =========================================
+   SOCIAL SECTION
+========================================= */
+
+.social-section {
+  width: 100%;
+  background: #f5f1ff;
+  padding: 64px 20px 69px;
+  box-sizing: border-box;
+}
+
+.social-container {
+  width: 100%;
+  max-width: 1180px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+
+/* =========================================
+   HEADING
+========================================= */
+
+.social-heading {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.social-heading h2 {
+  margin: 0;
+
+  color: #3b209b;
+  font-family: "Nunito", Arial, sans-serif;
+  font-size: 40px;
+  font-weight: 900;
+  line-height: 46px;
+  letter-spacing: -0.5px;
+}
+
+.social-heading-image {
+  position: absolute;
+
+  width: 48px;
+  height: 48px;
+
+  object-fit: contain;
+
+  top: -22px;
+  left: calc(50% + 165px);
+
+  display: block;
+}
+
+.social-heading p {
+  margin: 4px 0 0;
+
+  color: #4d4a5a;
+  font-family: "Nunito", Arial, sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 22px;
+}
+
+
+/* =========================================
+   SOCIAL LINKS
+========================================= */
+
+.social-links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+
+  gap: 16px;
+
+  margin-top: 41px;
+}
+
+
+/* =========================================
+   COMPACT SOCIAL BUTTON
+========================================= */
+
+.social-button {
+  width: 180px;
+  height: 58px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 11px;
+
+  padding: 0 20px;
+
+  background: #ffffff;
+
+  border-radius: 30px;
+
+  text-decoration: none;
+
+  font-family: "Nunito", Arial, sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+
+  box-shadow: 0 7px 20px rgba(72, 47, 130, 0.08);
+
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.social-button:hover {
+  transform: translateY(-3px);
+
+  box-shadow: 0 11px 25px rgba(72, 47, 130, 0.15);
+}
+
+
+/* =========================================
+   ICON
+========================================= */
+
+.social-button img {
+  width: 30px;
+  height: 30px;
+
+  object-fit: contain;
+
+  display: block;
+}
+
+
+/* Facebook / WhatsApp / Snapchat etc.
+   Some original images are larger */
+.facebook-button img {
+  width: 32px;
+  height: 32px;
+}
+
+.whatsapp-button img {
+  width: 31px;
+  height: 31px;
+}
+
+.snapchat-button img {
+  width: 31px;
+  height: 31px;
+}
+
+.tiktok-button img {
+  width: 30px;
+  height: 30px;
+}
+
+.youtube-button img {
+  width: 32px;
+  height: 32px;
+}
+
+
+/* =========================================
+   PLATFORM COLORS
+========================================= */
+
+.instagram-button span {
+  color: #6334c9;
+}
+
+.facebook-button span {
+  color: #1877f2;
+}
+
+.whatsapp-button span {
+  color: #25a95a;
+}
+
+.snapchat-button span {
+  color: #d0aa00;
+}
+
+.tiktok-button span {
+  color: #171717;
+}
+
+.youtube-button span {
+  color: #e32626;
+}
+
+
+/* =========================================
+   PLATFORM HOVER
+========================================= */
+
+.instagram-button:hover {
+  box-shadow: 0 10px 25px rgba(99, 52, 201, 0.18);
+}
+
+.facebook-button:hover {
+  box-shadow: 0 10px 25px rgba(24, 119, 242, 0.18);
+}
+
+.whatsapp-button:hover {
+  box-shadow: 0 10px 25px rgba(37, 169, 90, 0.18);
+}
+
+.snapchat-button:hover {
+  box-shadow: 0 10px 25px rgba(208, 170, 0, 0.18);
+}
+
+.tiktok-button:hover {
+  box-shadow: 0 10px 25px rgba(23, 23, 23, 0.16);
+}
+
+.youtube-button:hover {
+  box-shadow: 0 10px 25px rgba(227, 38, 38, 0.18);
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 900px) {
+
+  .social-links {
+    max-width: 620px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .social-button {
+    width: 180px;
+  }
+
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 600px) {
+
+  .social-section {
+    padding: 50px 20px 55px;
+  }
+
+  .social-heading h2 {
+    font-size: 34px;
+    line-height: 40px;
+  }
+
+  .social-heading-image {
+    width: 42px;
+    height: 42px;
+
+    top: -18px;
+    left: calc(50% + 135px);
+  }
+
+  .social-heading p {
+    font-size: 14px;
+    line-height: 20px;
+  }
+
+  .social-links {
+    flex-direction: column;
+
+    gap: 14px;
+
+    margin-top: 30px;
+  }
+
+  .social-button {
+    width: 270px;
+    height: 58px;
+  }
+
+}
+
+
+/* =========================================
+   SMALL MOBILE
+========================================= */
+
+@media (max-width: 400px) {
+
+  .social-heading h2 {
+    font-size: 29px;
+    line-height: 35px;
+  }
+
+  .social-heading-image {
+    width: 36px;
+    height: 36px;
+
+    top: -14px;
+    left: calc(50% + 115px);
+  }
+
+  .social-heading p {
+    font-size: 13px;
+  }
+
+  .social-button {
+    width: 250px;
+    height: 55px;
+
+    font-size: 15px;
+  }
+
+  .social-button img {
+    width: 27px;
+    height: 27px;
+  }
+
+}
