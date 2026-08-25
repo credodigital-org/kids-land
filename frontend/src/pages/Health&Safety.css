@@ -1098,6 +1098,7 @@
     margin-top: 48px;
 
     font-size: 20px;
+    text-align: center;
   }
 
 
@@ -1305,6 +1306,7 @@
     font-size: 19px;
 
     line-height: 1.4;
+    text-align: center;
   }
 
 
@@ -1451,4 +1453,1065 @@
 
     transform: none;
   }
+}
+
+
+
+
+/* =========================================================
+   KIDS LAND - FULL PAGE ANIMATION SYSTEM
+========================================================= */
+
+/* ---------------------------------------------------------
+   PAGE LOADING
+--------------------------------------------------------- */
+
+.health-page {
+  animation: pageLoad 0.9s ease-out both;
+}
+
+@keyframes pageLoad {
+  0% {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+/* =========================================================
+   HERO ANIMATIONS
+========================================================= */
+
+.health-hero {
+  position: relative;
+  overflow: hidden;
+}
+
+/* Soft moving light */
+
+.health-hero::before {
+  content: "";
+
+  position: absolute;
+
+  width: 300px;
+  height: 300px;
+
+  top: 20px;
+  left: -150px;
+
+  border-radius: 50%;
+
+  background: rgba(91, 32, 217, 0.035);
+
+  filter: blur(20px);
+
+  pointer-events: none;
+
+  animation: heroGlow 7s ease-in-out infinite;
+}
+
+.health-hero::after {
+  content: "";
+
+  position: absolute;
+
+  width: 250px;
+  height: 250px;
+
+  right: -120px;
+  bottom: 20px;
+
+  border-radius: 50%;
+
+  background: rgba(239, 183, 236, 0.08);
+
+  filter: blur(25px);
+
+  pointer-events: none;
+
+  animation: heroGlowRight 8s ease-in-out infinite;
+}
+
+@keyframes heroGlow {
+  0%,
+  100% {
+    transform: translate(0, 0) scale(1);
+  }
+
+  50% {
+    transform: translate(70px, 30px) scale(1.15);
+  }
+}
+
+@keyframes heroGlowRight {
+  0%,
+  100% {
+    transform: translate(0, 0) scale(1);
+  }
+
+  50% {
+    transform: translate(-50px, -30px) scale(1.12);
+  }
+}
+
+
+/* ---------------------------------------------------------
+   HERO TITLE
+--------------------------------------------------------- */
+
+.health-hero h1 {
+  position: relative;
+  z-index: 2;
+
+  animation:
+    heroTitleAdvanced
+    1s
+    cubic-bezier(0.22, 1, 0.36, 1)
+    0.15s
+    both;
+}
+
+@keyframes heroTitleAdvanced {
+  0% {
+    opacity: 0;
+
+    transform:
+      translateY(55px)
+      scale(0.88)
+      rotateX(20deg);
+
+    filter: blur(8px);
+  }
+
+  60% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 1;
+
+    transform:
+      translateY(0)
+      scale(1)
+      rotateX(0);
+
+    filter: blur(0);
+  }
+}
+
+
+/* ---------------------------------------------------------
+   HERO DESCRIPTION
+--------------------------------------------------------- */
+
+.health-hero p {
+  position: relative;
+  z-index: 2;
+
+  animation:
+    heroParagraphAdvanced
+    1s
+    cubic-bezier(0.22, 1, 0.36, 1)
+    0.45s
+    both;
+}
+
+@keyframes heroParagraphAdvanced {
+  0% {
+    opacity: 0;
+
+    transform:
+      translateY(40px)
+      scale(0.96);
+
+    filter: blur(6px);
+  }
+
+  100% {
+    opacity: 1;
+
+    transform:
+      translateY(0)
+      scale(1);
+
+    filter: blur(0);
+  }
+}
+
+
+/* =========================================================
+   SAFETY SECTION
+========================================================= */
+
+.safety-section {
+  animation:
+    sectionFadeIn
+    1s
+    ease-out
+    0.2s
+    both;
+}
+
+@keyframes sectionFadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+/* =========================================================
+   SAFETY CARDS - STAGGER
+========================================================= */
+
+.safety-card {
+  animation:
+    safetyCardEntrance
+    0.85s
+    cubic-bezier(0.22, 1, 0.36, 1)
+    var(--delay, 0s)
+    both;
+}
+
+
+/* Individual delays */
+
+.safety-card:nth-child(1) {
+  --delay: 0.15s;
+}
+
+.safety-card:nth-child(2) {
+  --delay: 0.28s;
+}
+
+.safety-card:nth-child(3) {
+  --delay: 0.41s;
+}
+
+.safety-card:nth-child(4) {
+  --delay: 0.54s;
+}
+
+.safety-card:nth-child(5) {
+  --delay: 0.67s;
+}
+
+.safety-card:nth-child(6) {
+  --delay: 0.80s;
+}
+
+.safety-card:nth-child(7) {
+  --delay: 0.93s;
+}
+
+.safety-card:nth-child(8) {
+  --delay: 1.06s;
+}
+
+
+@keyframes safetyCardEntrance {
+  0% {
+    opacity: 0;
+
+    transform:
+      translateY(80px)
+      scale(0.88)
+      rotateX(10deg);
+
+    filter: blur(5px);
+  }
+
+  65% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 1;
+
+    transform:
+      translateY(0)
+      scale(1)
+      rotateX(0);
+
+    filter: blur(0);
+  }
+}
+
+
+/* =========================================================
+   SAFETY ICON ANIMATION
+========================================================= */
+
+.safety-icon {
+  animation:
+    safetyIconFloat
+    3.5s
+    ease-in-out
+    infinite;
+}
+
+@keyframes safetyIconFloat {
+  0%,
+  100% {
+    transform: translateY(0) rotate(0deg);
+  }
+
+  50% {
+    transform: translateY(-5px) rotate(3deg);
+  }
+}
+
+
+/* Hover overrides float */
+
+.safety-card:hover .safety-icon {
+  animation: none;
+
+  transform:
+    rotate(12deg)
+    scale(1.15);
+}
+
+
+/* =========================================================
+   SAFETY CARD SHINE
+========================================================= */
+
+.safety-card::after {
+  content: "";
+
+  position: absolute;
+
+  top: 0;
+  left: -120%;
+
+  width: 70%;
+  height: 100%;
+
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.45),
+    transparent
+  );
+
+  transform: skewX(-20deg);
+
+  pointer-events: none;
+
+  transition: left 0.7s ease;
+}
+
+.safety-card:hover::after {
+  left: 140%;
+}
+
+
+/* =========================================================
+   SAFETY TITLE ANIMATION
+========================================================= */
+
+.safety-card h2 {
+  animation:
+    cardTitleReveal
+    0.7s
+    ease
+    var(--delay, 0s)
+    both;
+}
+
+@keyframes cardTitleReveal {
+  0% {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+/* =========================================================
+   SAFETY TEXT
+========================================================= */
+
+.safety-card p {
+  animation:
+    cardTextReveal
+    0.8s
+    ease
+    calc(var(--delay, 0s) + 0.15s)
+    both;
+}
+
+@keyframes cardTextReveal {
+  0% {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+/* =========================================================
+   CHILD PROTECTION INTRO
+========================================================= */
+
+.protection-intro {
+  position: relative;
+  overflow: hidden;
+
+  animation:
+    protectionIntroReveal
+    1s
+    ease-out
+    both;
+}
+
+@keyframes protectionIntroReveal {
+  0% {
+    opacity: 0;
+    transform: translateY(45px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+/* Decorative glow */
+
+.protection-intro::before {
+  content: "";
+
+  position: absolute;
+
+  width: 250px;
+  height: 250px;
+
+  left: -130px;
+  top: 60px;
+
+  border-radius: 50%;
+
+  background: rgba(91, 32, 217, 0.035);
+
+  filter: blur(20px);
+
+  pointer-events: none;
+
+  animation:
+    protectionGlow
+    7s
+    ease-in-out
+    infinite;
+}
+
+.protection-intro::after {
+  content: "";
+
+  position: absolute;
+
+  width: 220px;
+  height: 220px;
+
+  right: -100px;
+  bottom: 20px;
+
+  border-radius: 50%;
+
+  background: rgba(246, 140, 171, 0.07);
+
+  filter: blur(25px);
+
+  pointer-events: none;
+
+  animation:
+    protectionGlowRight
+    8s
+    ease-in-out
+    infinite;
+}
+
+@keyframes protectionGlow {
+  0%,
+  100% {
+    transform: translate(0, 0);
+  }
+
+  50% {
+    transform: translate(80px, 20px);
+  }
+}
+
+@keyframes protectionGlowRight {
+  0%,
+  100% {
+    transform: translate(0, 0);
+  }
+
+  50% {
+    transform: translate(-60px, -20px);
+  }
+}
+
+
+/* =========================================================
+   PROTECTION TITLE
+========================================================= */
+
+.protection-intro h1 {
+  position: relative;
+  z-index: 2;
+
+  animation:
+    protectionTitle
+    1s
+    cubic-bezier(0.22, 1, 0.36, 1)
+    0.2s
+    both;
+}
+
+@keyframes protectionTitle {
+  0% {
+    opacity: 0;
+
+    transform:
+      translateY(50px)
+      scale(0.9);
+
+    filter: blur(7px);
+  }
+
+  100% {
+    opacity: 1;
+
+    transform:
+      translateY(0)
+      scale(1);
+
+    filter: blur(0);
+  }
+}
+
+
+/* =========================================================
+   PROTECTION INTRO TEXT
+========================================================= */
+
+.protection-intro p {
+  position: relative;
+  z-index: 2;
+
+  animation:
+    protectionParagraph
+    1s
+    ease
+    0.45s
+    both;
+}
+
+@keyframes protectionParagraph {
+  0% {
+    opacity: 0;
+    transform: translateY(35px);
+    filter: blur(5px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+    filter: blur(0);
+  }
+}
+
+
+/* =========================================================
+   PROTECTION GRID
+========================================================= */
+
+.protection-section {
+  position: relative;
+}
+
+.protection-grid {
+  perspective: 1200px;
+}
+
+
+/* =========================================================
+   PROTECTION CARD STAGGER
+========================================================= */
+
+.protection-card {
+  animation:
+    protectionCardAdvanced
+    0.95s
+    cubic-bezier(0.22, 1, 0.36, 1)
+    var(--protection-delay, 0s)
+    both;
+}
+
+
+.protection-card:nth-child(1) {
+  --protection-delay: 0.15s;
+}
+
+.protection-card:nth-child(2) {
+  --protection-delay: 0.30s;
+}
+
+.protection-card:nth-child(3) {
+  --protection-delay: 0.45s;
+}
+
+.protection-card:nth-child(4) {
+  --protection-delay: 0.60s;
+}
+
+
+@keyframes protectionCardAdvanced {
+  0% {
+    opacity: 0;
+
+    transform:
+      translateY(90px)
+      scale(0.88)
+      rotateX(12deg);
+
+    filter: blur(7px);
+  }
+
+  60% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 1;
+
+    transform:
+      translateY(0)
+      scale(1)
+      rotateX(0);
+
+    filter: blur(0);
+  }
+}
+
+
+/* =========================================================
+   PROTECTION ICON FLOAT
+========================================================= */
+
+.protection-icon {
+  animation:
+    protectionIconFloat
+    3.8s
+    ease-in-out
+    infinite;
+}
+
+@keyframes protectionIconFloat {
+  0%,
+  100% {
+    transform: translateY(0) rotate(0deg);
+  }
+
+  50% {
+    transform: translateY(-6px) rotate(-4deg);
+  }
+}
+
+.protection-card:hover .protection-icon {
+  animation: none;
+
+  transform:
+    rotate(-8deg)
+    scale(1.08);
+}
+
+
+/* =========================================================
+   PROTECTION CARD SHINE
+========================================================= */
+
+.protection-card::after {
+  content: "";
+
+  position: absolute;
+
+  top: 0;
+  left: -120%;
+
+  width: 65%;
+  height: 100%;
+
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.38),
+    transparent
+  );
+
+  transform: skewX(-20deg);
+
+  pointer-events: none;
+
+  transition: left 0.8s ease;
+}
+
+.protection-card:hover::after {
+  left: 140%;
+}
+
+
+/* =========================================================
+   BACKGROUND ICON ANIMATION
+========================================================= */
+
+.background-icon {
+  animation:
+    backgroundIconFloat
+    5s
+    ease-in-out
+    infinite;
+}
+
+@keyframes backgroundIconFloat {
+  0%,
+  100% {
+    transform:
+      translate(0, 0)
+      rotate(0deg)
+      scale(1);
+  }
+
+  50% {
+    transform:
+      translate(-8px, -10px)
+      rotate(3deg)
+      scale(1.04);
+  }
+}
+
+.protection-card:hover .background-icon {
+  animation: none;
+
+  transform:
+    scale(1.12)
+    rotate(-5deg);
+}
+
+
+/* =========================================================
+   PROTECTION TITLE / TEXT
+========================================================= */
+
+.protection-card h2 {
+  animation:
+    protectionCardTitle
+    0.75s
+    ease
+    calc(var(--protection-delay, 0s) + 0.15s)
+    both;
+}
+
+@keyframes protectionCardTitle {
+  0% {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+.protection-card p {
+  animation:
+    protectionCardText
+    0.8s
+    ease
+    calc(var(--protection-delay, 0s) + 0.3s)
+    both;
+}
+
+@keyframes protectionCardText {
+  0% {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+/* =========================================================
+   GENERAL HOVER
+========================================================= */
+
+.safety-card,
+.protection-card {
+  will-change: transform;
+}
+
+.safety-card:hover,
+.protection-card:hover {
+  cursor: pointer;
+}
+
+
+/* =========================================================
+   MOBILE ANIMATION OPTIMIZATION
+========================================================= */
+
+@media (max-width: 768px) {
+
+  .health-hero h1 {
+    animation-duration: 0.8s;
+  }
+
+  .health-hero p {
+    animation-duration: 0.8s;
+  }
+
+  .safety-card {
+    animation-duration: 0.7s;
+  }
+
+  .protection-card {
+    animation-duration: 0.75s;
+  }
+
+  .safety-card:hover {
+    transform:
+      translateY(-6px)
+      scale(1.01);
+  }
+
+  .protection-card:hover {
+    transform:
+      translateY(-6px)
+      scale(1.01);
+  }
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 576px) {
+
+  .health-hero::before,
+  .health-hero::after,
+  .protection-intro::before,
+  .protection-intro::after {
+    opacity: 0.6;
+  }
+
+  .safety-card::after,
+  .protection-card::after {
+    display: none;
+  }
+
+  .safety-icon {
+    animation-duration: 4s;
+  }
+
+  .protection-icon {
+    animation-duration: 4.2s;
+  }
+
+}
+
+
+/* =========================================================
+   VERY SMALL PHONES
+========================================================= */
+
+@media (max-width: 380px) {
+
+  .safety-card,
+  .protection-card {
+    animation-duration: 0.6s;
+  }
+
+  .safety-icon,
+  .protection-icon {
+    animation-duration: 4.5s;
+  }
+
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .health-page,
+  .health-page *,
+  .health-page *::before,
+  .health-page *::after {
+    animation: none !important;
+
+    transition: none !important;
+
+    scroll-behavior: auto !important;
+  }
+
+  .health-hero h1,
+  .health-hero p,
+  .safety-card,
+  .safety-card h2,
+  .safety-card p,
+  .protection-intro,
+  .protection-intro h1,
+  .protection-intro p,
+  .protection-card,
+  .protection-card h2,
+  .protection-card p {
+    opacity: 1 !important;
+
+    transform: none !important;
+
+    filter: none !important;
+  }
+}
+
+
+/* =========================================================
+   SCROLL REVEAL SYSTEM
+========================================================= */
+
+/* Default reveal */
+
+.scroll-reveal {
+  opacity: 0;
+
+  transform:
+    translateY(70px)
+    scale(0.97);
+
+  transition:
+    opacity 0.9s cubic-bezier(0.22, 1, 0.36, 1),
+    transform 0.9s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+
+/* Visible */
+
+.scroll-reveal.is-visible {
+  opacity: 1;
+
+  transform:
+    translateY(0)
+    scale(1);
+}
+
+
+/* =========================================================
+   SCALE REVEAL
+========================================================= */
+
+.scroll-reveal-scale {
+  opacity: 0;
+
+  transform:
+    translateY(70px)
+    scale(0.90);
+
+  transition:
+    opacity 0.8s cubic-bezier(0.22, 1, 0.36, 1),
+    transform 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+
+/* Visible */
+
+.scroll-reveal-scale.is-visible {
+  opacity: 1;
+
+  transform:
+    translateY(0)
+    scale(1);
+
+  transition-delay: var(--delay, 0s);
+}
+
+
+/* =========================================================
+   LEFT REVEAL
+========================================================= */
+
+.scroll-reveal-left {
+  opacity: 0;
+
+  transform:
+    translateX(-90px)
+    scale(0.97);
+
+  transition:
+    opacity 0.9s ease,
+    transform 0.9s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.scroll-reveal-left.is-visible {
+  opacity: 1;
+
+  transform:
+    translateX(0)
+    scale(1);
+}
+
+
+/* =========================================================
+   RIGHT REVEAL
+========================================================= */
+
+.scroll-reveal-right {
+  opacity: 0;
+
+  transform:
+    translateX(90px)
+    scale(0.97);
+
+  transition:
+    opacity 0.9s ease,
+    transform 0.9s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.scroll-reveal-right.is-visible {
+  opacity: 1;
+
+  transform:
+    translateX(0)
+    scale(1);
 }

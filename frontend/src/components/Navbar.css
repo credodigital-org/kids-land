@@ -1074,3 +1074,72 @@ body {
 *::after {
   box-sizing: border-box;
 }
+
+/* ========================================================= 1. NAVBAR SOFT FLOAT ========================================================= */ 
+.site-header { 
+  animation: 
+    navbarFadeIn 0.8s ease both, 
+    navbarSoftFloat 6s ease-in-out 1s infinite; 
+}
+@keyframes navbarSoftFloat { 
+  0%, 100% { transform: translateY(0); 
+  } 
+  50% { 
+    transform: translateY(-3px); 
+  } 
+} 
+/* ========================================================= 2. LOGO FLOATING ========================================================= */ 
+.kids-logo { 
+  animation: 
+  logoFloating 4s ease-in-out 1s infinite; 
+} 
+@keyframes logoFloating { 
+  0%, 100% { transform: translateY(0) rotate(0deg); 
+  } 
+  50% { 
+    transform: 
+    translateY(-5px) rotate(-1deg); 
+  } 
+} 
+/* ========================================================= 3. LOGO HOVER BOUNCE ========================================================= */ 
+.kids-logo:hover { 
+  animation: 
+  logoBounce 0.65s ease; 
+} @keyframes logoBounce { 
+  0% { 
+    transform: scale(1); 
+  } 
+  35% { 
+    transform: scale(1.08) rotate(2deg); 
+  } 
+  60% { 
+    transform: scale(1.03) rotate(-1deg);
+   } 
+   100% { 
+    transform: scale(1.05) rotate(0deg); 
+  } 
+} 
+/* ========================================================= 4. LOGO IMAGE GLOW ========================================================= */ 
+.logo-image:hover { 
+  filter: 
+    brightness(1.05) 
+    drop-shadow(0 6px 12px rgba(124, 58, 237, 0.15)); 
+  transform: scale(1.07); 
+} 
+/* ========================================================= 5. NAVIGATION BREATHING SHADOW ========================================================= */ 
+.main-navigation { 
+  animation: 
+  navigationAppear 0.9s ease 0.25s both, 
+  navigationBreathing 5s ease-in-out 1.2s infinite; 
+} 
+@keyframes navigationBreathing { 
+  0%,
+  100% { 
+    box-shadow: 
+    0 2px 8px rgba(0, 0, 0, 0.04); 
+  } 
+  50% { 
+    box-shadow: 
+    0 8px 28px rgba(124, 58, 237, 0.12); 
+  } 
+}

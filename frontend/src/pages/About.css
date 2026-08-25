@@ -127,9 +127,9 @@
   width: max-content;
   max-width: 100%;
   display: flex;
-  gap: 20px;
-  padding-left: 50px;
-  padding-right: 50px;
+  gap: 30px;
+  padding-left: 70px;
+  padding-right: 60px;
 
   overflow-x: auto;
   -webkit-overflow-scrolling: touch;
@@ -283,7 +283,7 @@
 }
 
 .curriculum-grid {
-  max-width: 1025px;
+  max-width: 1325px;
   margin: 0 auto;
 
   display: grid;
@@ -346,7 +346,7 @@
 }
 
 .team-grid {
-  max-width: 815px;
+  max-width: 1015px;
   margin: 0 auto;
 
   display: grid;
@@ -523,7 +523,7 @@
 }
 
 .services-grid {
-  max-width: 1050px;
+  max-width: 1250px;
 
   margin: 0 auto;
 
@@ -574,7 +574,7 @@
 }
 
 .facilities-grid {
-  max-width: 1015px;
+  max-width: 1315px;
 
   margin: 0 auto;
 
@@ -584,20 +584,20 @@
 }
 
 .facility-card {
-  min-height: 275px;
+  min-height: 375px;
 
   padding: 16px;
 
   background: #ffffff;
 
-  border-radius: 20px;
+  border-radius: 30px;
 
   box-shadow: 0 8px 20px rgba(92, 54, 131, 0.08);
 }
 
 .facility-card img {
   width: 100%;
-  height: 132px;
+  height: 232px;
 
   display: block;
 
@@ -764,6 +764,9 @@
   .specialist-grid {
     grid-template-columns: 1fr;
   }
+  .team-card h3{
+    text-align: center;
+  }
 
 
   /* SERVICES */
@@ -788,23 +791,46 @@
 
   /* FACILITIES */
 
-  .facilities-section {
-    padding: 60px 20px;
+   .facilities-section {
+    width: 100%;
+    padding: 40px 16px;
   }
 
-  .facilities-section .section-title {
-    margin-bottom: 40px;
+  .facilities-section h2 {
+    font-size: 32px;
+    text-align: center;
+    margin-bottom: 30px;
   }
 
   .facilities-grid {
+    display: grid;
     grid-template-columns: 1fr;
-    gap: 20px;
+    gap: 24px;
   }
 
   .facility-card {
-    min-height: auto;
+    width: 100%;
+    max-width: 100%;
+    margin: 0 auto;
   }
 
+  .facility-card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 20px;
+  }
+
+  .facility-card h3 {
+    font-size: 20px;
+    margin: 14px 0 8px;
+    text-align: center;
+  }
+
+  .facility-card p {
+    font-size: 14px;
+    line-height: 1.6;
+  }
 }
 
 

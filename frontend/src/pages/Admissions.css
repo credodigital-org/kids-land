@@ -219,7 +219,7 @@
 .admission-hero h1 {
   color: #39249a;
 
-  font-size: 43px;
+  font-size: 48px;
   line-height: 1.13;
   font-weight: 900;
 
@@ -290,7 +290,7 @@
   color: white;
   background: #13a64b;
 
-  font-family: inherit;
+  font-family: Nunito;
   font-size: 15px;
   font-weight: 600;
 
@@ -352,14 +352,14 @@
 ========================================= */
 
 .admission-hero-image {
-  width: 345px;
-  height: 350px;
+  width: 445px;
+  height: 450px;
 
   padding: 7px;
 
   border-radius: 58px;
 
-  /* background: #ffffff; */
+  background: #ffffff;
 
   box-sizing: border-box;
 
@@ -430,7 +430,7 @@
 
 .steps-section {
   width: calc(100% - 160px);
-  max-width: 1000px;
+  max-width: 1400px;
 
   margin: 0 auto 47px;
 
@@ -455,13 +455,15 @@
 
   color: #39249a;
 
-  font-size: 29px;
+  font-size: 32.99px;
 
   line-height: 1.2;
 
-  font-weight: 700;
+  font-weight: 900;
 
   margin-bottom: 40px;
+
+  font-family: Nunito;
 
   animation:
     fadeDown 0.9s
@@ -481,7 +483,7 @@
   grid-template-columns:
     repeat(4, 1fr);
 
-  gap: 26px;
+  gap: 30px;
 
   width: 100%;
 }
@@ -491,7 +493,7 @@
 ========================================= */
 
 .step-card {
-  min-height: 186px;
+  min-height: 196px;
 
   background: #ffffff;
 
@@ -610,9 +612,11 @@
 
   font-size: 17px;
 
-  font-weight: 650;
+  font-weight: 700;
 
   margin-bottom: 9px;
+
+  font-family: "Plus Jakarta Sans",sans-serif;
 
   transition:
     transform 0.3s ease;
@@ -648,7 +652,7 @@
 
 .register-section {
   width: calc(100% - 160px);
-  max-width: 1000px;
+  max-width: 1400px;
 
   margin: 0 auto;
 
@@ -700,13 +704,15 @@
 
   text-align: center;
 
-  font-size: 53px;
+  font-size: 60.62px;
 
   line-height: 1.1;
 
-  font-weight: 700;
+  font-weight: 900;
 
   margin-bottom: 25px;
+
+  font-family: Nunito;
 
   animation:
     fadeDown 0.9s
@@ -721,7 +727,11 @@
 
   text-align: center;
 
-  font-size: 11px;
+  font-size: 12.94px;
+
+  font-family: Nunito;
+
+  font-weight: 200;
 
   line-height: 1.4;
 
@@ -1007,11 +1017,11 @@
 
   color: #ffffff;
 
-  font-family: inherit;
+  font-family: Nunito;
 
-  font-size: 26px;
+  font-size: 31.05px;
 
-  font-weight: 700;
+  font-weight: 900;
 
   cursor: pointer;
 
