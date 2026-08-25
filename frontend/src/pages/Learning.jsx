@@ -21,6 +21,7 @@ import littleAngelsImg from "../assets/little-angels (2).png";
 import toddlersImg from "../assets/toddlers (2).png";
 import discoveriesImg from "../assets/discoveries (2).png";
 import inventorsImg from "../assets/inventors (2).png";
+import Trending from "../assets/TrendingUp.png";
 
 const programs = [
   {
@@ -230,7 +231,7 @@ function Learning() {
           </div>
 
           <div className="assessment-icon">
-            <TrendingUp size={62} strokeWidth={2.5} />
+            <img src={Trending} />
           </div>
 
         </div>

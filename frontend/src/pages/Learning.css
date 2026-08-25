@@ -32,18 +32,20 @@
 
 .learning-hero h1 {
   color: #39249a;
-  font-size: 43px;
+  font-size: 49.46px;
   line-height: 1.2;
-  font-weight: 700;
+  font-weight: 900;
+  font-family: Nunito;
   letter-spacing: -0.8px;
   margin-bottom: 36px;
 }
 
 .learning-hero p {
   color: #4c4c4c;
-  font-size: 17px;
+  font-size: 19.11px;
   line-height: 1.5;
   font-weight: 400;
+  font-family: "Be Vietnam Pro",sans-serif;
 }
 
 
@@ -62,18 +64,19 @@
 .programs-section > h2 {
   text-align: center;
   color: #39249a;
-  font-size: 32px;
-  font-weight: 500;
+  font-size: 36px;
+  font-weight: 700;
   margin-bottom: 66px;
+  font-family: Nunito;
 }
 
 .program-grid {
   width: 100%;
-  max-width: 950px;
+  max-width: 1350px;
   margin: 0 auto;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 28px 12px;
+  gap: 38px 22px;
 }
 
 
@@ -86,13 +89,13 @@
   border-radius: 25px;
   padding: 26px;
   box-sizing: border-box;
-  min-height: 370px;
+  min-height: 570px;
   box-shadow: 0 5px 20px rgba(100, 80, 130, 0.05);
 }
 
 .program-image-wrapper {
   width: 100%;
-  height: 214px;
+  height: 314px;
   overflow: hidden;
   border-radius: 13px;
 }
@@ -125,8 +128,8 @@
 }
 
 .program-icon.pink {
-  background: #ffd9d5;
-  color: #ff6d67;
+  background: #FFDAD6;
+  color: #BA1A1A;
 }
 
 .program-icon.green {
@@ -148,21 +151,23 @@
   color: #242424;
   font-size: 25px;
   line-height: 1.05;
-  font-weight: 650;
+  font-weight: 700;
+  font-family: "Plus Jakarta Sans",sans-serif;
 }
 
 .program-title-row span {
   display: block;
   margin-top: 4px;
-  font-size: 12px;
+  font-size: 15.6px;
   line-height: 1;
   font-weight: 600;
   letter-spacing: 0.6px;
+  font-family: "Be Vietnam Pro",sans-serif;
 }
 
 .program-title-row span,
 .learn-more.pink {
-  color: #ed3737;
+  color: #BA1A1A;
 }
 
 .program-title-row span,
@@ -229,10 +234,11 @@
 .areas-heading h2 {
   margin: 0;
   color: #39259b;
-  font-size: 34px;
+  font-size: 36px;
   line-height: 1.2;
   font-weight: 800;
   letter-spacing: 0.1px;
+  font-family: Nunito;
 }
 
 .areas-heading p {
@@ -241,7 +247,8 @@
   font-size: 14px;
   line-height: 25px;
   font-weight: 500;
-  font-style: italic;
+  font-style: Regular;
+  font-family: "Be Vietnam Pro",sans-serif;
 }
 
 /* =========================================================
@@ -250,7 +257,7 @@
 
 .areas-container {
   width: calc(100% - 152px);
-  max-width: 1015px;
+  max-width: 1315px;
   margin: 0 auto;
 
   display: grid;
@@ -860,6 +867,7 @@
 
   .program-card {
     padding: 18px;
+    min-height: 370px;
   }
 
   .program-image-wrapper {
@@ -1023,7 +1031,7 @@
 }
 
 .assessment-card {
-  max-width: 950px;
+  max-width: 1350px;
   min-height: 245px;
   margin: 0 auto;
   background: #ffffff;
@@ -1038,16 +1046,18 @@
 
 .assessment-content h2 {
   color: #39249a;
-  font-size: 31px;
-  font-weight: 600;
+  font-size: 36px;
+  font-weight: 800;
   margin-bottom: 20px;
+  font-family: Nunito;
 }
 
 .assessment-content p {
   color: #171717;
-  font-size: 13.5px;
-  line-height: 1.75;
-  letter-spacing: 1px;
+  font-size: 15px;
+  line-height: 27px;
+  letter-spacing: 1.56px;
+  font-family: "Be Vietnam Pro",sans-serif;
 }
 
 .assessment-icon {
@@ -1058,9 +1068,9 @@
   align-items: center;
   justify-content: center;
   color: #806aa1;
-  background: radial-gradient(
+  /* background: radial-gradient(
     circle,
     rgba(197, 177, 230, 0.42),
     rgba(255, 255, 255, 0)
-  );
+  ); */
 }
