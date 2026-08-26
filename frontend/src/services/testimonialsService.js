@@ -21,3 +21,16 @@ export async function addTestimonial({ parentName, message, rating, order, photo
 export async function deleteTestimonial(id) {
   await api.delete(`/testimonials/${id}/`);
 }
+
+export async function updateTestimonial(id, { parentName, message, rating, order, photoFile }) {
+  const formData = new FormData();
+  if (parentName !== undefined) formData.append("parent_name", parentName);
+  if (message !== undefined) formData.append("message", message);
+  if (rating !== undefined) formData.append("rating", rating ?? 5);
+  if (order !== undefined) formData.append("order", order ?? 0);
+  if (photoFile) formData.append("photo", photoFile);
+  const res = await api.patch(`/testimonials/${id}/`, formData, {
+    headers: { "Content-Type": "multipart/form-data" },
+  });
+  return res.data;
+}

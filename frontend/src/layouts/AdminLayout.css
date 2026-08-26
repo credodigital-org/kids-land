@@ -7,8 +7,43 @@
 
 .admin-content {
   flex: 1;
+  min-width: 0; /* lets long table content shrink instead of overflowing the page */
 }
 
 .admin-content-body {
   padding: 24px 32px;
+}
+
+.admin-sidebar-backdrop {
+  display: none;
+}
+
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 900px) {
+
+  .admin-content-body {
+    padding: 20px;
+  }
+
+  .admin-sidebar-backdrop {
+    display: block;
+
+    position: fixed;
+    inset: 0;
+
+    background: rgba(16, 27, 81, 0.45);
+
+    z-index: 40;
+  }
+}
+
+@media (max-width: 480px) {
+
+  .admin-content-body {
+    padding: 16px 14px;
+  }
 }

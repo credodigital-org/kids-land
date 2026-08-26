@@ -1,21 +1,22 @@
 import { useEffect, useState } from "react";
+import { X } from "lucide-react";
 import AdminLayout from "../../layouts/AdminLayout";
 import DataTable from "../components/DataTable";
 import ConfirmDialog from "../components/ConfirmDialog";
 import * as testimonialsService from "../../services/testimonialsService";
 import "./ContentPage.css";
 
+const emptyForm = { parentName: "", message: "", rating: 5, order: 0, photo: null };
+
 function TestimonialsPage() {
   const [testimonials, setTestimonials] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState("");
-  const [parentName, setParentName] = useState("");
-  const [message, setMessage] = useState("");
-  const [rating, setRating] = useState(5);
-  const [order, setOrder] = useState(0);
-  const [photo, setPhoto] = useState(null);
   const [saving, setSaving] = useState(false);
   const [toDelete, setToDelete] = useState(null);
+
+  const [form, setForm] = useState(emptyForm);
+  const [editingItem, setEditingItem] = useState(null);
 
   async function load() {
     setLoading(true);
@@ -31,16 +32,54 @@ function TestimonialsPage() {
 
   useEffect(() => { load(); }, []);
 
-  async function handleAdd(e) {
+  function startEdit(row) {
+    setEditingItem(row);
+    setForm({
+      parentName: row.parent_name || "",
+      message: row.message || "",
+      rating: row.rating ?? 5,
+      order: row.order ?? 0,
+      photo: null,
+    });
+    setError("");
+  }
+
+  function cancelEdit() {
+    setEditingItem(null);
+    setForm(emptyForm);
+    setError("");
+  }
+
+  async function handleSubmit(e) {
     e.preventDefault();
-    if (!parentName || !message) return;
+    if (!form.parentName || !form.message) return;
+
     setSaving(true);
+    setError("");
+
     try {
-      await testimonialsService.addTestimonial({ parentName, message, rating, order, photoFile: photo });
-      setParentName(""); setMessage(""); setRating(5); setOrder(0); setPhoto(null);
+      if (editingItem) {
+        await testimonialsService.updateTestimonial(editingItem.id, {
+          parentName: form.parentName,
+          message: form.message,
+          rating: form.rating,
+          order: form.order,
+          photoFile: form.photo,
+        });
+      } else {
+        await testimonialsService.addTestimonial({
+          parentName: form.parentName,
+          message: form.message,
+          rating: form.rating,
+          order: form.order,
+          photoFile: form.photo,
+        });
+      }
+
+      cancelEdit();
       await load();
     } catch (err) {
-      setError("Could not save testimonial. Please try again.");
+      setError(editingItem ? "Could not save changes. Please try again." : "Could not save testimonial. Please try again.");
     } finally {
       setSaving(false);
     }
@@ -48,24 +87,112 @@ function TestimonialsPage() {
 
   async function confirmDelete() {
     await testimonialsService.deleteTestimonial(toDelete.id);
+    if (editingItem?.id === toDelete.id) cancelEdit();
     setToDelete(null);
     await load();
   }
 
   return (
     <AdminLayout title="Testimonials">
-      <form className="content-upload-form" onSubmit={handleAdd}>
-        <input type="text" placeholder="Parent name" value={parentName} onChange={(e) => setParentName(e.target.value)} required />
-        <input type="text" placeholder="Testimonial message" value={message} onChange={(e) => setMessage(e.target.value)} required style={{ flex: 1, minWidth: 220 }} />
-        <input type="number" min="1" max="5" placeholder="Rating (1-5)" value={rating} onChange={(e) => setRating(e.target.value)} />
-        <input type="number" placeholder="Order" value={order} onChange={(e) => setOrder(e.target.value)} />
-        <input type="file" accept="image/*" onChange={(e) => setPhoto(e.target.files[0])} />
-        <button type="submit" disabled={saving}>{saving ? "Saving..." : "Add Testimonial"}</button>
-      </form>
+
+      <div className={`content-form-card ${editingItem ? "editing" : ""}`}>
+
+        <div className="content-form-header">
+          <div className="content-form-title">
+            {editingItem ? (
+              <>
+                Editing testimonial
+                <span className="editing-badge">Edit mode</span>
+              </>
+            ) : (
+              "Add a new testimonial"
+            )}
+          </div>
+
+          {editingItem && (
+            <button type="button" className="content-form-cancel" onClick={cancelEdit}>
+              <X size={14} />
+              Cancel
+            </button>
+          )}
+        </div>
+
+        <form className="content-upload-form" onSubmit={handleSubmit}>
+
+          <div className="content-form-field">
+            <label>Parent name</label>
+            <input
+              type="text"
+              placeholder="Parent name"
+              value={form.parentName}
+              onChange={(e) => setForm({ ...form, parentName: e.target.value })}
+              required
+            />
+          </div>
+
+          <div className="content-form-field wide">
+            <label>Message</label>
+            <input
+              type="text"
+              placeholder="Testimonial message"
+              value={form.message}
+              onChange={(e) => setForm({ ...form, message: e.target.value })}
+              required
+            />
+          </div>
+
+          <div className="content-form-field">
+            <label>Rating (1–5)</label>
+            <input
+              type="number"
+              min="1"
+              max="5"
+              value={form.rating}
+              onChange={(e) => setForm({ ...form, rating: e.target.value })}
+            />
+          </div>
+
+          <div className="content-form-field">
+            <label>Order</label>
+            <input
+              type="number"
+              value={form.order}
+              onChange={(e) => setForm({ ...form, order: e.target.value })}
+            />
+          </div>
+
+          <div className="content-form-field">
+            <label>{editingItem ? "Replace photo (optional)" : "Photo (optional)"}</label>
+            <input
+              type="file"
+              accept="image/*"
+              onChange={(e) => setForm({ ...form, photo: e.target.files[0] })}
+            />
+          </div>
+
+          {editingItem?.photo && (
+            <div className="content-current-file">
+              <img src={editingItem.photo} alt="Current" />
+              Current photo — upload a new file above to replace it
+            </div>
+          )}
+
+          <div className="content-form-field content-form-actions">
+            <button type="submit" disabled={saving}>
+              {saving
+                ? "Saving..."
+                : editingItem
+                ? "Save Changes"
+                : "Add Testimonial"}
+            </button>
+          </div>
+
+        </form>
+      </div>
 
       {error && <p className="content-page-error">{error}</p>}
       {loading ? (
-        <p>Loading...</p>
+        <p className="content-loading">Loading...</p>
       ) : (
         <DataTable
           columns={[
@@ -75,6 +202,7 @@ function TestimonialsPage() {
             { key: "order", label: "Order" },
           ]}
           rows={testimonials}
+          onEdit={startEdit}
           onDelete={setToDelete}
           emptyMessage="No testimonials yet."
         />

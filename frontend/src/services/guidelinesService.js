@@ -24,3 +24,11 @@ export async function uploadGuideline({ title, pdfFile }) {
 export async function deleteGuidelineVersion(id) {
   await api.delete(`/admin/parent-guidelines/${id}/`);
 }
+
+export async function updateGuidelineVersion(id, { title, isActive }) {
+  const payload = {};
+  if (title !== undefined) payload.title = title;
+  if (isActive !== undefined) payload.is_active = isActive;
+  const res = await api.patch(`/admin/parent-guidelines/${id}/`, payload);
+  return res.data;
+}
