@@ -60,3 +60,20 @@ export async function uploadGalleryImage({
 export async function deleteGalleryImage(id) {
   await api.delete(`/gallery/${id}/`);
 }
+
+export async function updateGalleryImage(id, { title, category, order, imageFile }) {
+  const formData = new FormData();
+
+  if (title !== undefined) formData.append("title", title || "");
+  if (category !== undefined) formData.append("category", category || "Events");
+  if (order !== undefined) formData.append("order", order ?? 0);
+  if (imageFile) formData.append("image", imageFile);
+
+  const res = await api.patch(`/gallery/${id}/`, formData, {
+    headers: {
+      "Content-Type": "multipart/form-data",
+    },
+  });
+
+  return res.data;
+}

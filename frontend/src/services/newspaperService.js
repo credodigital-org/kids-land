@@ -28,3 +28,20 @@ export async function uploadNewspaperEdition({ title, editionDate, pdfFile, onPr
 export async function deleteNewspaperEdition(id) {
   await api.delete(`/newspaper-archive/${id}/`);
 }
+
+export async function updateNewspaperEdition(id, { title, editionDate, pdfFile, onProgress }) {
+  const formData = new FormData();
+  if (title !== undefined) formData.append("title", title);
+  if (editionDate !== undefined) formData.append("edition_date", editionDate);
+  if (pdfFile) formData.append("file", pdfFile);
+
+  const res = await api.patch(`/newspaper-archive/${id}/`, formData, {
+    headers: { "Content-Type": "multipart/form-data" },
+    onUploadProgress: (event) => {
+      if (onProgress && event.total) {
+        onProgress(Math.round((event.loaded * 100) / event.total));
+      }
+    },
+  });
+  return res.data;
+}

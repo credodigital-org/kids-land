@@ -5,6 +5,8 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  padding: 20px;
+  box-sizing: border-box;
   z-index: 100;
 }
 
@@ -12,8 +14,10 @@
   background: #fff;
   padding: 24px;
   border-radius: 12px;
+  width: 100%;
   max-width: 320px;
   text-align: center;
+  box-sizing: border-box;
 }
 
 .confirm-actions {

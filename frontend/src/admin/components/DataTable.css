@@ -1,3 +1,11 @@
+.data-table-wrapper {
+  background: #fff;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 2px 10px rgba(16, 27, 81, 0.05);
+  border: 1px solid #eef0f5;
+}
+
 .data-table {
   width: 100%;
   border-collapse: collapse;
@@ -6,26 +14,170 @@
 .data-table th,
 .data-table td {
   text-align: left;
-  padding: 12px;
-  border-bottom: 1px solid #eee;
+  padding: 14px 16px;
+  border-bottom: 1px solid #f0f1f5;
+  font-size: 14px;
+  color: #1f2440;
 }
 
 .data-table th {
+  background: #f9fafc;
   color: #6b7280;
-  font-size: 13px;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.4px;
   text-transform: uppercase;
 }
 
+.data-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.data-table tbody tr:hover {
+  background: #f9fafc;
+}
+
 .data-table-empty {
-  padding: 40px;
+  padding: 48px 24px;
   text-align: center;
-  color: #6b7280;
+  color: #8b91a5;
+  background: #fff;
+  border-radius: 14px;
+  border: 1px dashed #dfe2ec;
+  font-size: 14px;
+}
+
+.data-table-actions-head {
+  width: 1%;
+  white-space: nowrap;
+}
+
+.data-table-actions {
+  display: flex;
+  gap: 8px;
+  white-space: nowrap;
+}
+
+.data-table-edit-btn,
+.data-table-delete-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+
+  padding: 6px 12px;
+
+  border-radius: 8px;
+  border: 1px solid transparent;
+
+  font-weight: 700;
+  font-size: 12.5px;
+
+  cursor: pointer;
+
+  transition: background 0.15s ease, border-color 0.15s ease, transform 0.15s ease;
+}
+
+.data-table-edit-btn {
+  background: #eef1ff;
+  color: #3949ab;
+}
+
+.data-table-edit-btn:hover {
+  background: #dfe4ff;
+  transform: translateY(-1px);
 }
 
 .data-table-delete-btn {
-  background: none;
-  border: none;
+  background: #fdecec;
   color: #d92d20;
-  cursor: pointer;
-  font-weight: 600;
+}
+
+.data-table-delete-btn:hover {
+  background: #fadada;
+  transform: translateY(-1px);
+}
+
+
+/* =========================================================
+   RESPONSIVE — collapse the table into a stack of cards
+   below tablet width, using the data-label attributes as
+   the row labels instead of a header row.
+========================================================= */
+
+@media (max-width: 760px) {
+
+  .data-table thead {
+    display: none;
+  }
+
+  .data-table,
+  .data-table tbody,
+  .data-table tr,
+  .data-table td {
+    display: block;
+    width: 100%;
+  }
+
+  .data-table tbody tr {
+    padding: 14px 16px;
+    margin-bottom: 12px;
+
+    border: 1px solid #f0f1f5;
+    border-radius: 12px;
+  }
+
+  .data-table tbody tr:last-child {
+    margin-bottom: 0;
+  }
+
+  .data-table td {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+
+    padding: 8px 0;
+    border-bottom: 1px solid #f4f5f8;
+
+    text-align: right;
+  }
+
+  .data-table td:last-child {
+    border-bottom: none;
+  }
+
+  .data-table td::before {
+    content: attr(data-label);
+
+    flex-shrink: 0;
+
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 0.4px;
+    text-transform: uppercase;
+    color: #9096a8;
+
+    text-align: left;
+  }
+
+  .data-table-actions {
+    justify-content: flex-end;
+  }
+
+  .data-table-actions::before {
+    content: none;
+  }
+}
+
+@media (max-width: 400px) {
+
+  .data-table-edit-btn span,
+  .data-table-delete-btn span {
+    display: none;
+  }
+
+  .data-table-edit-btn,
+  .data-table-delete-btn {
+    padding: 8px;
+  }
 }

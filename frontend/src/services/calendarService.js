@@ -24,3 +24,11 @@ export async function uploadCalendar({ title, pdfFile }) {
 export async function deleteCalendarVersion(id) {
   await api.delete(`/admin/academic-calendar/${id}/`);
 }
+
+export async function updateCalendarVersion(id, { title, isActive }) {
+  const payload = {};
+  if (title !== undefined) payload.title = title;
+  if (isActive !== undefined) payload.is_active = isActive;
+  const res = await api.patch(`/admin/academic-calendar/${id}/`, payload);
+  return res.data;
+}

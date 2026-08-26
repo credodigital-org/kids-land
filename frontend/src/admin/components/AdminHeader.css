@@ -2,20 +2,99 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+
   padding: 16px 24px;
+
+  background: #ffffff;
   border-bottom: 1px solid #eee;
+
+  position: sticky;
+  top: 0;
+  z-index: 30;
+}
+
+.admin-header-left {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  min-width: 0;
 }
 
 .admin-header h1 {
   font-size: 20px;
   color: #101b51;
+
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.admin-menu-btn {
+  display: none;
+
+  background: none;
+  border: none;
+  color: #101b51;
+  cursor: pointer;
+
+  padding: 4px;
+
+  flex-shrink: 0;
 }
 
 .admin-logout-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+
   background: none;
   border: 1px solid #ddd;
   border-radius: 8px;
   padding: 8px 16px;
   cursor: pointer;
   font-weight: 600;
+  font-size: 13.5px;
+  color: #1f2440;
+
+  flex-shrink: 0;
+
+  transition: background 0.15s ease, border-color 0.15s ease;
+}
+
+.admin-logout-btn:hover {
+  background: #fdecec;
+  border-color: #f3c8c5;
+  color: #d92d20;
+}
+
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 900px) {
+
+  .admin-menu-btn {
+    display: inline-flex;
+  }
+}
+
+@media (max-width: 480px) {
+
+  .admin-header {
+    padding: 14px 16px;
+  }
+
+  .admin-header h1 {
+    font-size: 17px;
+  }
+
+  .admin-logout-btn span {
+    display: none;
+  }
+
+  .admin-logout-btn {
+    padding: 9px;
+  }
 }
