@@ -443,34 +443,69 @@
 
 /* =========================================================
    SPECIFIC AREAS
+   Reference-style 2 x 2 organic layout
 ========================================================= */
 
 .specific-box {
   position: relative;
+  min-height: 560px;
+  padding: 0;
+}
+
+.specific-box h3 {
+  position: absolute;
+  top: 39px;
+  left: 70px;
+  margin: 0;
+
+  color: #39259b;
+  font-size: 31px;
+  line-height: 1.2;
+  font-weight: 800;
+  font-family: "Nunito", sans-serif;
 }
 
 .specific-items {
   position: absolute;
-  top: 119px;
-  left: 55px;
-  right: 42px;
-  bottom: 45px;
+  top: 115px;
+  left: 50%;
+  transform: translateX(-50%);
+
+  width: 390px;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 155px 155px;
+
+  column-gap: 45px;
+  row-gap: 30px;
+
+  align-items: center;
+  justify-items: center;
 }
 
 /* =========================================================
-   SPECIFIC ITEM COMMON
+   COMMON ORGANIC SHAPE
 ========================================================= */
 
 .specific-item {
-  position: absolute;
+  position: relative;
+
+  width: 168px;
+  height: 153px;
 
   display: flex;
   align-items: center;
   justify-content: center;
 
   text-align: center;
-
   box-sizing: border-box;
+
+  border: 1px solid;
+  
+  box-shadow:
+    0 0 0 8px #ffffff,
+    0 0 0 9px currentColor;
 }
 
 .specific-item svg {
@@ -486,6 +521,7 @@
   font-size: 19px;
   line-height: 21px;
   font-weight: 800;
+  font-family: "Nunito", sans-serif;
 }
 
 /* =========================================================
@@ -493,42 +529,27 @@
 ========================================================= */
 
 .specific-item.literacy {
-  width: 169px;
-  height: 153px;
-
-  left: 4px;
-  top: 8px;
-
   background: #f0d957;
-
-  border: 1px solid #e8c838;
+  border-color: #e8c838;
+  color: #e8c838;
 
   border-radius:
     45% 40% 38% 43% /
     38% 34% 55% 58%;
 
-  transform: rotate(-15deg);
-
-  box-shadow:
-    0 0 0 8px #ffffff,
-    0 0 0 9px #e8c838;
+  transform: rotate(-5deg);
 }
 
 .literacy svg {
   left: 35px;
-  top: 42px;
-
+  top: 38px;
   color: #8b7833;
-
-  transform: rotate(15deg);
 }
 
 .literacy span {
   color: #81713b;
-
-  transform: rotate(15deg);
-
-  margin-top: 24px;
+  transform: rotate(5deg);
+  margin-top: 20px;
 }
 
 /* =========================================================
@@ -536,42 +557,27 @@
 ========================================================= */
 
 .specific-item.mathematics {
-  width: 169px;
-  height: 154px;
-
-  right: 5px;
-  top: 3px;
-
   background: #c9f47c;
-
-  border: 1px solid #a9dc5c;
+  border-color: #a9dc5c;
+  color: #a9dc5c;
 
   border-radius:
     39% 50% 42% 42% /
     40% 39% 54% 56%;
 
-  transform: rotate(-13deg);
-
-  box-shadow:
-    0 0 0 8px #ffffff,
-    0 0 0 9px #a9dc5c;
+  transform: rotate(-5deg);
 }
 
 .mathematics svg {
   left: 36px;
-  top: 43px;
-
+  top: 39px;
   color: #739d43;
-
-  transform: rotate(13deg);
 }
 
 .mathematics span {
   color: #6f8c48;
-
-  transform: rotate(13deg);
-
-  margin-top: 25px;
+  transform: rotate(5deg);
+  margin-top: 20px;
 }
 
 /* =========================================================
@@ -579,42 +585,27 @@
 ========================================================= */
 
 .specific-item.expressive {
-  width: 167px;
-  height: 153px;
-
-  left: 21px;
-  top: 207px;
-
   background: #efc6d5;
-
-  border: 1px solid #df9fba;
+  border-color: #df9fba;
+  color: #df9fba;
 
   border-radius:
     42% 48% 45% 39% /
     45% 42% 55% 53%;
 
-  transform: rotate(11deg);
-
-  box-shadow:
-    0 0 0 8px #ffffff,
-    0 0 0 9px #df9fba;
+  transform: rotate(7deg);
 }
 
 .expressive svg {
   left: 30px;
-  top: 37px;
-
+  top: 35px;
   color: #a25c78;
-
-  transform: rotate(-11deg);
 }
 
 .expressive span {
   color: #bc6d8b;
-
-  transform: rotate(-11deg);
-
-  margin-top: 28px;
+  transform: rotate(-7deg);
+  margin-top: 22px;
 }
 
 /* =========================================================
@@ -622,218 +613,156 @@
 ========================================================= */
 
 .specific-item.world {
-  width: 168px;
-  height: 153px;
-
-  right: 4px;
-  top: 170px;
-
   background: #9d7bdd;
-
-  border: 1px solid #8864ce;
+  border-color: #8864ce;
+  color: #8864ce;
 
   border-radius:
     39% 46% 45% 40% /
     40% 42% 53% 54%;
 
-  transform: rotate(25deg);
-
-  box-shadow:
-    0 0 0 8px #ffffff,
-    0 0 0 9px #8864ce;
+  transform: rotate(12deg);
 }
 
 .world svg {
   left: 33px;
-  top: 39px;
-
+  top: 37px;
   color: #684f9a;
-
-  transform: rotate(-25deg);
 }
 
 .world span {
   color: #684d9b;
-
-  transform: rotate(-25deg);
-
-  margin-top: 25px;
+  transform: rotate(-12deg);
+  margin-top: 20px;
 }
 
-/* =========================================================
-   DESKTOP BREAK
-========================================================= */
-
-.desktop-break {
-  display: block;
-}
 
 /* =========================================================
-   RESPONSIVE — TABLET
+   TABLET
 ========================================================= */
 
 @media (max-width: 1000px) {
 
-  .areas-section {
-    padding: 70px 20px;
-  }
-
-  .areas-container {
-    width: 100%;
-    max-width: 900px;
-  }
-
-  .areas-box {
+  .specific-box {
     min-height: 530px;
   }
 
-  .areas-box h3 {
+  .specific-box h3 {
     left: 50px;
     font-size: 28px;
   }
 
-  .prime-items {
-    left: 28px;
-    right: 28px;
+  .specific-items {
+    width: 350px;
+    column-gap: 30px;
+    row-gap: 25px;
   }
 
-  .prime-item span {
-    left: 125px;
-    width: 230px;
+  .specific-item {
+    width: 150px;
+    height: 140px;
+  }
+
+  .specific-item span {
     font-size: 17px;
-  }
-
-  .prime-item svg {
-    left: 45px;
-  }
-
-  .specific-items {
-    left: 35px;
-    right: 30px;
-  }
-
-  .specific-item.literacy,
-  .specific-item.mathematics,
-  .specific-item.expressive,
-  .specific-item.world {
-    width: 145px;
-    height: 135px;
+    line-height: 19px;
   }
 }
 
-/* =========================================================
-   RESPONSIVE — SMALL TABLET
-========================================================= */
-
-@media (max-width: 900px) {
-
-  .learning-hero h1 {
-    font-size: 36px;
-  }
-
-  .program-grid,
-  .areas-container {
-    grid-template-columns: 1fr;
-    max-width: 600px;
-  }
-
-  .specific-items {
-    height: 400px;
-  }
-
-  .assessment-card {
-    padding: 35px;
-  }
-}
 
 /* =========================================================
-   RESPONSIVE — MOBILE
+   MOBILE
 ========================================================= */
 
 @media (max-width: 700px) {
 
-  .areas-section {
-    padding: 55px 16px;
+  .specific-box {
+    min-height: 500px;
   }
 
-  .areas-heading {
-    margin-bottom: 35px;
-  }
-
-  .areas-heading h2 {
+  .specific-box h3 {
+    top: 30px;
+    left: 35px;
     font-size: 27px;
-  }
-
-  .areas-heading p {
-    margin-top: 18px;
-    font-size: 13px;
-    line-height: 21px;
-  }
-
-  .desktop-break {
-    display: none;
-  }
-
-  .areas-container {
-    width: 100%;
-    grid-template-columns: 1fr;
-    gap: 20px;
-  }
-
-  .areas-box {
-    min-height: 520px;
-  }
-
-  .areas-box h3 {
-    top: 32px;
-    left: 40px;
-    font-size: 27px;
-  }
-
-  .prime-items {
-    top: 110px;
-    left: 25px;
-    right: 25px;
-    gap: 15px;
-  }
-
-  .prime-item {
-    height: 105px;
-  }
-
-  .prime-item svg {
-    left: 40px;
-  }
-
-  .prime-item span {
-    left: 100px;
-    width: calc(100% - 125px);
-    font-size: 16px;
-    line-height: 19px;
   }
 
   .specific-items {
-    top: 105px;
-    left: 20px;
-    right: 20px;
+    top: 100px;
+
+    width: 330px;
+
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 145px 145px;
+
+    column-gap: 25px;
+    row-gap: 25px;
   }
 
-  .specific-item.literacy {
-    left: 5px;
+  .specific-item {
+    width: 140px;
+    height: 130px;
   }
 
-  .specific-item.mathematics {
-    right: 0;
+  .specific-item span {
+    font-size: 16px;
+    line-height: 18px;
   }
 
-  .specific-item.expressive {
-    left: 15px;
-    top: 185px;
+  .specific-item svg {
+    width: 17px;
+    height: 17px;
   }
 
-  .specific-item.world {
-    right: 0;
-    top: 165px;
+  .literacy svg,
+  .mathematics svg,
+  .expressive svg,
+  .world svg {
+    left: 28px;
+    top: 32px;
+  }
+}
+
+
+/* =========================================================
+   SMALL PHONES
+========================================================= */
+
+@media (max-width: 450px) {
+
+  .specific-box {
+    min-height: 470px;
+  }
+
+  .specific-box h3 {
+    top: 27px;
+    left: 25px;
+    font-size: 24px;
+  }
+
+  .specific-items {
+    top: 90px;
+
+    width: 290px;
+
+    grid-template-rows: 130px 130px;
+
+    column-gap: 20px;
+    row-gap: 20px;
+  }
+
+  .specific-item {
+    width: 125px;
+    height: 120px;
+  }
+
+  .specific-item span {
+    font-size: 14px;
+    line-height: 17px;
+  }
+
+  .specific-item svg {
+    width: 16px;
+    height: 16px;
   }
 }
 
@@ -1073,4 +1002,235 @@
     rgba(197, 177, 230, 0.42),
     rgba(255, 255, 255, 0)
   ); */
+}
+/* =========================================================
+   MOBILE FIX - AREAS SECTION
+========================================================= */
+
+@media (max-width: 700px) {
+
+  .areas-container {
+    grid-template-columns: 1fr;
+    gap: 28px;
+    width: 100%;
+  }
+
+  .areas-box {
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  /* -----------------------------
+     PRIME AREAS
+  ----------------------------- */
+
+  .prime-box {
+    min-height: 470px;
+  }
+
+  /* -----------------------------
+     SPECIFIC AREAS
+  ----------------------------- */
+
+  .specific-box {
+    min-height: 500px;
+    width: 100%;
+    overflow: hidden;
+  }
+
+  .specific-box h3 {
+    position: absolute;
+    top: 30px;
+    left: 35px;
+    font-size: 27px;
+  }
+
+  .specific-items {
+    position: absolute;
+
+    top: 105px;
+    left: 50%;
+    transform: translateX(-50%);
+
+    width: 350px;
+    max-width: calc(100% - 40px);
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 145px 145px;
+
+    column-gap: 20px;
+    row-gap: 25px;
+
+    align-items: center;
+    justify-items: center;
+  }
+
+  .specific-item {
+    width: 145px;
+    height: 135px;
+  }
+
+  .specific-item span {
+    font-size: 16px;
+    line-height: 18px;
+  }
+}
+
+
+/* =========================================================
+   SMALL PHONES
+========================================================= */
+
+@media (max-width: 450px) {
+
+  .areas-container {
+    grid-template-columns: 1fr;
+  }
+
+  .specific-box {
+    min-height: 470px;
+  }
+
+  .specific-box h3 {
+    top: 28px;
+    left: 25px;
+    font-size: 24px;
+  }
+
+  .specific-items {
+    top: 90px;
+
+    width: 300px;
+    max-width: calc(100% - 30px);
+
+    grid-template-rows: 130px 130px;
+
+    column-gap: 15px;
+    row-gap: 20px;
+  }
+
+  .specific-item {
+    width: 125px;
+    height: 118px;
+  }
+
+  .specific-item span {
+    font-size: 14px;
+    line-height: 17px;
+  }
+}
+/* =========================================================
+   MOBILE AREAS - FINAL FIX
+========================================================= */
+
+@media (max-width: 700px) {
+
+  .areas-container {
+    width: 100%;
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+
+  /* PRIME AREAS */
+  .prime-box {
+    min-height: 650px;
+  }
+
+  .prime-items {
+    top: 105px;
+    left: 20px;
+    right: 20px;
+    gap: 20px;
+  }
+
+  .prime-item {
+    height: 130px;
+  }
+
+  .prime-item span {
+    left: 120px;
+    width: calc(100% - 145px);
+    font-size: 16px;
+    line-height: 19px;
+  }
+
+  .prime-item svg {
+    left: 55px;
+  }
+
+  /* SPECIFIC AREAS */
+  .specific-box {
+    min-height: 500px;
+  }
+
+  .specific-items {
+    top: 105px;
+    width: 350px;
+    max-width: calc(100% - 30px);
+
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 145px 145px;
+
+    column-gap: 20px;
+    row-gap: 25px;
+
+    transform: translateX(-50%);
+  }
+
+  .specific-item {
+    width: 140px;
+    height: 130px;
+  }
+}
+
+
+/* SMALL PHONES */
+@media (max-width: 450px) {
+
+  .prime-box {
+    min-height: 610px;
+  }
+
+  .prime-items {
+    top: 95px;
+  }
+
+  .prime-item {
+    height: 120px;
+  }
+
+  .prime-item span {
+    left: 95px;
+    width: calc(100% - 115px);
+    font-size: 14px;
+    line-height: 17px;
+  }
+
+  .prime-item svg {
+    left: 35px;
+  }
+
+  .specific-box {
+    min-height: 470px;
+  }
+
+  .specific-items {
+    top: 90px;
+    width: 300px;
+    grid-template-rows: 130px 130px;
+    column-gap: 15px;
+    row-gap: 20px;
+  }
+
+  .specific-item {
+    width: 125px;
+    height: 118px;
+  }
+
+  .specific-item span {
+    font-size: 14px;
+    line-height: 17px;
+  }
 }
