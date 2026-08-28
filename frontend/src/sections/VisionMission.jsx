@@ -5,14 +5,16 @@ import kidsRed from "../assets/kids-red.png";
 import kidsPlaying from "../assets/kids-playing.png";
 
 import "./VisionMission.css";
+import { useLanguage } from "../context/LanguageContext";
 
 function VisionMission() {
+  const { language, t } = useLanguage();
+
   return (
     <section className="vision-mission-section" id="vision-mission">
 
       {/* Rainbow decoration */}
       
-
 
       <div className="vision-mission-container">
 
@@ -31,24 +33,22 @@ function VisionMission() {
 
 
           {/* Heading */}
-          <div className="vision-heading">
+          <div className="vision-heading" dir={language === "ar" ? "rtl" : "ltr"}>
 
             <div className="vision-icon">
               <Eye size={22} />
             </div>
 
             <h2>
-              Our Vision
+              {t("vision.heading")}
             </h2>
 
           </div>
 
 
           {/* Description */}
-          <p className="vision-description">
-            To provide a world-class educational
-            environment that nurtures and
-            prepares a creative generation.
+          <p className="vision-description" dir={language === "ar" ? "rtl" : "ltr"}>
+            {t("vision.body")}
           </p>
 
 
@@ -75,32 +75,22 @@ function VisionMission() {
 
 
           {/* Heading */}
-          <div className="mission-heading">
+          <div className="mission-heading" dir={language === "ar" ? "rtl" : "ltr"}>
 
             <div className="mission-icon">
               <Rocket size={20} />
             </div>
 
             <h2>
-              Our Mission
+              {t("mission.heading")}
             </h2>
 
           </div>
 
 
           {/* Description */}
-          <p className="mission-description">
-            To nurture children based on the
-            authentic values and principles of
-            our community, develop their social
-            communication skills, and instill
-            strong moral values through a
-            stimulating, child-centered
-            environment that supports their
-            growth and prepares them for future
-            stages of education.We believe that
-            creativity and innovation begin in
-            the early years.
+          <p className="mission-description" dir={language === "ar" ? "rtl" : "ltr"}>
+            {t("mission.body")}
           </p>
 
 

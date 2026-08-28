@@ -109,6 +109,7 @@ header {
 
 .hero-card {
   position: absolute;
+  left: 0; /* explicit, so this never depends on text direction */
 
   margin-top: 10px;
   margin-left: -100px;
@@ -355,6 +356,7 @@ header {
   z-index: 10;
   
   display: flex;
+  flex-direction: row;
   align-items: center;
   justify-content: space-around;
   
@@ -514,6 +516,7 @@ header {
     height: auto;
 
     display: flex;
+    flex-direction: row;
     align-items: flex-start;
     justify-content: center;
     gap: 16px;
