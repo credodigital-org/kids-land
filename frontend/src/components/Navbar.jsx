@@ -5,41 +5,17 @@ import "./Navbar.css";
 import logo from "../assets/logo.png";
 import { useLanguage } from "../context/LanguageContext";
 
-// English / Arabic labels for the nav links - add more keys here as
-// more strings across the site get translated.
-const LABELS = {
-  en: {
-    Home: "Home",
-    "About Us": "About Us",
-    Learning: "Learning",
-    Admission: "Admission",
-    Gallery: "Gallery",
-    "Health & Safety": "Health & Safety",
-    langButton: "اقرأ بالعربية",
-  },
-  ar: {
-    Home: "الرئيسية",
-    "About Us": "من نحن",
-    Learning: "التعلم",
-    Admission: "القبول",
-    Gallery: "المعرض",
-    "Health & Safety": "الصحة والسلامة",
-    langButton: "Read in English",
-  },
-};
-
 function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
-  const { language, toggleLanguage } = useLanguage();
-  const t = LABELS[language];
+  const { language, toggleLanguage, t } = useLanguage();
 
   const navItems = [
-    { name: "Home", path: "/" },
-    { name: "About Us", path: "/about" },
-    { name: "Learning", path: "/learning" },
-    { name: "Admission", path: "/admission" },
-    { name: "Gallery", path: "/gallery" },
-    { name: "Health & Safety", path: "/health-safety" },
+    { key: "home", path: "/" },
+    { key: "about", path: "/about" },
+    { key: "learning", path: "/learning" },
+    { key: "admission", path: "/admission" },
+    { key: "gallery", path: "/gallery" },
+    { key: "healthSafety", path: "/health-safety" },
   ];
 
   return (
@@ -72,14 +48,14 @@ function Navbar() {
         >
           {navItems.map((item) => (
             <NavLink
-              key={item.name}
+              key={item.key}
               to={item.path}
               className={({ isActive }) =>
                 `nav-link ${isActive ? "active" : ""}`
               }
               onClick={() => setMenuOpen(false)}
             >
-              {t[item.name]}
+              {t(`nav.${item.key}`)}
             </NavLink>
           ))}
 
@@ -95,7 +71,7 @@ function Navbar() {
             }}
           >
             <Languages size={16} />
-            <span>{t.langButton}</span>
+            <span>{t("nav.toggle")}</span>
           </button>
         </nav>
 
@@ -106,7 +82,7 @@ function Navbar() {
           onClick={toggleLanguage}
         >
           <Languages size={16} />
-          <span>{t.langButton}</span>
+          <span>{t("nav.toggle")}</span>
         </button>
 
       </div>

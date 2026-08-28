@@ -4,8 +4,11 @@ import "./PrincipalMessage.css";
 import cloud from "../assets/cloud.png";
 import sunImage from "../assets/sun.png";
 import rain from "../assets/rain.png";
+import { useLanguage } from "../context/LanguageContext";
 
 function PrincipalMessage() {
+  const { language, t } = useLanguage();
+
   return (
     <section className="principal-section" id="principal-message">
 
@@ -21,8 +24,8 @@ function PrincipalMessage() {
         <div className="principal-card">
 
           {/* Heading */}
-          <h2 className="principal-title">
-            A Message from the Nursery Principal
+          <h2 className="principal-title" dir={language === "ar" ? "rtl" : "ltr"}>
+            {t("principal.title")}
           </h2>
 
 
@@ -37,49 +40,34 @@ function PrincipalMessage() {
 
 
           {/* Message */}
-          <div className="principal-text">
+          <div className="principal-text" dir={language === "ar" ? "rtl" : "ltr"}>
 
             <p className="dear-parents">
-              Dear Parents,
+              {t("principal.dearParents")}
             </p>
 
             <p className="purple-message">
-              It is my great pleasure to welcome you to Kids Land Nursery
-              and sincerely thank you for the trust you have placed in us.
+              {t("principal.p1")}
             </p>
 
             <p>
-              Since 2004, we have been committed to providing a safe,
-              nurturing, and inspiring environment where every child is
-              valued, supported, and encouraged to reach their full potential.
-              Our approach combines high-quality care and education in line
-              with the EYFS framework and ADEK standards.
+              {t("principal.p2")}
             </p>
 
             <p>
-              We believe every child is unique, and we respect their
-              individual abilities, interests, and developmental needs.
-              We also strive to nurture children who are proud of their
-              Arabic language and national identity and guided by values
-              of compassion, respect, and tolerance.
+              {t("principal.p3")}
             </p>
 
             <p>
-              We believe that a strong partnership between families and
-              the nursery is essential for children's success. Through trust,
-              communication, and collaboration, we can give every child the
-              best possible start in life.
+              {t("principal.p4")}
             </p>
 
             <p>
-              We look forward to another year filled with learning,
-              happiness, growth, and wonderful memories. Since 2004...
-              Creating the Beginnings, Every Child Deserves.
-              With our highest respect and appreciation,
+              {t("principal.p5")}
             </p>
 
             <p className="principal-signature">
-              Nursery Principal
+              {t("principal.signature")}
             </p>
 
           </div>
