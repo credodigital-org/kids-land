@@ -74,7 +74,7 @@ function AdmissionSection() {
         <div className="admission-resources">
 
           {/* Parent's Guide */}
-          <div className="resource-card">
+          {/* <div className="resource-card">
 
             <div className="resource-icon resource-icon-purple">
               <BookOpen size={22} />
@@ -103,10 +103,10 @@ function AdmissionSection() {
               </span>
             )}
 
-          </div>
+          </div> */}
 
           {/* Academic Calendar */}
-          <div className="resource-card">
+          {/* <div className="resource-card">
 
             <div className="resource-icon resource-icon-green">
               <CalendarDays size={22} />
@@ -136,7 +136,7 @@ function AdmissionSection() {
               </span>
             )}
 
-          </div>
+          </div> */}
 
         </div>
 

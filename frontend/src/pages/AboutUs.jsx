@@ -37,14 +37,16 @@ import winterCamp from "../assets/winter-camp.png";
 import speechSupport from "../assets/speech-support.png";
 import additionalSupport from "../assets/additional-support.png";
 
-import library from "../assets/library.png";
-import classrooms from "../assets/classrooms.png";
-import outdoorGarden from "../assets/outdoor-garden.png";
-import riskyPlay from "../assets/risky-play.png";
-import identityRoom from "../assets/identity-room.png";
-import firstAid from "../assets/first-aid-room.png";
-import napRoom from "../assets/nap-room.png";
-import constructionRoom from "../assets/construction-room.png";
+import libraryImg from "../assets/library.png";
+import classroomImg from "../assets/Container (12).png";
+import outdoorImg from "../assets/Container (13).png";
+import riskyPlayImg from "../assets/Container (14).png";
+import uaeRoomImg from "../assets/Container (15).png";
+import firstAidImg from "../assets/Container (16).png";
+import napRoomImg from "../assets/Container (17).png";
+import constructionImg from "../assets/Container (18).png";
+import messyPlayImg from "../assets/Container (19).png";
+import theatreImg from "../assets/library.png";
 
 function About() {
   const values = [
@@ -134,46 +136,66 @@ function About() {
     },
   ];
 
-  const facilities = [
+   const facilities = [
     {
+      image: libraryImg,
       title: "Library",
-      image: library,
-      text: "A cozy space filled with books and stories. it encourage imagination, curiosity, and a love for reading.",
+      description:
+        "A cozy space filled with books and stories. it encourages imagination, curiosity, and a love for reading.",
     },
     {
+      image: classroomImg,
       title: "Classrooms",
-      image: classrooms,
-      text: "Bright, engaging rooms equipped with age-appropriate learning resources to foster cognitive and social development.",
+      description:
+        "Bright, engaging rooms equipped with age-appropriate learning resources to support cognitive and social development.",
     },
     {
+      image: outdoorImg,
       title: "Outdoor Garden",
-      image: outdoorGarden,
-      text: "A natural space where children can explore and play.it develops curiosity and helps children connect with nature.",
+      description:
+        "A natural space where children can explore and play. it develops curiosity and helps children connect with nature.",
     },
     {
+      image: riskyPlayImg,
       title: "Risky Play Area",
-      image: riskyPlay,
-      text: "A safe space where children can try new challenges. it builds confidence, independence, and problem solving skills.",
+      description:
+        "A safe space where children can try new challenges. it builds confidence, independence, and problem solving skills.",
     },
     {
+      image: uaeRoomImg,
       title: "UAE National Identity Room",
-      image: identityRoom,
-      text: "A special space to discover UAE culture, heritage, and traditions. it builds pride,respect, and a strong sense of belonging.",
+      description:
+        "A special space to discover UAE culture, heritage, and traditions. it builds pride, respect, and a strong sense of belonging.",
     },
     {
+      image: firstAidImg,
       title: "First Aid Room",
-      image: firstAid,
-      text: "A safe and caring space for immediate support when needed. it helps ensure children’s health,safety, and well-being.",
+      description:
+        "A safe and caring space for immediate support when needed. it helps ensure children’s health, safety, and well-being.",
     },
     {
+      image: napRoomImg,
       title: "Nap Room",
-      image: napRoom,
-      text: "A calm and comfortable space for rest and relaxation. it helps children recharge and feel safe and refreshed.",
+      description:
+        "A calm and comfortable space for rest and relaxation. it helps children recharge and feel safe and refreshed.",
     },
     {
-      title: "Construction Room",
-      image: constructionRoom,
-      text: "A fun for building, designing, and creating. it develops creativity, planning, and fine motor skills.",
+      image: constructionImg,
+      title: "construction Room",
+      description:
+        "A fun for building, designing, and creating. it develops creativity, planning, and fine motor skills.",
+    },
+    {
+      image: messyPlayImg,
+      title: "Messy Play Area",
+      description:
+        "A creative space for hands on and sensory activities. it encourages exploration, creativity, and self-expression.",
+    },
+    {
+      image: theatreImg,
+      title: "Theatre",
+      description:
+        "A creative space for storytelling, acting, acting and performances. it builds confidence, communication, and creativity.",
     },
   ];
 
@@ -407,30 +429,37 @@ function About() {
       </section>
 
       {/* ================= FACILITIES ================= */}
-      <section className="facilities-section">
+      <section className="nursery-facilities">
+      <div className="facilities-container">
 
-        <h2 className="section-title">Nursery Facilities</h2>
+        <h2 className="facilities-title">
+          Nursery Facilities
+        </h2>
 
         <div className="facilities-grid">
-
           {facilities.map((facility, index) => (
             <div className="facility-card" key={index}>
 
-              <img
-                src={facility.image}
-                alt={facility.title}
-              />
+              <div className="facility-image-wrapper">
+                <img
+                  src={facility.image}
+                  alt={facility.title}
+                  className="facility-image"
+                />
+              </div>
 
-              <h3>{facility.title}</h3>
+              <div className="facility-content">
+                <h3>{facility.title}</h3>
 
-              <p>{facility.text}</p>
+                <p>{facility.description}</p>
+              </div>
 
             </div>
           ))}
-
         </div>
 
-      </section>
+      </div>
+    </section>
 
     </main>
   );

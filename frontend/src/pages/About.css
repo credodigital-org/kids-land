@@ -5,6 +5,7 @@
 .about-page {
   width: 100%;
   overflow: hidden;
+  padding-top: 7px;
   background: #ffffff;
   color: #111111;
   font-family: "Nunito", sans-serif;
@@ -65,7 +66,7 @@
 }
 
 .why-section {
-  margin-top: 90px;
+  margin-top: 50px;
 }
 
 .why-section h2 {
@@ -113,14 +114,14 @@
 
 .values-section {
   width: 100%;
-  padding: 30px 0 90px;
+  padding: 20px 0 70px;
   background: #f5edf8;
   border-radius: 32px;
   overflow: hidden;
 }
 
 .values-section .section-title {
-  margin-bottom: 40px;
+  margin-bottom: 20px;
 }
 
 .values-slider {
@@ -267,7 +268,7 @@
 ========================================================= */
 
 .eyfs-section {
-  padding: 130px 5% 80px;
+  padding: 100px 5% 80px;
   background: #ffffff;
 }
 
@@ -300,7 +301,7 @@
 
   text-align: center;
 
-  border-radius: 0 0 38px 0;
+  border-radius: 38px 0 38px 0;
 
   box-shadow:
     2px 5px 6px rgba(0, 0, 0, 0.18);
@@ -336,7 +337,7 @@
 
 .team-description {
   max-width: 720px;
-  margin: 15px auto 80px;
+  margin: 15px auto 50px;
 
   text-align: center;
 
@@ -507,121 +508,561 @@
 ========================================================= */
 
 .services-section {
-  padding: 65px 5% 110px;
-  background: #ffffff;
-}
-
-.services-description {
-  max-width: 760px;
-
-  margin: 30px auto 70px;
-
-  text-align: center;
-
-  font-size: 14px;
-  line-height: 1.35;
-}
-
-.services-grid {
-  max-width: 1250px;
-
-  margin: 0 auto;
-
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  gap: 16px;
-}
-
-.service-card {
-  text-align: center;
-}
-
-.service-card img {
   width: 100%;
-  aspect-ratio: 1 / 1;
+  min-height: 630px;
 
-  object-fit: cover;
+  padding: 65px 0 110px;
 
-  border-radius: 50%;
+  background: #ffffff;
 
-  display: block;
-}
+  box-sizing: border-box;
 
-.service-card h3 {
-  margin: 16px 0 0;
-
-  color: #111111;
-
-  font-size: 18px;
-  font-weight: 500;
-
-  line-height: 1.25;
+  font-family: "Poppins", sans-serif;
 }
 
 
 /* =========================================================
-   FACILITIES
+   SECTION TITLE
 ========================================================= */
 
-.facilities-section {
-  padding: 75px 5% 100px;
+.services-section .section-title {
+  margin: 0;
 
-  background: #f5edf8;
+  text-align: center;
+
+  color: #39239a;
+
+  font-family: "Be Vietnam Pro",sans-serif;
+  font-size: 48px;
+  font-weight: 800;
+  font-style: ExtraBold;
+
+  line-height: 100%;
 }
 
-.facilities-section .section-title {
-  margin-bottom: 65px;
+
+/* =========================================================
+   DESCRIPTION
+========================================================= */
+
+.services-description {
+  width: 100%;
+  max-width: 760px;
+
+  margin: 28px auto 0;
+
+  padding: 0;
+
+  text-align: center;
+
+  color: #111111;
+
+  font-family: "Be Vietnam Pro", sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+  font-style: Regular;
+
+  line-height: 100%;
 }
 
-.facilities-grid {
-  max-width: 1315px;
 
-  margin: 0 auto;
+/* =========================================================
+   SERVICES GRID
+========================================================= */
+
+.services-grid {
+  width: 100%;
+  max-width: 1250px;
+
+  margin: 70px auto 0;
+
+  padding: 0;
 
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 45px 7px;
+
+  grid-template-columns: repeat(5, 1fr);
+
+  column-gap: 16px;
+
+  align-items: start;
+
+  box-sizing: border-box;
 }
 
-.facility-card {
-  min-height: 375px;
 
-  padding: 16px;
+/* =========================================================
+   SERVICE CARD
+========================================================= */
 
-  background: #ffffff;
-
-  border-radius: 30px;
-
-  box-shadow: 0 8px 20px rgba(92, 54, 131, 0.08);
-}
-
-.facility-card img {
+.service-card {
   width: 100%;
-  height: 232px;
+
+  padding: 0;
+  margin: 0;
+
+  text-align: center;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  box-sizing: border-box;
+}
+
+
+/* =========================================================
+   SERVICE IMAGE
+========================================================= */
+
+.service-card img {
+  width: 209px;
+  height: 209px;
+
+  max-width: 100%;
 
   display: block;
 
   object-fit: cover;
+  object-position: center;
 
-  border-radius: 50% 50% 45% 45%;
+  border-radius: 4%;
+
+  margin: 0;
+  padding: 0;
+
+  box-sizing: border-box;
 }
 
-.facility-card h3 {
-  margin: 17px 0 10px;
 
-  color: #38229a;
+/* =========================================================
+   SERVICE TITLE
+========================================================= */
 
-  font-size: 14px;
-  font-weight: 800;
+.service-card h3 {
+  width: 100%;
+
+  margin: 14px 0 0;
+  padding: 0;
+
+  color: #111111;
+
+  font-family: "Be Vietnam Pro", sans-serif;
+
+  font-size: 20px;
+  font-weight: 400;
+
+  line-height: 1.25;
+
+  text-align: center;
+
+  box-sizing: border-box;
 }
 
-.facility-card p {
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1050px) {
+
+  .services-section {
+    padding: 55px 30px 80px;
+  }
+
+  .services-grid {
+    max-width: 900px;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    column-gap: 25px;
+    row-gap: 45px;
+
+    margin-top: 55px;
+  }
+
+  .service-card img {
+    width: 180px;
+    height: 180px;
+  }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 700px) {
+
+  .services-section {
+    min-height: auto;
+
+    padding: 45px 20px 60px;
+  }
+
+  .services-section .section-title {
+    font-size: 36px;
+  }
+
+  .services-description {
+    max-width: 600px;
+
+    margin-top: 20px;
+
+    font-size: 12px;
+
+    line-height: 1.6;
+  }
+
+  .services-grid {
+    grid-template-columns: repeat(2, 1fr);
+
+    column-gap: 20px;
+    row-gap: 40px;
+
+    margin-top: 45px;
+  }
+
+  .service-card img {
+    width: 140px;
+    height: 140px;
+  }
+
+  .service-card h3 {
+    margin-top: 12px;
+
+    font-size: 16px;
+
+    line-height: 1.3;
+  }
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 450px) {
+
+  .services-section {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .services-section .section-title {
+    font-size: 30px;
+  }
+
+  .services-description {
+    font-size: 11px;
+  }
+
+  .services-grid {
+    grid-template-columns: 1fr;
+
+    row-gap: 35px;
+
+    margin-top: 40px;
+  }
+
+  .service-card img {
+    width: 180px;
+    height: 180px;
+  }
+
+  .service-card h3 {
+    font-size: 17px;
+  }
+
+}
+
+/* =========================================================
+   NURSERY FACILITIES SECTION
+========================================================= */
+
+.nursery-facilities {
+  width: 100%;
+  min-height: 100vh;
+  background: #f3eaf7;
+  padding: 0 0 50px;
+  box-sizing: border-box;
+  overflow: hidden;
+  font-family: "Poppins", sans-serif;
+}
+
+
+/* =========================================================
+   CONTAINER
+========================================================= */
+
+.facilities-container {
+  width: calc(100% - 120px);
+  max-width: 1230px;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+
+/* =========================================================
+   TITLE
+========================================================= */
+
+.facilities-title {
+  margin: 0;
+  padding: 0;
+  height: 90px;
+
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+
+  color: #39239a;
+  font-family: "Poppins", sans-serif;
+  font-size: 44px;
+  font-weight: 700;
+  line-height: 1.15;
+  text-align: center;
+}
+
+
+/* =========================================================
+   FACILITIES GRID
+========================================================= */
+
+.facilities-grid {
+  width: 100%;
+
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+
+  column-gap: 18px;
+  row-gap: 34px;
+
+  align-items: start;
+}
+
+
+/* =========================================================
+   FACILITY CARD
+========================================================= */
+
+.facility-card {
+  width: 100%;
+  min-width: 0;
+
+  background: #ffffff;
+
+  border-radius: 16px;
+
+  overflow: hidden;
+
+  box-shadow: 0 5px 15px rgba(80, 55, 100, 0.07);
+
+  box-sizing: border-box;
+
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+
+/* =========================================================
+   CARD HOVER
+========================================================= */
+
+.facility-card:hover {
+  transform: translateY(-4px);
+
+  box-shadow: 0 10px 25px rgba(80, 55, 100, 0.12);
+}
+
+
+/* =========================================================
+   IMAGE
+========================================================= */
+
+.facility-image-wrapper {
+  width: 100%;
+  height: 132px;
+
+  overflow: hidden;
+
+  border-radius: 16px 16px 0 0;
+}
+
+
+.facility-image {
+  width: 100%;
+  height: 100%;
+
+  display: block;
+
+  object-fit: cover;
+  object-position: center;
+
+  transition: transform 0.35s ease;
+}
+
+
+.facility-card:hover .facility-image {
+  transform: scale(1.03);
+}
+
+
+/* =========================================================
+   CARD CONTENT
+========================================================= */
+
+.facility-content {
+  min-height: 110px;
+
+  padding: 15px 17px 16px;
+
+  box-sizing: border-box;
+}
+
+
+/* =========================================================
+   CARD TITLE
+========================================================= */
+
+.facility-content h3 {
+  margin: 0 0 7px;
+
+  color: #33209a;
+
+  font-family: "Poppins", sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+
+  line-height: 1.35;
+}
+
+
+/* =========================================================
+   CARD DESCRIPTION
+========================================================= */
+
+.facility-content p {
   margin: 0;
 
-  color: #55505d;
+  color: #4d4853;
 
-  font-size: 11.5px;
-  line-height: 1.55;
+  font-family: "Poppins", sans-serif;
+  font-size: 9.5px;
+  font-weight: 400;
+
+  line-height: 1.65;
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1000px) {
+
+  .facilities-container {
+    width: calc(100% - 60px);
+  }
+
+  .facilities-title {
+    font-size: 40px;
+    height: 85px;
+  }
+
+  .facilities-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+  }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 700px) {
+
+  .nursery-facilities {
+    padding-bottom: 35px;
+  }
+
+  .facilities-container {
+    width: calc(100% - 32px);
+  }
+
+  .facilities-title {
+    height: auto;
+    padding: 25px 0 30px;
+
+    font-size: 32px;
+  }
+
+  .facilities-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px;
+  }
+
+  .facility-image-wrapper {
+    height: 125px;
+  }
+
+  .facility-content {
+    min-height: 120px;
+    padding: 13px 13px 15px;
+  }
+
+  .facility-content h3 {
+    font-size: 12px;
+  }
+
+  .facility-content p {
+    font-size: 9px;
+    line-height: 1.55;
+  }
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 480px) {
+
+  .facilities-container {
+    width: calc(100% - 24px);
+  }
+
+  .facilities-title {
+    font-size: 28px;
+  }
+
+  .facilities-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .facility-image-wrapper {
+    height: 180px;
+  }
+
+  .facility-content {
+    min-height: auto;
+    padding: 15px 16px 18px;
+  }
+
+  .facility-content h3 {
+    font-size: 14px;
+  }
+
+  .facility-content p {
+    font-size: 10px;
+  }
+
 }
 
 
@@ -704,12 +1145,24 @@
   }
 
   .values-slider {
-    width: 100%;
+    /* width: 100%;
     padding: 0 20px;
 
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 12px;
+    gap: 12px; */
+     .values-slider {
+    width: max-content;
+  max-width: 100%;
+  display: flex;
+  gap: 30px;
+  padding-left: 50px;
+  padding-right: 60px;
+
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: thin;
+  }
   }
 
   .value-card {

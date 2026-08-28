@@ -1,16 +1,30 @@
-/* =========================================================
-   NAVBAR
-========================================================= */
-
 .site-header {
   width: 100%;
-  min-height: 147px;
+  min-height: 127px;
   background: #ffffff;
-  position: relative;
+
+  position: fixed;
+  top: 0;
+  left: 0;
   z-index: 1000;
 
   animation: navbarFadeIn 0.8s ease both;
 }
+
+/* =========================================================
+   NAVBAR
+========================================================= */
+
+/* .site-header {
+  width: 100%;
+  min-height: 147px;
+  background: #ffffff;
+  position: sticky;
+  top: 0; 
+  z-index: 1000;
+
+  animation: navbarFadeIn 0.8s ease both;
+} */
 
 @keyframes navbarFadeIn {
   from {
@@ -30,8 +44,8 @@
 
 .navbar-container {
   width: calc(100% - 80px);
-  max-width: 1580px;
-  min-height: 147px;
+  max-width: 1480px;
+  min-height: 127px;
 
   margin: 0 auto;
   padding: 10px 0;

@@ -1,122 +1,456 @@
-/* =========================================
-   NEWSLETTER SECTION
-========================================= */
+/* =========================================================
+   GLOBAL
+========================================================= */
 
-.newsletter-section {
+.newsletter-section,
+.newsletter-section * {
+  box-sizing: border-box;
+}
+
+
+/* =========================================================
+   MAIN RESOURCES SECTION
+========================================================= */
+
+.resources-section {
   width: 100%;
-  min-height: 460px;
-  position: relative;
+  min-height: 750px;
+
+  padding: 68px 29px 115px;
+
   background: #e7d5ff;
-  padding: 74px 20px 105px;
+
+  position: relative;
+
+  font-family: "Poppins", sans-serif;
+
   overflow: hidden;
 }
 
 
-/* =========================================
-   CONTAINER
-========================================= */
+/* =========================================================
+   TOP CARDS GRID
+========================================================= */
 
-.newsletter-container {
+.resources-grid {
   width: 100%;
-  max-width: 1015px;
+  max-width: 1073px;
+
   margin: 0 auto;
-  text-align: center;
+
+  display: grid;
+
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+
+  gap: 26px;
+
   position: relative;
+
   z-index: 2;
 }
 
 
-/* =========================================
-   LABEL
-========================================= */
+/* =========================================================
+   COMMON RESOURCE CARD
+========================================================= */
 
-.newsletter-label {
-  display: block;
-  margin-bottom: 17px;
-
-  color: #00a35a;
-
-  font-size: 13px;
-  font-weight: 800;
-  letter-spacing: 1.8px;
-}
-
-
-/* =========================================
-   CARD
-========================================= */
-
-.newsletter-card {
+.resource-card {
   width: 100%;
-  min-height: 307px;
+  height: 268px;
 
-  padding: 40px 35px;
+  position: relative;
 
   background: #ffffff;
 
-  border: 1px solid #d5c9df;
-  border-radius: 27px;
+  border-radius: 24px;
+
+  border: none;
 
   box-shadow:
-    0 10px 16px rgba(72, 53, 95, 0.15);
+    0 3px 2px rgba(45, 30, 70, 0.28);
+
+  overflow: visible;
+}
+
+
+/* =========================================================
+   RESOURCE CONTENT
+========================================================= */
+
+.resource-content {
+  width: 100%;
+  height: 100%;
+
+  padding: 49px 48px 25px;
+
+  position: relative;
 
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+
+  text-align: center;
+
+  z-index: 5;
 }
 
 
-/* =========================================
-   TITLE
-========================================= */
+/* =========================================================
+   RESOURCE TITLE
+========================================================= */
 
-.newsletter-title {
+.resource-content h2 {
   margin: 0;
 
-  color: #38219a;
+  color: #39219a;
 
   font-family: "Nunito", sans-serif;
-  font-size: 40px;
+
+  font-size: 31px;
+
   font-weight: 900;
+
   line-height: 1.15;
+
+  white-space: nowrap;
 }
 
 
-/* =========================================
-   DESCRIPTION
-========================================= */
+/* =========================================================
+   RESOURCE DESCRIPTION
+========================================================= */
+
+.resource-content p {
+  width: 100%;
+  max-width: 445px;
+
+  margin: 13px auto 0;
+
+  color: #514d58;
+
+  font-family: "Poppins", sans-serif;
+
+  font-size: 10.5px;
+
+  font-weight: 400;
+
+  line-height: 1.55;
+
+  text-align: center;
+}
+
+
+/* =========================================================
+   GREEN DOWNLOAD TEXT
+========================================================= */
+
+.resource-content h4 {
+  margin: 11px 0 0;
+
+  color: #20a957;
+
+  font-family: "Poppins", sans-serif;
+
+  font-size: 14px;
+
+  font-weight: 700;
+
+  line-height: 1.25;
+
+  text-align: center;
+}
+
+
+/* =========================================================
+   PDF SMALL TEXT
+========================================================= */
+
+.pdf-info {
+  margin-top: 3px;
+
+  color: #777777;
+
+  font-family: "Poppins", sans-serif;
+
+  font-size: 6px;
+
+  font-weight: 400;
+
+  line-height: 1.2;
+}
+
+
+/* =========================================================
+   PURPLE BUTTON
+========================================================= */
+
+.purple-download-button {
+  height: 31px;
+  min-width: 118px;
+
+  margin-top: 13px;
+
+  padding: 0 17px;
+
+  border: none;
+
+  border-radius: 18px;
+
+  background: #38209e;
+
+  color: #ffffff;
+
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 7px;
+
+  font-family: "Poppins", sans-serif;
+
+  font-size: 9px;
+
+  font-weight: 600;
+
+  line-height: 1;
+
+  cursor: pointer;
+
+  box-shadow:
+    0 5px 9px rgba(55, 31, 150, 0.22);
+
+  transition:
+    transform 0.2s ease,
+    background 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+
+/* =========================================================
+   PURPLE BUTTON HOVER
+========================================================= */
+
+.purple-download-button:hover {
+  background: #2e178a;
+
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 7px 13px rgba(55, 31, 150, 0.28);
+}
+
+
+/* =========================================================
+   PURPLE BUTTON ACTIVE
+========================================================= */
+
+.purple-download-button:active {
+  transform: translateY(0);
+}
+
+
+/* =========================================================
+   PARENT GUIDE IMAGE
+========================================================= */
+
+.parent-decoration {
+  position: absolute;
+
+  width: 105px;
+  height: 100px;
+
+  right: 43px;
+  bottom: 13px;
+
+  object-fit: contain;
+
+  display: block;
+
+  z-index: 3;
+
+  pointer-events: none;
+}
+
+
+/* =========================================================
+   FRAME IMAGE
+   Academic Calendar top decoration
+========================================================= */
+
+.frame-decoration {
+  position: absolute;
+
+  width: 65px;
+  height: 100px;
+
+  top: -15px;
+  left: 0;
+
+  object-fit: contain;
+
+  display: block;
+
+  z-index: 20;
+
+  pointer-events: none;
+}
+
+
+/* =========================================================
+   PINK CALENDAR DECORATION
+========================================================= */
+
+.calendar-decoration {
+  position: absolute;
+
+  width: 82px;
+  height: 82px;
+
+  right: -1px;
+  bottom: -1px;
+
+  object-fit: contain;
+
+  display: block;
+
+  z-index: 10;
+
+  pointer-events: none;
+}
+
+
+/* =========================================================
+   NEWSLETTER CARD
+========================================================= */
+
+.newsletter-card {
+  width: 100%;
+  max-width: 800px;
+
+  height: 242px;
+
+  margin: 56px auto 0;
+
+  padding: 20px 30px;
+
+  background: #ffffff;
+
+  border: 1px solid #d4c9df;
+
+  border-radius: 27px;
+
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  text-align: center;
+
+  box-shadow:
+    0 8px 13px rgba(72, 53, 95, 0.16);
+
+  z-index: 2;
+}
+
+
+/* =========================================================
+   NEWSLETTER LABEL
+========================================================= */
+
+.newsletter-label {
+  display: block;
+
+  margin: 0;
+
+  color: #20a957;
+
+  font-family: "Poppins", sans-serif;
+
+  font-size: 12px;
+
+  font-weight: 600;
+
+  letter-spacing: 2px;
+
+  line-height: 1.2;
+}
+
+
+/* =========================================================
+   NEWSLETTER TITLE
+========================================================= */
+
+.newsletter-title {
+  margin: 10px 0 0;
+
+  padding: 0;
+
+  color: #39219a;
+
+  font-family: "Nunito", sans-serif;
+
+  font-size: 32px;
+
+  font-weight: 900;
+
+  line-height: 1.2;
+}
+
+
+/* =========================================================
+   NEWSLETTER DESCRIPTION
+========================================================= */
 
 .newsletter-description {
-  max-width: 850px;
+  width: 100%;
+  max-width: 720px;
 
-  margin: 20px 0 37px;
+  margin: 18px 0 0;
+
+  padding: 0;
 
   color: #5c5866;
 
-  font-size: 17px;
-  line-height: 1.5;
+  font-family: "Poppins", sans-serif;
+
+  font-size: 14px;
+
   font-weight: 400;
+
+  line-height: 1.45;
+
+  text-align: center;
 }
 
 
-/* =========================================
-   DOWNLOAD BUTTON
-========================================= */
+/* =========================================================
+   NEWSLETTER BUTTON
+========================================================= */
 
 .newsletter-download-button {
-  width: 155px;
-  height: 65px;
+  width: 123px;
+  height: 52px;
+
+  margin-top: 29px;
+
+  padding: 0;
 
   border: none;
-  border-radius: 34px;
+
+  border-radius: 28px;
 
   background: #20ad58;
+
   color: #ffffff;
 
-  font-family: inherit;
-  font-size: 15px;
-  font-weight: 800;
+  font-family: "Poppins", sans-serif;
+
+  font-size: 12px;
+
+  font-weight: 600;
+
   letter-spacing: 0.3px;
 
   cursor: pointer;
@@ -131,7 +465,11 @@
 }
 
 
-.newsletter-download-button:hover {
+/* =========================================================
+   NEWSLETTER BUTTON HOVER
+========================================================= */
+
+.newsletter-download-button:hover:not(:disabled) {
   background: #169b4c;
 
   transform: translateY(-2px);
@@ -141,73 +479,278 @@
 }
 
 
-.newsletter-download-button:active {
+/* =========================================================
+   NEWSLETTER BUTTON ACTIVE
+========================================================= */
+
+.newsletter-download-button:active:not(:disabled) {
   transform: translateY(0);
 }
 
 
-/* =========================================
-   TABLET
-========================================= */
+/* =========================================================
+   DISABLED BUTTON
+========================================================= */
 
-@media (max-width: 900px) {
-  .newsletter-section {
-    min-height: 450px;
-    padding: 65px 20px 90px;
-  }
+.newsletter-download-button:disabled {
+  opacity: 0.7;
 
-  .newsletter-card {
-    min-height: 290px;
-  }
-
-  .newsletter-title {
-    font-size: 36px;
-  }
-
-  .newsletter-description {
-    font-size: 15px;
-  }
+  cursor: not-allowed;
 }
 
 
-/* =========================================
-   MOBILE
-========================================= */
+/* =========================================================
+   TABLET
+========================================================= */
 
-@media (max-width: 600px) {
-  .newsletter-section {
-    min-height: 430px;
-    padding: 60px 15px 80px;
+@media (max-width: 900px) {
+
+  .resources-section {
+    padding: 55px 25px 90px;
   }
 
-  .newsletter-label {
-    font-size: 11px;
-    margin-bottom: 14px;
+
+  .resources-grid {
+    max-width: 650px;
+
+    grid-template-columns: 1fr;
+
+    gap: 25px;
   }
+
+
+  .resource-card {
+    height: 268px;
+  }
+
 
   .newsletter-card {
-    min-height: 300px;
-    padding: 35px 20px;
+    max-width: 650px;
+
+    margin-top: 45px;
+  }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 600px) {
+
+  .resources-section {
+    min-height: auto;
+
+    padding: 35px 15px 70px;
+  }
+
+
+  .resources-grid {
+    width: 100%;
+
+    grid-template-columns: 1fr;
+
+    gap: 20px;
+  }
+
+
+  .resource-card {
+    height: 270px;
+
+    border-radius: 22px;
+  }
+
+
+  .resource-content {
+    padding: 40px 20px 25px;
+  }
+
+
+  .resource-content h2 {
+    font-size: 26px;
+
+    white-space: normal;
+  }
+
+
+  .resource-content p {
+    max-width: 360px;
+
+    font-size: 10px;
+
+    line-height: 1.55;
+  }
+
+
+  .resource-content h4 {
+    font-size: 13px;
+  }
+
+
+  .pdf-info {
+    font-size: 6px;
+  }
+
+
+  /* Parent image */
+
+  .parent-decoration {
+    width: 85px;
+    height: 85px;
+
+    right: 20px;
+    bottom: 12px;
+  }
+
+
+  /* Frame */
+
+  .frame-decoration {
+    width: 58px;
+    height: 90px;
+
+    top: -12px;
+    left: -2px;
+  }
+
+
+  /* Pink decoration */
+
+  .calendar-decoration {
+    width: 70px;
+    height: 70px;
+
+    right: -1px;
+    bottom: -1px;
+  }
+
+
+  /* Newsletter */
+
+  .newsletter-card {
+    width: 100%;
+
+    height: auto;
+
+    min-height: 255px;
+
+    margin-top: 35px;
+
+    padding: 22px 18px;
+
     border-radius: 23px;
   }
 
-  .newsletter-title {
-    font-size: 30px;
+
+  .newsletter-label {
+    font-size: 10px;
+
+    letter-spacing: 1.7px;
   }
+
+
+  .newsletter-title {
+    margin-top: 9px;
+
+    font-size: 28px;
+  }
+
 
   .newsletter-description {
     max-width: 330px;
 
-    margin: 15px auto 30px;
+    margin-top: 16px;
 
-    font-size: 13px;
-    line-height: 1.65;
+    font-size: 12px;
+
+    line-height: 1.6;
   }
+
 
   .newsletter-download-button {
-    width: 135px;
-    height: 52px;
+    width: 125px;
 
-    font-size: 13px;
+    height: 50px;
+
+    margin-top: 25px;
+
+    font-size: 12px;
   }
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 400px) {
+
+  .resources-section {
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+
+
+  .resource-card {
+    height: 260px;
+
+    border-radius: 20px;
+  }
+
+
+  .resource-content {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+
+  .resource-content h2 {
+    font-size: 23px;
+  }
+
+
+  .resource-content p {
+    font-size: 9px;
+  }
+
+
+  .parent-decoration {
+    width: 75px;
+    height: 75px;
+
+    right: 12px;
+  }
+
+
+  .frame-decoration {
+    width: 52px;
+    height: 82px;
+
+    top: -10px;
+    left: -2px;
+  }
+
+
+  .calendar-decoration {
+    width: 62px;
+    height: 62px;
+  }
+
+
+  .newsletter-card {
+    min-height: 245px;
+  }
+
+
+  .newsletter-title {
+    font-size: 25px;
+  }
+
+
+  .newsletter-description {
+    font-size: 11px;
+  }
+
 }

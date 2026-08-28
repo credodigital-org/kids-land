@@ -123,13 +123,13 @@ function Footer() {
           <ul>
 
             <li>
-              <a href="#home">
+              <a href="/">
                 Home
               </a>
             </li>
 
             <li>
-              <a href="#about">
+              <a href="/about">
                 About Us
               </a>
             </li>
@@ -141,13 +141,13 @@ function Footer() {
             </li>
 
             <li>
-              <a href="#gallery">
+              <a href="/gallery">
                 Gallery
               </a>
             </li>
 
             <li>
-              <a href="#contact">
+              <a href="/admission">
                 Contact Us
               </a>
             </li>

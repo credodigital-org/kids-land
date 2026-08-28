@@ -543,6 +543,7 @@
   .timing-card {
     width: 100%;
     max-width: 367px;
+    text-align: center;
   }
 
   .testimonials-heading {
