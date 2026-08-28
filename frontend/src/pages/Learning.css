@@ -1,5 +1,5 @@
 /* =========================================
-   LEARNING PAGE
+   LEARNING PAGE BASE
 ========================================= */
 
 .learning-page {
@@ -9,6 +9,7 @@
   color: #292929;
   font-family: "Poppins", sans-serif;
   overflow-x: hidden;
+  margin-top: 67px;
 }
 
 .learning-page h1,
@@ -18,9 +19,8 @@
   margin: 0;
 }
 
-
 /* =========================================
-   HERO
+   HERO SECTION
 ========================================= */
 
 .learning-hero {
@@ -35,7 +35,7 @@
   font-size: 49.46px;
   line-height: 1.2;
   font-weight: 900;
-  font-family: Nunito;
+  font-family: "Nunito", sans-serif;
   letter-spacing: -0.8px;
   margin-bottom: 36px;
 }
@@ -45,9 +45,8 @@
   font-size: 19.11px;
   line-height: 1.5;
   font-weight: 400;
-  font-family: "Be Vietnam Pro",sans-serif;
+  font-family: "Be Vietnam Pro", sans-serif;
 }
-
 
 /* =========================================
    PROGRAM SECTION
@@ -67,7 +66,7 @@
   font-size: 36px;
   font-weight: 700;
   margin-bottom: 66px;
-  font-family: Nunito;
+  font-family: "Nunito", sans-serif;
 }
 
 .program-grid {
@@ -78,7 +77,6 @@
   grid-template-columns: repeat(2, 1fr);
   gap: 38px 22px;
 }
-
 
 /* =========================================
    PROGRAM CARD
@@ -128,8 +126,8 @@
 }
 
 .program-icon.pink {
-  background: #FFDAD6;
-  color: #BA1A1A;
+  background: #ffdad6;
+  color: #ba1a1a;
 }
 
 .program-icon.green {
@@ -152,7 +150,7 @@
   font-size: 25px;
   line-height: 1.05;
   font-weight: 700;
-  font-family: "Plus Jakarta Sans",sans-serif;
+  font-family: "Plus Jakarta Sans", sans-serif;
 }
 
 .program-title-row span {
@@ -162,12 +160,12 @@
   line-height: 1;
   font-weight: 600;
   letter-spacing: 0.6px;
-  font-family: "Be Vietnam Pro",sans-serif;
+  font-family: "Be Vietnam Pro", sans-serif;
 }
 
 .program-title-row span,
 .learn-more.pink {
-  color: #BA1A1A;
+  color: #ba1a1a;
 }
 
 .program-title-row span,
@@ -208,10 +206,8 @@
   font-size: 17px;
 }
 
-
 /* =========================================================
-   SEVEN AREAS OF LEARNING
-   Matches the supplied reference design
+   SEVEN AREAS OF LEARNING SECTION
 ========================================================= */
 
 .areas-section {
@@ -221,10 +217,6 @@
   font-family: "Nunito", sans-serif;
   box-sizing: border-box;
 }
-
-/* =========================================================
-   HEADING
-========================================================= */
 
 .areas-heading {
   text-align: center;
@@ -238,7 +230,6 @@
   line-height: 1.2;
   font-weight: 800;
   letter-spacing: 0.1px;
-  font-family: Nunito;
 }
 
 .areas-heading p {
@@ -247,56 +238,38 @@
   font-size: 14px;
   line-height: 25px;
   font-weight: 500;
-  font-style: Regular;
-  font-family: "Be Vietnam Pro",sans-serif;
+  font-family: "Be Vietnam Pro", sans-serif;
 }
 
-/* =========================================================
-   MAIN TWO BOX CONTAINER
-========================================================= */
-
 .areas-container {
-  width: calc(100% - 152px);
+  width: calc(100% - 100px);
   max-width: 1315px;
   margin: 0 auto;
-
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 17px;
+  gap: 28px;
   align-items: stretch;
 }
 
-/* =========================================================
-   COMMON BOX
-========================================================= */
-
+/* Figma-matching Container Box (rx: 41px, #FBFBFB, drop-shadow) */
 .areas-box {
-  position: relative;
-  min-height: 560px;
-
-  background: #ffffff;
-
-  border-radius: 36px;
-
-  box-shadow:
-    0 2px 2px rgba(0, 0, 0, 0.10),
-    0 5px 7px rgba(0, 0, 0, 0.10);
-
-  overflow: hidden;
+  background: #fbfbfb;
+  border-radius: 41px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08), 0 2px 4px rgba(0, 0, 0, 0.04);
   box-sizing: border-box;
+  padding: 44px 36px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .areas-box h3 {
-  position: absolute;
-  top: 39px;
-  left: 70px;
-
-  margin: 0;
-
+  margin: 0 0 36px 0;
   color: #39259b;
-  font-size: 31px;
+  font-size: 32px;
   line-height: 1.2;
   font-weight: 800;
+  text-align: center;
 }
 
 /* =========================================================
@@ -304,652 +277,164 @@
 ========================================================= */
 
 .prime-box {
-  padding: 0;
+  padding: 44px 36px;
 }
 
 .prime-items {
-  position: absolute;
-  left: 35px;
-  right: 35px;
-  top: 137px;
-
+  width: 100%;
   display: flex;
   flex-direction: column;
-  gap: 18px;
+  gap: 22px;
 }
-
-/* =========================================================
-   PRIME ITEM COMMON
-========================================================= */
 
 .prime-item {
   position: relative;
-
-  height: 115px;
+  height: 110px;
   width: 100%;
-
   display: flex;
   align-items: center;
-
   box-sizing: border-box;
-
-  padding-left: 60px;
-
+  padding: 0 30px 0 80px;
   background: #ffffff;
 }
 
 .prime-item svg {
   position: absolute;
-  left: 61px;
-  width: 20px;
-  height: 20px;
-
+  left: 45px;
+  width: 22px;
+  height: 22px;
   stroke-width: 2.2;
 }
 
 .prime-item span {
-  position: absolute;
-
-  left: 147px;
-
-  width: 280px;
-
-  font-size: 19px;
+  width: 100%;
+  font-size: 17px;
   line-height: 21px;
   font-weight: 800;
-
   text-align: center;
 }
 
-/* =========================================================
-   COMMUNICATION
-========================================================= */
-
 .prime-item.communication {
-  border: 8px solid #ffccbb;
-
-  border-radius:
-    115px
-    10px
-    115px
-    10px /
-    105px
-    10px
-    105px
-    10px;
-
-  transform: rotate(0deg);
+  border: 7px solid #ffccbb;
+  border-radius: 115px 10px 115px 10px / 105px 10px 105px 10px;
 }
-
-.communication svg {
-  color: #ff5637;
-}
-
+.communication svg,
 .communication span {
   color: #ff5637;
 }
 
-/* =========================================================
-   PHYSICAL DEVELOPMENT
-========================================================= */
-
 .prime-item.physical {
-  border: 8px solid #fff3b4;
-
-  border-radius:
-    115px
-    10px
-    115px
-    10px /
-    105px
-    10px
-    105px
-    10px;
+  border: 7px solid #fff3b4;
+  border-radius: 115px 10px 115px 10px / 105px 10px 105px 10px;
 }
-
-.physical svg {
+.physical svg,
+.physical span {
   color: #dfc832;
 }
 
-.physical span {
-  color: #d7bb24;
-}
-
-/* =========================================================
-   PERSONAL / SOCIAL
-========================================================= */
-
 .prime-item.personal {
-  border: 8px solid #acd6fa;
-
-  border-radius:
-    115px
-    10px
-    115px
-    10px /
-    105px
-    10px
-    105px
-    10px;
+  border: 7px solid #acd6fa;
+  border-radius: 115px 10px 115px 10px / 105px 10px 105px 10px;
 }
-
-.personal svg {
-  color: #63a9e8;
-}
-
+.personal svg,
 .personal span {
   color: #459be9;
 }
 
 /* =========================================================
-   SPECIFIC AREAS
-   Reference-style 2 x 2 organic layout
+   SPECIFIC AREAS (EXACT FIGMA SVG WRAPPERS)
 ========================================================= */
 
 .specific-box {
-  position: relative;
-  min-height: 560px;
-  padding: 0;
-}
-
-.specific-box h3 {
-  position: absolute;
-  top: 39px;
-  left: 70px;
-  margin: 0;
-
-  color: #39259b;
-  font-size: 31px;
-  line-height: 1.2;
-  font-weight: 800;
-  font-family: "Nunito", sans-serif;
+  padding: 44px 36px;
+  box-sizing: border-box;
 }
 
 .specific-items {
-  position: absolute;
-  top: 115px;
-  left: 50%;
-  transform: translateX(-50%);
-
-  width: 390px;
-
+  width: 100%;
+  max-width: 480px;
+  margin: 0 auto;
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 155px 155px;
-
-  column-gap: 45px;
-  row-gap: 30px;
-
+  grid-template-columns: repeat(2, 1fr);
+  gap: 32px 24px;
   align-items: center;
   justify-items: center;
 }
 
-/* =========================================================
-   COMMON ORGANIC SHAPE
-========================================================= */
-
-.specific-item {
+.specific-item-wrapper {
   position: relative;
-
-  width: 168px;
-  height: 153px;
-
+  width: 215px;
+  height: 195px;
   display: flex;
   align-items: center;
   justify-content: center;
-
-  text-align: center;
+  cursor: pointer;
   box-sizing: border-box;
-
-  border: 1px solid;
-  
-  box-shadow:
-    0 0 0 8px #ffffff,
-    0 0 0 9px currentColor;
+  transition: transform 0.25s ease;
 }
 
-.specific-item svg {
+.specific-item-wrapper:hover {
+  transform: translateY(-4px) scale(1.02);
+}
+
+.specific-item-wrapper .shape-svg {
   position: absolute;
-
-  width: 19px;
-  height: 19px;
-
-  stroke-width: 2;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  pointer-events: none;
 }
 
-.specific-item span {
-  font-size: 19px;
-  line-height: 21px;
-  font-weight: 800;
+.specific-item-wrapper .pick-content {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.specific-item-wrapper .pick-content svg {
+  margin-bottom: 8px;
+  flex-shrink: 0;
+}
+
+.specific-item-wrapper .pick-content span {
   font-family: "Nunito", sans-serif;
+  font-size: 16px;
+  font-weight: 800;
+  line-height: 1.25;
+  text-align: center;
 }
 
-/* =========================================================
-   LITERACY
-========================================================= */
-
-.specific-item.literacy {
-  background: #f0d957;
-  border-color: #e8c838;
-  color: #e8c838;
-
-  border-radius:
-    45% 40% 38% 43% /
-    38% 34% 55% 58%;
-
-  transform: rotate(-5deg);
+/* Optical Alignment & Color Accents */
+.specific-item-wrapper.literacy .pick-content {
+  color: #4f4214;
+  padding: 0 8px 14px 0;
 }
 
-.literacy svg {
-  left: 35px;
-  top: 38px;
-  color: #8b7833;
+.specific-item-wrapper.mathematics .pick-content {
+  color: #3b4d13;
+  padding: 0 0 14px 14px;
 }
 
-.literacy span {
-  color: #81713b;
-  transform: rotate(5deg);
-  margin-top: 20px;
+.specific-item-wrapper.expressive .pick-content {
+  color: #7a3148;
+  padding: 0 0 14px 14px;
 }
 
-/* =========================================================
-   MATHEMATICS
-========================================================= */
-
-.specific-item.mathematics {
-  background: #c9f47c;
-  border-color: #a9dc5c;
-  color: #a9dc5c;
-
-  border-radius:
-    39% 50% 42% 42% /
-    40% 39% 54% 56%;
-
-  transform: rotate(-5deg);
+.specific-item-wrapper.world .pick-content {
+  color: #312368;
+  padding: 14px 0 0 8px;
 }
-
-.mathematics svg {
-  left: 36px;
-  top: 39px;
-  color: #739d43;
-}
-
-.mathematics span {
-  color: #6f8c48;
-  transform: rotate(5deg);
-  margin-top: 20px;
-}
-
-/* =========================================================
-   EXPRESSIVE ARTS
-========================================================= */
-
-.specific-item.expressive {
-  background: #efc6d5;
-  border-color: #df9fba;
-  color: #df9fba;
-
-  border-radius:
-    42% 48% 45% 39% /
-    45% 42% 55% 53%;
-
-  transform: rotate(7deg);
-}
-
-.expressive svg {
-  left: 30px;
-  top: 35px;
-  color: #a25c78;
-}
-
-.expressive span {
-  color: #bc6d8b;
-  transform: rotate(-7deg);
-  margin-top: 22px;
-}
-
-/* =========================================================
-   UNDERSTANDING THE WORLD
-========================================================= */
-
-.specific-item.world {
-  background: #9d7bdd;
-  border-color: #8864ce;
-  color: #8864ce;
-
-  border-radius:
-    39% 46% 45% 40% /
-    40% 42% 53% 54%;
-
-  transform: rotate(12deg);
-}
-
-.world svg {
-  left: 33px;
-  top: 37px;
-  color: #684f9a;
-}
-
-.world span {
-  color: #684d9b;
-  transform: rotate(-12deg);
-  margin-top: 20px;
-}
-
-
-/* =========================================================
-   TABLET
-========================================================= */
-
-@media (max-width: 1000px) {
-
-  .specific-box {
-    min-height: 530px;
-  }
-
-  .specific-box h3 {
-    left: 50px;
-    font-size: 28px;
-  }
-
-  .specific-items {
-    width: 350px;
-    column-gap: 30px;
-    row-gap: 25px;
-  }
-
-  .specific-item {
-    width: 150px;
-    height: 140px;
-  }
-
-  .specific-item span {
-    font-size: 17px;
-    line-height: 19px;
-  }
-}
-
-
-/* =========================================================
-   MOBILE
-========================================================= */
-
-@media (max-width: 700px) {
-
-  .specific-box {
-    min-height: 500px;
-  }
-
-  .specific-box h3 {
-    top: 30px;
-    left: 35px;
-    font-size: 27px;
-  }
-
-  .specific-items {
-    top: 100px;
-
-    width: 330px;
-
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 145px 145px;
-
-    column-gap: 25px;
-    row-gap: 25px;
-  }
-
-  .specific-item {
-    width: 140px;
-    height: 130px;
-  }
-
-  .specific-item span {
-    font-size: 16px;
-    line-height: 18px;
-  }
-
-  .specific-item svg {
-    width: 17px;
-    height: 17px;
-  }
-
-  .literacy svg,
-  .mathematics svg,
-  .expressive svg,
-  .world svg {
-    left: 28px;
-    top: 32px;
-  }
-}
-
-
-/* =========================================================
-   SMALL PHONES
-========================================================= */
-
-@media (max-width: 450px) {
-
-  .specific-box {
-    min-height: 470px;
-  }
-
-  .specific-box h3 {
-    top: 27px;
-    left: 25px;
-    font-size: 24px;
-  }
-
-  .specific-items {
-    top: 90px;
-
-    width: 290px;
-
-    grid-template-rows: 130px 130px;
-
-    column-gap: 20px;
-    row-gap: 20px;
-  }
-
-  .specific-item {
-    width: 125px;
-    height: 120px;
-  }
-
-  .specific-item span {
-    font-size: 14px;
-    line-height: 17px;
-  }
-
-  .specific-item svg {
-    width: 16px;
-    height: 16px;
-  }
-}
-
-/* =========================================================
-   RESPONSIVE — SMALL MOBILE (WIDER)
-========================================================= */
-
-@media (max-width: 600px) {
-
-  .learning-hero {
-    padding-top: 45px;
-  }
-
-  .learning-hero h1 {
-    font-size: 28px;
-  }
-
-  .learning-hero p {
-    font-size: 14px;
-  }
-
-  .programs-section {
-    padding: 45px 18px;
-    border-radius: 40px 40px 0 0;
-  }
-
-  .programs-section > h2 {
-    font-size: 25px;
-    margin-bottom: 35px;
-  }
-
-  .program-card {
-    padding: 18px;
-    min-height: 370px;
-  }
-
-  .program-image-wrapper {
-    height: 190px;
-  }
-
-  .program-title-row h3 {
-    font-size: 22px;
-  }
-
-  .areas-section {
-    padding: 45px 18px;
-  }
-
-  .areas-heading h2 {
-    font-size: 25px;
-  }
-
-  .areas-box {
-    padding: 30px 20px;
-  }
-
-  .areas-box > h3 {
-    font-size: 25px;
-  }
-
-  .prime-item {
-    font-size: 14px;
-  }
-
-  .specific-items {
-    transform: scale(0.85);
-    transform-origin: top center;
-    height: 340px;
-  }
-
-  .assessment-section {
-    padding: 40px 18px;
-  }
-
-  .assessment-card {
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 30px 25px;
-  }
-
-  .assessment-content h2 {
-    font-size: 26px;
-  }
-
-  .assessment-content p {
-    font-size: 12px;
-    letter-spacing: 0.5px;
-  }
-
-  .assessment-icon {
-    align-self: center;
-    width: 100px;
-    height: 100px;
-  }
-}
-
-/* =========================================================
-   SMALL MOBILE
-========================================================= */
-
-@media (max-width: 450px) {
-
-  .areas-heading h2 {
-    font-size: 24px;
-  }
-
-  .areas-box {
-    min-height: 500px;
-    border-radius: 28px;
-  }
-
-  .areas-box h3 {
-    left: 30px;
-    font-size: 24px;
-  }
-
-  .prime-items {
-    left: 18px;
-    right: 18px;
-  }
-
-  .prime-item {
-    height: 100px;
-  }
-
-  .prime-item span {
-    left: 80px;
-    width: calc(100% - 95px);
-    font-size: 14px;
-  }
-
-  .prime-item svg {
-    left: 27px;
-  }
-
-  .specific-items {
-    transform: scale(0.88);
-    transform-origin: top center;
-  }
-}
-
-/* =========================================================
-   VERY SMALL PHONES
-========================================================= */
-
-@media (max-width: 380px) {
-
-  .learning-hero {
-    padding: 60px 16px 30px;
-  }
-
-  .learning-hero h1 {
-    font-size: 24px;
-  }
-
-  .programs-section > h2 {
-    font-size: 22px;
-  }
-
-  .program-title-row h3 {
-    font-size: 19px;
-  }
-
-  .areas-heading h2 {
-    font-size: 22px;
-  }
-
-  .areas-box h3 {
-    font-size: 21px;
-  }
-
-  .prime-item span {
-    font-size: 13px;
-  }
-
-  .specific-items {
-    transform: scale(0.78);
-  }
-
-  .assessment-content h2 {
-    font-size: 23px;
-  }
-}
-
 
 /* =========================================
-   ASSESSMENT
+   ASSESSMENT SECTION
 ========================================= */
 
 .assessment-section {
@@ -965,7 +450,7 @@
   margin: 0 auto;
   background: #ffffff;
   border-radius: 30px;
-  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.25);
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.15);
   padding: 40px 65px;
   box-sizing: border-box;
   display: flex;
@@ -978,15 +463,15 @@
   font-size: 36px;
   font-weight: 800;
   margin-bottom: 20px;
-  font-family: Nunito;
+  font-family: "Nunito", sans-serif;
 }
 
 .assessment-content p {
   color: #171717;
   font-size: 15px;
   line-height: 27px;
-  letter-spacing: 1.56px;
-  font-family: "Be Vietnam Pro",sans-serif;
+  letter-spacing: 0.5px;
+  font-family: "Be Vietnam Pro", sans-serif;
 }
 
 .assessment-icon {
@@ -997,240 +482,99 @@
   align-items: center;
   justify-content: center;
   color: #806aa1;
-  /* background: radial-gradient(
-    circle,
-    rgba(197, 177, 230, 0.42),
-    rgba(255, 255, 255, 0)
-  ); */
 }
+
 /* =========================================================
-   MOBILE FIX - AREAS SECTION
+   RESPONSIVE / MEDIA QUERIES
 ========================================================= */
 
-@media (max-width: 700px) {
-
+@media (max-width: 992px) {
   .areas-container {
     grid-template-columns: 1fr;
-    gap: 28px;
-    width: 100%;
-  }
-
-  .areas-box {
-    width: 100%;
-    box-sizing: border-box;
-  }
-
-  /* -----------------------------
-     PRIME AREAS
-  ----------------------------- */
-
-  .prime-box {
-    min-height: 470px;
-  }
-
-  /* -----------------------------
-     SPECIFIC AREAS
-  ----------------------------- */
-
-  .specific-box {
-    min-height: 500px;
-    width: 100%;
-    overflow: hidden;
-  }
-
-  .specific-box h3 {
-    position: absolute;
-    top: 30px;
-    left: 35px;
-    font-size: 27px;
+    width: calc(100% - 40px);
   }
 
   .specific-items {
-    position: absolute;
-
-    top: 105px;
-    left: 50%;
-    transform: translateX(-50%);
-
-    width: 350px;
-    max-width: calc(100% - 40px);
-
-    display: grid;
-
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 145px 145px;
-
-    column-gap: 20px;
-    row-gap: 25px;
-
-    align-items: center;
-    justify-items: center;
+    max-width: 440px;
+    gap: 24px 18px;
   }
 
-  .specific-item {
+  .specific-item-wrapper {
+    width: 190px;
+    height: 175px;
+  }
+}
+
+@media (max-width: 768px) {
+  .program-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .learning-hero h1 {
+    font-size: 32px;
+  }
+
+  .learning-hero p {
+    font-size: 15px;
+  }
+
+  .programs-section > h2,
+  .areas-heading h2,
+  .assessment-content h2 {
+    font-size: 28px;
+  }
+
+  .areas-box {
+    padding: 30px 20px;
+  }
+
+  .areas-box h3 {
+    font-size: 26px;
+  }
+
+  .assessment-card {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 30px 25px;
+  }
+
+  .assessment-icon {
+    align-self: center;
+    margin-top: 20px;
+    width: 110px;
+    height: 110px;
+  }
+}
+
+@media (max-width: 480px) {
+  .specific-items {
+    max-width: 320px;
+    gap: 16px 12px;
+  }
+
+  .specific-item-wrapper {
     width: 145px;
     height: 135px;
   }
 
-  .specific-item span {
-    font-size: 16px;
-    line-height: 18px;
-  }
-}
-
-
-/* =========================================================
-   SMALL PHONES
-========================================================= */
-
-@media (max-width: 450px) {
-
-  .areas-container {
-    grid-template-columns: 1fr;
+  .specific-item-wrapper .pick-content span {
+    font-size: 13px;
   }
 
-  .specific-box {
-    min-height: 470px;
+  .specific-item-wrapper .pick-content svg {
+    margin-bottom: 4px;
   }
 
-  .specific-box h3 {
-    top: 28px;
-    left: 25px;
-    font-size: 24px;
+  .prime-item {
+    height: 95px;
+    padding: 0 15px 0 60px;
   }
 
-  .specific-items {
-    top: 90px;
-
-    width: 300px;
-    max-width: calc(100% - 30px);
-
-    grid-template-rows: 130px 130px;
-
-    column-gap: 15px;
-    row-gap: 20px;
-  }
-
-  .specific-item {
-    width: 125px;
-    height: 118px;
-  }
-
-  .specific-item span {
-    font-size: 14px;
-    line-height: 17px;
-  }
-}
-/* =========================================================
-   MOBILE AREAS - FINAL FIX
-========================================================= */
-
-@media (max-width: 700px) {
-
-  .areas-container {
-    width: 100%;
-    grid-template-columns: 1fr;
-    gap: 28px;
-  }
-
-  /* PRIME AREAS */
-  .prime-box {
-    min-height: 650px;
-  }
-
-  .prime-items {
-    top: 105px;
+  .prime-item svg {
     left: 20px;
-    right: 20px;
-    gap: 20px;
-  }
-
-  .prime-item {
-    height: 130px;
   }
 
   .prime-item span {
-    left: 120px;
-    width: calc(100% - 145px);
-    font-size: 16px;
-    line-height: 19px;
-  }
-
-  .prime-item svg {
-    left: 55px;
-  }
-
-  /* SPECIFIC AREAS */
-  .specific-box {
-    min-height: 500px;
-  }
-
-  .specific-items {
-    top: 105px;
-    width: 350px;
-    max-width: calc(100% - 30px);
-
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 145px 145px;
-
-    column-gap: 20px;
-    row-gap: 25px;
-
-    transform: translateX(-50%);
-  }
-
-  .specific-item {
-    width: 140px;
-    height: 130px;
-  }
-}
-
-
-/* SMALL PHONES */
-@media (max-width: 450px) {
-
-  .prime-box {
-    min-height: 610px;
-  }
-
-  .prime-items {
-    top: 95px;
-  }
-
-  .prime-item {
-    height: 120px;
-  }
-
-  .prime-item span {
-    left: 95px;
-    width: calc(100% - 115px);
     font-size: 14px;
-    line-height: 17px;
-  }
-
-  .prime-item svg {
-    left: 35px;
-  }
-
-  .specific-box {
-    min-height: 470px;
-  }
-
-  .specific-items {
-    top: 90px;
-    width: 300px;
-    grid-template-rows: 130px 130px;
-    column-gap: 15px;
-    row-gap: 20px;
-  }
-
-  .specific-item {
-    width: 125px;
-    height: 118px;
-  }
-
-  .specific-item span {
-    font-size: 14px;
-    line-height: 17px;
   }
 }

@@ -73,8 +73,8 @@
 ========================================= */
 
 .location-map {
-  width: 535px;
-  height: 535px;
+  width: 595px;
+  height: 595px;
   margin-left: -100px;
 
   position: relative;
@@ -88,12 +88,12 @@
 
   overflow: hidden;
 
-  border-radius: 0 0 32px 32px;
+  /* border-radius: 32px 32px 32px 32px; */
 
-  background: #eeeeee;
+  /* background: #eeeeee; */
 
-  box-shadow:
-    0 7px 18px rgba(63, 42, 120, 0.08);
+  /* box-shadow:
+    0 7px 18px rgba(63, 42, 120, 0.08); */
 }
 
 .google-map {
@@ -326,6 +326,9 @@
   .location-container {
     max-width: 850px;
   }
+  .location-map {
+    left: 45px;
+  }
 
   .location-content {
     grid-template-columns: 1fr;
@@ -370,12 +373,13 @@
   .location-map {
     width: 100%;
     height: auto;
+    left: 49px;
 
     aspect-ratio: 1 / 1;
   }
 
   .map-placeholder {
-    border-radius: 0 0 25px 25px;
+    border-radius: 25px 25px 25px 25px;
   }
 
   .map-marker {
@@ -425,5 +429,317 @@
 
   .location-item-content p {
     font-size: 13px;
+  }
+}
+
+
+
+
+
+
+
+
+/* =========================================
+   TABLET RESPONSIVE
+   768px - 1024px
+========================================= */
+
+@media (max-width: 1024px) {
+
+  .location-details {
+    width: 100%;
+    padding-top: 5px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .location-item {
+    width: 90%;
+    max-width: 600px;
+
+    margin-bottom: 22px;
+
+    display: flex;
+    align-items: center;
+  }
+
+  .location-item-icon {
+    width: 50px;
+    height: 50px;
+    flex: 0 0 50px;
+  }
+
+  .location-item-icon img {
+    width: 48px;
+    height: 48px;
+    object-fit: contain;
+  }
+
+  .location-item-content {
+    margin-left: 14px;
+    text-align: left;
+  }
+
+  .location-item-content h3 {
+    font-size: 17px;
+    line-height: 21px;
+    margin-bottom: 4px;
+  }
+
+  .location-item-content p {
+    font-size: 14px;
+    line-height: 20px;
+  }
+
+  .google-map-button {
+    min-width: 220px;
+    height: 44px;
+
+    padding: 0 20px;
+
+    font-size: 14px;
+    gap: 9px;
+
+    align-self: center;
+  }
+
+  .map-button-icon {
+    width: 17px;
+    height: 17px;
+  }
+
+  .map-button-icon img {
+    width: 16px;
+    height: 16px;
+  }
+}
+
+
+/* =========================================
+   MOBILE RESPONSIVE
+   481px - 767px
+========================================= */
+
+@media (max-width: 767px) {
+
+  .location-details {
+    width: 100%;
+    padding-top: 5px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .location-item {
+    width: 92%;
+    max-width: 500px;
+
+    margin-bottom: 20px;
+
+    display: flex;
+    align-items: flex-start;
+  }
+
+  .location-item-icon {
+    width: 46px;
+    height: 46px;
+    flex: 0 0 46px;
+
+    border-radius: 10px;
+  }
+
+  .location-item-icon img {
+    width: 44px;
+    height: 44px;
+
+    object-fit: contain;
+  }
+
+  .location-item-content {
+    margin-left: 12px;
+
+    flex: 1;
+    min-width: 0;
+
+    text-align: left;
+  }
+
+  .location-item-content h3 {
+    font-size: 16px;
+    line-height: 20px;
+    margin: 0 0 4px;
+  }
+
+  .location-item-content p {
+    font-size: 13px;
+    line-height: 19px;
+  }
+
+  .google-map-button {
+    width: 100%;
+    min-width: 0;
+    max-width: 230px;
+
+    height: 44px;
+
+    padding: 0 18px;
+
+    font-size: 14px;
+    gap: 8px;
+
+    border-radius: 23px;
+
+    align-self: center;
+  }
+
+  .map-button-icon {
+    width: 17px;
+    height: 17px;
+  }
+
+  .map-button-icon img {
+    width: 16px;
+    height: 16px;
+  }
+}
+
+
+/* =========================================
+   SMALL MOBILE
+   320px - 480px
+========================================= */
+
+@media (max-width: 480px) {
+
+  .location-details {
+    width: 100%;
+    padding-top: 3px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .location-item {
+    width: 94%;
+    max-width: 420px;
+
+    margin-bottom: 18px;
+
+    display: flex;
+    align-items: flex-start;
+  }
+
+  .location-item-icon {
+    width: 42px;
+    height: 42px;
+    flex: 0 0 42px;
+
+    border-radius: 9px;
+  }
+
+  .location-item-icon img {
+    width: 40px;
+    height: 40px;
+  }
+
+  .location-item-content {
+    margin-left: 10px;
+    flex: 1;
+
+    text-align: left;
+  }
+
+  .location-item-content h3 {
+    font-size: 15px;
+    line-height: 19px;
+    margin-bottom: 3px;
+  }
+
+  .location-item-content p {
+    font-size: 12px;
+    line-height: 18px;
+  }
+
+  .google-map-button {
+    width: 100%;
+    max-width: 210px;
+
+    height: 42px;
+
+    padding: 0 16px;
+
+    font-size: 13px;
+    gap: 7px;
+
+    border-radius: 22px;
+
+    align-self: center;
+  }
+
+  .map-button-icon {
+    width: 16px;
+    height: 16px;
+  }
+
+  .map-button-icon img {
+    width: 15px;
+    height: 15px;
+  }
+}
+
+
+/* =========================================
+   EXTRA SMALL MOBILE
+   BELOW 360px
+========================================= */
+
+@media (max-width: 359px) {
+
+  .location-details {
+    align-items: center;
+  }
+
+  .location-item {
+    width: 94%;
+  }
+
+  .location-item-icon {
+    width: 39px;
+    height: 39px;
+    flex: 0 0 39px;
+  }
+
+  .location-item-icon img {
+    width: 37px;
+    height: 37px;
+  }
+
+  .location-item-content {
+    margin-left: 9px;
+  }
+
+  .location-item-content h3 {
+    font-size: 14px;
+    line-height: 18px;
+  }
+
+  .location-item-content p {
+    font-size: 11.5px;
+    line-height: 17px;
+  }
+
+  .google-map-button {
+    width: 100%;
+    max-width: 195px;
+
+    height: 40px;
+
+    font-size: 12px;
+
+    align-self: center;
   }
 }

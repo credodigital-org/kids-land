@@ -86,9 +86,9 @@ function PrincipalMessage() {
 
 
           {/* Arabic Button */}
-          <button className="arabic-button">
+          {/* <button className="arabic-button">
             اقرأ بالعربية
-          </button>
+          </button> */}
 
         </div>
 

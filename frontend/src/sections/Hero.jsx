@@ -107,9 +107,9 @@ function Hero() {
           </div>
 
         </div>
-        <button className="hero-arabic-button">
+        {/* <button className="hero-arabic-button">
       اقرأ بالعربية
-    </button>
+    </button> */}
 
       </div>
     </section>
