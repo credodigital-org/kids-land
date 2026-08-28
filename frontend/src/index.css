@@ -4,6 +4,8 @@
    from the inspect panel on the right side
    ============================================ */
 
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@600;700;800;900&display=swap");
+
 :root {
   /* Colors - copy exact hex codes from Figma */
   --color-primary: #000000;
@@ -12,8 +14,9 @@
   --color-background: #ffffff;
 
   /* Fonts - copy exact font names/sizes from Figma */
-  --font-heading: 'Arial', sans-serif;
-  --font-body: 'Arial', sans-serif;
+  --font-heading: 'Nunito', sans-serif;
+  --font-body: 'Nunito', sans-serif;
+  --font-arabic: 'Cairo', sans-serif;
   --fs-h1: 32px;
   --fs-h2: 24px;
   --fs-body: 16px;
@@ -32,6 +35,10 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 html,
 body,
 #root {
@@ -43,9 +50,36 @@ body,
 
 body {
   overflow-x: hidden;
+  font-family: var(--font-body);
+  color: #101b51;
+}
+
+button,
+input,
+textarea {
+  font-family: inherit;
+}
+
+a {
+  text-decoration: none;
 }
 
 .app {
   width: 100%;
   min-height: 100vh;
+}
+
+/* =========================================
+   ARABIC / RTL SUPPORT
+   Applied only within elements that explicitly set
+   dir="rtl" themselves (currently just the Navbar,
+   since that's the only translated content so far) -
+   NOT globally on <html>/<body>. Flipping the whole
+   page to RTL while most content is still untranslated
+   English makes that English text render right-aligned
+   with reversed punctuation, which looks broken.
+========================================= */
+
+[dir="rtl"] {
+  font-family: var(--font-arabic);
 }

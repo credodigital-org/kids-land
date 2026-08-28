@@ -4,19 +4,13 @@
 
 .about-section {
   position: relative;
-
   width: 100%;
   min-height: 635px;
-
-  background: #F5F2FF;
-
+  background: #f5f2ff;
   overflow: hidden;
-
-  font-family: Arial, Helvetica, sans-serif;
-
   box-sizing: border-box;
+  font-family: "Nunito", Arial, sans-serif;
 }
-
 
 /* =========================================
    MAIN CONTAINER
@@ -24,68 +18,49 @@
 
 .about-container {
   position: relative;
-
   width: 100%;
-  max-width: 970px;
-
-  min-height: 665px;
-
+  max-width: 1200px;
+  min-height: 635px;
   margin: 0 auto;
 
   display: grid;
-
-  grid-template-columns: 470px 1fr;
-
-  column-gap: 38px;
-
+  grid-template-columns: 1fr 1fr;
   align-items: center;
+  gap: 55px;
 
+  padding: 55px 45px;
   box-sizing: border-box;
-
-  padding: 0 15px;
 }
 
-
 /* =========================================
-   LEFT IMAGE AREA
+   LEFT IMAGE
 ========================================= */
 
 .about-image-area {
-  position: relative;
-
-  width: 470px;
-  height: 420px;
+  width: 100%;
+  max-width: 520px;
+  height: auto;
 
   display: flex;
-
-  left: -60px;
-  
-
   align-items: center;
   justify-content: center;
 
+  margin: 0 auto;
   box-sizing: border-box;
 }
 
-/* =========================================
-   MAIN IMAGE
-========================================= */
+.about-image-border {
+  width: 100%;
+  max-width: 520px;
+  display: block;
+}
 
 .about-main-image {
   display: block;
-
   width: 100%;
-  height: 100%;
-
-  object-fit: cover;
-
-  object-position: center;
-
-  border-radius: inherit;
-
-  box-sizing: border-box;
+  height: auto;
+  object-fit: contain;
 }
-
 
 /* =========================================
    RIGHT CONTENT
@@ -93,16 +68,11 @@
 
 .about-content {
   position: relative;
-
   z-index: 5;
-
   width: 100%;
-
-  padding-top: 3px;
-
+  max-width: 540px;
   box-sizing: border-box;
 }
-
 
 /* =========================================
    LABEL
@@ -110,21 +80,15 @@
 
 .about-label {
   display: block;
-
-  margin-bottom: 6px;
-  font-family: Nunito;
+  margin-bottom: 8px;
 
   color: #0aa65a;
-
-  font-size: 13px;
-
+  font-family: "Nunito", sans-serif;
+  font-size: 14px;
   font-weight: 700;
-
-  line-height: 17px;
-
-  letter-spacing: 1.2px;
+  line-height: 18px;
+  letter-spacing: 1.5px;
 }
-
 
 /* =========================================
    TITLE
@@ -134,45 +98,31 @@
   margin: 0;
 
   color: #3d209d;
-
-  font-size: 40px;
-
+  font-family: "Nunito", sans-serif;
+  font-size: 42px;
   font-weight: 900;
-
-  font-family: Nunito;
-
-  line-height: 37px;
-
+  line-height: 1.02;
   letter-spacing: -0.8px;
 }
-
 
 /* =========================================
    DESCRIPTION
 ========================================= */
 
 .about-description {
-  max-width: 510px;
-
-  margin: 21px 0 0;
+  max-width: 520px;
+  margin: 22px 0 0;
 
   color: #575264;
-
-  font-size: 13px;
-
+  font-family: "Nunito", sans-serif;
+  font-size: 15px;
   font-weight: 400;
-
-  line-height: 19px;
-
-  font-family: Nunito;
-
-  letter-spacing: 0.05px;
+  line-height: 1.55;
 }
 
 .about-description + .about-description {
-  margin-top: 14px;
+  margin-top: 15px;
 }
-
 
 /* =========================================
    FEATURES
@@ -180,92 +130,68 @@
 
 .about-features {
   display: flex;
-
   flex-direction: column;
-
-  gap: 13px;
-
+  gap: 14px;
   margin-top: 25px;
 }
 
-
 .about-feature {
   display: flex;
-
   align-items: center;
-
-  min-height: 18px;
-
   gap: 12px;
 
+  min-height: 20px;
+
   color: #373348;
-
-  font-size: 12px;
-
-  font-weight: 400;
-
-  line-height: 18px;
+  font-family: "Nunito", sans-serif;
+  font-size: 14px;
+  line-height: 20px;
 }
 
-
-/* =========================================
-   FEATURE ICON
-========================================= */
-
 .feature-icon {
-  width: 14px;
-  height: 18px;
+  width: 18px;
+  height: 20px;
 
   display: flex;
-
   align-items: center;
   justify-content: center;
 
   flex-shrink: 0;
-
   color: #a44fff;
 }
 
 .feature-icon svg {
-  width: 15px;
-  height: 15px;
-
+  width: 16px;
+  height: 16px;
   stroke-width: 2;
 }
-
 
 /* =========================================
    BUTTON
 ========================================= */
 
 .about-button {
-  width: 195px;
-  height: 41px;
+  width: 255px;
+  height: 54px;
 
   margin-top: 30px;
 
   display: inline-flex;
-
   align-items: center;
   justify-content: center;
+  gap: 10px;
 
-  gap: 7px;
-
-  border: 1.8px solid #3d209d;
-
-  border-radius: 22px;
+  border: 2px solid #3d209d;
+  border-radius: 28px;
 
   background: transparent;
-
   color: #3d209d;
 
   text-decoration: none;
 
-  font-size: 12px;
-
-  font-weight: 700;
-
-  line-height: 16px;
+  font-family: "Nunito", sans-serif;
+  font-size: 14px;
+  font-weight: 800;
 
   box-sizing: border-box;
 
@@ -276,20 +202,16 @@
 }
 
 .about-button svg {
-  width: 15px;
-  height: 15px;
-
+  width: 17px;
+  height: 17px;
   stroke-width: 2.3;
 }
 
 .about-button:hover {
   background: #3d209d;
-
   color: #ffffff;
-
   transform: translateY(-1px);
 }
-
 
 /* =========================================
    GARDEN DECORATION
@@ -297,37 +219,30 @@
 
 .about-garden {
   position: absolute;
-
   z-index: 2;
 
-  right: -270px;
-  bottom: -27px;
-  
+  right: -80px;
+  bottom: -50px;
 
-  width: 355px;
-  height: 355px;
+  width: 330px;
+  height: 330px;
 
   pointer-events: none;
 }
-
 
 .garden {
   width: 100%;
   height: 100%;
 }
 
-
 .garden img {
   display: block;
-
   width: 100%;
   height: 100%;
 
   object-fit: contain;
-
   object-position: bottom right;
 }
-
 
 /* =========================================
    TABLET
@@ -337,141 +252,116 @@
 
   .about-container {
     max-width: 900px;
-
-    grid-template-columns: 420px 1fr;
-
-    column-gap: 30px;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    padding: 45px 30px;
   }
 
   .about-image-area {
-    width: 420px;
-    height: 390px;
-  }
-
-  .about-image-border {
-    width: 405px;
-    height: 375px;
+    max-width: 430px;
   }
 
   .about-title {
     font-size: 36px;
-    line-height: 35px;
+    line-height: 1.05;
+  }
+
+  .about-description {
+    font-size: 14px;
+  }
+
+  .about-feature {
+    font-size: 13px;
   }
 
   .about-garden {
-    width: 210px;
-    height: 210px;
+    width: 230px;
+    height: 230px;
+    right: -60px;
+    bottom: -30px;
   }
 }
 
-
 /* =========================================
-   TABLET / SMALL LAPTOP
+   MOBILE / TABLET
 ========================================= */
 
-@media (max-width: 800px) {
+@media (max-width: 768px) {
 
   .about-section {
     min-height: auto;
   }
 
   .about-container {
+    width: 100%;
     min-height: auto;
 
-    grid-template-columns: 1fr;
+    display: flex;
+    flex-direction: column;
 
-    gap: 40px;
+    gap: 25px;
 
-    padding: 65px 30px 180px;
+    padding: 45px 20px 150px;
 
     text-align: center;
   }
 
-  .about-image-area {
-    width: 430px;
-    max-width: 100%;
-
-    height: 380px;
-
-    margin: 0 auto;
-    margin-left: 180px;
-  }
-
-  .about-image-border {
-    width: 410px;
-    max-width: 100%;
-
-    height: 365px;
-  }
-
-  .about-content {
-    display: flex;
-
-    flex-direction: column;
-
-    align-items: center;
-  }
-
-  .about-description {
-    max-width: 600px;
-  }
-
-  .about-feature {
-    justify-content: center;
-  }
-
-  .about-garden {
-    width: 220px;
-    height: 220px;
-  }
-}
-
-
-/* =========================================
-   MOBILE
-========================================= */
-
-@media (max-width: 600px) {
-
-  .about-container {
-    padding: 50px 18px 150px;
-
-    gap: 30px;
-  }
+  /* IMPORTANT:
+     Do NOT push the image to the right.
+  */
 
   .about-image-area {
     width: 100%;
-    height: 300px;
-    left: 1px;
+    max-width: 430px;
+
+    height: auto;
+
+    margin: 0 auto;
+    order: 1;
   }
 
   .about-image-border {
-    width: 330px;
-    max-width: 90%;
+    width: 100%;
+    max-width: 430px;
+    margin: 0 auto;
+  }
 
-    height: 285px;
+  .about-main-image {
+    width: 100%;
+    height: auto;
+  }
+
+  .about-content {
+    width: 100%;
+    max-width: 600px;
+
+    margin: 0 auto;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    order: 2;
   }
 
   .about-label {
-    font-size: 11px;
-
+    font-size: 12px;
     letter-spacing: 1.3px;
   }
 
   .about-title {
-    font-size: 30px;
-
-    line-height: 32px;
-
+    font-size: 31px;
+    line-height: 1.05;
     letter-spacing: -0.4px;
   }
 
   .about-description {
+    max-width: 560px;
+
     margin-top: 17px;
 
     font-size: 13px;
-
-    line-height: 20px;
+    line-height: 1.55;
   }
 
   .about-description + .about-description {
@@ -479,8 +369,10 @@
   }
 
   .about-features {
-    gap: 12px;
+    width: 100%;
+    max-width: 390px;
 
+    gap: 12px;
     margin-top: 22px;
 
     text-align: left;
@@ -488,28 +380,83 @@
 
   .about-feature {
     justify-content: flex-start;
-
     font-size: 12px;
   }
 
   .about-button {
+    width: 210px;
+    height: 45px;
+
     margin-top: 25px;
+
+    font-size: 12px;
   }
 
   .about-garden {
-    width: 170px;
-    height: 170px;
+    width: 190px;
+    height: 190px;
 
-    right: -8px;
+    right: -20px;
+    bottom: -25px;
   }
 }
-
 
 /* =========================================
    SMALL MOBILE
 ========================================= */
 
-@media (max-width: 400px) {
+@media (max-width: 480px) {
+
+  .about-container {
+    padding: 35px 16px 130px;
+    gap: 20px;
+  }
+
+  .about-image-area {
+    width: 100%;
+    max-width: 350px;
+
+    margin: 0 auto;
+  }
+
+  .about-image-border {
+    width: 100%;
+  }
+
+  .about-title {
+    font-size: 27px;
+    line-height: 1.08;
+  }
+
+  .about-description {
+    font-size: 12px;
+    line-height: 1.55;
+  }
+
+  .about-feature {
+    font-size: 11px;
+  }
+
+  .about-button {
+    width: 200px;
+    height: 43px;
+    font-size: 11px;
+  }
+
+  .about-garden {
+    width: 150px;
+    height: 150px;
+
+    right: -15px;
+    bottom: -15px;
+  }
+}
+
+/* =========================================
+   VERY SMALL MOBILE
+========================================= */
+
+@media (max-width: 380px) {
 
   .about-container {
     padding-left: 12px;
@@ -517,32 +464,18 @@
   }
 
   .about-image-area {
-    height: 260px;
-  }
-
-  .about-image-border {
-    width: 290px;
-    height: 250px;
+    max-width: 320px;
   }
 
   .about-title {
-    font-size: 27px;
-
-    line-height: 30px;
+    font-size: 25px;
   }
 
   .about-description {
-    font-size: 12px;
-
-    line-height: 19px;
-  }
-
-  .about-feature {
     font-size: 11px;
   }
 
-  .about-garden {
-    width: 145px;
-    height: 145px;
+  .about-feature {
+    font-size: 10.5px;
   }
 }
