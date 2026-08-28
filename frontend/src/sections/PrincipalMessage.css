@@ -347,6 +347,7 @@ transform: rotate(40deg);
   .principal-card {
     left: 4%;
     width: 92%;
+    height: 850px;
 
     padding-left: 65px;
     padding-right: 65px;
@@ -360,7 +361,7 @@ transform: rotate(40deg);
   }
 
   .principal-cloud {
-    right: -10px;
+    right: -49px;
   }
 }
 

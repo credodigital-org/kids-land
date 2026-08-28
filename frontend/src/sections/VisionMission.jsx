@@ -53,9 +53,9 @@ function VisionMission() {
 
 
           {/* Arabic button */}
-          <button className="vision-arabic-button">
+          {/* <button className="vision-arabic-button">
             اقرأ بالعربية
-          </button>
+          </button> */}
 
         </article>
 
@@ -105,9 +105,9 @@ function VisionMission() {
 
 
           {/* Arabic button */}
-          <button className="mission-arabic-button">
+          {/* <button className="mission-arabic-button">
             اقرأ بالعربية
-          </button>
+          </button> */}
 
 
           {/* Bottom kids image */}

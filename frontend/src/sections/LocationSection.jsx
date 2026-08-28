@@ -1,5 +1,5 @@
 import "./LocationSection.css";
-// import map from "../assets/location-map.png";
+import map from "../assets/location-map.png";
 import location from "../assets/Background (4).png";
 import call from "../assets/Background (5).png";
 // import loc from "../assets/Background (6).png";
@@ -34,14 +34,15 @@ function LocationSection() {
 
             <div className="map-placeholder">
 
-              <iframe
+              {/* <iframe
                 src="https://www.google.com/maps?q=https://maps.app.goo.gl/PPyuBRYmgXsog6Te8?g_st=iw&output=embed"
                 className="google-map"
                 loading="lazy"
                 allowFullScreen
                 referrerPolicy="no-referrer-when-downgrade"
                 title="Kids Land Nursery Location"
-              ></iframe>
+              ></iframe> */}
+              <img src={map} className="google-map" onClick={openGoogleMaps} />
 
             </div>
 
