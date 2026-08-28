@@ -1157,3 +1157,63 @@ body {
     0 8px 28px rgba(124, 58, 237, 0.12); 
   } 
 }
+
+/* =========================================================
+   ARABIC / ENGLISH LANGUAGE TOGGLE
+========================================================= */
+
+.nav-language-toggle {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+
+  background: #8bc63f;
+  color: #ffffff;
+  font-family: 'Nunito', sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+
+  border: none;
+  border-radius: 9999px;
+  padding: 9px 16px;
+
+  cursor: pointer;
+  white-space: nowrap;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.nav-language-toggle:hover {
+  background: #79bd25;
+  transform: translateY(-2px);
+}
+
+/* Desktop: shown inline in the header bar next to the nav pill */
+.nav-language-toggle-desktop {
+  display: flex;
+}
+
+.nav-language-toggle-mobile {
+  display: none;
+}
+
+@media (max-width: 900px) {
+  /* Below 900px the header gets tight (logo + hamburger + pill nav +
+     toggle all competing for space) - move the toggle inside the
+     mobile dropdown menu instead of keeping it in the header bar. */
+  .nav-language-toggle-desktop {
+    display: none;
+  }
+
+  .nav-language-toggle-mobile {
+    display: flex;
+    justify-content: center;
+    margin-top: 12px;
+    width: 100%;
+  }
+}
+
+/* RTL: when Arabic is active, mirror the icon/text order so the
+   icon still sits on the "leading" side of the button. */
+[dir="rtl"] .nav-language-toggle {
+  flex-direction: row-reverse;
+}
