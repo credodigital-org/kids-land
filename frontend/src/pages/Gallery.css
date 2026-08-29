@@ -5,7 +5,7 @@
 .gallery-page {
   width: 100%;
   min-height: 100vh;
-  padding-top: 57px;
+  padding-top: 0px;
 
   background: #ffffff;
 
@@ -437,7 +437,7 @@
 @media (max-width: 1000px) {
 
   .gallery-hero {
-    padding-top: 70px;
+    padding-top: 0px;
   }
 
   .gallery-hero h1 {

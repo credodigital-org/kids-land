@@ -2,12 +2,21 @@
    ADMISSION PAGE
 ========================================= */
 
-.admission-page {
+/* .admission-page {
   width: 100%;
   min-height: 100vh;
   background: #ffffff;
   padding-top: 77px;
   color: #252525;
+  font-family: "Poppins", sans-serif;
+  overflow-x: hidden;
+} */
+.admissions-page {
+  width: 100%;
+  min-height: 100vh;
+  background: #ffffff;
+  padding-top: 0px;
+  box-sizing: border-box;
   font-family: "Poppins", sans-serif;
   overflow-x: hidden;
 }
