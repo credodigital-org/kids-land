@@ -60,7 +60,7 @@ header {
   position: relative;
   width: 100%;
   min-height: 890px;
-  padding-top: 127px;
+  padding-top: 0px;
 
   background: #ffffff;
 
@@ -346,12 +346,20 @@ header {
 /* =========================================
    STATISTICS CARD
 ========================================= */
-.hero-stats {
+/* .hero-stats {
   width: 100%;
   max-width: 1247px;
   height: 160px;
   margin-top: 80px;
   margin-left: -150px;
+  position: relative;
+  z-index: 10; */
+
+  .hero-stats {
+  width: 100%;
+  max-width: 1247px;
+  height: 160px;
+  margin: 80px auto 0;
   position: relative;
   z-index: 10;
   

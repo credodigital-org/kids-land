@@ -4,12 +4,16 @@
 
 .about-page {
   width: 100%;
+    /* width: 100%; */
+  min-height: 100vh;
+  padding-top: 0px;
+  box-sizing: border-box;
   overflow: hidden;
-  padding-top: 7px;
   background: #ffffff;
   color: #111111;
   font-family: "Nunito", sans-serif;
 }
+
 
 .about-page * {
   box-sizing: border-box;

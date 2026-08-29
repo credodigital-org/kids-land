@@ -8,7 +8,7 @@
   background: #ffffff;
   color: #222;
   overflow-x: hidden;
-  padding-top: 57px;
+  padding-top: 0px;
 
   font-family: "Poppins", sans-serif;
 
@@ -852,7 +852,7 @@
   .health-hero {
     min-height: 500px;
 
-    padding-top: 80px;
+    padding-top: 0px;
   }
 
 

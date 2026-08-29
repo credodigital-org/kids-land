@@ -1,6 +1,15 @@
-/* =========================================
+/* =========================================================
    LEARNING PAGE BASE
-========================================= */
+========================================================= */
+
+/* .learning-page {
+  width: 100%;
+  min-height: 100vh;
+  background: #ffffff;
+  color: #292929;
+  font-family: "Poppins", sans-serif;
+  overflow-x: hidden;
+} */
 
 .learning-page {
   width: 100%;
@@ -9,9 +18,9 @@
   color: #292929;
   font-family: "Poppins", sans-serif;
   overflow-x: hidden;
-  margin-top: 67px;
+  padding-top: 0px;
+  box-sizing: border-box;
 }
-
 .learning-page h1,
 .learning-page h2,
 .learning-page h3,
@@ -19,9 +28,10 @@
   margin: 0;
 }
 
-/* =========================================
+
+/* =========================================================
    HERO SECTION
-========================================= */
+========================================================= */
 
 .learning-hero {
   width: 100%;
@@ -41,6 +51,8 @@
 }
 
 .learning-hero p {
+  max-width: 800px;
+  margin: 0 auto;
   color: #4c4c4c;
   font-size: 19.11px;
   line-height: 1.5;
@@ -48,9 +60,10 @@
   font-family: "Be Vietnam Pro", sans-serif;
 }
 
-/* =========================================
+
+/* =========================================================
    PROGRAM SECTION
-========================================= */
+========================================================= */
 
 .programs-section {
   width: 100%;
@@ -64,6 +77,7 @@
   text-align: center;
   color: #39249a;
   font-size: 36px;
+  line-height: 1.2;
   font-weight: 700;
   margin-bottom: 66px;
   font-family: "Nunito", sans-serif;
@@ -78,9 +92,10 @@
   gap: 38px 22px;
 }
 
-/* =========================================
+
+/* =========================================================
    PROGRAM CARD
-========================================= */
+========================================================= */
 
 .program-card {
   background: #ffffff;
@@ -157,18 +172,18 @@
   display: block;
   margin-top: 4px;
   font-size: 15.6px;
-  line-height: 1;
+  line-height: 1.2;
   font-weight: 600;
   letter-spacing: 0.6px;
   font-family: "Be Vietnam Pro", sans-serif;
 }
 
-.program-title-row span,
+.program-card.pink .program-title-row span,
 .learn-more.pink {
   color: #ba1a1a;
 }
 
-.program-title-row span,
+.program-card.green .program-title-row span,
 .learn-more.green {
   color: #72b71d;
 }
@@ -188,6 +203,7 @@
   font-size: 14px;
   line-height: 1.55;
   margin-top: 16px;
+  font-family: "Be Vietnam Pro", sans-serif;
 }
 
 .learn-more {
@@ -205,6 +221,25 @@
   margin-left: 5px;
   font-size: 17px;
 }
+
+
+/* =========================================================
+   ARABIC PROGRAM SUPPORT
+========================================================= */
+
+.learning-page[dir="rtl"] .program-title-row {
+  flex-direction: row;
+}
+
+.learning-page[dir="rtl"] .program-content {
+  text-align: right;
+}
+
+.learning-page[dir="rtl"] .learn-more span {
+  margin-left: 0;
+  margin-right: 5px;
+}
+
 
 /* =========================================================
    SEVEN AREAS OF LEARNING SECTION
@@ -233,13 +268,19 @@
 }
 
 .areas-heading p {
-  margin: 27px 0 0;
+  max-width: 780px;
+  margin: 27px auto 0;
   color: #151515;
   font-size: 14px;
   line-height: 25px;
   font-weight: 500;
   font-family: "Be Vietnam Pro", sans-serif;
 }
+
+
+/* =========================================================
+   AREAS CONTAINER
+========================================================= */
 
 .areas-container {
   width: calc(100% - 100px);
@@ -251,11 +292,17 @@
   align-items: stretch;
 }
 
-/* Figma-matching Container Box (rx: 41px, #FBFBFB, drop-shadow) */
+
+/* =========================================================
+   AREAS BOX
+========================================================= */
+
 .areas-box {
   background: #fbfbfb;
   border-radius: 41px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08), 0 2px 4px rgba(0, 0, 0, 0.04);
+  box-shadow:
+    0 4px 12px rgba(0, 0, 0, 0.08),
+    0 2px 4px rgba(0, 0, 0, 0.04);
   box-sizing: border-box;
   padding: 44px 36px;
   display: flex;
@@ -271,6 +318,7 @@
   font-weight: 800;
   text-align: center;
 }
+
 
 /* =========================================================
    PRIME AREAS
@@ -314,35 +362,69 @@
   text-align: center;
 }
 
+
+/* Communication */
+
 .prime-item.communication {
   border: 7px solid #ffccbb;
-  border-radius: 115px 10px 115px 10px / 105px 10px 105px 10px;
+  border-radius:
+    115px 10px 115px 10px /
+    105px 10px 105px 10px;
 }
+
 .communication svg,
 .communication span {
   color: #ff5637;
 }
 
+
+/* Physical */
+
 .prime-item.physical {
   border: 7px solid #fff3b4;
-  border-radius: 115px 10px 115px 10px / 105px 10px 105px 10px;
+  border-radius:
+    115px 10px 115px 10px /
+    105px 10px 105px 10px;
 }
+
 .physical svg,
 .physical span {
   color: #dfc832;
 }
 
+
+/* Personal */
+
 .prime-item.personal {
   border: 7px solid #acd6fa;
-  border-radius: 115px 10px 115px 10px / 105px 10px 105px 10px;
+  border-radius:
+    115px 10px 115px 10px /
+    105px 10px 105px 10px;
 }
+
 .personal svg,
 .personal span {
   color: #459be9;
 }
 
+
 /* =========================================================
-   SPECIFIC AREAS (EXACT FIGMA SVG WRAPPERS)
+   ARABIC PRIME AREAS
+========================================================= */
+
+.learning-page[dir="rtl"] .prime-item {
+  padding: 0 80px 0 30px;
+}
+
+.learning-page[dir="rtl"] .prime-item svg {
+  left: auto;
+  right: 45px;
+}
+
+
+/* =========================================================
+   SPECIFIC AREAS
+   ORIGINAL FIGMA SVG SHAPES
 ========================================================= */
 
 .specific-box {
@@ -372,6 +454,12 @@
   box-sizing: border-box;
   transition: transform 0.25s ease;
 }
+
+
+/* Important:
+   NO border-radius here.
+   The SVG itself creates the Figma shape.
+*/
 
 .specific-item-wrapper:hover {
   transform: translateY(-4px) scale(1.02);
@@ -412,7 +500,11 @@
   text-align: center;
 }
 
-/* Optical Alignment & Color Accents */
+
+/* =========================================================
+   SPECIFIC AREA OPTICAL ALIGNMENT
+========================================================= */
+
 .specific-item-wrapper.literacy .pick-content {
   color: #4f4214;
   padding: 0 8px 14px 0;
@@ -433,9 +525,39 @@
   padding: 14px 0 0 8px;
 }
 
-/* =========================================
+
+/* =========================================================
+   ARABIC SPECIFIC AREAS
+========================================================= */
+
+.learning-page[dir="rtl"]
+.specific-item-wrapper.literacy
+.pick-content {
+  padding: 0 0 14px 8px;
+}
+
+.learning-page[dir="rtl"]
+.specific-item-wrapper.mathematics
+.pick-content {
+  padding: 0 14px 14px 0;
+}
+
+.learning-page[dir="rtl"]
+.specific-item-wrapper.expressive
+.pick-content {
+  padding: 0 14px 14px 0;
+}
+
+.learning-page[dir="rtl"]
+.specific-item-wrapper.world
+.pick-content {
+  padding: 14px 8px 0 0;
+}
+
+
+/* =========================================================
    ASSESSMENT SECTION
-========================================= */
+========================================================= */
 
 .assessment-section {
   width: 100%;
@@ -458,9 +580,14 @@
   justify-content: space-between;
 }
 
+.assessment-content {
+  max-width: 1050px;
+}
+
 .assessment-content h2 {
   color: #39249a;
   font-size: 36px;
+  line-height: 1.2;
   font-weight: 800;
   margin-bottom: 20px;
   font-family: "Nunito", sans-serif;
@@ -477,18 +604,65 @@
 .assessment-icon {
   width: 150px;
   height: 150px;
-  border-radius: 50%;
+  min-width: 150px;
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #806aa1;
 }
 
+.assessment-icon img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+
 /* =========================================================
-   RESPONSIVE / MEDIA QUERIES
+   ARABIC ASSESSMENT
+========================================================= */
+
+.learning-page[dir="rtl"] .assessment-card {
+  direction: rtl;
+}
+
+.learning-page[dir="rtl"] .assessment-content {
+  text-align: right;
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1200px) {
+
+  .programs-section {
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+
+  .program-card {
+    min-height: 540px;
+  }
+
+  .program-image-wrapper {
+    height: 290px;
+  }
+
+  .specific-item-wrapper {
+    width: 195px;
+    height: 178px;
+  }
+
+}
+
+
+/* =========================================================
+   TABLET / SMALL LAPTOP
 ========================================================= */
 
 @media (max-width: 992px) {
+
   .areas-container {
     grid-template-columns: 1fr;
     width: calc(100% - 40px);
@@ -503,78 +677,372 @@
     width: 190px;
     height: 175px;
   }
+
+  .assessment-card {
+    gap: 30px;
+  }
+
 }
 
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
 @media (max-width: 768px) {
-  .program-grid {
-    grid-template-columns: 1fr;
+
+  /* Hero */
+
+  .learning-hero {
+    padding: 45px 20px 35px;
   }
 
   .learning-hero h1 {
     font-size: 32px;
+    line-height: 1.2;
+    margin-bottom: 18px;
   }
 
   .learning-hero p {
     font-size: 15px;
+    line-height: 1.6;
+  }
+
+
+  /* Programs */
+
+  .programs-section {
+    border-radius: 40px 40px 0 0;
+    padding: 40px 20px 55px;
   }
 
   .programs-section > h2,
   .areas-heading h2,
   .assessment-content h2 {
     font-size: 28px;
+    line-height: 1.25;
+  }
+
+  .programs-section > h2 {
+    margin-bottom: 35px;
+  }
+
+  .program-grid {
+    grid-template-columns: 1fr;
+    gap: 25px;
+  }
+
+  .program-card {
+    min-height: 0;
+    padding: 20px;
+  }
+
+  .program-image-wrapper {
+    height: 250px;
+  }
+
+  .program-content {
+    padding-top: 20px;
+  }
+
+  .program-title-row h3 {
+    font-size: 22px;
+  }
+
+  .program-title-row span {
+    font-size: 14px;
+  }
+
+  .program-content > p {
+    font-size: 14px;
+  }
+
+
+  /* Areas */
+
+  .areas-section {
+    padding: 55px 0 50px;
+  }
+
+  .areas-heading {
+    padding: 0 20px;
+    margin-bottom: 30px;
+  }
+
+  .areas-heading p {
+    margin-top: 15px;
+    font-size: 14px;
+    line-height: 1.6;
+  }
+
+  .areas-container {
+    width: calc(100% - 30px);
+    gap: 20px;
   }
 
   .areas-box {
+    min-height: 0;
     padding: 30px 20px;
+    border-radius: 30px;
   }
 
   .areas-box h3 {
     font-size: 26px;
+    margin-bottom: 25px;
+  }
+
+
+  /* Prime Areas */
+
+  .prime-items {
+    gap: 15px;
+  }
+
+  .prime-item {
+    height: 90px;
+    padding: 0 20px 0 65px;
+  }
+
+  .prime-item svg {
+    left: 25px;
+  }
+
+  .prime-item span {
+    font-size: 14px;
+    line-height: 1.35;
+  }
+
+
+  /* Specific Areas */
+
+  .specific-items {
+    max-width: 380px;
+    gap: 20px 14px;
+  }
+
+  .specific-item-wrapper {
+    width: 165px;
+    height: 150px;
+  }
+
+  .specific-item-wrapper .pick-content span {
+    font-size: 14px;
+  }
+
+
+  /* Assessment */
+
+  .assessment-section {
+    padding: 45px 20px 55px;
   }
 
   .assessment-card {
     flex-direction: column;
     align-items: flex-start;
     padding: 30px 25px;
+    gap: 20px;
+  }
+
+  .assessment-content {
+    width: 100%;
+  }
+
+  .assessment-content h2 {
+    margin-bottom: 15px;
+  }
+
+  .assessment-content p {
+    font-size: 14px;
+    line-height: 1.65;
+    letter-spacing: 0;
   }
 
   .assessment-icon {
     align-self: center;
-    margin-top: 20px;
     width: 110px;
     height: 110px;
+    min-width: 110px;
   }
+
 }
 
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
 @media (max-width: 480px) {
-  .specific-items {
-    max-width: 320px;
-    gap: 16px 12px;
+
+  .learning-hero {
+    padding: 35px 15px 30px;
   }
 
-  .specific-item-wrapper {
-    width: 145px;
-    height: 135px;
+  .learning-hero h1 {
+    font-size: 28px;
   }
 
-  .specific-item-wrapper .pick-content span {
+  .learning-hero p {
+    font-size: 14px;
+  }
+
+
+  /* Programs */
+
+  .programs-section {
+    padding-left: 15px;
+    padding-right: 15px;
+    border-radius: 32px 32px 0 0;
+  }
+
+  .programs-section > h2 {
+    font-size: 25px;
+  }
+
+  .program-card {
+    padding: 16px;
+    border-radius: 20px;
+  }
+
+  .program-image-wrapper {
+    height: 210px;
+  }
+
+  .program-icon {
+    width: 36px;
+    height: 36px;
+    min-width: 36px;
+  }
+
+  .program-title-row h3 {
+    font-size: 20px;
+  }
+
+  .program-title-row span {
+    font-size: 12.5px;
+  }
+
+  .program-content > p {
     font-size: 13px;
+    line-height: 1.55;
   }
 
-  .specific-item-wrapper .pick-content svg {
-    margin-bottom: 4px;
+
+  /* Areas */
+
+  .areas-container {
+    width: calc(100% - 20px);
   }
+
+  .areas-box {
+    padding: 25px 15px;
+    border-radius: 25px;
+  }
+
+  .areas-box h3 {
+    font-size: 24px;
+  }
+
+
+  /* Prime */
 
   .prime-item {
-    height: 95px;
-    padding: 0 15px 0 60px;
+    height: 82px;
+    padding: 0 15px 0 55px;
   }
 
   .prime-item svg {
-    left: 20px;
+    left: 18px;
+    width: 18px;
+    height: 18px;
   }
 
   .prime-item span {
-    font-size: 14px;
+    font-size: 13px;
+    line-height: 1.25;
   }
+
+
+  /* Specific */
+
+  .specific-items {
+    width: 100%;
+    max-width: 320px;
+    gap: 14px 8px;
+  }
+
+  .specific-item-wrapper {
+    width: 140px;
+    height: 130px;
+  }
+
+  .specific-item-wrapper .pick-content span {
+    font-size: 12px;
+    line-height: 1.25;
+  }
+
+  .specific-item-wrapper .pick-content svg {
+    width: 20px;
+    height: 20px;
+    margin-bottom: 4px;
+  }
+
+
+  /* Assessment */
+
+  .assessment-section {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .assessment-card {
+    padding: 25px 20px;
+    border-radius: 22px;
+  }
+
+  .assessment-content h2 {
+    font-size: 25px;
+  }
+
+  .assessment-content p {
+    font-size: 13px;
+    line-height: 1.6;
+  }
+
+  .assessment-icon {
+    width: 95px;
+    height: 95px;
+    min-width: 95px;
+  }
+
+}
+
+
+/* =========================================================
+   VERY SMALL PHONES
+========================================================= */
+
+@media (max-width: 360px) {
+
+  .learning-hero h1 {
+    font-size: 25px;
+  }
+
+  .programs-section > h2,
+  .areas-heading h2 {
+    font-size: 23px;
+  }
+
+  .specific-items {
+    max-width: 290px;
+  }
+
+  .specific-item-wrapper {
+    width: 128px;
+    height: 120px;
+  }
+
+  .specific-item-wrapper .pick-content span {
+    font-size: 11px;
+  }
+
 }
