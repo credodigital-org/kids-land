@@ -7,15 +7,18 @@ import snap from "../assets/snapchat.png";
 import tiktok from "../assets/tiktok.png";
 import whatsapp from "../assets/whatsapp.png";
 import youtube from "../assets/youtube.png";
+import { useLanguage } from "../context/LanguageContext";
 
 function SocialSection() {
+  const { language } = useLanguage();
+  const c = language === "ar" ? { title: "ابقوا على تواصل", text: "تابعوا مغامراتنا اليومية على وسائل التواصل الاجتماعي" } : { title: "Stay Connected", text: "Follow our daily adventures on social media" };
   return (
-    <section className="social-section">
+    <section className="social-section" dir={language === "ar" ? "rtl" : "ltr"}>
       <div className="social-container">
 
         {/* Heading */}
         <div className="social-heading">
-          <h2>Stay Connected</h2>
+          <h2>{c.title}</h2>
 
           <img
             className="social-heading-image"
@@ -23,7 +26,7 @@ function SocialSection() {
             alt=""
           />
 
-          <p>Follow our daily adventures on social media</p>
+          <p>{c.text}</p>
         </div>
 
         {/* Social Buttons */}

@@ -83,3 +83,17 @@ a {
 [dir="rtl"] {
   font-family: var(--font-arabic);
 }
+
+/* Protect every public section from horizontal clipping and make Arabic read naturally. */
+[dir="rtl"] :is(h1,h2,h3,p,li,span) { text-align: inherit; }
+main, section, article { max-width: 100%; }
+img { max-width: 100%; }
+@media (max-width: 1024px) {
+  .about-page, .learning-page, .health-page, .admissions-page, .gallery-page { overflow-x: clip; }
+  .about-hero, .learning-hero, .health-hero, .admission-hero { padding-left: 20px; padding-right: 20px; }
+}
+@media (max-width: 700px) {
+  h1 { font-size: clamp(28px, 8vw, 38px) !important; line-height: 1.2 !important; }
+  h2 { line-height: 1.25 !important; }
+  .desktop-break { display: none; }
+}

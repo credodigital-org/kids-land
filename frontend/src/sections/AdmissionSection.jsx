@@ -7,8 +7,11 @@ import sun1 from "../assets/sun1.png";
 
 import * as guidelinesService from "../services/guidelinesService";
 import * as calendarService from "../services/calendarService";
+import { useLanguage } from "../context/LanguageContext";
 
 function AdmissionSection() {
+  const { language } = useLanguage();
+  const c = language === "ar" ? { label: "القبول", title: "انضموا إلى عائلتنا", text: "نجعل عملية التسجيل بسيطة ومرحبة للعائلات الجديدة. ابدأوا رحلة طفلكم معنا اليوم.", button: "عرض خطوات القبول" } : { label: "ADMISSION", title: "Joining Our Family", text: "We make the enrollment process simple and welcoming for new families. Start your child's journey with us today.", button: "View Admission Steps" };
   const [guideline, setGuideline] = useState(null);
   const [calendar, setCalendar] = useState(null);
 
@@ -25,7 +28,7 @@ function AdmissionSection() {
   }, []);
 
   return (
-    <section className="admission-section" id="admission">
+    <section className="admission-section" id="admission" dir={language === "ar" ? "rtl" : "ltr"}>
 
       {/* Decorative student character */}
       <div className="admission-character">
@@ -47,25 +50,22 @@ function AdmissionSection() {
       <div className="admission-container">
 
         <span className="admission-label">
-          ADMISSION
+          {c.label}
         </span>
 
         <h2 className="admission-title">
-          Joining Our Family
+          {c.title}
         </h2>
 
         <p className="admission-description">
-          We make the enrollment process simple and welcoming
-          for new families. Start your
-          <br className="admission-desktop-break" />
-          child's journey with us today.
+          {c.text}
         </p>
 
         <a
           href="#admission-steps"
           className="admission-button"
         >
-          <span>View Admission Steps</span>
+          <span>{c.button}</span>
 
           <ArrowRight size={16} />
         </a>

@@ -5,8 +5,11 @@ import photographer from "../assets/image 222.png";
 import book from "../assets/image 223.png";
 
 import * as galleryService from "../services/galleryService";
+import { useLanguage } from "../context/LanguageContext";
 
 function GallerySection() {
+  const { language } = useLanguage();
+  const c = language === "ar" ? { label: "المعرض", title: "الحياة في كيدز لاند", button: "عرض المعرض كاملًا", alt: "صورة من معرض كيدز لاند" } : { label: "GALLERY", title: "Life at Kids Land", button: "View Full Gallery", alt: "Kids Land gallery photo" };
   const [images, setImages] = useState([]);
 
   useEffect(() => {
@@ -17,7 +20,7 @@ function GallerySection() {
   }, []);
 
   return (
-    <section className="gallery-section" id="gallery">
+    <section className="gallery-section" id="gallery" dir={language === "ar" ? "rtl" : "ltr"}>
 
       <div className="gallery-container">
 
@@ -25,11 +28,11 @@ function GallerySection() {
         <div className="gallery-header">
 
           <span className="gallery-label">
-            GALLERY
+            {c.label}
           </span>
 
           <h2 className="gallery-title">
-            Life at Kids Land
+            {c.title}
           </h2>
 
         </div>
@@ -42,7 +45,7 @@ function GallerySection() {
             <div className="gallery-image-box" key={img.id}>
               <img
                 src={img.image}
-                alt={img.title || "Kids Land gallery photo"}
+                alt={img.title || c.alt}
               />
             </div>
           ))}
@@ -57,7 +60,7 @@ function GallerySection() {
             href="#gallery"
             className="gallery-button"
           >
-            <span>View Full Gallery</span>
+            <span>{c.button}</span>
 
             <span className="gallery-grid-icon">
               ▦

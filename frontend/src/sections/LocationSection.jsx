@@ -4,8 +4,11 @@ import location from "../assets/Background (4).png";
 import call from "../assets/Background (5).png";
 // import loc from "../assets/Background (6).png";
 import open from "../assets/Container (2).png";
+import { useLanguage } from "../context/LanguageContext";
 
 function LocationSection() {
+  const { language } = useLanguage();
+  const c = language === "ar" ? { title: "موقعنا", address: "العنوان", addressText: "العين، أبوظبي، الإمارات العربية المتحدة", phone: "رقم الهاتف", maps: "فتح في خرائط Google" } : { title: "Our Location", address: "Physical Address", addressText: "123 Learning Lane, Playtown, PT 56789", phone: "Phone Number", maps: "Open in Google Maps" };
   const openGoogleMaps = () => {
     window.open(
       " https://maps.app.goo.gl/PPyuBRYmgXsog6Te8?g_st=iw",
@@ -15,13 +18,13 @@ function LocationSection() {
   };
 
   return (
-    <section className="location-section" id="location">
+    <section className="location-section" id="location" dir={language === "ar" ? "rtl" : "ltr"}>
 
       <div className="location-container">
 
         {/* Heading */}
         <h2 className="location-title">
-          Our Location
+          {c.title}
         </h2>
 
 
@@ -64,11 +67,11 @@ function LocationSection() {
               <div className="location-item-content">
 
                 <h3>
-                  Physical Address
+                  {c.address}
                 </h3>
 
                 <p>
-                  123 Learning Lane, Playtown, PT 56789
+                  {c.addressText}
                 </p>
 
               </div>
@@ -86,7 +89,7 @@ function LocationSection() {
               <div className="location-item-content">
 
                 <h3>
-                  Phone Number
+                  {c.phone}
                 </h3>
 
                 <p>
@@ -107,7 +110,7 @@ function LocationSection() {
                 <img src={open}/>
               </span>
 
-              Open in Google Maps
+              {c.maps}
             </button>
 
           </div>

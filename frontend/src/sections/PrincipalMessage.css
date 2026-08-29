@@ -5,7 +5,8 @@
 .principal-section {
   position: relative;
   width: 100%;
-  min-height: 767px;
+  min-height: 0;
+  padding: 56px 24px 72px;
   /* overflow: hidden; */
   background: #f3efff;
   box-sizing: border-box;
@@ -21,7 +22,7 @@
 
   width: 100%;
   max-width: 1105px;
-  min-height: 767px;
+  min-height: 0;
 
   margin: 0 auto;
 
@@ -34,17 +35,15 @@
 ========================================= */
 
 .principal-card {
-  position: absolute;
-
-  top: 80px;
-  left: -120px;
-
-  width: 1355px;
-  height: 730px;
+  position: relative;
+  width: min(1180px, 100%);
+  min-height: 0;
+  height: auto;
+  margin: 0 auto;
 
   box-sizing: border-box;
 
-  padding: 27px 87px 35px;
+  padding: 28px clamp(22px, 6vw, 76px) 38px;
 
   background: #fafff2;
 
@@ -69,7 +68,7 @@
 
   font-family: "Nunito", sans-serif;
 
-  font-size: 46px;
+  font-size: clamp(28px, 3vw, 42px);
   font-weight: 700;
 
   line-height: 1.25;
@@ -126,7 +125,7 @@
 
   font-family: "Be Vietnam Pro", sans-serif;
 
-  font-size: 14px;
+  font-size: clamp(15px, 1.35vw, 18px);
   font-weight: 400;
 
   line-height: 1.72;
@@ -149,7 +148,7 @@
 .dear-parents {
   color: #82c63f;
 
-  font-size: 14px;
+  font-size: inherit;
   font-weight: 700;
 
   line-height: 1.5;
@@ -165,7 +164,7 @@
 .purple-message {
   color: #301aa2;
 
-  font-size: 14px;
+  font-size: inherit;
 
   line-height: 1.7;
 
@@ -180,7 +179,7 @@
 .principal-signature {
   color: #82c63f;
 
-  font-size: 14px;
+  font-size: inherit;
   font-weight: 700;
 
   line-height: 1.4;
@@ -337,17 +336,17 @@ transform: rotate(40deg);
 @media (max-width: 1000px) {
 
   .principal-section {
-    min-height: 850px;
+    min-height: 0;
   }
 
   .principal-wrapper {
-    min-height: 850px;
+    min-height: 0;
   }
 
   .principal-card {
-    left: 4%;
-    width: 92%;
-    height: 850px;
+    left: auto;
+    width: 100%;
+    height: auto;
 
     padding-left: 65px;
     padding-right: 65px;
@@ -375,7 +374,7 @@ transform: rotate(40deg);
   .principal-section {
     min-height: auto;
 
-    padding: 85px 15px 80px;
+    padding: 50px 15px 55px;
 
     box-sizing: border-box;
   }
@@ -402,9 +401,9 @@ transform: rotate(40deg);
     width: 100%;
     height: auto;
 
-    min-height: 700px;
+    min-height: 0;
 
-    padding: 28px 24px 90px;
+    padding: 26px 20px 34px;
 
     border-radius: 14px;
   }
@@ -434,7 +433,7 @@ transform: rotate(40deg);
   .principal-text {
     margin-top: 0;
 
-    font-size: 14px;
+    font-size: 15px;
 
     line-height: 1.7;
   }

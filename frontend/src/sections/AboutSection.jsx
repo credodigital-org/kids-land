@@ -9,10 +9,12 @@ import schoolBuilding from "../assets/about-image.png";
 import garden from "../assets/garden.png";
 
 import "./AboutSection.css";
+import { useLanguage } from "../context/LanguageContext";
 
 function AboutSection() {
+  const { language, t } = useLanguage();
   return (
-    <section className="about-section" id="about-us">
+    <section className="about-section" id="about-us" dir={language === "ar" ? "rtl" : "ltr"}>
 
       <div className="about-container">
 
@@ -40,27 +42,22 @@ function AboutSection() {
         <div className="about-content">
 
           <span className="about-label">
-            ABOUT US
+            {t("homeAbout.label")}
           </span>
 
 
           <h2 className="about-title">
-            A Place to Learn, Play
-            <br />
-            and Grow
+            {t("about.heroTitle")}
           </h2>
 
 
           <p className="about-description">
-            At Kids Land Nursery, we believe childhood is a time
-            of wonder, discovery and limitless possibility.
+            {t("homeAbout.description1")}
           </p>
 
 
           <p className="about-description">
-            Our nurturing environment, enriched curriculum and
-            caring educators help every child build the confidence
-            and skills for a brighter future.
+            {t("homeAbout.description2")}
           </p>
 
 
@@ -74,7 +71,7 @@ function AboutSection() {
               </div>
 
               <span>
-                Child-centered approach
+                {t("homeAbout.feature1")}
               </span>
 
             </div>
@@ -87,8 +84,7 @@ function AboutSection() {
               </div>
 
               <span>
-                Focus on social, emotional &amp;
-                cognitive development
+                {t("homeAbout.feature2")}
               </span>
 
             </div>
@@ -101,7 +97,7 @@ function AboutSection() {
               </div>
 
               <span>
-                Strong parent partnership
+                {t("homeAbout.feature3")}
               </span>
 
             </div>
@@ -115,7 +111,7 @@ function AboutSection() {
             className="about-button"
           >
             <span>
-              Learn More About Us
+              {t("homeAbout.learnMore")}
             </span>
 
             <ArrowRight size={15} />

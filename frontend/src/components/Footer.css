@@ -10,6 +10,10 @@
   color: #111111;
 }
 
+[dir="rtl"].kids-footer .footer-main { direction: rtl; }
+[dir="rtl"].kids-footer .footer-links { padding-left: 0; padding-right: 5px; }
+[dir="rtl"].kids-footer .footer-links ul { padding: 0 34px 0 0; }
+
 /* =========================
    MAIN FOOTER
 ========================= */

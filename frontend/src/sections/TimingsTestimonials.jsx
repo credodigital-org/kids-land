@@ -7,6 +7,7 @@ import party from "../assets/Background (3).png";
 import sun  from "../assets/Container (1).png";
 
 import * as testimonialsService from "../services/testimonialsService";
+import { useLanguage } from "../context/LanguageContext";
 
 // Cards cycle through these three color variants regardless of how many
 // testimonials the admin has added - keeps the original design's look.
@@ -22,6 +23,8 @@ function initials(name) {
 }
 
 function TimingsTestimonials() {
+  const { language } = useLanguage();
+  const c = language === "ar" ? { title: "مواعيد الحضانة", intro: "جدول منظم ومرن، صُمم ليمنح أطفالكم أفضل توازن بين التعلم واللعب والراحة.", weekdays: "الاثنين - الخميس", weekdaysText: "أيام التعلم الأساسية", friday: "الجمعة", fridayText: "نصف يوم والاستعداد لعطلة نهاية الأسبوع", to: "إلى", testimonials: "آراء أولياء الأمور" } : { title: "Nursery Timings", intro: "A structured yet flexible schedule designed to give your little ones the best balance of learning, play, and rest.", weekdays: "Mon - Thu", weekdaysText: "Core Learning Days", friday: "Friday", fridayText: "Half Day & Weekend Prep", to: "TO", testimonials: "Testimonials" };
   const [testimonials, setTestimonials] = useState([]);
 
   useEffect(() => {
@@ -32,7 +35,7 @@ function TimingsTestimonials() {
   }, []);
 
   return (
-    <section className="timings-testimonials">
+    <section className="timings-testimonials" dir={language === "ar" ? "rtl" : "ltr"}>
 
       {/* =====================================
           NURSERY TIMINGS
@@ -45,15 +48,11 @@ function TimingsTestimonials() {
 
           <h2 className="timings-title">
             <span className="timings-clock-icon">◷</span>
-            Nursery Timings
+            {c.title}
           </h2>
 
           <p className="timings-description">
-            A structured yet flexible schedule
-            <br />
-            designed to give your little ones the
-            <br />
-            best balance of learning, play, and rest.
+            {c.intro}
           </p>
 
           <div className="timings-rainbow">
@@ -76,10 +75,10 @@ function TimingsTestimonials() {
               </div>
 
               <div>
-                <h3>Mon - Thu</h3>
+                <h3>{c.weekdays}</h3>
 
                 <p>
-                  Core Learning Days
+                  {c.weekdaysText}
                 </p>
               </div>
 
@@ -96,7 +95,7 @@ function TimingsTestimonials() {
                 <strong>7:00 AM</strong>
 
                 <span className="to-text">
-                  TO
+                  {c.to}
                 </span>
 
                 <strong>5:00 PM</strong>
@@ -117,10 +116,10 @@ function TimingsTestimonials() {
               </div>
 
               <div>
-                <h3>Friday</h3>
+                <h3>{c.friday}</h3>
 
                 <p>
-                  Half Day & Weekend Prep
+                  {c.fridayText}
                 </p>
               </div>
 
@@ -137,7 +136,7 @@ function TimingsTestimonials() {
                 <strong>7:00 AM</strong>
 
                 <span className="to-text">
-                  TO
+                  {c.to}
                 </span>
 
                 <strong>12:00 PM</strong>
@@ -159,7 +158,7 @@ function TimingsTestimonials() {
       <div className="testimonials-container">
 
         <div className="testimonials-heading">
-          Testimonials
+          {c.testimonials}
         </div>
 
 

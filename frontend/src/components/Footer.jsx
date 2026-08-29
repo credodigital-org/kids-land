@@ -11,10 +11,12 @@ import youtube from "../assets/youtube.png";
 import icon from "../assets/mdi_location.png";
 import snap from "../assets/snapchat.png";
 import tiktok from "../assets/tiktok.png";
+import { useLanguage } from "../context/LanguageContext";
 
 function Footer() {
+  const { language, t } = useLanguage();
   return (
-    <footer className="kids-footer">
+    <footer className="kids-footer" dir={language === "ar" ? "rtl" : "ltr"}>
 
       {/* Decorative left illustration */}
       <div className="footer-left-decoration">
@@ -35,15 +37,11 @@ function Footer() {
         <div className="footer-column footer-about">
 
           <h3>
-            Kids Land Nursery
+            {t("footer.name")}
           </h3>
 
           <p>
-            Providing a warm,caring, and
-            <br />
-            inspiring environment for your
-            <br />
-            little ones to learn and grow.
+            {t("footer.description")}
           </p>
 
           <div className="footer-socials">
@@ -117,38 +115,38 @@ function Footer() {
         <div className="footer-column footer-links">
 
           <h3>
-            Quick Links
+            {t("footer.quickLinks")}
           </h3>
 
           <ul>
 
             <li>
               <a href="/">
-                Home
+                {t("nav.home")}
               </a>
             </li>
 
             <li>
               <a href="/about">
-                About Us
+                {t("nav.about")}
               </a>
             </li>
 
             <li>
               <a href="#learning">
-                Programs
+                {t("footer.programs")}
               </a>
             </li>
 
             <li>
               <a href="/gallery">
-                Gallery
+                {t("nav.gallery")}
               </a>
             </li>
 
             <li>
               <a href="/admission">
-                Contact Us
+                {t("footer.contactUs")}
               </a>
             </li>
 
@@ -161,7 +159,7 @@ function Footer() {
         <div className="footer-column footer-contact">
 
           <h3>
-            Lets Connect
+            {t("footer.letsConnect")}
           </h3>
 
           <div className="footer-contact-item">
@@ -172,11 +170,11 @@ function Footer() {
 
             <div>
               <p>
-                123, Learning Lane, Playtown
+                {t("footer.location")}
               </p>
 
               <p>
-                (555)123-4567
+                {t("footer.phone")}
               </p>
             </div>
 
@@ -190,7 +188,7 @@ function Footer() {
       {/* Copyright */}
       <div className="footer-bottom">
 
-        © 2024 Kids Land Nursery. All rights reserved.
+        {t("footer.copyright")}
 
       </div>
 
