@@ -30,10 +30,13 @@ import "./Admissions.css";
 
 // Put your admission image inside src/assets/images/
 import admissionImage from "../assets/admission.png";
+import { useLanguage } from "../context/LanguageContext";
 
 function Admission() {
+  const { language } = useLanguage();
+  const c = language === "ar" ? { open:"القبول مفتوح", title:"بداية رائعة لمستقبل صغير", intro:"نوفر بيئة آمنة ومحبة ومليئة بالبهجة حيث يتعلم الأطفال ويلعبون وينمون معًا.", apply:"قدّم الآن", enquire:"استفسر الآن", steps:"خطوات بسيطة للانضمام إلينا", register:"1. التسجيل", registerText:"املأ نموذج الاستفسار الإلكتروني أدناه لتعبّر عن اهتمامك.", tour:"2. جولة", tourText:"احجز جولة شخصية في مرافق حضانتنا الجميلة.", meet:"3. لقاء", meetText:"لقاء تقييم قصير وودود مع مديرة الحضانة.", enroll:"4. التسجيل النهائي", enrollText:"أكمل الأوراق وانضم إلى عائلة كيدز لاند!", interest:"سجّل اهتمامك", formIntro:"املأ النموذج أدناه وسيتواصل معك فريق القبول قريبًا لترتيب جولة.", parent:"أدخل اسم ولي الأمر", phone:"أدخل رقم هاتفك", child:"أدخل اسم طفلك", age:"اختر الفئة العمرية", question:"هل لديك أي متطلبات أو أسئلة محددة؟", submit:"إرسال الاستفسار", groups:["الملائكة الصغار - 45 يومًا - 11 شهرًا","الأطفال الصغار - 1 - 2 سنة","المستكشفون - 2 - 3 سنوات","المبتكرون - 3 - 4 سنوات"] } : { open:"Admission Open", title:"A Great Start For Little Futures", intro:"We provide a safe, caring and joyful environment where children learn, play and grow together.", apply:"Apply Now", enquire:"Enquire Now", steps:"Simple Steps to Join Us", register:"1. Register", registerText:"Fill out our online inquiry form below to express your interest.", tour:"2. Tour", tourText:"Schedule a personalized tour of our beautiful nursery facilities.", meet:"3. Meet", meetText:"A brief, friendly assessment meeting with our Principal.", enroll:"4. Enroll", enrollText:"Complete paperwork and welcome to the Kids Land family!", interest:"Register Your Interest", formIntro:"Fill out the form below and our admissions team will contact you shortly to arrange a tour.", parent:"Enter parent Name", phone:"Enter Your Phone Number", child:"Enter Your Children's Name", age:"Select Age Group", question:"Any specific requirements or questions?", submit:"Submit Inquiry", groups:["Little Angels - 45 Days - 11 Months","Toddlers - 1 - 2 Years","Discoveries - 2 - 3 Years","Inventors - 3 - 4 Years"] };
   return (
-    <main className="admission-page">
+    <main className="admission-page" dir={language === "ar" ? "rtl" : "ltr"}>
 
       {/* ================= HERO ================= */}
       <section className="admission-hero">
@@ -41,30 +44,26 @@ function Admission() {
         <div className="admission-hero-content">
 
           <p className="admission-open">
-            Admission Open
+            {c.open}
           </p>
 
           <h1>
-            A Great Start For Little
-            <br />
-            Futures
+            {c.title}
           </h1>
 
           <p className="admission-description">
-            We provide a safe, caring and joyful environment where
-            <br className="desktop-only" />
-            children learn, play and grow together.
+            {c.intro}
           </p>
 
           <div className="admission-buttons">
 
             <button className="apply-btn">
-              Apply Now
+              {c.apply}
               <ArrowRight size={17} />
             </button>
 
             <button className="enquire-btn">
-              Enquire Now
+              {c.enquire}
               <ArrowRight size={17} />
             </button>
 
@@ -85,7 +84,7 @@ function Admission() {
       {/* ================= SIMPLE STEPS ================= */}
       <section className="steps-section">
 
-        <h2>Simple Steps to Join Us</h2>
+        <h2>{c.steps}</h2>
 
         <div className="steps-grid">
 
@@ -96,12 +95,10 @@ function Admission() {
               <FileText size={23} />
             </div>
 
-            <h3>1. Register</h3>
+            <h3>{c.register}</h3>
 
             <p>
-              Fill out our online inquiry form
-              <br />
-              below to express your interest.
+              {c.registerText}
             </p>
 
           </div>
@@ -114,14 +111,10 @@ function Admission() {
               <Flag size={23} />
             </div>
 
-            <h3 className="green-title">2. Tour</h3>
+            <h3 className="green-title">{c.tour}</h3>
 
             <p>
-              Schedule a personalized tour
-              <br />
-              of our beautiful nursery
-              <br />
-              facilities.
+              {c.tourText}
             </p>
 
           </div>
@@ -134,12 +127,10 @@ function Admission() {
               <DoorOpen size={23} />
             </div>
 
-            <h3 className="yellow-title">3. Meet</h3>
+            <h3 className="yellow-title">{c.meet}</h3>
 
             <p>
-              A brief, friendly assessment
-              <br />
-              meeting with our Principal.
+              {c.meetText}
             </p>
 
           </div>
@@ -152,14 +143,10 @@ function Admission() {
               <PartyPopper size={23} />
             </div>
 
-            <h3 className="red-title">4. Enroll</h3>
+            <h3 className="red-title">{c.enroll}</h3>
 
             <p>
-              Complete paperwork and
-              <br />
-              welcome to the Kids Land
-              <br />
-              family!
+              {c.enrollText}
             </p>
 
           </div>
@@ -174,11 +161,10 @@ function Admission() {
 
         <div className="register-card">
 
-          <h2>Register Your Interest</h2>
+          <h2>{c.interest}</h2>
 
           <p className="register-subtitle">
-            fill out the form below and our admissions team will contact you
-            shortly to arrange a tour.
+            {c.formIntro}
           </p>
 
 
@@ -193,7 +179,7 @@ function Admission() {
 
                 <input
                   type="text"
-                  placeholder="Enter parent Name"
+                  placeholder={c.parent}
                 />
 
               </div>
@@ -205,7 +191,7 @@ function Admission() {
 
                 <input
                   type="tel"
-                  placeholder="Enter Your Phone Number"
+                  placeholder={c.phone}
                 />
 
               </div>
@@ -222,7 +208,7 @@ function Admission() {
 
                 <input
                   type="text"
-                  placeholder="Enter Your Children's Name"
+                  placeholder={c.child}
                 />
 
               </div>
@@ -234,23 +220,23 @@ function Admission() {
 
                 <select defaultValue="">
                   <option value="" disabled>
-                    Select Age Group
+                    {c.age}
                   </option>
 
                   <option value="little-angels">
-                    Little Angels - 45 Days - 11 Months
+                    {c.groups[0]}
                   </option>
 
                   <option value="toddlers">
-                    Toddlers - 1 - 2 Years
+                    {c.groups[1]}
                   </option>
 
                   <option value="discoveries">
-                    Discoveries - 2 - 3 Years
+                    {c.groups[2]}
                   </option>
 
                   <option value="inventors">
-                    Inventors - 3 - 4 Years
+                    {c.groups[3]}
                   </option>
 
                 </select>
@@ -271,7 +257,7 @@ function Admission() {
               <User size={18} />
 
               <textarea
-                placeholder="Any specific requirements or questions ?"
+                placeholder={c.question}
               />
 
             </div>
@@ -282,7 +268,7 @@ function Admission() {
               type="submit"
               className="submit-btn"
             >
-              Submit Inquiry
+              {c.submit}
             </button>
 
           </form>

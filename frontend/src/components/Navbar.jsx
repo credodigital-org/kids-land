@@ -15,7 +15,7 @@ function Navbar() {
     { key: "learning", path: "/learning" },
     { key: "admission", path: "/admission" },
     { key: "gallery", path: "/gallery" },
-    { key: "healthSafety", path: "/health-safety" },
+    { key: "healthSafety", path: "/Health-Safety" },
   ];
 
   return (

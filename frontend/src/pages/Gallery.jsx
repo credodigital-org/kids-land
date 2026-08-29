@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { ArrowRight } from "lucide-react";
 import "./Gallery.css";
 import * as galleryService from "../services/galleryService";
+import { useLanguage } from "../context/LanguageContext";
 
 const categories = [
   "All",
@@ -23,6 +24,8 @@ const shapes = [
 ];
 
 function Gallery() {
+  const { language } = useLanguage();
+  const copy = language === "ar" ? { title: "معرضنا", intro: "استكشفوا لحظات الفرح والتعلّم والإبداع في حضانة كيدز لاند. صُممت بيئتنا لإلهام العقول الصغيرة كل يوم.", loading: "جارٍ تحميل المعرض...", unavailable: "تعذر تحميل صور المعرض.", empty: "لا توجد صور متاحة في المعرض.", more: "عرض المزيد", cats: ["الكل", "الفصول الدراسية", "منطقة اللعب", "الفعاليات"] } : { title: "Our Gallery", intro: "Explore moments of joy, learning, and creativity at Kids Land Nursery. Our environment is designed to inspire little minds every day.", loading: "Loading gallery...", unavailable: "Unable to load gallery images.", empty: "No gallery images available.", more: "Load More", cats: categories };
   const [activeCategory, setActiveCategory] = useState("All");
   const [galleryItems, setGalleryItems] = useState([]);
   const [visibleCount, setVisibleCount] = useState(9);
@@ -44,14 +47,14 @@ function Gallery() {
         setGalleryItems(data);
       } catch (err) {
         console.error("Failed to load gallery:", err);
-        setError("Unable to load gallery images.");
+        setError(copy.unavailable);
       } finally {
         setLoading(false);
       }
     }
 
     loadGallery();
-  }, []);
+  }, [language]);
 
   // =====================================
   // FILTER BY CATEGORY
@@ -93,7 +96,7 @@ function Gallery() {
   };
 
   return (
-    <main className="gallery-page">
+    <main className="gallery-page" dir={language === "ar" ? "rtl" : "ltr"}>
 
       {/* =====================================
           GALLERY HERO
@@ -101,14 +104,10 @@ function Gallery() {
 
       <section className="gallery-hero">
 
-        <h1>Our Gallery</h1>
+        <h1>{copy.title}</h1>
 
         <p>
-          Explore moments of joy, learning, and creativity at
-          Kids Land Nursery. Our
-          <br className="desktop-break" />
-          environment is designed to inspire little minds
-          every day.
+          {copy.intro}
         </p>
 
       </section>
@@ -122,7 +121,7 @@ function Gallery() {
 
         <div className="gallery-filters">
 
-          {categories.map((category) => (
+          {categories.map((category, index) => (
             <button
               key={category}
               type="button"
@@ -135,7 +134,7 @@ function Gallery() {
                 handleCategoryChange(category)
               }
             >
-              {category}
+              {copy.cats[index]}
             </button>
           ))}
 
@@ -154,7 +153,7 @@ function Gallery() {
 
         {loading && (
           <div className="gallery-status">
-            Loading gallery...
+            {copy.loading}
           </div>
         )}
 
@@ -174,7 +173,7 @@ function Gallery() {
           !error &&
           filteredItems.length === 0 && (
             <div className="gallery-status">
-              No gallery images available.
+              {copy.empty}
             </div>
           )}
 
@@ -227,7 +226,7 @@ function Gallery() {
               className="load-more-btn"
               onClick={handleLoadMore}
             >
-              <span>Load More</span>
+              <span>{copy.more}</span>
               <ArrowRight size={27} />
             </button>
 

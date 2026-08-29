@@ -27,6 +27,7 @@ import {
 } from "lucide-react";
 
 import "./About.css";
+import { useLanguage } from "../context/LanguageContext";
 
 // Replace these filenames with the exact images in your assets folder
 import aboutBuilding from "../assets/about-image.png";
@@ -49,192 +50,75 @@ import messyPlayImg from "../assets/Container (19).png";
 import theatreImg from "../assets/library.png";
 
 function About() {
+  const { language, t } = useLanguage();
+
+  // Icons/colors stay fixed regardless of language - only the text comes
+  // from the translation dictionary, keyed by a stable id per value/
+  // principle so English and Arabic always render the same set in the
+  // same order.
   const values = [
-    {
-      title: "Creativity",
-      text: "Encouraging children to think outside the box and developing their artistic and creative skills.",
-      icon: <Lightbulb />,
-      color: "purple",
-      iconBg: "#d990f8",
-    },
-    {
-      title: "continuous Learning",
-      text: "Encouraging children to think outside the box and developing their artistic and creative skills.",
-      icon: <BookOpen />,
-      color: "orange",
-      iconBg: "#ffcda9",
-    },
-    {
-      title: "Communication",
-      text: "Encouraging children to think outside the box and developing their artistic and creative skills.",
-      icon: <MessageCircle />,
-      color: "green",
-      iconBg: "#bce86c",
-    },
-    {
-      title: "Respect",
-      text: "Encouraging children to think outside the box and developing their artistic and creative skills.",
-      icon: <Heart />,
-      color: "yellow",
-      iconBg: "#f8f98c",
-    },
-    {
-      title: "Safety",
-      text: "Encouraging children to think outside the box and developing their artistic and creative skills.",
-      icon: <ShieldCheck />,
-      color: "blue",
-      iconBg: "#d8edf3",
-    },
-    {
-      title: "Kindness",
-      text: "Encouraging children to care, share and support one another.",
-      icon: <Heart />,
-      color: "pink",
-      iconBg: "#f7c6d8",
-    },
+    { id: "creativity", icon: <Lightbulb />, color: "purple", iconBg: "#d990f8" },
+    { id: "continuousLearning", icon: <BookOpen />, color: "orange", iconBg: "#ffcda9" },
+    { id: "communication", icon: <MessageCircle />, color: "green", iconBg: "#bce86c" },
+    { id: "respect", icon: <Heart />, color: "yellow", iconBg: "#f8f98c" },
+    { id: "safety", icon: <ShieldCheck />, color: "blue", iconBg: "#d8edf3" },
+    { id: "collaboration", icon: <Users />, color: "pink", iconBg: "#f7c6d8" },
+    { id: "excellence", icon: <Sparkles />, color: "purple", iconBg: "#d990f8" },
   ];
 
   const curriculum = [
-    {
-      title: "Every Child is Unique",
-      text: "We respect each child’s abilities, interests, and individual needs.",
-    },
-    {
-      title: "Positive Relationships",
-      text: "We Build secure, respectful, and supportive relationships with children and families.",
-    },
-    {
-      title: "Enabling Environments",
-      text: "We provide safe and engaging environments that encourage exploration and discovery.",
-    },
-    {
-      title: "Learning and Development",
-      text: "We offer meaningful experiences that support children’s overall development.",
-    },
+    { id: "uniqueChild" },
+    { id: "positiveRelationships" },
+    { id: "enablingEnvironments" },
+    { id: "learningDevelopment" },
   ];
 
   const services = [
-    {
-      title: "School Transportation",
-      image: schoolBus,
-    },
-    {
-      title: "Summer Camp",
-      image: summerCamp,
-    },
-    {
-      title: "Winter Camp",
-      image: winterCamp,
-    },
-    {
-      title: "Speech & Language Support",
-      image: speechSupport,
-    },
-    {
-      title: "Additional Support Services",
-      image: additionalSupport,
-    },
+    { id: "schoolTransportation", image: schoolBus },
+    { id: "summerCamp", image: summerCamp },
+    { id: "winterCamp", image: winterCamp },
+    { id: "speechLanguageSupport", image: speechSupport },
+    { id: "additionalSupport", image: additionalSupport },
   ];
 
    const facilities = [
-    {
-      image: libraryImg,
-      title: "Library",
-      description:
-        "A cozy space filled with books and stories. it encourages imagination, curiosity, and a love for reading.",
-    },
-    {
-      image: classroomImg,
-      title: "Classrooms",
-      description:
-        "Bright, engaging rooms equipped with age-appropriate learning resources to support cognitive and social development.",
-    },
-    {
-      image: outdoorImg,
-      title: "Outdoor Garden",
-      description:
-        "A natural space where children can explore and play. it develops curiosity and helps children connect with nature.",
-    },
-    {
-      image: riskyPlayImg,
-      title: "Risky Play Area",
-      description:
-        "A safe space where children can try new challenges. it builds confidence, independence, and problem solving skills.",
-    },
-    {
-      image: uaeRoomImg,
-      title: "UAE National Identity Room",
-      description:
-        "A special space to discover UAE culture, heritage, and traditions. it builds pride, respect, and a strong sense of belonging.",
-    },
-    {
-      image: firstAidImg,
-      title: "First Aid Room",
-      description:
-        "A safe and caring space for immediate support when needed. it helps ensure children’s health, safety, and well-being.",
-    },
-    {
-      image: napRoomImg,
-      title: "Nap Room",
-      description:
-        "A calm and comfortable space for rest and relaxation. it helps children recharge and feel safe and refreshed.",
-    },
-    {
-      image: constructionImg,
-      title: "construction Room",
-      description:
-        "A fun for building, designing, and creating. it develops creativity, planning, and fine motor skills.",
-    },
-    {
-      image: messyPlayImg,
-      title: "Messy Play Area",
-      description:
-        "A creative space for hands on and sensory activities. it encourages exploration, creativity, and self-expression.",
-    },
-    {
-      image: theatreImg,
-      title: "Theatre",
-      description:
-        "A creative space for storytelling, acting, acting and performances. it builds confidence, communication, and creativity.",
-    },
+    { id: "library", image: libraryImg },
+    { id: "classrooms", image: classroomImg },
+    { id: "outdoorGarden", image: outdoorImg },
+    { id: "riskyPlayArea", image: riskyPlayImg },
+    { id: "uaeIdentityRoom", image: uaeRoomImg },
+    { id: "firstAidRoom", image: firstAidImg },
+    { id: "napRoom", image: napRoomImg },
+    { id: "constructionRoom", image: constructionImg },
+    { id: "messyPlayArea", image: messyPlayImg },
+    { id: "theatre", image: theatreImg },
   ];
 
   return (
-    <main className="about-page">
+    <main className="about-page" dir={language === "ar" ? "rtl" : "ltr"}>
 
       {/* ================= HERO ================= */}
       <section className="about-hero">
         <div className="about-hero-content">
 
           <div className="about-hero-left">
-            <h1>A Place to Learn, Play and Grow</h1>
+            <h1>{t("about.heroTitle")}</h1>
 
             <p className="hero-description">
-              We believe childhood is a time of wonder, discovery and limitless
-              possibility. Our nurturing environment helps every child build
-              the confidence and skills for a brighter future.
+              {t("about.heroDescription")}
             </p>
 
             <div className="why-section">
               <h2>
-                Why Families Choose Kids
-                <br />
-                Land Nursery ?
+                {t("about.whyTitle")}
               </h2>
 
               <p>
-                For more than two decades, Kids Land Nursery has earned the
-                trust of families -not when they first enroll their children,
-                but also as they continue to choose us for each new stage of
-                their children’s early learning journey.
+                {t("about.whyP1")}
               </p>
 
               <p>
-                parents choose us because we believe that a child deserves
-                more than simply a safe place. Every child deserves a nurturing
-                learning environment that understands their individual needs,
-                celebrates who they are, and helps them grow, learn, and
-                develop with confidence
+                {t("about.whyP2")}
               </p>
             </div>
           </div>
@@ -253,13 +137,13 @@ function About() {
       {/* ================= VALUES ================= */}
       <section className="values-section">
 
-        <h2 className="section-title">Our Values</h2>
+        <h2 className="section-title">{t("about.valuesTitle")}</h2>
 
         <div className="values-slider">
-          {values.map((value, index) => (
+          {values.map((value) => (
             <div
               className={`value-card ${value.color}`}
-              key={index}
+              key={value.id}
             >
               <div
                 className="value-icon"
@@ -268,9 +152,9 @@ function About() {
                 {value.icon}
               </div>
 
-              <h3>{value.title}</h3>
+              <h3>{t(`about.values.${value.id}.title`)}</h3>
 
-              <p>{value.text}</p>
+              <p>{t(`about.values.${value.id}.text`)}</p>
 
               <span className="value-line"></span>
             </div>
@@ -283,22 +167,18 @@ function About() {
       <section className="eyfs-section">
 
         <h2 className="section-title">
-          EYFS Curriculum at kids Land Foundation
+          {t("about.eyfsTitle")}
         </h2>
 
         <p className="eyfs-description">
-          Kids Land Foundation follows the{" "}
-          <strong>Early Years Foundation Stage(EYFS)</strong> frameworks,
-          providing a safe, stimulating, and inclusive environment where
-          children learn through play, exploration, and hands-on experiences,
-          while supporting their individual needs and holistic development.
+          {t("about.eyfsDescription")}
         </p>
 
         <div className="curriculum-grid">
-          {curriculum.map((item, index) => (
-            <div className="curriculum-card" key={index}>
-              <h3>{item.title}</h3>
-              <p>{item.text}</p>
+          {curriculum.map((item) => (
+            <div className="curriculum-card" key={item.id}>
+              <h3>{t(`about.curriculum.${item.id}.title`)}</h3>
+              <p>{t(`about.curriculum.${item.id}.text`)}</p>
             </div>
           ))}
         </div>
@@ -308,13 +188,10 @@ function About() {
       {/* ================= TEAM ================= */}
       <section className="team-section">
 
-        <h2 className="section-title">Our Team</h2>
+        <h2 className="section-title">{t("about.teamTitle")}</h2>
 
         <p className="team-description">
-          At Kids Nursery, we believe that quality education and care begin
-          with a qualified,specialized, and well-trained team working together
-          to provide every child with a safe, supportive, and stimulating
-          environment.
+          {t("about.teamDescription")}
         </p>
 
         <div className="team-grid">
@@ -324,15 +201,15 @@ function About() {
               <Lightbulb />
             </div>
 
-            <h3>Leadership</h3>
+            <h3>{t("about.team.leadership")}</h3>
 
             <div className="team-tags">
               <span>
-                <CheckCircle2 /> Nursery Director
+                <CheckCircle2 /> {t("about.team.nurseryDirector")}
               </span>
 
               <span>
-                <CheckCircle2 /> Assistant Director
+                <CheckCircle2 /> {t("about.team.assistantDirector")}
               </span>
             </div>
           </div>
@@ -342,15 +219,15 @@ function About() {
               <BookOpen />
             </div>
 
-            <h3>Educational Staff</h3>
+            <h3>{t("about.team.educationalStaff")}</h3>
 
             <div className="team-tags">
               <span>
-                <CheckCircle2 /> Qualified Teachers
+                <CheckCircle2 /> {t("about.team.qualifiedTeachers")}
               </span>
 
               <span>
-                <CheckCircle2 /> Teaching Assistants
+                <CheckCircle2 /> {t("about.team.teachingAssistants")}
               </span>
             </div>
           </div>
@@ -360,23 +237,23 @@ function About() {
               <Shield />
             </div>
 
-            <h3>Specialists & Coordination</h3>
+            <h3>{t("about.team.specialists")}</h3>
 
             <div className="specialist-grid">
               <span>
-                <Shield /> Health & Safety Officer
+                <Shield /> {t("about.team.healthSafetyOfficer")}
               </span>
 
               <span>
-                <ClipboardList /> Curriculum Coordinator
+                <ClipboardList /> {t("about.team.curriculumCoordinator")}
               </span>
 
               <span>
-                <Users /> Inclusion Coordinator
+                <Users /> {t("about.team.inclusionCoordinator")}
               </span>
 
               <span>
-                <Shield /> Child Protection Coordinator
+                <Shield /> {t("about.team.childProtectionCoordinator")}
               </span>
             </div>
           </div>
@@ -386,13 +263,13 @@ function About() {
               <Bus />
             </div>
 
-            <h3>Support & Logistics</h3>
+            <h3>{t("about.team.supportLogistics")}</h3>
 
             <div className="support-list">
-              <span>♟ Cleaning Staff</span>
-              <span>▣ Authorized Drivers</span>
-              <span>♟ Bus Supervisors</span>
-              <span>▣ Bus Driver</span>
+              <span>♟ {t("about.team.cleaningStaff")}</span>
+              <span>▣ {t("about.team.authorizedDrivers")}</span>
+              <span>♟ {t("about.team.busSupervisors")}</span>
+              <span>▣ {t("about.team.busDriver")}</span>
             </div>
           </div>
 
@@ -403,24 +280,22 @@ function About() {
       {/* ================= SERVICES ================= */}
       <section className="services-section">
 
-        <h2 className="section-title">Our Services</h2>
+        <h2 className="section-title">{t("about.servicesTitle")}</h2>
 
         <p className="services-description">
-          At Kids Land nursery, we provide a range of services designed to
-          support children and families throughout the year, ensuring a safe,
-          enriching, and supportive early learning experience.
+          {t("about.servicesDescription")}
         </p>
 
         <div className="services-grid">
-          {services.map((service, index) => (
-            <div className="service-card" key={index}>
+          {services.map((service) => (
+            <div className="service-card" key={service.id}>
 
               <img
                 src={service.image}
-                alt={service.title}
+                alt={t(`about.services.${service.id}`)}
               />
 
-              <h3>{service.title}</h3>
+              <h3>{t(`about.services.${service.id}`)}</h3>
 
             </div>
           ))}
@@ -433,25 +308,25 @@ function About() {
       <div className="facilities-container">
 
         <h2 className="facilities-title">
-          Nursery Facilities
+          {t("about.facilitiesTitle")}
         </h2>
 
         <div className="facilities-grid">
-          {facilities.map((facility, index) => (
-            <div className="facility-card" key={index}>
+          {facilities.map((facility) => (
+            <div className="facility-card" key={facility.id}>
 
               <div className="facility-image-wrapper">
                 <img
                   src={facility.image}
-                  alt={facility.title}
+                  alt={t(`about.facilities.${facility.id}.title`)}
                   className="facility-image"
                 />
               </div>
 
               <div className="facility-content">
-                <h3>{facility.title}</h3>
+                <h3>{t(`about.facilities.${facility.id}.title`)}</h3>
 
-                <p>{facility.description}</p>
+                <p>{t(`about.facilities.${facility.id}.description`)}</p>
               </div>
 
             </div>
