@@ -26,6 +26,31 @@ class AcademicCalendar(models.Model):
         return f"{self.title} ({self.uploaded_at:%Y-%m-%d})"
 
 
+class Newsletter(models.Model):
+    """
+    The Newsletter PDF shown on the homepage. Same "only one current"
+    pattern as AcademicCalendar - uploading a new one automatically
+    deactivates the previous one. Old ones stay in the database for
+    reference, they just stop being the one shown on the site.
+    """
+
+    file = models.FileField(upload_to="newsletter/")
+    title = models.CharField(max_length=200, default="Newsletter")
+    is_active = models.BooleanField(default=True)
+    uploaded_at = models.DateTimeField(auto_now_add=True)
+
+    class Meta:
+        ordering = ["-uploaded_at"]
+
+    def save(self, *args, **kwargs):
+        if self.is_active:
+            Newsletter.objects.exclude(pk=self.pk).update(is_active=False)
+        super().save(*args, **kwargs)
+
+    def __str__(self):
+        return f"{self.title} ({self.uploaded_at:%Y-%m-%d})"
+
+
 class NewspaperEdition(models.Model):
     """
     One monthly newspaper edition. All editions stay in the archive -

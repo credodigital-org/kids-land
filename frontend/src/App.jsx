@@ -29,6 +29,7 @@ import CalendarPage from "./admin/pages/CalendarPage";
 import NewspaperPage from "./admin/pages/NewspaperPage";
 import GuidelinesPage from "./admin/pages/GuidelinesPage";
 import TestimonialsPage from "./admin/pages/TestimonialsPage";
+import NewsletterPage from "./admin/pages/NewsletterPage";
 
 
 export default function App() {
@@ -58,6 +59,7 @@ export default function App() {
             <Route path="/admin/newspaper" element={<ProtectedRoute><NewspaperPage /></ProtectedRoute>} />
             <Route path="/admin/guidelines" element={<ProtectedRoute><GuidelinesPage /></ProtectedRoute>} />
             <Route path="/admin/testimonials" element={<ProtectedRoute><TestimonialsPage /></ProtectedRoute>} />
+            <Route path="/admin/newsletter" element={<ProtectedRoute><NewsletterPage /></ProtectedRoute>} />
             {/* Add new admin routes above this line when new sections are added */}
           </Routes>
         </BrowserRouter>

@@ -6,6 +6,7 @@ import {
   Newspaper,
   BookOpen,
   MessageSquareQuote,
+  Mail,
   X,
 } from "lucide-react";
 import "./AdminSidebar.css";
@@ -58,6 +59,11 @@ function AdminSidebar({ open, onClose }) {
         <NavLink to="/admin/testimonials" className="admin-nav-link">
           <MessageSquareQuote size={17} />
           <span>Testimonials</span>
+        </NavLink>
+
+        <NavLink to="/admin/newsletter" className="admin-nav-link">
+          <Mail size={17} />
+          <span>Newsletter</span>
         </NavLink>
         {/* Add new sections above this line, following the same pattern */}
       </nav>
