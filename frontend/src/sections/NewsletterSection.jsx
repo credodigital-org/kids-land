@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Download, CalendarDays } from "lucide-react";
 import "./NewsletterSection.css";
 
@@ -8,9 +8,32 @@ import calendarImage from "../assets/Frame.png";
 import balloonImage from "../assets/Vector (1).png";
 import { useLanguage } from "../context/LanguageContext";
 
+import * as guidelinesService from "../services/guidelinesService";
+import * as calendarService from "../services/calendarService";
+import * as newsletterService from "../services/newsletterService";
+
 function Resources() {
   const { language } = useLanguage();
-  const c = language === "ar" ? { guide: "دليل أولياء الأمور", guideText: "حمّلوا دليلنا الكامل لمعرفة المزيد عن برامجنا وسياساتنا وروتيننا اليومي وكيف نعتني بأطفالكم.", guideDownload: "تحميل إرشادات أولياء الأمور", pdf: "احصلوا على الدليل الكامل بصيغة PDF", downloadPdf: "تحميل PDF", calendar: "التقويم الأكاديمي", calendarText: "اطّلعوا على التواريخ الدراسية المهمة والعطلات والفعاليات الخاصة طوال العام. خططوا مسبقًا ولا تفوتوا أي لحظة من رحلة تعلم طفلكم.", downloadCalendar: "تحميل التقويم", newsletter: "النشرة الإخبارية", updated: "ابقوا على اطلاع", newsletterText: "اشتركوا في نشرتنا للحصول على أحدث الأخبار والفعاليات والنصائح التعليمية من حضانة كيدز لاند.", download: "تحميل" } : { guide: "Parent’s Guide", guideText: "Download our complete guide to know more about our programs, policies, daily routines, and how we care for your little ones.", guideDownload: "Download Parent’s Guideline", pdf: "Get the complete guide in PDF format", downloadPdf: "Download PDF", calendar: "Academic Calendar", calendarText: "Stay updated with important school dates, holidays, and special events throughout the year. Plan ahead and never miss a moment of your child’s learning journey.", downloadCalendar: "Download Calendar", newsletter: "NEWSLETTER", updated: "Stay Updated", newsletterText: "Subscribe to our newsletter for the latest news, events, and educational tips from Kids Land Nursery.", download: "Download" };
+  const c = language === "ar" ? { guide: "دليل أولياء الأمور", guideText: "حمّلوا دليلنا الكامل لمعرفة المزيد عن برامجنا وسياساتنا وروتيننا اليومي وكيف نعتني بأطفالكم.", guideDownload: "تحميل إرشادات أولياء الأمور", pdf: "احصلوا على الدليل الكامل بصيغة PDF", downloadPdf: "تحميل PDF", calendar: "التقويم الأكاديمي", calendarText: "اطّلعوا على التواريخ الدراسية المهمة والعطلات والفعاليات الخاصة طوال العام. خططوا مسبقًا ولا تفوتوا أي لحظة من رحلة تعلم طفلكم.", downloadCalendar: "تحميل التقويم", newsletter: "النشرة الإخبارية", updated: "ابقوا على اطلاع", newsletterText: "اشتركوا في نشرتنا للحصول على أحدث الأخبار والفعاليات والنصائح التعليمية من حضانة كيدز لاند.", download: "تحميل", comingSoon: "قريبًا" } : { guide: "Parent’s Guide", guideText: "Download our complete guide to know more about our programs, policies, daily routines, and how we care for your little ones.", guideDownload: "Download Parent’s Guideline", pdf: "Get the complete guide in PDF format", downloadPdf: "Download PDF", calendar: "Academic Calendar", calendarText: "Stay updated with important school dates, holidays, and special events throughout the year. Plan ahead and never miss a moment of your child’s learning journey.", downloadCalendar: "Download Calendar", newsletter: "NEWSLETTER", updated: "Stay Updated", newsletterText: "Subscribe to our newsletter for the latest news, events, and educational tips from Kids Land Nursery.", download: "Download", comingSoon: "Coming soon" };
+
+  // Whatever the admin currently has uploaded for each of these three -
+  // null means nothing active yet, in which case the button disables
+  // itself instead of trying to download nothing.
+  const [guideline, setGuideline] = useState(null);
+  const [calendar, setCalendar] = useState(null);
+  const [newsletter, setNewsletter] = useState(null);
+
+  useEffect(() => {
+    guidelinesService.getCurrentGuideline().then(setGuideline).catch(() => setGuideline(null));
+    calendarService.getCurrentCalendar().then(setCalendar).catch(() => setCalendar(null));
+    newsletterService.getCurrentNewsletter().then(setNewsletter).catch(() => setNewsletter(null));
+  }, []);
+
+  function openFile(fileUrl) {
+    if (!fileUrl) return;
+    window.open(fileUrl, "_blank", "noopener,noreferrer");
+  }
+
   return (
     <section className="resources-page" dir={language === "ar" ? "rtl" : "ltr"}>
 
@@ -33,9 +56,13 @@ function Resources() {
               {c.pdf}
             </span>
 
-            <button className="purple-btn">
+            <button
+              className="purple-btn"
+              onClick={() => openFile(guideline?.file)}
+              disabled={!guideline}
+            >
               <Download size={12} />
-              {c.downloadPdf}
+              {guideline ? c.downloadPdf : c.comingSoon}
             </button>
           </div>
 
@@ -65,9 +92,13 @@ function Resources() {
 
             <h3>{c.downloadCalendar}</h3>
 
-            <button className="purple-btn calendar-btn">
+            <button
+              className="purple-btn calendar-btn"
+              onClick={() => openFile(calendar?.file)}
+              disabled={!calendar}
+            >
               <CalendarDays size={14} />
-              {c.downloadCalendar}
+              {calendar ? c.downloadCalendar : c.comingSoon}
             </button>
           </div>
 
@@ -94,8 +125,12 @@ function Resources() {
           {c.newsletterText}
         </p>
 
-        <button className="download-btn">
-          {c.download}
+        <button
+          className="download-btn"
+          onClick={() => openFile(newsletter?.file)}
+          disabled={!newsletter}
+        >
+          {newsletter ? c.download : c.comingSoon}
         </button>
 
       </div>
