@@ -22,6 +22,33 @@ function initials(name) {
     .toUpperCase();
 }
 
+// Renders real star icons from the backend's decimal rating (e.g. 4.5),
+// including a proper visual half-star - not a hardcoded "★★★★★" and not
+// a naive repeat() (which throws on non-integer values).
+function StarRating({ rating }) {
+  const value = Number(rating || 0);
+  const fullStars = Math.floor(value);
+  const hasHalfStar = value % 1 !== 0;
+  const emptyStars = Math.max(5 - fullStars - (hasHalfStar ? 1 : 0), 0);
+
+  return (
+    <div className="stars" aria-label={`${value} out of 5 stars`}>
+      {Array.from({ length: fullStars }).map((_, i) => (
+        <span key={`full-${i}`} className="star star-full">★</span>
+      ))}
+      {hasHalfStar && (
+        <span className="star star-half" aria-hidden="true">
+          <span className="star-half-fill">★</span>
+          <span className="star-half-empty">☆</span>
+        </span>
+      )}
+      {Array.from({ length: emptyStars }).map((_, i) => (
+        <span key={`empty-${i}`} className="star star-empty">☆</span>
+      ))}
+    </div>
+  );
+}
+
 function TimingsTestimonials() {
   const { language } = useLanguage();
   const c = language === "ar" ? { title: "مواعيد الحضانة", intro: "جدول منظم ومرن، صُمم ليمنح أطفالكم أفضل توازن بين التعلم واللعب والراحة.", weekdays: "الاثنين - الخميس", weekdaysText: "أيام التعلم الأساسية", friday: "الجمعة", fridayText: "نصف يوم والاستعداد لعطلة نهاية الأسبوع", to: "إلى", testimonials: "آراء أولياء الأمور" } : { title: "Nursery Timings", intro: "A structured yet flexible schedule designed to give your little ones the best balance of learning, play, and rest.", weekdays: "Mon - Thu", weekdaysText: "Core Learning Days", friday: "Friday", fridayText: "Half Day & Weekend Prep", to: "TO", testimonials: "Testimonials" };
@@ -182,14 +209,13 @@ function TimingsTestimonials() {
 
                 <div>
                   <h3>{t.parent_name}</h3>
+                  {t.subtitle && <p className="testimonial-subtitle">{t.subtitle}</p>}
                 </div>
 
               </div>
 
 
-              <div className="stars">
-                {"★".repeat(t.rating)}{"☆".repeat(5 - t.rating)}
-              </div>
+              <StarRating rating={t.rating} />
 
 
               <p className="testimonial-text">

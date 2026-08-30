@@ -6,7 +6,18 @@ import ConfirmDialog from "../components/ConfirmDialog";
 import * as testimonialsService from "../../services/testimonialsService";
 import "./ContentPage.css";
 
-const emptyForm = { parentName: "", message: "", rating: 5, order: 0, photo: null };
+const emptyForm = { parentName: "", subtitle: "", message: "", rating: 5, order: 0, photo: null };
+
+// Shared star-rendering logic (also used in the public TimingsTestimonials.jsx
+// section) - calculates full/half/empty stars from a decimal rating like 4.5,
+// instead of a hardcoded "★★★★★" or a naive repeat() that breaks on decimals.
+function renderStars(ratingValue) {
+  const rating = Number(ratingValue || 0);
+  const fullStars = Math.floor(rating);
+  const hasHalfStar = rating % 1 !== 0;
+  const emptyStars = 5 - fullStars - (hasHalfStar ? 1 : 0);
+  return "★".repeat(fullStars) + (hasHalfStar ? "⯪" : "") + "☆".repeat(Math.max(emptyStars, 0));
+}
 
 function TestimonialsPage() {
   const [testimonials, setTestimonials] = useState([]);
@@ -36,6 +47,7 @@ function TestimonialsPage() {
     setEditingItem(row);
     setForm({
       parentName: row.parent_name || "",
+      subtitle: row.subtitle || "",
       message: row.message || "",
       rating: row.rating ?? 5,
       order: row.order ?? 0,
@@ -61,6 +73,7 @@ function TestimonialsPage() {
       if (editingItem) {
         await testimonialsService.updateTestimonial(editingItem.id, {
           parentName: form.parentName,
+          subtitle: form.subtitle,
           message: form.message,
           rating: form.rating,
           order: form.order,
@@ -69,6 +82,7 @@ function TestimonialsPage() {
       } else {
         await testimonialsService.addTestimonial({
           parentName: form.parentName,
+          subtitle: form.subtitle,
           message: form.message,
           rating: form.rating,
           order: form.order,
@@ -130,6 +144,16 @@ function TestimonialsPage() {
             />
           </div>
 
+          <div className="content-form-field">
+            <label>Child / Relationship</label>
+            <input
+              type="text"
+              placeholder="e.g. Mother of a Baby"
+              value={form.subtitle}
+              onChange={(e) => setForm({ ...form, subtitle: e.target.value })}
+            />
+          </div>
+
           <div className="content-form-field wide">
             <label>Message</label>
             <input
@@ -142,11 +166,12 @@ function TestimonialsPage() {
           </div>
 
           <div className="content-form-field">
-            <label>Rating (1–5)</label>
+            <label>Rating (1–5, half-stars allowed)</label>
             <input
               type="number"
               min="1"
               max="5"
+              step="0.5"
               value={form.rating}
               onChange={(e) => setForm({ ...form, rating: e.target.value })}
             />
@@ -197,8 +222,9 @@ function TestimonialsPage() {
         <DataTable
           columns={[
             { key: "parent_name", label: "Parent" },
+            { key: "subtitle", label: "Relationship" },
             { key: "message", label: "Message" },
-            { key: "rating", label: "Rating", render: (row) => "★".repeat(row.rating) },
+            { key: "rating", label: "Rating", render: (row) => `${renderStars(row.rating)} (${row.rating})` },
             { key: "order", label: "Order" },
           ]}
           rows={testimonials}
