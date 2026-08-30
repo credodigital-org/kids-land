@@ -459,6 +459,39 @@
   color: #69714b;
 }
 
+/* Half-star visual: overlay a full star clipped to 50% width on top of
+   an empty star, instead of showing a plain unicode glyph that doesn't
+   render consistently across fonts. */
+.star-half {
+  position: relative;
+  display: inline-block;
+  width: 1em;
+}
+
+.star-half-empty {
+  color: inherit;
+}
+
+.star-half-fill {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50%;
+  overflow: hidden;
+  color: inherit;
+}
+
+/* =========================================
+   TESTIMONIAL SUBTITLE (relationship line)
+========================================= */
+
+.testimonial-subtitle {
+  margin: 2px 0 0;
+  font-size: 13px;
+  font-weight: 500;
+  opacity: 0.75;
+}
+
 /* =========================================
    TESTIMONIAL TEXT
 ========================================= */

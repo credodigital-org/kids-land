@@ -5,9 +5,10 @@ export async function getTestimonials() {
   return res.data.results ?? res.data;
 }
 
-export async function addTestimonial({ parentName, message, rating, order, photoFile }) {
+export async function addTestimonial({ parentName, subtitle, message, rating, order, photoFile }) {
   const formData = new FormData();
   formData.append("parent_name", parentName);
+  formData.append("subtitle", subtitle ?? "");
   formData.append("message", message);
   formData.append("rating", rating ?? 5);
   formData.append("order", order ?? 0);
@@ -22,9 +23,10 @@ export async function deleteTestimonial(id) {
   await api.delete(`/testimonials/${id}/`);
 }
 
-export async function updateTestimonial(id, { parentName, message, rating, order, photoFile }) {
+export async function updateTestimonial(id, { parentName, subtitle, message, rating, order, photoFile }) {
   const formData = new FormData();
   if (parentName !== undefined) formData.append("parent_name", parentName);
+  if (subtitle !== undefined) formData.append("subtitle", subtitle ?? "");
   if (message !== undefined) formData.append("message", message);
   if (rating !== undefined) formData.append("rating", rating ?? 5);
   if (order !== undefined) formData.append("order", order ?? 0);
