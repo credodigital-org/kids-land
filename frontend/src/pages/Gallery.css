@@ -5,7 +5,8 @@
 .gallery-page {
   width: 100%;
   min-height: 100vh;
-  padding-top: 0px;
+  /* padding-top: 0px; */
+  margin-top: -39px;
 
   background: #ffffff;
 
@@ -44,7 +45,7 @@
 
   font-size: 60.99px;
 
-  line-height: 1.1;
+  line-height: 103.63px;
 
   font-weight: 900;
 
@@ -57,14 +58,19 @@
 
 .gallery-hero p {
   color: #222;
+  max-width: 900px;
+  margin: 0 auto;
 
   font-size: 20px;
 
-  line-height: 1.75;
+  line-height: 39px;
 
   font-weight: 300;
 
   font-family: Nunito;
+  font-style: Light;
+  letter-spacing: 0px;
+  text-align: center;
 }
 
 

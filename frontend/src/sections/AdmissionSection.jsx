@@ -62,7 +62,7 @@ function AdmissionSection() {
         </p>
 
         <a
-          href="#admission-steps"
+          href="/admission"
           className="admission-button"
         >
           <span>{c.button}</span>

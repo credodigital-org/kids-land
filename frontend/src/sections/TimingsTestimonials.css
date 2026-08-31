@@ -158,10 +158,10 @@
 }
 
 .timing-icon {
-  width: 63px;
-  height: 63px;
+  /* width: 63px;
+  height: 63px; */
 
-  flex: 0 0 53px;
+  /* flex: 0 0 53px; */
 
   display: flex;
   align-items: center;
