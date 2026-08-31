@@ -107,7 +107,7 @@ function AboutSection() {
 
           {/* Button */}
           <a
-            href="#learning"
+            href="/about"
             className="about-button"
           >
             <span>

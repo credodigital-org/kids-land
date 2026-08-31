@@ -1,5 +1,5 @@
 /* Footer.css */
-
+/* 
 .kids-footer {
   position: relative;
   width: 100%;
@@ -12,7 +12,525 @@
 
 [dir="rtl"].kids-footer .footer-main { direction: rtl; }
 [dir="rtl"].kids-footer .footer-links { padding-left: 0; padding-right: 5px; }
-[dir="rtl"].kids-footer .footer-links ul { padding: 0 34px 0 0; }
+[dir="rtl"].kids-footer .footer-links ul { padding: 0 34px 0 0; } */
+
+/* =========================
+   MAIN FOOTER
+========================= */
+/* 
+.footer-main {
+  position: relative;
+  z-index: 2;
+
+  min-height: 375px;
+  padding: 67px 9% 90px;
+
+  display: grid;
+  grid-template-columns: 1.2fr 0.9fr 1.2fr;
+  column-gap: 70px;
+} */
+
+/* =========================
+   COLUMNS
+========================= */
+/* 
+.footer-column {
+  position: relative;
+  z-index: 3;
+}
+
+.footer-column h3 {
+  margin: 0 0 14px;
+
+  color: #5A3CB8;
+  font-size: 23.63px;
+  font-weight: 700;
+  line-height: 25.87px;
+  font-family: "Be Vietnam Pro" Bold;
+  letter-spacing: 0px;
+}
+
+.footer-about p {
+  margin: 0;
+  font-family: "Be Vietnam Pro" Regular;
+
+  font-size: 16.17px;
+  line-height:25.87px;
+  font-weight: 400;
+  letter-spacing: 0px;
+} */
+
+/* =========================
+   SOCIAL ICONS
+========================= */
+
+/* .footer-socials {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  margin-top: 7px;
+  margin-left: 5px;
+}
+
+.footer-socials a {
+  display: flex;
+} */
+
+/* Instagram */
+/* .footer-socials .instagram {
+  border-radius: 5px;
+  width: 25px;
+  height: 25px;
+  line-height: 20px;
+} */
+
+/* Facebook */
+/* .footer-socials .facebook {
+  border-radius: 5px;
+  width: 41px;
+  height: 41px;
+} */
+
+/* WhatsApp */
+/* .footer-socials .whatsapp {
+  border-radius: 5px;
+  width: 29px;
+  height: 29px;
+} */
+
+/* YouTube */
+/* .footer-socials .youtube {
+  border-radius: 5px;
+  width: 50px;
+  height: 50px;
+}
+.footer-socials .snapchat {
+  border-radius: 5px;
+  width: 30px;
+  height: 30px;
+}
+.footer-socials .tiktok {
+  border-radius: 5px;
+  width: 30px;
+  height: 30px;
+} */
+
+/* =========================
+   QUICK LINKS
+========================= */
+
+/* .footer-links {
+  padding-left: 5px;
+}
+
+.footer-links h3 {
+  margin-bottom: 15px;
+}
+
+.footer-links ul {
+  margin: 0;
+  padding: 0 0 0 34px;
+
+  list-style: none;
+}
+
+.footer-links li {
+  margin-bottom: 7px;
+}
+
+.footer-links a {
+  color: #111111;
+  text-decoration: none;
+
+  font-size: 15.34px;
+  line-height: 25.87px;
+  letter-spacing: 0px;
+  font-weight: 400;
+  font-family: "Be Vietnam Pro" Regular;
+
+  transition: color 0.2s ease;
+}
+
+.footer-links a:hover {
+  color: #5839c9;
+} */
+
+/* =========================
+   CONTACT
+========================= */
+
+/* .footer-contact {
+  padding-left: 0;
+}
+
+.footer-contact h3 {
+  margin-bottom: 9px;
+}
+
+.footer-contact-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+}
+
+.contact-icon {
+  display: flex;
+  width: 15px;
+  height: 15px;
+}
+
+.footer-contact-item p {
+  margin: 0 0 6px;
+
+  font-size: 14px;
+  line-height: 15px;
+  color: #111111;
+} */
+
+/* =========================
+   LEFT DECORATION
+========================= */
+
+/* .footer-left-decoration {
+  position: absolute;
+  z-index: 1;
+
+  left: 0;
+  bottom: 65px;
+
+  width: 450px;
+  height: 190px;
+
+  pointer-events: none;
+}
+
+.footer-left-decoration img {
+  display: block;
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: contain;
+  object-position: left bottom;
+} */
+
+/* =========================
+   RIGHT DECORATION
+========================= */
+
+/* .footer-right-decoration {
+  position: absolute;
+  z-index: 1;
+
+  right: 0;
+  bottom: 73px;
+
+  width: 185px;
+  height: 290px;
+
+  pointer-events: none;
+}
+
+.footer-right-decoration img {
+  display: block;
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: contain;
+  object-position: right bottom;
+} */
+
+/* =========================
+   BOTTOM COPYRIGHT
+========================= */
+
+/* .footer-bottom {
+  position: absolute;
+  z-index: 4;
+
+  left: 0;
+  bottom: 0;
+
+  width: 100%;
+  height: 74px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: #eeeaff;
+
+  color: #45404f;
+
+  font-size: 15px;
+  font-weight: 400;
+
+  border-top: 1px solid rgba(88, 57, 201, 0.04);
+} */
+
+/* =========================
+   TABLET
+========================= */
+
+/* @media (max-width: 900px) {
+  .footer-main {
+    padding-left: 7%;
+    padding-right: 7%;
+
+    grid-template-columns: 1fr 0.8fr 1fr;
+    column-gap: 30px;
+  }
+
+  .footer-left-decoration {
+    width: 240px;
+  }
+
+  .footer-right-decoration {
+    width: 150px;
+  }
+} */
+
+/* =========================
+   MOBILE
+========================= */
+
+/* @media (max-width: 700px) {
+  .kids-footer {
+    min-height: auto;
+  }
+
+  .footer-main {
+    min-height: auto;
+
+    padding: 45px 25px 120px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+  }
+
+  .footer-column {
+    padding-left: 0;
+  }
+
+  .footer-column h3 {
+    font-size: 32px;
+  }
+
+  .footer-about p {
+    font-size: 14px;
+    line-height: 35.03px;
+  }
+
+  .footer-socials {
+    margin-left: 0;
+    margin-top: 25px;
+  }
+
+  .footer-links ul {
+    padding-left: 0;
+  }
+
+  .footer-links li {
+    margin-bottom: 8px;
+  }
+
+  .footer-contact-item {
+    margin-bottom: 20px;
+  }
+
+  .footer-left-decoration {
+    width: 190px;
+    height: 120px;
+    bottom: 74px;
+  }
+
+  .footer-right-decoration {
+    width: 125px;
+    height: 190px;
+    bottom: 74px;
+  }
+
+  .footer-bottom {
+    height: 74px;
+
+    padding: 0 20px;
+
+    text-align: center;
+    font-size: 13px;
+  }
+} */
+
+/* =========================
+   SMALL MOBILE
+========================= */
+/* 
+@media (max-width: 450px) {
+  .footer-main {
+    padding: 40px 20px 130px;
+  }
+
+  .footer-left-decoration {
+    width: 150px;
+  }
+
+  .footer-right-decoration {
+    width: 105px;
+  }
+
+  .footer-bottom {
+    font-size: 12px;
+  }
+} */
+
+/* =========================================================
+   MOBILE FOOTER - CENTER ALIGNMENT
+========================================================= */
+
+/* @media (max-width: 700px) { */
+
+  /* Center all footer columns */
+  /* .footer-column {
+    text-align: center;
+  } */
+
+  /* Center headings */
+  /* .footer-column h3 {
+    text-align: center;
+  } */
+
+  /* Center About text */
+  /* .footer-about p {
+    margin-left: auto;
+    margin-right: auto;
+
+    text-align: center;
+  } */
+
+  /* Center social icons */
+  /* .footer-socials {
+    justify-content: center;
+  } */
+
+  /* Center Quick Links */
+  /* .footer-links {
+    padding-left: 0;
+  }
+
+  .footer-links ul {
+    padding-left: 0;
+  }
+
+  .footer-links li {
+    padding-left: 0;
+
+    text-align: center;
+  } */
+
+  /* Remove quick-link dots */
+  /* .footer-links li::before {
+    display: none;
+  } */
+
+  /* Center links */
+  /* .footer-links a {
+    text-align: center;
+  } */
+
+  /* Contact section */
+  /* .footer-contact {
+    padding-left: 0;
+  }
+
+  .footer-contact-item {
+    justify-content: center;
+    align-items: center;
+
+    margin-left: auto;
+    margin-right: auto;
+
+    text-align: center;
+  } */
+
+  /* Center contact text */
+  /* .footer-contact-item p {
+    text-align: center;
+  } */
+
+  /* Center contact icon */
+  /* .contact-icon {
+    flex-shrink: 0;
+    margin-top: -32px;
+  }
+} */
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+/* @media (max-width: 450px) {
+
+  .footer-column {
+    text-align: center;
+  }
+
+  .footer-column h3 {
+    text-align: center;
+  }
+
+  .footer-about p {
+    margin-left: auto;
+    margin-right: auto;
+
+    text-align: center;
+  }
+
+  .footer-socials {
+    justify-content: center;
+  }
+
+  .footer-contact-item {
+    justify-content: center;
+  }
+
+} */
+
+
+/* =========================================================
+   VERY SMALL MOBILE
+========================================================= */
+
+/* @media (max-width: 350px) {
+
+  .footer-column h3,
+  .footer-about p,
+  .footer-links a,
+  .footer-contact-item p {
+    text-align: center;
+  }
+
+  .footer-socials {
+    justify-content: center;
+  }
+
+} */
+
+
+
+/* Footer.css */
+
+.kids-footer {
+  position: relative;
+  width: 100%;
+  min-height: 550px;
+  background: #ffffff;
+  overflow: hidden;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #111111;
+}
 
 /* =========================
    MAIN FOOTER
@@ -43,9 +561,9 @@
   margin: 0 0 14px;
 
   color: #5A3CB8;
-  font-size: 23.63px;
+  font-size: 32.04px;
   font-weight: 700;
-  line-height: 25.87px;
+  line-height: 35.07px;
   font-family: "Be Vietnam Pro" Bold;
   letter-spacing: 0px;
 }
@@ -54,7 +572,7 @@
   margin: 0;
   font-family: "Be Vietnam Pro" Regular;
 
-  font-size: 16.17px;
+  font-size: 21.92px;
   line-height:25.87px;
   font-weight: 400;
   letter-spacing: 0px;
@@ -120,7 +638,7 @@
    QUICK LINKS
 ========================= */
 
-.footer-links {
+/* .footer-links {
   padding-left: 5px;
 }
 
@@ -154,13 +672,127 @@
 
 .footer-links a:hover {
   color: #5839c9;
+} */
+
+
+/* =========================================================
+   QUICK LINKS
+========================================================= */
+
+.footer-links {
+  position: relative;
+  width: 100%;
+}
+
+.footer-links h3 {
+  margin: 0 0 13px 0;
+
+  color: #5638c5;
+
+  font-family: "Poppins", sans-serif;
+  font-size: 32.04px;
+  font-weight: 700;
+
+  line-height: 35.07px;
+}
+
+.footer-links ul {
+  list-style: none;
+
+  margin: 0;
+  padding: 0;
+  margin-left: -30px;
+}
+
+.footer-links li {
+  margin: 0;
+  padding: 0;
+}
+
+.footer-links li a {
+  display: flex;
+  align-items: center;
+
+  width: fit-content;
+
+  gap: 9px;
+
+  color: #111111;
+
+  text-decoration: none;
+
+  font-family: "Poppins", sans-serif;
+  font-size: 20.02px;
+  font-weight: 400;
+
+  line-height: 1.9;
+
+  transition: transform 0.2s ease;
+}
+
+.footer-links li a:hover {
+  transform: translateX(3px);
+}
+
+/* =========================================================
+   ARROWS
+========================================================= */
+
+.footer-arrow {
+  display: inline-flex;
+  margin-left: 30px;
+
+  align-items: center;
+  justify-content: center;
+
+  width: 12px;
+  height: 20px;
+
+  font-family: Arial, sans-serif;
+
+  font-size: 25px;
+  font-weight: 300;
+
+  line-height: 20px;
+
+  flex-shrink: 0;
+}
+
+/* Home */
+.arrow-blue {
+  color: #2196f3;
+}
+
+/* About Us */
+.arrow-red {
+  color: #ff3030;
+}
+
+/* Learning */
+.arrow-yellow {
+  color: #ffd900;
+}
+
+/* Admission */
+.arrow-green {
+  color: #16c95a;
+}
+
+/* Gallery */
+.arrow-pink {
+  color: #ff1493;
+}
+
+/* Health & Safety */
+.arrow-orange {
+  color: #ff9418;
 }
 
 /* =========================
    CONTACT
 ========================= */
 
-.footer-contact {
+/* .footer-contact {
   padding-left: 0;
 }
 
@@ -186,6 +818,101 @@
   font-size: 14px;
   line-height: 15px;
   color: #111111;
+} */
+
+/* =========================================================
+   COLUMN 3 - CONTACT
+========================================================= */
+
+.footer-contact {
+  position: relative;
+}
+
+.footer-contact h3 {
+  margin: 0 0 14px 0;
+
+  color: #5638c5;
+
+  font-family: "Poppins", sans-serif;
+  font-size: 32.04px;
+  font-weight: 700;
+
+  line-height: 1.3;
+}
+
+
+/* =========================================================
+   CONTACT ROW
+========================================================= */
+
+.footer-contact-item {
+  display: flex;
+  align-items: center;
+
+  gap: 10px;
+
+  margin-bottom: 9px;
+
+  min-height: 19px;
+}
+
+
+/* =========================================================
+   CONTACT TEXT
+========================================================= */
+
+.footer-contact-item p {
+  margin: 0;
+
+  color: #111111;
+
+  font-family: "Poppins", sans-serif;
+  font-size: 16.02px;
+  font-weight: 400;
+
+  line-height: 1.5;
+
+  white-space: nowrap;
+}
+
+
+/* =========================================================
+   CONTACT ICON
+========================================================= */
+
+.contact-icon {
+  width: 15px;
+  height: 19px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  flex-shrink: 0;
+}
+
+
+/* Address */
+.location-icon {
+  color: #ff1d25;
+}
+
+
+/* Mobile */
+.phone-icon {
+  color: #ffd800;
+}
+
+
+/* Telephone */
+.telephone-icon {
+  color: #18c957;
+}
+
+
+/* Email */
+.email-icon {
+  color: #ff1493;
 }
 
 /* =========================
@@ -292,228 +1019,330 @@
   }
 }
 
-/* =========================
-   MOBILE
-========================= */
-
-@media (max-width: 700px) {
-  .kids-footer {
-    min-height: auto;
-  }
-
-  .footer-main {
-    min-height: auto;
-
-    padding: 45px 25px 120px;
-
-    display: flex;
-    flex-direction: column;
-    gap: 35px;
-  }
-
-  .footer-column {
-    padding-left: 0;
-  }
-
-  .footer-column h3 {
-    font-size: 32px;
-  }
-
-  .footer-about p {
-    font-size: 14px;
-    line-height: 35.03px;
-  }
-
-  .footer-socials {
-    margin-left: 0;
-    margin-top: 25px;
-  }
-
-  .footer-links ul {
-    padding-left: 0;
-  }
-
-  .footer-links li {
-    margin-bottom: 8px;
-  }
-
-  .footer-contact-item {
-    margin-bottom: 20px;
-  }
-
-  .footer-left-decoration {
-    width: 190px;
-    height: 120px;
-    bottom: 74px;
-  }
-
-  .footer-right-decoration {
-    width: 125px;
-    height: 190px;
-    bottom: 74px;
-  }
-
-  .footer-bottom {
-    height: 74px;
-
-    padding: 0 20px;
-
-    text-align: center;
-    font-size: 13px;
-  }
-}
-
-/* =========================
-   SMALL MOBILE
-========================= */
-
-@media (max-width: 450px) {
-  .footer-main {
-    padding: 40px 20px 130px;
-  }
-
-  .footer-left-decoration {
-    width: 150px;
-  }
-
-  .footer-right-decoration {
-    width: 105px;
-  }
-
-  .footer-bottom {
-    font-size: 12px;
-  }
-}
-
 /* =========================================================
-   MOBILE FOOTER - CENTER ALIGNMENT
+   MOBILE FOOTER
+   701px AND BELOW
 ========================================================= */
 
 @media (max-width: 700px) {
 
-  /* Center all footer columns */
-  .footer-column {
-    text-align: center;
+  .kids-footer {
+    position: relative;
+    width: 100%;
+    min-height: 0;
+    overflow: hidden;
   }
 
-  /* Center headings */
-  .footer-column h3 {
-    text-align: center;
-  }
+  /* =========================
+     FOOTER MAIN
+  ========================= */
 
-  /* Center About text */
-  .footer-about p {
-    margin-left: auto;
-    margin-right: auto;
+  .footer-main {
+    width: 100%;
+    min-height: auto;
 
-    text-align: center;
-  }
+    padding: 28px 20px 75px;
 
-  /* Center social icons */
-  .footer-socials {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     justify-content: center;
+
+    gap: 0;
   }
 
-  /* Center Quick Links */
+  /* =========================
+     ALL COLUMNS
+  ========================= */
+
+  .footer-column {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+
+    text-align: center;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  /* =========================
+     LETS CONNECT
+  ========================= */
+
+  .footer-contact {
+    width: 100%;
+
+    padding: 0;
+    margin: 0;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer-column h3 {
+    margin: 0 0 15px;
+
+    font-size: 21px;
+    line-height: 1.2;
+    font-weight: 700;
+
+    text-align: center;
+  }
+
+  /* =========================
+     CONTACT ITEMS
+  ========================= */
+
+  .footer-contact-item {
+    width: auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin: 0 auto 10px;
+    padding: 0;
+
+    text-align: center;
+  }
+
+  .footer-contact-item:last-child {
+    margin-bottom: 0;
+  }
+
+  /* =========================
+     CONTACT ICON
+  ========================= */
+
+  .contact-icon {
+    width: 16px;
+    height: 16px;
+
+    flex-shrink: 0;
+
+    margin: 0 7px 0 0;
+  }
+
+  /* =========================
+     CONTACT TEXT
+  ========================= */
+
+  .footer-contact-item p {
+    margin: 0;
+
+    font-size: 11px;
+    line-height: 1.4;
+
+    text-align: center;
+    white-space: nowrap;
+  }
+
+  /* =========================
+     QUICK LINKS
+  ========================= */
+
   .footer-links {
-    padding-left: 0;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+
+    text-align: center;
   }
 
   .footer-links ul {
-    padding-left: 0;
+    padding: 0;
+    margin: 0;
+
+    list-style: none;
   }
 
   .footer-links li {
-    padding-left: 0;
+    padding: 0;
+    margin: 0 0 8px;
 
     text-align: center;
   }
 
-  /* Remove quick-link dots */
   .footer-links li::before {
     display: none;
   }
 
-  /* Center links */
   .footer-links a {
+    font-size: 12px;
     text-align: center;
   }
 
-  /* Contact section */
-  .footer-contact {
-    padding-left: 0;
+  /* =========================
+     ABOUT
+  ========================= */
+
+  .footer-about {
+    width: 100%;
+    text-align: center;
   }
 
-  .footer-contact-item {
-    justify-content: center;
+  .footer-about p {
+    max-width: 300px;
+
+    margin: 0 auto;
+
+    font-size: 12px;
+    line-height: 1.6;
+
+    text-align: center;
+  }
+
+  /* =========================
+     SOCIAL ICONS
+  ========================= */
+
+  .footer-socials {
+    display: flex;
     align-items: center;
+    justify-content: center;
 
-    margin-left: auto;
-    margin-right: auto;
+    gap: 10px;
 
-    text-align: center;
+    margin: 12px auto 0;
   }
 
-  /* Center contact text */
-  .footer-contact-item p {
-    text-align: center;
+  /* =========================
+     LEFT DECORATION
+  ========================= */
+
+  .footer-left-decoration {
+    position: absolute;
+
+    width: 105px;
+    height: auto;
+
+    left: 0;
+    bottom: 35px;
+
+    z-index: 1;
   }
 
-  /* Center contact icon */
-  .contact-icon {
-    flex-shrink: 0;
-    margin-top: -32px;
+  /* =========================
+     RIGHT DECORATION
+  ========================= */
+
+  .footer-right-decoration {
+    position: absolute;
+
+    width: 80px;
+    height: auto;
+
+    right: 0;
+    bottom: 35px;
+
+    z-index: 1;
+  }
+
+  /* =========================
+     FOOTER BOTTOM
+  ========================= */
+
+  .footer-bottom {
+    position: relative;
+    z-index: 5;
+
+    width: 100%;
+    height: 35px;
+
+    padding: 0 10px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+
+    font-size: 8px;
+    line-height: 1;
+
+    white-space: nowrap;
   }
 }
 
 
 /* =========================================================
    SMALL MOBILE
+   450px AND BELOW
 ========================================================= */
 
 @media (max-width: 450px) {
 
-  .footer-column {
-    text-align: center;
+  .footer-main {
+    padding: 25px 15px 65px;
   }
 
   .footer-column h3 {
-    text-align: center;
-  }
-
-  .footer-about p {
-    margin-left: auto;
-    margin-right: auto;
-
-    text-align: center;
-  }
-
-  .footer-socials {
-    justify-content: center;
+    font-size: 21px;
+    margin-bottom: 14px;
   }
 
   .footer-contact-item {
-    justify-content: center;
+    margin-bottom: 9px;
   }
 
+  .contact-icon {
+    width: 15px;
+    height: 15px;
+    margin-right: 6px;
+  }
+
+  .footer-contact-item p {
+    font-size: 10px;
+  }
+
+  .footer-left-decoration {
+    width: 95px;
+    bottom: 32px;
+  }
+
+  .footer-right-decoration {
+    width: 75px;
+    bottom: 32px;
+  }
+
+  .footer-bottom {
+    height: 32px;
+    font-size: 7.5px;
+  }
 }
 
 
 /* =========================================================
    VERY SMALL MOBILE
+   350px AND BELOW
 ========================================================= */
 
 @media (max-width: 350px) {
 
-  .footer-column h3,
-  .footer-about p,
-  .footer-links a,
+  .footer-main {
+    padding: 23px 10px 62px;
+  }
+
+  .footer-column h3 {
+    font-size: 20px;
+  }
+
   .footer-contact-item p {
-    text-align: center;
+    font-size: 9px;
   }
 
-  .footer-socials {
-    justify-content: center;
+  .footer-left-decoration {
+    width: 85px;
   }
 
+  .footer-right-decoration {
+    width: 68px;
+  }
+
+  .footer-bottom {
+    font-size: 7px;
+  }
 }

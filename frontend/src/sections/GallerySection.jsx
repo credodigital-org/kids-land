@@ -57,7 +57,7 @@ function GallerySection() {
         <div className="gallery-button-wrapper">
 
           <a
-            href="#gallery"
+            href="/gallery"
             className="gallery-button"
           >
             <span>{c.button}</span>
