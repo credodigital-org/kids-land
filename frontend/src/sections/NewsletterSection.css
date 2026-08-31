@@ -503,3 +503,144 @@
     height: 50px;
   }
 }
+
+/* =========================================================
+   DIVIDER + BROWSE HEADING
+========================================================= */
+
+.newsletter-divider {
+  width: 100%;
+  height: 1px;
+  background: #e3dbe8;
+  margin: 20px 0 16px;
+}
+
+.newsletter-browse-heading {
+  color: #38219a;
+  font-size: 15px;
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+
+/* =========================================================
+   NEWSLETTER MONTH/YEAR SELECTORS
+========================================================= */
+
+.newsletter-selectors {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 16px;
+
+  margin: 16px 0 6px;
+}
+
+.newsletter-select-field {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 4px;
+}
+
+.newsletter-select-field label {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.3px;
+  text-transform: uppercase;
+  color: #8b91a5;
+}
+
+.newsletter-select-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.newsletter-select-icon {
+  position: absolute;
+  left: 10px;
+  color: #20ad59;
+  pointer-events: none;
+}
+
+.newsletter-select-field select {
+  min-width: 120px;
+
+  padding: 8px 12px 8px 32px;
+
+  border-radius: 10px;
+  border: 1px solid #d6cedb;
+
+  font-family: inherit;
+  font-size: 13px;
+  font-weight: 600;
+  color: #301aa2;
+
+  background: #ffffff;
+
+  appearance: none;
+  cursor: pointer;
+}
+
+.newsletter-select-field select:focus {
+  outline: none;
+  border-color: #20ad59;
+}
+
+/* Button now sits in the same row as the selectors, matching them
+   in height instead of stacking below on its own line. */
+.newsletter-selectors .download-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+
+  width: auto;
+  height: 40px;
+  padding: 0 22px;
+
+  margin-top: 0;
+}
+
+.newsletter-empty {
+  display: block;
+  margin: 12px 0;
+
+  font-size: 13px;
+  color: #8b91a5;
+  font-style: italic;
+}
+
+/* =========================================================
+   FOOTNOTE
+========================================================= */
+
+.newsletter-footnote {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+
+  margin: 18px 0 0;
+
+  font-size: 12px;
+  color: #9a95a3;
+}
+
+@media (max-width: 480px) {
+  .newsletter-selectors {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .newsletter-select-field {
+    align-items: center;
+    width: 100%;
+    max-width: 220px;
+  }
+
+  .newsletter-select-field select {
+    width: 100%;
+  }
+}

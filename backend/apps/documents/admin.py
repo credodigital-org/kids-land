@@ -1,14 +1,9 @@
 from django.contrib import admin
-from .models import AcademicCalendar, NewspaperEdition, Newsletter
+from .models import AcademicCalendar, NewspaperEdition
 
 
 @admin.register(AcademicCalendar)
 class AcademicCalendarAdmin(admin.ModelAdmin):
-    list_display = ["title", "is_active", "uploaded_at"]
-
-
-@admin.register(Newsletter)
-class NewsletterAdmin(admin.ModelAdmin):
     list_display = ["title", "is_active", "uploaded_at"]
 
 
