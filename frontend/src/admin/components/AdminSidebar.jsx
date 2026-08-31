@@ -61,10 +61,10 @@ function AdminSidebar({ open, onClose }) {
           <span>Testimonials</span>
         </NavLink>
 
-        <NavLink to="/admin/newsletter" className="admin-nav-link">
+        {/* <NavLink to="/admin/newsletter" className="admin-nav-link">
           <Mail size={17} />
           <span>Newsletter</span>
-        </NavLink>
+        </NavLink> */}
         {/* Add new sections above this line, following the same pattern */}
       </nav>
     </aside>
