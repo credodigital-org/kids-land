@@ -221,7 +221,7 @@
   position: absolute;
   z-index: 2;
 
-  right: -80px;
+  right: -156px;
   bottom: -50px;
 
   width: 330px;
@@ -477,5 +477,622 @@
 
   .about-feature {
     font-size: 10.5px;
+  }
+}
+
+
+
+
+/* =========================================================
+   FULL ABOUT SECTION ANIMATION
+   ADD THIS AT THE VERY BOTTOM OF AboutSection.css
+   Existing positions/layout are NOT changed
+========================================================= */
+
+
+/* =========================================================
+   SECTION REVEAL
+========================================================= */
+
+@keyframes aboutSectionReveal {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+.about-section {
+  animation: aboutSectionReveal 0.8s ease-out both;
+}
+
+
+/* =========================================================
+   MAIN IMAGE REVEAL
+========================================================= */
+
+@keyframes aboutImageReveal {
+  0% {
+    opacity: 0;
+    transform: translateX(-45px) scale(0.92);
+  }
+
+  60% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0) scale(1);
+  }
+}
+
+.about-image-area {
+  animation: aboutImageReveal 1s cubic-bezier(0.22, 1, 0.36, 1) 0.15s both;
+}
+
+
+/* =========================================================
+   MAIN IMAGE SOFT FLOAT
+========================================================= */
+
+@keyframes aboutImageFloat {
+  0% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-8px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.about-main-image {
+  animation: aboutImageFloat 4.5s ease-in-out 1.2s infinite;
+}
+
+
+/* =========================================================
+   IMAGE HOVER
+========================================================= */
+
+.about-main-image {
+  transition:
+    transform 0.45s ease,
+    filter 0.45s ease;
+}
+
+.about-image-area:hover .about-main-image {
+  transform: scale(1.025);
+  filter: brightness(1.04);
+}
+
+
+/* =========================================================
+   LABEL REVEAL
+========================================================= */
+
+@keyframes aboutLabelReveal {
+  0% {
+    opacity: 0;
+    transform: translateY(15px);
+    letter-spacing: 4px;
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+    letter-spacing: 1.5px;
+  }
+}
+
+.about-label {
+  animation: aboutLabelReveal 0.75s ease-out 0.25s both;
+}
+
+
+/* =========================================================
+   TITLE REVEAL
+========================================================= */
+
+@keyframes aboutTitleReveal {
+  0% {
+    opacity: 0;
+    transform: translateY(25px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.about-title {
+  animation: aboutTitleReveal 0.85s cubic-bezier(0.22, 1, 0.36, 1) 0.4s both;
+}
+
+
+/* =========================================================
+   DESCRIPTION REVEAL
+========================================================= */
+
+@keyframes aboutDescriptionReveal {
+  0% {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.about-description {
+  animation: aboutDescriptionReveal 0.8s ease-out 0.55s both;
+}
+
+.about-description:nth-of-type(2) {
+  animation-delay: 0.7s;
+}
+
+
+/* =========================================================
+   FEATURES CONTAINER
+========================================================= */
+
+@keyframes featuresReveal {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.about-features {
+  animation: featuresReveal 0.8s ease-out 0.8s both;
+}
+
+
+/* =========================================================
+   INDIVIDUAL FEATURE STAGGER
+========================================================= */
+
+@keyframes featureItemReveal {
+  0% {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.about-feature {
+  animation: featureItemReveal 0.65s ease-out both;
+}
+
+.about-feature:nth-child(1) {
+  animation-delay: 0.9s;
+}
+
+.about-feature:nth-child(2) {
+  animation-delay: 1.05s;
+}
+
+.about-feature:nth-child(3) {
+  animation-delay: 1.2s;
+}
+
+
+/* =========================================================
+   FEATURE ICON ANIMATION
+========================================================= */
+
+@keyframes featureIconPop {
+  0% {
+    opacity: 0;
+    transform: scale(0.4) rotate(-25deg);
+  }
+
+  70% {
+    transform: scale(1.12) rotate(5deg);
+  }
+
+  100% {
+    opacity: 1;
+    transform: scale(1) rotate(0);
+  }
+}
+
+.feature-icon {
+  animation: featureIconPop 0.65s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+.about-feature:nth-child(1) .feature-icon {
+  animation-delay: 0.95s;
+}
+
+.about-feature:nth-child(2) .feature-icon {
+  animation-delay: 1.1s;
+}
+
+.about-feature:nth-child(3) .feature-icon {
+  animation-delay: 1.25s;
+}
+
+
+/* =========================================================
+   FEATURE ICON FLOAT
+========================================================= */
+
+@keyframes featureIconFloat {
+  0% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-4px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.about-feature:hover .feature-icon {
+  animation: featureIconFloat 0.8s ease-in-out infinite;
+}
+
+
+/* =========================================================
+   FEATURE HOVER
+========================================================= */
+
+.about-feature {
+  transition:
+    transform 0.3s ease,
+    color 0.3s ease;
+}
+
+.about-feature:hover {
+  transform: translateX(6px);
+  color: #3d209d;
+}
+
+
+/* =========================================================
+   BUTTON ENTRANCE
+========================================================= */
+
+@keyframes aboutButtonReveal {
+  0% {
+    opacity: 0;
+    transform: translateY(20px) scale(0.94);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.about-button {
+  animation: aboutButtonReveal 0.8s cubic-bezier(0.22, 1, 0.36, 1) 1.35s both;
+}
+
+
+/* =========================================================
+   BUTTON ARROW
+========================================================= */
+
+@keyframes aboutArrowMove {
+  0% {
+    transform: translateX(0);
+  }
+
+  50% {
+    transform: translateX(5px);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.about-button svg {
+  animation: aboutArrowMove 1.8s ease-in-out 2s infinite;
+}
+
+
+/* =========================================================
+   BUTTON HOVER
+========================================================= */
+
+.about-button {
+  transition:
+    background 0.3s ease,
+    color 0.3s ease,
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.about-button:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 25px rgba(61, 32, 157, 0.18);
+}
+
+.about-button:hover svg {
+  animation: aboutArrowHover 0.7s ease-in-out infinite;
+}
+
+@keyframes aboutArrowHover {
+  0% {
+    transform: translateX(0);
+  }
+
+  50% {
+    transform: translateX(7px);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}
+
+
+/* =========================================================
+   GARDEN ENTRANCE
+========================================================= */
+
+@keyframes gardenReveal {
+  0% {
+    opacity: 0;
+    transform: translateY(45px) scale(0.8);
+  }
+
+  70% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.about-garden {
+  animation: gardenReveal 1s cubic-bezier(0.22, 1, 0.36, 1) 0.5s both;
+}
+
+
+/* =========================================================
+   GARDEN FLOATING
+========================================================= */
+
+@keyframes gardenFloat {
+  0% {
+    transform: translateY(0) rotate(0deg);
+  }
+
+  25% {
+    transform: translateY(-6px) rotate(1deg);
+  }
+
+  50% {
+    transform: translateY(-10px) rotate(0deg);
+  }
+
+  75% {
+    transform: translateY(-5px) rotate(-1deg);
+  }
+
+  100% {
+    transform: translateY(0) rotate(0deg);
+  }
+}
+
+.garden {
+  animation: gardenFloat 5s ease-in-out 1.5s infinite;
+}
+
+
+/* =========================================================
+   GARDEN IMAGE SOFT MOVEMENT
+========================================================= */
+
+@keyframes gardenSway {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  50% {
+    transform: rotate(2deg);
+  }
+
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+.garden img {
+  animation: gardenSway 4s ease-in-out 1.5s infinite;
+}
+
+
+/* =========================================================
+   CONTENT SUBTLE FLOAT
+========================================================= */
+
+@keyframes aboutContentFloat {
+  0% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-2px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.about-content {
+  animation: aboutContentFloat 6s ease-in-out 2s infinite;
+}
+
+
+/* =========================================================
+   IMAGE BORDER SOFT GLOW
+========================================================= */
+
+@keyframes imageGlow {
+  0% {
+    filter: drop-shadow(0 0 0 rgba(61, 32, 157, 0));
+  }
+
+  50% {
+    filter: drop-shadow(0 8px 18px rgba(61, 32, 157, 0.08));
+  }
+
+  100% {
+    filter: drop-shadow(0 0 0 rgba(61, 32, 157, 0));
+  }
+}
+
+.about-image-border {
+  animation: imageGlow 5s ease-in-out 2s infinite;
+}
+
+
+/* =========================================================
+   MOBILE ANIMATIONS
+========================================================= */
+
+@media (max-width: 768px) {
+
+  .about-image-area {
+    animation:
+      aboutImageReveal 0.8s cubic-bezier(0.22, 1, 0.36, 1) 0.1s both;
+  }
+
+  .about-content {
+    animation: none;
+  }
+
+  .about-label {
+    animation-delay: 0.25s;
+  }
+
+  .about-title {
+    animation-delay: 0.35s;
+  }
+
+  .about-description {
+    animation-delay: 0.5s;
+  }
+
+  .about-description:nth-of-type(2) {
+    animation-delay: 0.62s;
+  }
+
+  .about-features {
+    animation-delay: 0.75s;
+  }
+
+  .about-feature:nth-child(1) {
+    animation-delay: 0.8s;
+  }
+
+  .about-feature:nth-child(2) {
+    animation-delay: 0.95s;
+  }
+
+  .about-feature:nth-child(3) {
+    animation-delay: 1.1s;
+  }
+
+  .about-button {
+    animation-delay: 1.2s;
+  }
+
+  .about-garden {
+    animation-delay: 0.8s;
+  }
+
+  .garden {
+    animation-duration: 4s;
+  }
+
+  .about-main-image {
+    animation-duration: 4s;
+  }
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 480px) {
+
+  .about-image-area {
+    animation-duration: 0.75s;
+  }
+
+  .about-main-image {
+    animation-duration: 3.8s;
+  }
+
+  .garden {
+    animation-duration: 4s;
+  }
+
+  .about-button:hover {
+    transform: translateY(-2px);
+  }
+
+  .about-feature:hover {
+    transform: translateX(3px);
+  }
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .about-section,
+  .about-image-area,
+  .about-main-image,
+  .about-label,
+  .about-title,
+  .about-description,
+  .about-features,
+  .about-feature,
+  .feature-icon,
+  .about-button,
+  .about-button svg,
+  .about-garden,
+  .garden,
+  .garden img,
+  .about-content,
+  .about-image-border {
+    animation: none !important;
+    transition: none !important;
   }
 }

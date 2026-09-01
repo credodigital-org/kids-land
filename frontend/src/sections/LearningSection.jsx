@@ -1,9 +1,9 @@
 import "./LearningSection.css";
 
-import littleAngels from "../assets/little-angels.png";
-import toddlers from "../assets/toddlers.png";
-import discoveries from "../assets/discoveries.png";
-import inventors from "../assets/inventors.png";
+import littleAngels from "../assets/letter  f.jpg.jpeg";
+import toddlers from "../assets/1756829868684rFaAB.jpeg";
+import discoveries from "../assets/20260622_072936079_iOS.jpg.jpeg";
+import inventors from "../assets/WhatsApp Image 2026-08-15 at 8.21.15 PM.jpeg";
 import { useLanguage } from "../context/LanguageContext";
 
 const programs = [
@@ -119,7 +119,7 @@ function LearningSection() {
                 </p>
 
                 <a
-                  href="#contact"
+                  href="/learning"
                   className="learning-more"
                 >
                   {copy.more}

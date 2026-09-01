@@ -5,7 +5,7 @@
 .gallery-page {
   width: 100%;
   min-height: 100vh;
-  /* padding-top: 0px; */
+  padding-top: 127px;
   margin-top: -39px;
 
   background: #ffffff;
@@ -1107,6 +1107,850 @@
     height: 48px;
 
     font-size: 15px;
+  }
+
+}
+
+
+
+
+
+/* =========================================================
+   ✨ FULL GALLERY ANIMATION
+   Add this at the VERY BOTTOM of Gallery.css
+========================================================= */
+
+
+/* =========================================================
+   GALLERY GRID ENTRANCE
+========================================================= */
+
+.gallery-grid {
+  perspective: 1200px;
+}
+
+
+/* =========================================================
+   GALLERY CARD - INITIAL ANIMATION
+========================================================= */
+
+.gallery-item {
+  animation:
+    galleryCardEnter 0.9s cubic-bezier(0.22, 1, 0.36, 1) both,
+    galleryFloat 5s ease-in-out infinite;
+
+  transform-style: preserve-3d;
+
+  will-change: transform;
+
+  backface-visibility: hidden;
+}
+
+
+/* =========================================================
+   STAGGERED CARD ANIMATION
+========================================================= */
+
+.gallery-item:nth-child(1) {
+  animation-delay: 0.05s, 1s;
+}
+
+.gallery-item:nth-child(2) {
+  animation-delay: 0.15s, 1.2s;
+}
+
+.gallery-item:nth-child(3) {
+  animation-delay: 0.25s, 1.4s;
+}
+
+.gallery-item:nth-child(4) {
+  animation-delay: 0.35s, 1.6s;
+}
+
+.gallery-item:nth-child(5) {
+  animation-delay: 0.45s, 1.8s;
+}
+
+.gallery-item:nth-child(6) {
+  animation-delay: 0.55s, 2s;
+}
+
+.gallery-item:nth-child(7) {
+  animation-delay: 0.65s, 2.2s;
+}
+
+.gallery-item:nth-child(8) {
+  animation-delay: 0.75s, 2.4s;
+}
+
+.gallery-item:nth-child(9) {
+  animation-delay: 0.85s, 2.6s;
+}
+
+
+/* =========================================================
+   CARD ENTER
+========================================================= */
+
+@keyframes galleryCardEnter {
+
+  0% {
+    opacity: 0;
+
+    transform:
+      perspective(1000px)
+      rotateY(90deg)
+      rotateX(10deg)
+      translateY(50px)
+      scale(0.75);
+  }
+
+  60% {
+    opacity: 1;
+
+    transform:
+      perspective(1000px)
+      rotateY(-12deg)
+      rotateX(3deg)
+      translateY(-8px)
+      scale(1.03);
+  }
+
+  100% {
+    opacity: 1;
+
+    transform:
+      perspective(1000px)
+      rotateY(0deg)
+      rotateX(0deg)
+      translateY(0)
+      scale(1);
+  }
+
+}
+
+
+/* =========================================================
+   SOFT FLOAT / FLOP ANIMATION
+========================================================= */
+
+@keyframes galleryFloat {
+
+  0% {
+    transform:
+      translateY(0)
+      rotate(0deg);
+  }
+
+  25% {
+    transform:
+      translateY(-6px)
+      rotate(0.7deg);
+  }
+
+  50% {
+    transform:
+      translateY(-2px)
+      rotate(-0.7deg);
+  }
+
+  75% {
+    transform:
+      translateY(5px)
+      rotate(0.5deg);
+  }
+
+  100% {
+    transform:
+      translateY(0)
+      rotate(0deg);
+  }
+
+}
+
+
+/* =========================================================
+   HOVER FLIP + FLOP
+========================================================= */
+
+.gallery-item:hover {
+
+  animation-play-state: paused;
+
+  transform:
+    perspective(1000px)
+    rotateY(8deg)
+    rotateX(-6deg)
+    rotateZ(1deg)
+    translateY(-12px)
+    scale(1.045);
+
+  box-shadow:
+    0 20px 40px rgba(57, 36, 154, 0.20),
+    0 8px 15px rgba(0, 0, 0, 0.12);
+
+  z-index: 10;
+
+}
+
+
+/* =========================================================
+   IMAGE ZOOM
+========================================================= */
+
+.gallery-item img {
+
+  transition:
+    transform 0.8s cubic-bezier(0.22, 1, 0.36, 1),
+    filter 0.5s ease;
+
+  will-change: transform;
+
+}
+
+
+/* Image movement when hover */
+
+.gallery-item:hover img {
+
+  transform:
+    scale(1.13)
+    rotate(1deg);
+
+  filter:
+    brightness(1.05)
+    saturate(1.08);
+
+}
+
+
+/* =========================================================
+   SHINE / LIGHT SWEEP
+========================================================= */
+
+.gallery-item::before {
+
+  content: "";
+
+  position: absolute;
+
+  top: 0;
+  left: -120%;
+
+  width: 70%;
+  height: 100%;
+
+  background:
+    linear-gradient(
+      100deg,
+      transparent,
+      rgba(255, 255, 255, 0.45),
+      transparent
+    );
+
+  transform: skewX(-20deg);
+
+  z-index: 3;
+
+  pointer-events: none;
+
+  transition: left 0.8s ease;
+
+}
+
+
+.gallery-item:hover::before {
+
+  left: 150%;
+
+}
+
+
+/* =========================================================
+   SOFT GLOW
+========================================================= */
+
+.gallery-item::after {
+
+  content: "";
+
+  position: absolute;
+
+  inset: 0;
+
+  border-radius: inherit;
+
+  box-shadow:
+    inset 0 0 0 1px rgba(255, 255, 255, 0.25);
+
+  pointer-events: none;
+
+  z-index: 2;
+
+}
+
+
+/* =========================================================
+   DIFFERENT FLOP DIRECTIONS
+========================================================= */
+
+.shape-one:hover {
+
+  transform:
+    perspective(1000px)
+    rotateY(-9deg)
+    rotateX(5deg)
+    rotateZ(-1deg)
+    translateY(-12px)
+    scale(1.045);
+
+}
+
+
+.shape-two:hover {
+
+  transform:
+    perspective(1000px)
+    rotateY(10deg)
+    rotateX(-5deg)
+    rotateZ(2deg)
+    translateY(-12px)
+    scale(1.05);
+
+}
+
+
+.shape-three:hover {
+
+  transform:
+    perspective(1000px)
+    rotateY(-8deg)
+    rotateX(-6deg)
+    rotateZ(-1deg)
+    translateY(-12px)
+    scale(1.045);
+
+}
+
+
+.shape-four:hover {
+
+  transform:
+    perspective(1000px)
+    rotateY(8deg)
+    rotateX(6deg)
+    rotateZ(1deg)
+    translateY(-12px)
+    scale(1.045);
+
+}
+
+
+.shape-five:hover {
+
+  transform:
+    perspective(1000px)
+    rotateY(-10deg)
+    rotateX(-4deg)
+    rotateZ(-1deg)
+    translateY(-12px)
+    scale(1.045);
+
+}
+
+
+.shape-six:hover {
+
+  transform:
+    perspective(1000px)
+    rotateY(7deg)
+    rotateX(5deg)
+    rotateZ(1deg)
+    translateY(-12px)
+    scale(1.04);
+
+}
+
+
+.shape-seven:hover {
+
+  transform:
+    perspective(1000px)
+    rotateY(-7deg)
+    rotateX(-5deg)
+    rotateZ(-1deg)
+    translateY(-12px)
+    scale(1.045);
+
+}
+
+
+.shape-eight:hover {
+
+  transform:
+    perspective(1000px)
+    rotateY(9deg)
+    rotateX(5deg)
+    rotateZ(1deg)
+    translateY(-12px)
+    scale(1.045);
+
+}
+
+
+.shape-nine:hover {
+
+  transform:
+    perspective(1000px)
+    rotateY(-8deg)
+    rotateX(-5deg)
+    rotateZ(-1deg)
+    translateY(-12px)
+    scale(1.04);
+
+}
+
+
+/* =========================================================
+   FILTER BUTTON ANIMATION
+========================================================= */
+
+.gallery-filter {
+
+  position: relative;
+
+  overflow: hidden;
+
+  transition:
+    transform 0.3s ease,
+    background 0.3s ease,
+    color 0.3s ease,
+    box-shadow 0.3s ease;
+
+}
+
+
+.gallery-filter::before {
+
+  content: "";
+
+  position: absolute;
+
+  width: 0;
+  height: 0;
+
+  left: 50%;
+  top: 50%;
+
+  background: rgba(255, 255, 255, 0.18);
+
+  border-radius: 50%;
+
+  transform: translate(-50%, -50%);
+
+  transition:
+    width 0.45s ease,
+    height 0.45s ease;
+
+}
+
+
+.gallery-filter:hover::before {
+
+  width: 180px;
+  height: 180px;
+
+}
+
+
+.gallery-filter:hover {
+
+  transform:
+    translateY(-4px)
+    scale(1.04);
+
+  box-shadow:
+    0 8px 18px rgba(57, 36, 154, 0.15);
+
+}
+
+
+.gallery-filter.active {
+
+  box-shadow:
+    0 7px 18px rgba(57, 36, 154, 0.25);
+
+}
+
+
+/* =========================================================
+   LOAD MORE BUTTON ANIMATION
+========================================================= */
+
+.load-more-btn {
+
+  position: relative;
+
+  overflow: hidden;
+
+  transition:
+    transform 0.35s ease,
+    box-shadow 0.35s ease,
+    background 0.35s ease,
+    color 0.35s ease;
+
+}
+
+
+.load-more-btn::before {
+
+  content: "";
+
+  position: absolute;
+
+  width: 0;
+  height: 0;
+
+  left: 50%;
+  top: 50%;
+
+  border-radius: 50%;
+
+  background: rgba(255, 255, 255, 0.18);
+
+  transform: translate(-50%, -50%);
+
+  transition:
+    width 0.5s ease,
+    height 0.5s ease;
+
+}
+
+
+.load-more-btn:hover::before {
+
+  width: 450px;
+  height: 450px;
+
+}
+
+
+.load-more-btn:hover {
+
+  transform:
+    translateY(-7px)
+    scale(1.04);
+
+  box-shadow:
+    0 14px 30px rgba(57, 36, 154, 0.25);
+
+}
+
+
+.load-more-btn svg {
+
+  transition:
+    transform 0.4s ease;
+
+}
+
+
+.load-more-btn:hover svg {
+
+  transform:
+    translateX(8px)
+    rotate(-5deg);
+
+}
+
+
+/* =========================================================
+   LOAD MORE BUTTON PULSE
+========================================================= */
+
+@keyframes loadMorePulse {
+
+  0% {
+    box-shadow:
+      0 3px 3px rgba(0, 0, 0, 0.22);
+  }
+
+  50% {
+    box-shadow:
+      0 8px 25px rgba(57, 36, 154, 0.22);
+  }
+
+  100% {
+    box-shadow:
+      0 3px 3px rgba(0, 0, 0, 0.22);
+  }
+
+}
+
+
+.load-more-btn {
+
+  animation:
+    loadMorePulse 3s ease-in-out infinite;
+
+}
+
+
+/* =========================================================
+   GALLERY IMAGE BREATHING
+========================================================= */
+
+.gallery-item img {
+
+  animation:
+    imageBreathing 7s ease-in-out infinite;
+
+}
+
+
+@keyframes imageBreathing {
+
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.025);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+
+}
+
+
+/* =========================================================
+   STOP BREATHING ON HOVER
+========================================================= */
+
+.gallery-item:hover img {
+
+  animation: none;
+
+}
+
+
+/* =========================================================
+   CARD FOCUS EFFECT
+========================================================= */
+
+.gallery-item:active {
+
+  transform:
+    perspective(1000px)
+    rotateY(0deg)
+    rotateX(0deg)
+    scale(0.96);
+
+  transition:
+    transform 0.15s ease;
+
+}
+
+
+/* =========================================================
+   RTL SUPPORT
+========================================================= */
+
+.gallery-page[dir="rtl"] .load-more-btn:hover svg {
+
+  transform:
+    translateX(-8px)
+    rotate(5deg);
+
+}
+
+
+/* =========================================================
+   TABLET ANIMATION
+========================================================= */
+
+@media (max-width: 1000px) {
+
+  .gallery-item {
+
+    animation-duration:
+      0.75s,
+      5.5s;
+
+  }
+
+  .gallery-item:hover {
+
+    transform:
+      perspective(900px)
+      rotateY(5deg)
+      rotateX(-4deg)
+      translateY(-8px)
+      scale(1.025);
+
+  }
+
+}
+
+
+/* =========================================================
+   MOBILE ANIMATION
+========================================================= */
+
+@media (max-width: 700px) {
+
+  .gallery-item {
+
+    animation:
+      mobileCardEnter 0.7s
+      cubic-bezier(0.22, 1, 0.36, 1)
+      both;
+
+  }
+
+
+  @keyframes mobileCardEnter {
+
+    0% {
+
+      opacity: 0;
+
+      transform:
+        translateY(35px)
+        scale(0.85)
+        rotate(-3deg);
+
+    }
+
+    60% {
+
+      opacity: 1;
+
+      transform:
+        translateY(-5px)
+        scale(1.02)
+        rotate(1deg);
+
+    }
+
+    100% {
+
+      opacity: 1;
+
+      transform:
+        translateY(0)
+        scale(1)
+        rotate(0);
+
+    }
+
+  }
+
+
+  /* Mobile hover */
+
+  .gallery-item:hover {
+
+    animation-play-state: paused;
+
+    transform:
+      translateY(-7px)
+      scale(1.025)
+      rotate(0.5deg);
+
+    box-shadow:
+      0 12px 25px rgba(57, 36, 154, 0.18);
+
+  }
+
+
+  .gallery-item:hover img {
+
+    transform:
+      scale(1.08)
+      rotate(0deg);
+
+  }
+
+
+  /* Remove strong 3D on touch devices */
+
+  .gallery-item {
+
+    transform-style: flat;
+
+  }
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 500px) {
+
+  .gallery-item {
+
+    animation-duration: 0.6s;
+
+  }
+
+
+  .gallery-item:hover {
+
+    transform:
+      translateY(-5px)
+      scale(1.018);
+
+  }
+
+
+  .gallery-item:hover img {
+
+    transform:
+      scale(1.06);
+
+  }
+
+
+  .gallery-filter:hover {
+
+    transform:
+      translateY(-2px)
+      scale(1.02);
+
+  }
+
+
+  .load-more-btn:hover {
+
+    transform:
+      translateY(-4px)
+      scale(1.025);
+
+  }
+
+}
+
+
+/* =========================================================
+   REDUCE MOTION ACCESSIBILITY
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .gallery-item,
+  .gallery-item img,
+  .load-more-btn,
+  .gallery-filter {
+
+    animation: none !important;
+
+    transition: none !important;
+
   }
 
 }

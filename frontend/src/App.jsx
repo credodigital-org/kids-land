@@ -13,6 +13,7 @@ import Gallery from './pages/Gallery';
 import HealthSafety from "./pages/Health&Safety";
 // import ContactUs from './pages/ContactUs';
 import ScrollToTop from './components/ScrollToTop';
+import WebsiteLoader from "./components/WebsiteLoader";
 
 // Language toggle (English/Arabic) - global so it persists across
 // route changes, read by Navbar.jsx and any page component that
@@ -37,6 +38,7 @@ export default function App() {
     <LanguageProvider>
       <AuthProvider>
         <BrowserRouter>
+        <WebsiteLoader />
         <ScrollToTop />
 
           <Routes>

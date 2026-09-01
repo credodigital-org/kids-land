@@ -497,7 +497,7 @@
   }
 
   .vision-card {
-    left: 5%;
+    left: 3%;
     width: 46%;
     height: auto;
     min-height: 360px;
@@ -722,5 +722,513 @@
   .mission-bottom-image {
     width: 75px;
     height: 75px;
+  }
+}
+
+
+
+/* =========================================================
+   FULL ANIMATION - VISION & MISSION
+   ADD THIS AT THE VERY BOTTOM OF VisionMission.css
+   Positions are NOT changed
+========================================================= */
+
+
+/* =========================================================
+   CARD ENTRANCE ANIMATION
+========================================================= */
+
+@keyframes visionCardReveal {
+  0% {
+    opacity: 0;
+    transform: translateY(45px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes missionCardReveal {
+  0% {
+    opacity: 0;
+    transform: translateY(55px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.vision-card {
+  animation: visionCardReveal 0.9s ease-out both;
+  animation-delay: 0.15s;
+}
+
+.mission-card {
+  animation: missionCardReveal 0.95s ease-out both;
+  animation-delay: 0.3s;
+}
+
+
+/* =========================================================
+   SCHOOL IMAGE - FLOATING
+========================================================= */
+
+@keyframes schoolFloat {
+  0% {
+    transform: translateY(0) rotate(0deg);
+  }
+
+  50% {
+    transform: translateY(-10px) rotate(2deg);
+  }
+
+  100% {
+    transform: translateY(0) rotate(0deg);
+  }
+}
+
+.vision-image {
+  animation:
+    visionImageReveal 0.8s ease-out both,
+    schoolFloat 4s ease-in-out 1s infinite;
+}
+
+@keyframes visionImageReveal {
+  0% {
+    opacity: 0;
+    transform: scale(0.65);
+  }
+
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+
+/* =========================================================
+   TOP MISSION IMAGE - FLOATING
+========================================================= */
+
+@keyframes missionTopFloat {
+  0% {
+    transform: translateY(0) rotate(0deg);
+  }
+
+  50% {
+    transform: translateY(-8px) rotate(-3deg);
+  }
+
+  100% {
+    transform: translateY(0) rotate(0deg);
+  }
+}
+
+@keyframes missionImageReveal {
+  0% {
+    opacity: 0;
+    transform: scale(0.5) rotate(-12deg);
+  }
+
+  100% {
+    opacity: 1;
+    transform: scale(1) rotate(0deg);
+  }
+}
+
+.mission-top-image {
+  animation:
+    missionImageReveal 0.8s ease-out 0.4s both,
+    missionTopFloat 3.8s ease-in-out 1.2s infinite;
+}
+
+
+/* =========================================================
+   BOTTOM KIDS IMAGE - FLOATING
+========================================================= */
+
+@keyframes kidsBottomFloat {
+  0% {
+    transform: translateY(0) rotate(0deg);
+  }
+
+  25% {
+    transform: translateY(-5px) rotate(-2deg);
+  }
+
+  50% {
+    transform: translateY(-10px) rotate(2deg);
+  }
+
+  75% {
+    transform: translateY(-5px) rotate(-1deg);
+  }
+
+  100% {
+    transform: translateY(0) rotate(0deg);
+  }
+}
+
+@keyframes kidsBottomReveal {
+  0% {
+    opacity: 0;
+    transform: scale(0.6);
+  }
+
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.mission-bottom-image {
+  animation:
+    kidsBottomReveal 0.8s ease-out 0.6s both,
+    kidsBottomFloat 4s ease-in-out 1.4s infinite;
+}
+
+
+/* =========================================================
+   VISION ICON - SOFT PULSE
+========================================================= */
+
+@keyframes visionIconPulse {
+  0% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(181, 240, 92, 0.35);
+  }
+
+  50% {
+    transform: scale(1.06);
+    box-shadow: 0 0 0 10px rgba(181, 240, 92, 0);
+  }
+
+  100% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(181, 240, 92, 0);
+  }
+}
+
+.vision-icon {
+  animation: visionIconPulse 3s ease-in-out 1.5s infinite;
+}
+
+
+/* =========================================================
+   MISSION ICON - ROCKET FLOAT
+========================================================= */
+
+@keyframes rocketFloat {
+  0% {
+    transform: translateY(0) rotate(0deg);
+  }
+
+  25% {
+    transform: translateY(-3px) rotate(-2deg);
+  }
+
+  50% {
+    transform: translateY(-6px) rotate(2deg);
+  }
+
+  75% {
+    transform: translateY(-3px) rotate(-1deg);
+  }
+
+  100% {
+    transform: translateY(0) rotate(0deg);
+  }
+}
+
+.mission-icon {
+  animation: rocketFloat 2.8s ease-in-out 1.5s infinite;
+}
+
+
+/* =========================================================
+   HEADING ANIMATION
+========================================================= */
+
+@keyframes headingReveal {
+  0% {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.vision-heading,
+.mission-heading {
+  animation: headingReveal 0.8s ease-out 0.5s both;
+}
+
+
+/* =========================================================
+   DESCRIPTION FADE
+========================================================= */
+
+@keyframes descriptionReveal {
+  0% {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.vision-description {
+  animation: descriptionReveal 0.8s ease-out 0.65s both;
+}
+
+.mission-description {
+  animation: descriptionReveal 0.8s ease-out 0.8s both;
+}
+
+
+/* =========================================================
+   STAR - ROTATING + BOUNCING
+========================================================= */
+
+@keyframes starAnimation {
+  0% {
+    transform: translateY(0) rotate(0deg) scale(1);
+  }
+
+  25% {
+    transform: translateY(-6px) rotate(8deg) scale(1.05);
+  }
+
+  50% {
+    transform: translateY(0) rotate(16deg) scale(1);
+  }
+
+  75% {
+    transform: translateY(-4px) rotate(8deg) scale(1.05);
+  }
+
+  100% {
+    transform: translateY(0) rotate(0deg) scale(1);
+  }
+}
+
+.vision-star {
+  animation:
+    starReveal 0.7s ease-out 0.8s both,
+    starAnimation 3.5s ease-in-out 1.5s infinite;
+}
+
+@keyframes starReveal {
+  0% {
+    opacity: 0;
+    transform: scale(0) rotate(-90deg);
+  }
+
+  100% {
+    opacity: 1;
+    transform: scale(1) rotate(0deg);
+  }
+}
+
+
+/* =========================================================
+   STAR ICON SPIN
+========================================================= */
+
+@keyframes starIconSpin {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  50% {
+    transform: rotate(15deg);
+  }
+
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+.vision-star svg {
+  animation: starIconSpin 2.5s ease-in-out 2s infinite;
+}
+
+
+/* =========================================================
+   CARD HOVER
+   Does not change layout position
+========================================================= */
+
+.vision-card,
+.mission-card {
+  transition:
+    box-shadow 0.35s ease,
+    border-color 0.35s ease;
+}
+
+.vision-card:hover,
+.mission-card:hover {
+  box-shadow:
+    0 20px 45px rgba(95, 66, 120, 0.12);
+}
+
+
+/* =========================================================
+   IMAGE HOVER
+========================================================= */
+
+.vision-image,
+.mission-top-image,
+.mission-bottom-image {
+  transition: filter 0.35s ease;
+}
+
+.vision-image:hover,
+.mission-top-image:hover,
+.mission-bottom-image:hover {
+  filter: brightness(1.05);
+}
+
+
+/* =========================================================
+   ICON HOVER
+========================================================= */
+
+.vision-icon,
+.mission-icon {
+  transition: transform 0.3s ease;
+}
+
+.vision-icon:hover,
+.mission-icon:hover {
+  transform: scale(1.1);
+}
+
+
+/* =========================================================
+   TEXT SHIMMER / SUBTLE MOVEMENT
+========================================================= */
+
+.vision-heading h2,
+.mission-heading h2 {
+  transition: color 0.3s ease;
+}
+
+.vision-heading:hover h2,
+.mission-heading:hover h2 {
+  color: #7037c5;
+}
+
+
+/* =========================================================
+   CONTINUOUS CARD LIGHT EFFECT
+========================================================= */
+
+@keyframes cardGlow {
+  0% {
+    box-shadow:
+      0 15px 35px rgba(95, 66, 120, 0.035);
+  }
+
+  50% {
+    box-shadow:
+      0 18px 42px rgba(95, 66, 120, 0.09);
+  }
+
+  100% {
+    box-shadow:
+      0 15px 35px rgba(95, 66, 120, 0.035);
+  }
+}
+
+.vision-card {
+  animation:
+    visionCardReveal 0.9s ease-out 0.15s both,
+    cardGlow 4s ease-in-out 1.5s infinite;
+}
+
+.mission-card {
+  animation:
+    missionCardReveal 0.95s ease-out 0.3s both,
+    cardGlow 4s ease-in-out 2s infinite;
+}
+
+
+/* =========================================================
+   MOBILE ANIMATION
+   Same positions/layout remain unchanged
+========================================================= */
+
+@media (max-width: 700px) {
+
+  .vision-card {
+    animation:
+      visionCardReveal 0.8s ease-out 0.1s both,
+      cardGlow 4s ease-in-out 1.2s infinite;
+  }
+
+  .mission-card {
+    animation:
+      missionCardReveal 0.8s ease-out 0.25s both,
+      cardGlow 4s ease-in-out 1.7s infinite;
+  }
+
+  .vision-image {
+    animation:
+      visionImageReveal 0.7s ease-out 0.3s both,
+      schoolFloat 3.5s ease-in-out 1s infinite;
+  }
+
+  .mission-top-image {
+    animation:
+      missionImageReveal 0.7s ease-out 0.45s both,
+      missionTopFloat 3.5s ease-in-out 1.2s infinite;
+  }
+
+  .mission-bottom-image {
+    animation:
+      kidsBottomReveal 0.7s ease-out 0.6s both,
+      kidsBottomFloat 3.5s ease-in-out 1.4s infinite;
+  }
+
+  .vision-star {
+    animation:
+      starReveal 0.6s ease-out 0.7s both,
+      starAnimation 3s ease-in-out 1.3s infinite;
+  }
+}
+
+
+/* =========================================================
+   REDUCED MOTION ACCESSIBILITY
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .vision-card,
+  .mission-card,
+  .vision-image,
+  .mission-top-image,
+  .mission-bottom-image,
+  .vision-icon,
+  .mission-icon,
+  .vision-star,
+  .vision-star svg,
+  .vision-heading,
+  .mission-heading,
+  .vision-description,
+  .mission-description {
+    animation: none !important;
+    transition: none !important;
   }
 }

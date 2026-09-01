@@ -399,3 +399,573 @@
     bottom: 110px;
   }
 }
+
+
+
+
+/* =========================================================
+   ✨ GALLERY FULL ANIMATION
+   Add this at the VERY BOTTOM of GallerySection.css
+========================================================= */
+
+
+/* =========================================================
+   1. SECTION FADE IN
+========================================================= */
+
+.gallery-section {
+  animation: gallerySectionReveal 0.9s ease both;
+}
+
+@keyframes gallerySectionReveal {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+
+/* =========================================================
+   2. HEADER ANIMATION
+========================================================= */
+
+.gallery-label {
+  animation: galleryLabelReveal 0.7s ease 0.15s both;
+}
+
+.gallery-title {
+  animation: galleryTitleReveal 0.9s
+    cubic-bezier(0.22, 1, 0.36, 1) 0.3s both;
+}
+
+@keyframes galleryLabelReveal {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+    letter-spacing: 5px;
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+    letter-spacing: 2px;
+  }
+}
+
+@keyframes galleryTitleReveal {
+  from {
+    opacity: 0;
+    transform: translateY(30px) scale(0.92);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+
+/* =========================================================
+   3. GALLERY IMAGE BOX REVEAL
+========================================================= */
+
+.gallery-image-box {
+  opacity: 0;
+
+  animation:
+    galleryImageReveal 0.85s
+    cubic-bezier(0.22, 1, 0.36, 1)
+    forwards;
+
+  will-change: transform, opacity;
+}
+
+
+/* Stagger each image */
+
+.gallery-image-box:nth-child(1) {
+  animation-delay: 0.45s;
+}
+
+.gallery-image-box:nth-child(2) {
+  animation-delay: 0.6s;
+}
+
+.gallery-image-box:nth-child(3) {
+  animation-delay: 0.75s;
+}
+
+.gallery-image-box:nth-child(4) {
+  animation-delay: 0.9s;
+}
+
+
+@keyframes galleryImageReveal {
+  from {
+    opacity: 0;
+    transform: translateY(55px) scale(0.92);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+
+/* =========================================================
+   4. IMAGE HOVER ZOOM
+========================================================= */
+
+.gallery-image-box {
+  transition:
+    transform 0.4s cubic-bezier(0.22, 1, 0.36, 1),
+    box-shadow 0.4s ease;
+}
+
+.gallery-image-box img {
+  transition:
+    transform 0.7s cubic-bezier(0.22, 1, 0.36, 1),
+    filter 0.4s ease;
+}
+
+
+.gallery-image-box:hover {
+  transform: translateY(-8px);
+
+  box-shadow:
+    0 12px 25px rgba(55, 35, 100, 0.18);
+}
+
+
+.gallery-image-box:hover img {
+  transform: scale(1.08);
+}
+
+
+/* =========================================================
+   5. IMAGE HOVER OVERLAY
+========================================================= */
+
+.gallery-image-box {
+  position: relative;
+}
+
+.gallery-image-box::after {
+  content: "";
+
+  position: absolute;
+
+  inset: 0;
+
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.18),
+    transparent 45%,
+    rgba(60, 30, 150, 0.08)
+  );
+
+  opacity: 0;
+
+  pointer-events: none;
+
+  transition:
+    opacity 0.4s ease;
+}
+
+.gallery-image-box:hover::after {
+  opacity: 1;
+}
+
+
+/* =========================================================
+   6. SHINE EFFECT ON IMAGES
+========================================================= */
+
+.gallery-image-box::before {
+  content: "";
+
+  position: absolute;
+
+  z-index: 2;
+
+  top: 0;
+  left: -120%;
+
+  width: 60%;
+  height: 100%;
+
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.35),
+    transparent
+  );
+
+  transform: skewX(-20deg);
+
+  pointer-events: none;
+}
+
+.gallery-image-box:hover::before {
+  animation: galleryImageShine 0.8s ease;
+}
+
+@keyframes galleryImageShine {
+  from {
+    left: -120%;
+  }
+
+  to {
+    left: 140%;
+  }
+}
+
+
+/* =========================================================
+   7. BUTTON ENTRANCE
+========================================================= */
+
+.gallery-button-wrapper {
+  opacity: 0;
+
+  animation:
+    galleryButtonReveal 0.8s
+    cubic-bezier(0.22, 1, 0.36, 1)
+    1.15s forwards;
+}
+
+@keyframes galleryButtonReveal {
+  from {
+    opacity: 0;
+    transform: translateY(25px) scale(0.9);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+
+/* =========================================================
+   8. GALLERY BUTTON HOVER
+========================================================= */
+
+.gallery-button {
+  position: relative;
+
+  overflow: hidden;
+
+  transition:
+    transform 0.3s ease,
+    background 0.3s ease,
+    color 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+
+.gallery-button::before {
+  content: "";
+
+  position: absolute;
+
+  top: 0;
+  left: -120%;
+
+  width: 75%;
+  height: 100%;
+
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.45),
+    transparent
+  );
+
+  transform: skewX(-20deg);
+
+  transition: left 0.6s ease;
+}
+
+
+.gallery-button:hover::before {
+  left: 140%;
+}
+
+
+.gallery-button:hover {
+  transform: translateY(-5px) scale(1.03);
+
+  box-shadow:
+    0 8px 18px rgba(10, 174, 91, 0.20);
+}
+
+
+.gallery-button:active {
+  transform: translateY(-1px) scale(0.98);
+}
+
+
+/* =========================================================
+   9. GRID ICON ANIMATION
+========================================================= */
+
+.gallery-grid-icon {
+  display: inline-flex;
+
+  transition:
+    transform 0.35s ease;
+}
+
+
+.gallery-button:hover .gallery-grid-icon {
+  transform: rotate(90deg) scale(1.15);
+}
+
+
+/* =========================================================
+   10. PHOTOGRAPHER ENTRANCE
+========================================================= */
+
+.gallery-photographer {
+  animation:
+    photographerReveal 1s
+    cubic-bezier(0.22, 1, 0.36, 1)
+    0.8s both;
+}
+
+
+@keyframes photographerReveal {
+  from {
+    opacity: 0;
+    transform: translateX(70px) translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0) translateY(0);
+  }
+}
+
+
+/* =========================================================
+   11. PHOTOGRAPHER FLOATING
+========================================================= */
+
+.gallery-photographer img {
+  animation:
+    photographerFloat 4s ease-in-out 1.8s infinite;
+  transform-origin: bottom center;
+}
+
+
+@keyframes photographerFloat {
+  0%,
+  100% {
+    transform: translateY(0) rotate(0deg);
+  }
+
+  50% {
+    transform: translateY(-9px) rotate(1.5deg);
+  }
+}
+
+
+/* =========================================================
+   12. BOOK DECORATION ENTRANCE
+========================================================= */
+
+.gallery-decoration-two {
+  animation:
+    bookReveal 0.9s
+    cubic-bezier(0.22, 1, 0.36, 1)
+    1s both;
+}
+
+
+@keyframes bookReveal {
+  from {
+    opacity: 0;
+    transform: translateY(35px) rotate(-25deg) scale(0.7);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0) rotate(-8deg) scale(1);
+  }
+}
+
+
+/* =========================================================
+   13. BOOK FLOATING
+========================================================= */
+
+.gallery-decoration-two img {
+  animation:
+    bookFloat 3s ease-in-out 1.7s infinite;
+  transform-origin: center;
+}
+
+
+@keyframes bookFloat {
+  0%,
+  100% {
+    transform: translateY(0) rotate(0deg);
+  }
+
+  50% {
+    transform: translateY(-8px) rotate(5deg);
+  }
+}
+
+
+/* =========================================================
+   14. DECORATION HOVER
+========================================================= */
+
+.gallery-decoration-two {
+  transition:
+    transform 0.4s ease;
+}
+
+.gallery-decoration-two:hover {
+  transform:
+    translateY(-8px)
+    rotate(-2deg)
+    scale(1.08);
+}
+
+
+/* =========================================================
+   15. IMAGE LOADING FEEL
+========================================================= */
+
+.gallery-image-box img {
+  animation: imageSoftAppear 1s ease both;
+}
+
+
+@keyframes imageSoftAppear {
+  from {
+    opacity: 0;
+    filter: blur(4px);
+  }
+
+  to {
+    opacity: 1;
+    filter: blur(0);
+  }
+}
+
+
+/* =========================================================
+   16. CARD DEPTH EFFECT
+========================================================= */
+
+.gallery-image-box:nth-child(1) {
+  transition-delay: 0s;
+}
+
+.gallery-image-box:nth-child(2) {
+  transition-delay: 0.03s;
+}
+
+.gallery-image-box:nth-child(3) {
+  transition-delay: 0.06s;
+}
+
+.gallery-image-box:nth-child(4) {
+  transition-delay: 0.09s;
+}
+
+
+/* =========================================================
+   17. RTL SUPPORT
+========================================================= */
+
+[dir="rtl"] .gallery-image-box:hover {
+  transform: translateY(-8px);
+}
+
+
+/* =========================================================
+   18. MOBILE ANIMATION
+========================================================= */
+
+@media (max-width: 600px) {
+
+  .gallery-image-box:hover {
+    transform: translateY(-4px);
+  }
+
+  .gallery-image-box:hover img {
+    transform: scale(1.05);
+  }
+
+  .gallery-button:hover {
+    transform: translateY(-3px) scale(1.02);
+  }
+
+  .gallery-photographer img {
+    animation-duration: 3.5s;
+  }
+
+  .gallery-decoration-two img {
+    animation-duration: 2.8s;
+  }
+}
+
+
+/* =========================================================
+   19. SMALL MOBILE
+========================================================= */
+
+@media (max-width: 400px) {
+
+  .gallery-image-box:hover {
+    transform: translateY(-3px);
+  }
+
+  .gallery-image-box:hover img {
+    transform: scale(1.04);
+  }
+
+  .gallery-button:hover {
+    transform: translateY(-2px) scale(1.01);
+  }
+}
+
+
+/* =========================================================
+   20. ACCESSIBILITY
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .gallery-section,
+  .gallery-label,
+  .gallery-title,
+  .gallery-image-box,
+  .gallery-image-box img,
+  .gallery-button-wrapper,
+  .gallery-photographer,
+  .gallery-photographer img,
+  .gallery-decoration-two,
+  .gallery-decoration-two img {
+    animation: none !important;
+    opacity: 1 !important;
+    transform: none !important;
+    filter: none !important;
+  }
+
+  .gallery-image-box,
+  .gallery-image-box img,
+  .gallery-button,
+  .gallery-decoration-two {
+    transition: none !important;
+  }
+}
