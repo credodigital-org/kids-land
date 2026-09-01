@@ -151,16 +151,16 @@
 
   overflow: hidden;
 
-  /* border: 3px solid #ffffff; */
+  border: 3px solid #ffffff;
 
   border-radius: 11px;
 
-  /* background: #eeeeee; */
+  background: #eeeeee;
 
   box-sizing: border-box;
 
-  /* box-shadow:
-    0 1px 3px rgba(0, 0, 0, 0.08); */
+  box-shadow:
+    0 1px 3px rgba(0, 0, 0, 0.08);
 }
 
 .learning-image {
@@ -380,5 +380,613 @@
 
   .learning-description {
     font-size: 11px;
+  }
+}
+
+
+
+
+
+/* =========================================================
+   FULL ANIMATION - LEARNING SECTION
+   IMPORTANT:
+   No existing positions, dimensions or layout are changed.
+========================================================= */
+
+
+/* =========================================================
+   SECTION ENTRY
+========================================================= */
+
+.learning-section {
+  animation: learningSectionReveal 0.9s ease both;
+}
+
+@keyframes learningSectionReveal {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+
+/* =========================================================
+   HEADER ANIMATION
+========================================================= */
+
+.learning-header {
+  animation: learningHeaderReveal 0.9s ease both;
+}
+
+.learning-label {
+  animation: learningLabelReveal 0.7s ease both;
+  animation-delay: 0.15s;
+}
+
+.learning-title {
+  animation: learningTitleReveal 0.9s cubic-bezier(0.22, 1, 0.36, 1) both;
+  animation-delay: 0.25s;
+}
+
+.learning-subtitle {
+  animation: learningSubtitleReveal 0.9s ease both;
+  animation-delay: 0.4s;
+}
+
+@keyframes learningHeaderReveal {
+  from {
+    opacity: 0;
+    transform: translateY(25px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes learningLabelReveal {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+    letter-spacing: 3px;
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+    letter-spacing: 1.4px;
+  }
+}
+
+@keyframes learningTitleReveal {
+  from {
+    opacity: 0;
+    transform: translateY(30px) scale(0.96);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes learningSubtitleReveal {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+/* =========================================================
+   CARD ENTRY ANIMATION
+========================================================= */
+
+.learning-card {
+  animation:
+    learningCardReveal 0.85s cubic-bezier(0.22, 1, 0.36, 1) both,
+    learningCardFloat 5s ease-in-out infinite;
+}
+
+
+/* Staggered cards */
+
+.learning-card:nth-child(1) {
+  animation-delay: 0.15s, 1.3s;
+}
+
+.learning-card:nth-child(2) {
+  animation-delay: 0.3s, 1.5s;
+}
+
+.learning-card:nth-child(3) {
+  animation-delay: 0.45s, 1.7s;
+}
+
+.learning-card:nth-child(4) {
+  animation-delay: 0.6s, 1.9s;
+}
+
+
+@keyframes learningCardReveal {
+  from {
+    opacity: 0;
+    transform: translateY(55px) scale(0.94);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+
+/* =========================================================
+   SUBTLE CONTINUOUS CARD FLOAT
+========================================================= */
+
+@keyframes learningCardFloat {
+  0% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-5px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+
+/* =========================================================
+   CARD HOVER
+========================================================= */
+
+.learning-card {
+  transition:
+    transform 0.35s cubic-bezier(0.22, 1, 0.36, 1),
+    box-shadow 0.35s ease,
+    filter 0.35s ease;
+}
+
+.learning-card:hover {
+  transform: translateY(-10px) scale(1.015);
+  box-shadow:
+    0 18px 35px rgba(72, 48, 100, 0.12);
+  filter: saturate(1.04);
+}
+
+
+/* =========================================================
+   IMAGE WRAPPER
+========================================================= */
+
+.learning-image-wrapper {
+  transition:
+    transform 0.45s cubic-bezier(0.22, 1, 0.36, 1),
+    box-shadow 0.45s ease;
+}
+
+.learning-card:hover .learning-image-wrapper {
+  transform: translateY(-3px);
+  box-shadow:
+    0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+
+/* =========================================================
+   IMAGE ZOOM
+========================================================= */
+
+.learning-image {
+  transition:
+    transform 0.8s cubic-bezier(0.22, 1, 0.36, 1),
+    filter 0.5s ease;
+}
+
+.learning-card:hover .learning-image {
+  transform: scale(1.08);
+  filter: brightness(1.04) saturate(1.05);
+}
+
+
+/* =========================================================
+   IMAGE INITIAL REVEAL
+========================================================= */
+
+.learning-image-wrapper {
+  animation: learningImageReveal 1s ease both;
+}
+
+.learning-card:nth-child(1) .learning-image-wrapper {
+  animation-delay: 0.35s;
+}
+
+.learning-card:nth-child(2) .learning-image-wrapper {
+  animation-delay: 0.5s;
+}
+
+.learning-card:nth-child(3) .learning-image-wrapper {
+  animation-delay: 0.65s;
+}
+
+.learning-card:nth-child(4) .learning-image-wrapper {
+  animation-delay: 0.8s;
+}
+
+@keyframes learningImageReveal {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+
+/* =========================================================
+   CARD CONTENT REVEAL
+========================================================= */
+
+.learning-card-content {
+  animation: learningContentReveal 0.8s ease both;
+}
+
+.learning-card:nth-child(1) .learning-card-content {
+  animation-delay: 0.55s;
+}
+
+.learning-card:nth-child(2) .learning-card-content {
+  animation-delay: 0.7s;
+}
+
+.learning-card:nth-child(3) .learning-card-content {
+  animation-delay: 0.85s;
+}
+
+.learning-card:nth-child(4) .learning-card-content {
+  animation-delay: 1s;
+}
+
+@keyframes learningContentReveal {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+/* =========================================================
+   CARD TITLE
+========================================================= */
+
+.learning-card h3 {
+  transition:
+    transform 0.3s ease,
+    color 0.3s ease;
+}
+
+.learning-card:hover h3 {
+  transform: translateY(-2px);
+}
+
+
+/* =========================================================
+   AGE TEXT
+========================================================= */
+
+.learning-age {
+  transition:
+    transform 0.3s ease,
+    opacity 0.3s ease;
+}
+
+.learning-card:hover .learning-age {
+  transform: translateY(-1px);
+  opacity: 0.85;
+}
+
+
+/* =========================================================
+   DESCRIPTION
+========================================================= */
+
+.learning-description {
+  transition:
+    transform 0.35s ease,
+    opacity 0.35s ease;
+}
+
+.learning-card:hover .learning-description {
+  transform: translateY(-1px);
+  opacity: 0.95;
+}
+
+
+/* =========================================================
+   LEARN MORE
+========================================================= */
+
+.learning-more {
+  position: relative;
+
+  transition:
+    transform 0.3s ease,
+    letter-spacing 0.3s ease;
+}
+
+.learning-more::after {
+  content: " →";
+
+  display: inline-block;
+
+  opacity: 0;
+
+  transform: translateX(-7px);
+
+  transition:
+    opacity 0.3s ease,
+    transform 0.3s ease;
+}
+
+.learning-more:hover {
+  text-decoration: none;
+
+  transform: translateY(-2px);
+
+  letter-spacing: 0.9px;
+}
+
+.learning-more:hover::after {
+  opacity: 1;
+  transform: translateX(3px);
+}
+
+
+/* =========================================================
+   DIFFERENT CARD HOVER FEEL
+========================================================= */
+
+.little-angels:hover {
+  box-shadow:
+    0 18px 35px rgba(240, 75, 71, 0.14);
+}
+
+.toddlers:hover {
+  box-shadow:
+    0 18px 35px rgba(184, 117, 0, 0.12);
+}
+
+.discoveries:hover {
+  box-shadow:
+    0 18px 35px rgba(21, 147, 76, 0.12);
+}
+
+.inventors:hover {
+  box-shadow:
+    0 18px 35px rgba(37, 117, 232, 0.13);
+}
+
+
+/* =========================================================
+   SOFT CARD SHINE
+========================================================= */
+
+.learning-card {
+  position: relative;
+}
+
+.learning-card::before {
+  content: "";
+
+  position: absolute;
+
+  top: 0;
+  left: -120%;
+
+  width: 70%;
+  height: 100%;
+
+  background:
+    linear-gradient(
+      90deg,
+      transparent,
+      rgba(255, 255, 255, 0.28),
+      transparent
+    );
+
+  transform: skewX(-20deg);
+
+  pointer-events: none;
+
+  z-index: 5;
+}
+
+.learning-card:hover::before {
+  animation: learningCardShine 0.8s ease;
+}
+
+@keyframes learningCardShine {
+  from {
+    left: -120%;
+  }
+
+  to {
+    left: 150%;
+  }
+}
+
+
+/* =========================================================
+   IMAGE BORDER PULSE
+========================================================= */
+
+.learning-card:hover .learning-image-wrapper {
+  border-color: rgba(255, 255, 255, 0.95);
+
+  animation: imageBorderPulse 1.4s ease-in-out infinite;
+}
+
+@keyframes imageBorderPulse {
+  0% {
+    box-shadow:
+      0 4px 12px rgba(0, 0, 0, 0.08);
+  }
+
+  50% {
+    box-shadow:
+      0 8px 22px rgba(0, 0, 0, 0.14);
+  }
+
+  100% {
+    box-shadow:
+      0 4px 12px rgba(0, 0, 0, 0.08);
+  }
+}
+
+
+/* =========================================================
+   HEADER TITLE GENTLE FLOAT
+========================================================= */
+
+.learning-title {
+  animation:
+    learningTitleReveal 0.9s cubic-bezier(0.22, 1, 0.36, 1) both,
+    learningTitleFloat 4s ease-in-out 1.5s infinite;
+}
+
+@keyframes learningTitleFloat {
+  0% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-3px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+
+/* =========================================================
+   LABEL GLOW
+========================================================= */
+
+.learning-label {
+  transition:
+    letter-spacing 0.3s ease,
+    opacity 0.3s ease;
+}
+
+.learning-label:hover {
+  letter-spacing: 2px;
+}
+
+
+/* =========================================================
+   MOBILE ANIMATION ADJUSTMENTS
+========================================================= */
+
+@media (max-width: 600px) {
+
+  .learning-card {
+    animation:
+      learningCardReveal 0.75s cubic-bezier(0.22, 1, 0.36, 1) both;
+  }
+
+  .learning-card:hover {
+    transform: translateY(-6px) scale(1.01);
+  }
+
+  .learning-card:hover .learning-image {
+    transform: scale(1.05);
+  }
+
+  .learning-card::before {
+    display: none;
+  }
+
+  .learning-card:hover .learning-image-wrapper {
+    animation: none;
+  }
+
+  .learning-title {
+    animation:
+      learningTitleReveal 0.8s cubic-bezier(0.22, 1, 0.36, 1) both;
+  }
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 400px) {
+
+  .learning-card:hover {
+    transform: translateY(-4px);
+  }
+
+  .learning-card:hover .learning-image {
+    transform: scale(1.04);
+  }
+
+  .learning-more:hover {
+    letter-spacing: 0.7px;
+  }
+}
+
+
+/* =========================================================
+   ACCESSIBILITY
+   Respect users who prefer reduced motion.
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .learning-section,
+  .learning-header,
+  .learning-label,
+  .learning-title,
+  .learning-subtitle,
+  .learning-card,
+  .learning-image-wrapper,
+  .learning-card-content {
+    animation: none !important;
+  }
+
+  .learning-card,
+  .learning-image,
+  .learning-image-wrapper,
+  .learning-more,
+  .learning-card h3,
+  .learning-age,
+  .learning-description {
+    transition: none !important;
+  }
+
+  .learning-card:hover {
+    transform: none !important;
   }
 }

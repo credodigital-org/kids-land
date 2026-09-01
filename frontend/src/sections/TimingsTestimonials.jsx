@@ -5,6 +5,7 @@ import calender from "../assets/Background (2).png";
 import clock from "../assets/Container.png";
 import party from "../assets/Background (3).png";
 import sun  from "../assets/Container (1).png";
+import decoration from "../assets/clock-removebg-preview 1.png";
 
 import * as testimonialsService from "../services/testimonialsService";
 import { useLanguage } from "../context/LanguageContext";
@@ -63,6 +64,12 @@ function TimingsTestimonials() {
 
   return (
     <section className="timings-testimonials" dir={language === "ar" ? "rtl" : "ltr"}>
+
+      <img
+      src={decoration}
+      alt="Decoration"
+      className="timings-decoration"
+    />
 
       {/* =====================================
           NURSERY TIMINGS

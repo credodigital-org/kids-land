@@ -743,3 +743,644 @@
     align-self: center;
   }
 }
+
+
+
+/* =========================================================
+   FULL ANIMATION PACK
+   LOCATION SECTION
+========================================================= */
+
+/* ---------------------------------------------------------
+   1. SECTION ENTRANCE
+--------------------------------------------------------- */
+
+.location-section {
+  animation: locationSectionFade 1s ease both;
+}
+
+@keyframes locationSectionFade {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+
+/* ---------------------------------------------------------
+   2. LOCATION TITLE
+--------------------------------------------------------- */
+
+.location-title {
+  animation: locationTitleReveal 0.9s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+@keyframes locationTitleReveal {
+  0% {
+    opacity: 0;
+    transform: translateY(35px) scale(0.96);
+  }
+
+  70% {
+    opacity: 1;
+    transform: translateY(-4px) scale(1.01);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+
+/* ---------------------------------------------------------
+   3. MAP ENTRANCE
+--------------------------------------------------------- */
+
+.location-map {
+  animation: mapReveal 1.1s cubic-bezier(0.22, 1, 0.36, 1) 0.15s both;
+}
+
+@keyframes mapReveal {
+  0% {
+    opacity: 0;
+    transform: translateX(-60px) scale(0.92);
+  }
+
+  60% {
+    opacity: 1;
+    transform: translateX(8px) scale(1.01);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0) scale(1);
+  }
+}
+
+
+/* ---------------------------------------------------------
+   4. MAP IMAGE
+--------------------------------------------------------- */
+
+.google-map {
+  transition:
+    transform 0.6s ease,
+    filter 0.6s ease;
+}
+
+.location-map:hover .google-map {
+  transform: scale(1.025);
+  filter: saturate(1.05);
+}
+
+
+/* ---------------------------------------------------------
+   5. LOCATION DETAILS
+--------------------------------------------------------- */
+
+.location-details {
+  animation: detailsReveal 1s cubic-bezier(0.22, 1, 0.36, 1) 0.3s both;
+}
+
+@keyframes detailsReveal {
+  0% {
+    opacity: 0;
+    transform: translateX(60px);
+  }
+
+  70% {
+    opacity: 1;
+    transform: translateX(-6px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+
+/* ---------------------------------------------------------
+   6. LOCATION ITEMS
+--------------------------------------------------------- */
+
+.location-item {
+  opacity: 0;
+  animation: locationItemReveal 0.75s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+.location-item:nth-child(1) {
+  animation-delay: 0.45s;
+}
+
+.location-item:nth-child(2) {
+  animation-delay: 0.6s;
+}
+
+@keyframes locationItemReveal {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+/* ---------------------------------------------------------
+   7. LOCATION ICON ANIMATION
+--------------------------------------------------------- */
+
+.location-item-icon {
+  transition:
+    transform 0.35s ease,
+    box-shadow 0.35s ease;
+}
+
+.location-item:hover .location-item-icon {
+  transform: translateY(-5px) rotate(-5deg) scale(1.06);
+
+  box-shadow:
+    0 8px 18px rgba(62, 36, 158, 0.16);
+}
+
+.location-item-icon img {
+  transition: transform 0.4s ease;
+}
+
+.location-item:hover .location-item-icon img {
+  transform: scale(1.08);
+}
+
+
+/* ---------------------------------------------------------
+   8. LOCATION TEXT HOVER
+--------------------------------------------------------- */
+
+.location-item-content h3 {
+  transition:
+    color 0.3s ease,
+    transform 0.3s ease;
+}
+
+.location-item-content p {
+  transition:
+    color 0.3s ease,
+    transform 0.3s ease;
+}
+
+.location-item:hover .location-item-content h3 {
+  color: #40209f;
+  transform: translateX(3px);
+}
+
+.location-item:hover .location-item-content p {
+  color: #403b50;
+  transform: translateX(3px);
+}
+
+
+/* ---------------------------------------------------------
+   9. GOOGLE MAP BUTTON ENTRANCE
+--------------------------------------------------------- */
+
+.google-map-button {
+  opacity: 0;
+
+  animation:
+    googleButtonReveal
+    0.8s
+    cubic-bezier(0.22, 1, 0.36, 1)
+    0.75s
+    forwards;
+}
+
+@keyframes googleButtonReveal {
+  from {
+    opacity: 0;
+    transform: translateY(25px) scale(0.92);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+
+/* ---------------------------------------------------------
+   10. GOOGLE MAP BUTTON HOVER
+--------------------------------------------------------- */
+
+.google-map-button {
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease,
+    background 0.3s ease;
+}
+
+.google-map-button:hover {
+  transform: translateY(-4px) scale(1.03);
+
+  box-shadow:
+    0 10px 22px rgba(64, 32, 159, 0.28);
+}
+
+
+/* ---------------------------------------------------------
+   11. GOOGLE MAP ICON
+--------------------------------------------------------- */
+
+.map-button-icon {
+  transition:
+    transform 0.35s ease;
+}
+
+.google-map-button:hover .map-button-icon {
+  transform: translateY(-2px) rotate(-8deg) scale(1.1);
+}
+
+.map-button-icon img {
+  transition: transform 0.35s ease;
+}
+
+.google-map-button:hover .map-button-icon img {
+  transform: scale(1.08);
+}
+
+
+/* ---------------------------------------------------------
+   12. BUTTON PULSE
+--------------------------------------------------------- */
+
+.google-map-button::after {
+  content: "";
+
+  position: absolute;
+
+  width: 100%;
+  height: 100%;
+
+  left: 0;
+  top: 0;
+
+  border-radius: 25px;
+
+  border: 1px solid rgba(255, 255, 255, 0.35);
+
+  opacity: 0;
+
+  transform: scale(0.9);
+
+  pointer-events: none;
+}
+
+.google-map-button {
+  position: relative;
+  overflow: hidden;
+}
+
+.google-map-button:hover::after {
+  animation: buttonPulse 0.7s ease;
+}
+
+@keyframes buttonPulse {
+  0% {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+
+  40% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+    transform: scale(1.12);
+  }
+}
+
+
+/* ---------------------------------------------------------
+   13. MAP FLOATING EFFECT
+--------------------------------------------------------- */
+
+@media (min-width: 951px) {
+
+  .location-map {
+    animation:
+      mapReveal 1.1s cubic-bezier(0.22, 1, 0.36, 1) 0.15s both,
+      mapFloat 5s ease-in-out 1.5s infinite;
+  }
+
+}
+
+@keyframes mapFloat {
+  0% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-7px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+
+/* ---------------------------------------------------------
+   14. ICON FLOATING EFFECT
+--------------------------------------------------------- */
+
+.location-item-icon img {
+  animation: iconFloat 3.5s ease-in-out infinite;
+}
+
+.location-item:nth-child(2) .location-item-icon img {
+  animation-delay: 0.8s;
+}
+
+@keyframes iconFloat {
+  0% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-4px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+
+/* ---------------------------------------------------------
+   15. MAP SHINE EFFECT
+--------------------------------------------------------- */
+
+.map-placeholder {
+  position: relative;
+}
+
+.map-placeholder::after {
+  content: "";
+
+  position: absolute;
+
+  top: 0;
+  left: -120%;
+
+  width: 70%;
+  height: 100%;
+
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.25),
+    transparent
+  );
+
+  transform: skewX(-18deg);
+
+  pointer-events: none;
+
+  animation: mapShine 6s ease-in-out 2s infinite;
+}
+
+@keyframes mapShine {
+  0% {
+    left: -120%;
+  }
+
+  25% {
+    left: 130%;
+  }
+
+  100% {
+    left: 130%;
+  }
+}
+
+
+/* ---------------------------------------------------------
+   16. CONTENT HOVER LIFT
+--------------------------------------------------------- */
+
+.location-item {
+  transition:
+    transform 0.3s ease;
+}
+
+.location-item:hover {
+  transform: translateX(5px);
+}
+
+
+/* ---------------------------------------------------------
+   17. RTL SUPPORT
+--------------------------------------------------------- */
+
+[dir="rtl"] .location-item:hover {
+  transform: translateX(-5px);
+}
+
+[dir="rtl"] .location-item-content {
+  margin-left: 0;
+  margin-right: 15px;
+}
+
+[dir="rtl"] .location-item:hover .location-item-content h3,
+[dir="rtl"] .location-item:hover .location-item-content p {
+  transform: translateX(-3px);
+}
+
+
+/* ---------------------------------------------------------
+   18. TABLET ANIMATIONS
+--------------------------------------------------------- */
+
+@media (max-width: 950px) {
+
+  .location-map {
+    animation:
+      mapRevealTablet
+      0.9s
+      cubic-bezier(0.22, 1, 0.36, 1)
+      both;
+  }
+
+  .location-details {
+    animation:
+      detailsRevealTablet
+      0.9s
+      cubic-bezier(0.22, 1, 0.36, 1)
+      0.2s
+      both;
+  }
+
+}
+
+@keyframes mapRevealTablet {
+  from {
+    opacity: 0;
+    transform: translateY(45px) scale(0.94);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes detailsRevealTablet {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+/* ---------------------------------------------------------
+   19. MOBILE ANIMATIONS
+--------------------------------------------------------- */
+
+@media (max-width: 600px) {
+
+  .location-title {
+    animation-duration: 0.7s;
+  }
+
+  .location-map {
+    animation:
+      mobileMapReveal
+      0.85s
+      cubic-bezier(0.22, 1, 0.36, 1)
+      both;
+  }
+
+  .location-details {
+    animation:
+      mobileDetailsReveal
+      0.8s
+      cubic-bezier(0.22, 1, 0.36, 1)
+      0.3s
+      both;
+  }
+
+  .location-item:hover {
+    transform: translateY(-3px);
+  }
+
+  .location-item:hover .location-item-icon {
+    transform: scale(1.04);
+  }
+
+  .google-map-button:hover {
+    transform: translateY(-3px) scale(1.02);
+  }
+
+}
+
+@keyframes mobileMapReveal {
+  from {
+    opacity: 0;
+    transform: translateY(35px) scale(0.94);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes mobileDetailsReveal {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+/* ---------------------------------------------------------
+   20. SMALL MOBILE
+--------------------------------------------------------- */
+
+@media (max-width: 400px) {
+
+  .location-item {
+    animation-duration: 0.65s;
+  }
+
+  .google-map-button {
+    transition:
+      transform 0.25s ease,
+      box-shadow 0.25s ease;
+  }
+
+  .google-map-button:active {
+    transform: scale(0.96);
+  }
+
+}
+
+
+/* ---------------------------------------------------------
+   21. REDUCE MOTION ACCESSIBILITY
+--------------------------------------------------------- */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .location-section,
+  .location-title,
+  .location-map,
+  .location-details,
+  .location-item,
+  .google-map-button,
+  .location-item-icon img,
+  .map-placeholder::after {
+    animation: none !important;
+    transition: none !important;
+  }
+
+}
+
+
+/* =========================================================
+   FINAL MAP POSITION FIX
+========================================================= */
+
+@media (max-width: 950px) {
+  .location-map {
+    margin-left: 0;
+    left: 0;
+  }
+}
+
+@media (max-width: 600px) {
+  .location-map {
+    width: 100%;
+    height: auto;
+    left: 0;
+    margin-left: 0;
+  }
+}

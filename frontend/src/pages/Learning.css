@@ -18,7 +18,7 @@
   color: #292929;
   font-family: "Poppins", sans-serif;
   overflow-x: hidden;
-  padding-top: 0px;
+  padding-top: 127px;
   box-sizing: border-box;
 }
 .learning-page h1,
@@ -1043,6 +1043,1134 @@
 
   .specific-item-wrapper .pick-content span {
     font-size: 11px;
+  }
+
+}
+
+
+
+/* =========================================================
+   FULL LEARNING PAGE ANIMATIONS
+   FLIP + FLOP + FLOAT + HOVER + REVEAL
+========================================================= */
+
+
+/* =========================================================
+   1. PROGRAM CARD 3D SETUP
+========================================================= */
+
+.program-card {
+  position: relative;
+  transform-style: preserve-3d;
+  perspective: 1200px;
+
+  will-change: transform;
+
+  animation:
+    learningCardReveal 0.9s cubic-bezier(.22, 1, .36, 1) both,
+    learningCardFloat 5s ease-in-out infinite;
+
+  transition:
+    transform 0.65s cubic-bezier(.22, 1, .36, 1),
+    box-shadow 0.5s ease;
+}
+
+
+/* Stagger cards */
+
+.program-card:nth-child(1) {
+  animation-delay: 0.05s, 1s;
+}
+
+.program-card:nth-child(2) {
+  animation-delay: 0.18s, 1.3s;
+}
+
+.program-card:nth-child(3) {
+  animation-delay: 0.31s, 1.6s;
+}
+
+.program-card:nth-child(4) {
+  animation-delay: 0.44s, 1.9s;
+}
+
+
+/* =========================================================
+   2. FLIP + FLOP HOVER
+========================================================= */
+
+.program-card:hover {
+  transform:
+    perspective(1200px)
+    rotateX(4deg)
+    rotateY(-5deg)
+    translateY(-14px)
+    scale(1.025);
+
+  box-shadow:
+    0 25px 50px rgba(70, 45, 120, 0.18),
+    0 10px 20px rgba(70, 45, 120, 0.08);
+}
+
+
+/* Alternate direction */
+
+.program-card:nth-child(even):hover {
+  transform:
+    perspective(1200px)
+    rotateX(4deg)
+    rotateY(5deg)
+    translateY(-14px)
+    scale(1.025);
+}
+
+
+/* =========================================================
+   3. CARD IMAGE ANIMATION
+========================================================= */
+
+.program-image-wrapper {
+  position: relative;
+  overflow: hidden;
+}
+
+
+/* Image zoom */
+
+.program-image {
+  transition:
+    transform 0.9s cubic-bezier(.22, 1, .36, 1),
+    filter 0.6s ease;
+}
+
+
+.program-card:hover .program-image {
+  transform: scale(1.09) rotate(1deg);
+  filter: saturate(1.08);
+}
+
+
+/* Image shine */
+
+.program-image-wrapper::after {
+  content: "";
+  position: absolute;
+
+  top: -120%;
+  left: -80%;
+
+  width: 55%;
+  height: 300%;
+
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.45),
+    transparent
+  );
+
+  transform: rotate(20deg);
+
+  transition: left 0.9s ease;
+
+  pointer-events: none;
+}
+
+
+.program-card:hover .program-image-wrapper::after {
+  left: 140%;
+}
+
+
+/* =========================================================
+   4. PROGRAM ICON ANIMATION
+========================================================= */
+
+.program-icon {
+  position: relative;
+
+  transition:
+    transform 0.5s cubic-bezier(.34, 1.56, .64, 1),
+    box-shadow 0.4s ease;
+}
+
+
+.program-icon svg {
+  transition:
+    transform 0.5s ease;
+}
+
+
+.program-card:hover .program-icon {
+  transform:
+    rotate(-12deg)
+    scale(1.18);
+
+  box-shadow:
+    0 8px 18px rgba(0, 0, 0, 0.12);
+}
+
+
+.program-card:hover .program-icon svg {
+  transform:
+    rotate(20deg)
+    scale(1.08);
+}
+
+
+/* =========================================================
+   5. TITLE ANIMATION
+========================================================= */
+
+.program-title-row h3 {
+  transition:
+    transform 0.45s ease,
+    letter-spacing 0.45s ease;
+}
+
+
+.program-card:hover .program-title-row h3 {
+  transform: translateX(5px);
+  letter-spacing: 0.3px;
+}
+
+
+/* Arabic */
+
+.learning-page[dir="rtl"] .program-card:hover
+.program-title-row h3 {
+  transform: translateX(-5px);
+}
+
+
+/* =========================================================
+   6. AGE TEXT ANIMATION
+========================================================= */
+
+.program-title-row span {
+  transition:
+    opacity 0.4s ease,
+    transform 0.4s ease;
+}
+
+
+.program-card:hover .program-title-row span {
+  transform: translateY(-2px);
+  opacity: 0.85;
+}
+
+
+/* =========================================================
+   7. DESCRIPTION ANIMATION
+========================================================= */
+
+.program-content > p {
+  transition:
+    transform 0.5s ease,
+    color 0.4s ease;
+}
+
+
+.program-card:hover .program-content > p {
+  transform: translateY(-3px);
+  color: #4e4858;
+}
+
+
+/* =========================================================
+   8. LEARN MORE ANIMATION
+========================================================= */
+
+.learn-more {
+  position: relative;
+  transition:
+    transform 0.35s ease,
+    letter-spacing 0.35s ease;
+}
+
+
+.learn-more span {
+  display: inline-block;
+
+  transition:
+    transform 0.4s cubic-bezier(.34, 1.56, .64, 1);
+}
+
+
+.program-card:hover .learn-more {
+  transform: translateX(4px);
+  letter-spacing: 0.3px;
+}
+
+
+.program-card:hover .learn-more span {
+  transform: translateX(8px);
+}
+
+
+.learning-page[dir="rtl"] .program-card:hover .learn-more {
+  transform: translateX(-4px);
+}
+
+
+.learning-page[dir="rtl"] .program-card:hover
+.learn-more span {
+  transform: translateX(-8px);
+}
+
+
+/* =========================================================
+   9. PROGRAM CARD GLOW
+========================================================= */
+
+.program-card::before {
+  content: "";
+
+  position: absolute;
+
+  inset: 0;
+
+  border-radius: inherit;
+
+  background:
+    radial-gradient(
+      circle at 50% 0%,
+      rgba(255,255,255,0.75),
+      transparent 55%
+    );
+
+  opacity: 0;
+
+  transition: opacity 0.5s ease;
+
+  pointer-events: none;
+
+  z-index: 0;
+}
+
+
+.program-card:hover::before {
+  opacity: 1;
+}
+
+
+/* Keep content above glow */
+
+.program-card > * {
+  position: relative;
+  z-index: 1;
+}
+
+
+/* =========================================================
+   10. HERO ANIMATION
+========================================================= */
+
+.learning-hero h1 {
+  animation:
+    learningHeroTitle 1s cubic-bezier(.22, 1, .36, 1) both;
+}
+
+
+.learning-hero p {
+  animation:
+    learningHeroText 1s 0.25s cubic-bezier(.22, 1, .36, 1) both;
+}
+
+
+/* =========================================================
+   11. PROGRAM SECTION TITLE
+========================================================= */
+
+.programs-section > h2 {
+  animation:
+    learningSectionTitle 0.9s 0.2s cubic-bezier(.22, 1, .36, 1)
+    both;
+}
+
+
+/* =========================================================
+   12. AREAS SECTION TITLE
+========================================================= */
+
+.areas-heading h2 {
+  animation:
+    learningSectionTitle 0.9s 0.1s cubic-bezier(.22, 1, .36, 1)
+    both;
+}
+
+
+.areas-heading p {
+  animation:
+    learningHeroText 0.9s 0.25s ease both;
+}
+
+
+/* =========================================================
+   13. PRIME AREA ITEMS
+========================================================= */
+
+.prime-item {
+  transition:
+    transform 0.5s cubic-bezier(.34, 1.56, .64, 1),
+    box-shadow 0.45s ease,
+    background 0.4s ease;
+}
+
+
+.prime-item:hover {
+  transform:
+    translateX(8px)
+    scale(1.025);
+
+  box-shadow:
+    0 12px 28px rgba(50, 50, 80, 0.12);
+
+  background: #ffffff;
+}
+
+
+.learning-page[dir="rtl"] .prime-item:hover {
+  transform:
+    translateX(-8px)
+    scale(1.025);
+}
+
+
+/* Icon */
+
+.prime-item svg {
+  transition:
+    transform 0.45s cubic-bezier(.34, 1.56, .64, 1);
+}
+
+
+.prime-item:hover svg {
+  transform:
+    rotate(15deg)
+    scale(1.2);
+}
+
+
+/* Text */
+
+.prime-item span {
+  transition:
+    transform 0.4s ease;
+}
+
+
+.prime-item:hover span {
+  transform: scale(1.025);
+}
+
+
+/* =========================================================
+   14. SPECIFIC AREA FLIP/FLOP
+========================================================= */
+
+.specific-item-wrapper {
+  perspective: 800px;
+
+  transition:
+    transform 0.65s cubic-bezier(.34, 1.56, .64, 1),
+    filter 0.4s ease;
+}
+
+
+/* Existing hover replaced with stronger animation */
+
+.specific-item-wrapper:hover {
+  transform:
+    translateY(-10px)
+    scale(1.06)
+    rotate(-2deg);
+
+  filter:
+    drop-shadow(0 15px 18px rgba(80, 50, 120, 0.16));
+}
+
+
+/* Alternate flop */
+
+.specific-item-wrapper:nth-child(even):hover {
+  transform:
+    translateY(-10px)
+    scale(1.06)
+    rotate(2deg);
+}
+
+
+/* =========================================================
+   15. SPECIFIC SVG FLOATING
+========================================================= */
+
+.specific-item-wrapper .shape-svg {
+  transform-origin: center;
+  transition:
+    transform 0.8s cubic-bezier(.22, 1, .36, 1),
+    filter 0.5s ease;
+}
+
+
+.specific-item-wrapper:hover .shape-svg {
+  transform:
+    rotate(8deg)
+    scale(1.06);
+}
+
+
+/* Alternate SVG */
+
+.specific-item-wrapper:nth-child(even):hover .shape-svg {
+  transform:
+    rotate(-8deg)
+    scale(1.06);
+}
+
+
+/* =========================================================
+   16. SPECIFIC CONTENT
+========================================================= */
+
+.specific-item-wrapper .pick-content {
+  transition:
+    transform 0.5s cubic-bezier(.34, 1.56, .64, 1);
+}
+
+
+.specific-item-wrapper:hover .pick-content {
+  transform:
+    scale(1.08)
+    translateY(-2px);
+}
+
+
+.specific-item-wrapper .pick-content svg {
+  transition:
+    transform 0.5s cubic-bezier(.34, 1.56, .64, 1);
+}
+
+
+.specific-item-wrapper:hover .pick-content svg {
+  transform:
+    rotate(-12deg)
+    scale(1.15);
+}
+
+
+/* =========================================================
+   17. SPECIFIC ITEMS FLOATING
+========================================================= */
+
+.specific-item-wrapper.literacy {
+  animation: specificFloat1 4.5s ease-in-out infinite;
+}
+
+
+.specific-item-wrapper.mathematics {
+  animation: specificFloat2 5s ease-in-out infinite;
+}
+
+
+.specific-item-wrapper.expressive {
+  animation: specificFloat3 4.8s ease-in-out infinite;
+}
+
+
+.specific-item-wrapper.world {
+  animation: specificFloat4 5.3s ease-in-out infinite;
+}
+
+
+/* =========================================================
+   18. ASSESSMENT CARD
+========================================================= */
+
+.assessment-card {
+  position: relative;
+
+  overflow: hidden;
+
+  transition:
+    transform 0.6s cubic-bezier(.22, 1, .36, 1),
+    box-shadow 0.5s ease;
+}
+
+
+.assessment-card:hover {
+  transform:
+    translateY(-8px)
+    scale(1.01);
+
+  box-shadow:
+    0 20px 45px rgba(70, 45, 120, 0.15);
+}
+
+
+/* Assessment glow */
+
+.assessment-card::before {
+  content: "";
+
+  position: absolute;
+
+  width: 180px;
+  height: 180px;
+
+  border-radius: 50%;
+
+  background:
+    radial-gradient(
+      circle,
+      rgba(57, 36, 154, 0.08),
+      transparent 70%
+    );
+
+  top: -70px;
+  right: 120px;
+
+  animation:
+    assessmentGlow 5s ease-in-out infinite;
+
+  pointer-events: none;
+}
+
+
+/* =========================================================
+   19. ASSESSMENT ICON
+========================================================= */
+
+.assessment-icon {
+  transition:
+    transform 0.7s cubic-bezier(.34, 1.56, .64, 1);
+}
+
+
+.assessment-card:hover .assessment-icon {
+  transform:
+    rotate(8deg)
+    scale(1.08);
+}
+
+
+.assessment-icon img {
+  animation:
+    assessmentFloat 4s ease-in-out infinite;
+
+  transition:
+    transform 0.5s ease;
+}
+
+
+.assessment-card:hover .assessment-icon img {
+  transform:
+    rotate(-8deg)
+    scale(1.08);
+}
+
+
+/* =========================================================
+   20. ASSESSMENT TEXT
+========================================================= */
+
+.assessment-content h2 {
+  transition:
+    transform 0.5s ease;
+}
+
+
+.assessment-card:hover .assessment-content h2 {
+  transform: translateX(5px);
+}
+
+
+.learning-page[dir="rtl"]
+.assessment-card:hover
+.assessment-content h2 {
+  transform: translateX(-5px);
+}
+
+
+.assessment-content p {
+  transition:
+    transform 0.5s ease;
+}
+
+
+.assessment-card:hover .assessment-content p {
+  transform: translateY(-2px);
+}
+
+
+/* =========================================================
+   21. SECTION REVEAL
+========================================================= */
+
+.programs-section,
+.areas-section,
+.assessment-section {
+  animation:
+    sectionFadeUp 0.9s ease both;
+}
+
+
+/* =========================================================
+   22. KEYFRAMES
+========================================================= */
+
+
+/* Hero */
+
+@keyframes learningHeroTitle {
+
+  from {
+    opacity: 0;
+    transform:
+      translateY(45px)
+      scale(0.92);
+  }
+
+  to {
+    opacity: 1;
+    transform:
+      translateY(0)
+      scale(1);
+  }
+
+}
+
+
+@keyframes learningHeroText {
+
+  from {
+    opacity: 0;
+    transform:
+      translateY(25px);
+  }
+
+  to {
+    opacity: 1;
+    transform:
+      translateY(0);
+  }
+
+}
+
+
+/* Section titles */
+
+@keyframes learningSectionTitle {
+
+  from {
+    opacity: 0;
+    transform:
+      translateY(30px)
+      scale(0.96);
+  }
+
+  to {
+    opacity: 1;
+    transform:
+      translateY(0)
+      scale(1);
+  }
+
+}
+
+
+/* Cards */
+
+@keyframes learningCardReveal {
+
+  from {
+    opacity: 0;
+
+    transform:
+      perspective(1200px)
+      rotateX(18deg)
+      rotateY(-8deg)
+      translateY(80px)
+      scale(0.9);
+  }
+
+  to {
+    opacity: 1;
+
+    transform:
+      perspective(1200px)
+      rotateX(0)
+      rotateY(0)
+      translateY(0)
+      scale(1);
+  }
+
+}
+
+
+/* Card floating */
+
+@keyframes learningCardFloat {
+
+  0%,
+  100% {
+    transform:
+      perspective(1200px)
+      translateY(0);
+  }
+
+  50% {
+    transform:
+      perspective(1200px)
+      translateY(-5px);
+  }
+
+}
+
+
+/* Section */
+
+@keyframes sectionFadeUp {
+
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+}
+
+
+/* Specific shapes */
+
+@keyframes specificFloat1 {
+
+  0%,
+  100% {
+    transform: translateY(0) rotate(0deg);
+  }
+
+  50% {
+    transform: translateY(-7px) rotate(1deg);
+  }
+
+}
+
+
+@keyframes specificFloat2 {
+
+  0%,
+  100% {
+    transform: translateY(0) rotate(0deg);
+  }
+
+  50% {
+    transform: translateY(-9px) rotate(-1deg);
+  }
+
+}
+
+
+@keyframes specificFloat3 {
+
+  0%,
+  100% {
+    transform: translateY(0) rotate(0deg);
+  }
+
+  50% {
+    transform: translateY(-6px) rotate(1deg);
+  }
+
+}
+
+
+@keyframes specificFloat4 {
+
+  0%,
+  100% {
+    transform: translateY(0) rotate(0deg);
+  }
+
+  50% {
+    transform: translateY(-8px) rotate(-1deg);
+  }
+
+}
+
+
+/* Assessment */
+
+@keyframes assessmentFloat {
+
+  0%,
+  100% {
+    transform: translateY(0) rotate(0deg);
+  }
+
+  50% {
+    transform: translateY(-10px) rotate(4deg);
+  }
+
+}
+
+
+@keyframes assessmentGlow {
+
+  0%,
+  100% {
+    transform: translate(0, 0) scale(1);
+    opacity: 0.5;
+  }
+
+  50% {
+    transform: translate(30px, 15px) scale(1.25);
+    opacity: 0.9;
+  }
+
+}
+
+
+/* =========================================================
+   23. PROGRAM CARD EDGE PULSE
+========================================================= */
+
+.program-card.pink:hover {
+  box-shadow:
+    0 25px 50px rgba(186, 26, 26, 0.14),
+    0 0 0 2px rgba(255, 218, 214, 0.5);
+}
+
+
+.program-card.green:hover {
+  box-shadow:
+    0 25px 50px rgba(101, 173, 0, 0.14),
+    0 0 0 2px rgba(225, 255, 173, 0.6);
+}
+
+
+.program-card.purple:hover {
+  box-shadow:
+    0 25px 50px rgba(117, 83, 168, 0.14),
+    0 0 0 2px rgba(233, 220, 250, 0.6);
+}
+
+
+.program-card.yellow:hover {
+  box-shadow:
+    0 25px 50px rgba(165, 139, 18, 0.14),
+    0 0 0 2px rgba(255, 240, 161, 0.6);
+}
+
+
+/* =========================================================
+   24. BUTTON ARROW CONTINUOUS MOTION
+========================================================= */
+
+.learn-more span {
+  animation:
+    arrowIdle 2s ease-in-out infinite;
+}
+
+
+@keyframes arrowIdle {
+
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+
+  50% {
+    transform: translateX(4px);
+  }
+
+}
+
+
+.learning-page[dir="rtl"]
+.learn-more span {
+  animation-name: arrowIdleRTL;
+}
+
+
+@keyframes arrowIdleRTL {
+
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+
+  50% {
+    transform: translateX(-4px);
+  }
+
+}
+
+
+/* =========================================================
+   25. PRIME ITEM BORDER ANIMATION
+========================================================= */
+
+.prime-item {
+  background:
+    linear-gradient(#fff, #fff) padding-box,
+    linear-gradient(
+      120deg,
+      transparent,
+      rgba(255,255,255,0.8),
+      transparent
+    ) border-box;
+}
+
+
+.prime-item:hover {
+  animation:
+    primePulse 0.7s ease;
+}
+
+
+@keyframes primePulse {
+
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.035);
+  }
+
+  100% {
+    transform: scale(1.025);
+  }
+
+}
+
+
+/* =========================================================
+   26. MOBILE ANIMATION
+========================================================= */
+
+@media (max-width: 768px) {
+
+  .program-card {
+    animation:
+      learningCardReveal 0.8s ease both,
+      learningCardFloat 6s ease-in-out infinite;
+  }
+
+
+  .program-card:hover {
+    transform:
+      translateY(-8px)
+      scale(1.015)
+      rotateX(2deg)
+      rotateY(-2deg);
+  }
+
+
+  .program-card:nth-child(even):hover {
+    transform:
+      translateY(-8px)
+      scale(1.015)
+      rotateX(2deg)
+      rotateY(2deg);
+  }
+
+
+  .program-card:hover .program-image {
+    transform: scale(1.05);
+  }
+
+
+  .specific-item-wrapper:hover {
+    transform:
+      translateY(-7px)
+      scale(1.035)
+      rotate(-1deg);
+  }
+
+
+  .specific-item-wrapper:nth-child(even):hover {
+    transform:
+      translateY(-7px)
+      scale(1.035)
+      rotate(1deg);
+  }
+
+
+  .prime-item:hover {
+    transform:
+      translateY(-4px)
+      scale(1.015);
+  }
+
+
+  .learning-hero h1 {
+    animation-duration: 0.8s;
+  }
+
+}
+
+
+/* =========================================================
+   27. SMALL MOBILE
+========================================================= */
+
+@media (max-width: 480px) {
+
+  .program-card:hover {
+    transform:
+      translateY(-5px)
+      scale(1.01);
+  }
+
+
+  .program-card:nth-child(even):hover {
+    transform:
+      translateY(-5px)
+      scale(1.01);
+  }
+
+
+  .program-card:hover .program-icon {
+    transform:
+      rotate(-8deg)
+      scale(1.1);
+  }
+
+
+  .specific-item-wrapper:hover {
+    transform:
+      translateY(-5px)
+      scale(1.025);
+  }
+
+
+  .assessment-card:hover {
+    transform:
+      translateY(-5px);
+  }
+
+}
+
+
+/* =========================================================
+   28. REDUCED MOTION
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
   }
 
 }

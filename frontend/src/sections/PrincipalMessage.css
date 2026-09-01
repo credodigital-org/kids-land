@@ -461,7 +461,7 @@ transform: rotate(40deg);
   /* Sun */
 
   .principal-sun {
-    top: 25px;
+    top: -85px;
     left: -25px;
 
     width: 125px;
@@ -551,4 +551,661 @@ transform: rotate(40deg);
 
     right: -15px;
   }
+}
+
+
+
+/* =========================================================
+   FULL ANIMATION PACK
+   ADD THIS AT THE VERY BOTTOM
+   Positions & sizes are NOT changed
+========================================================= */
+
+
+/* =========================================================
+   1. MAIN CARD REVEAL
+========================================================= */
+
+.principal-card {
+  animation: principalCardIn 1s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+@keyframes principalCardIn {
+  0% {
+    opacity: 0;
+    transform: translateY(45px) scale(0.97);
+  }
+
+  60% {
+    opacity: 1;
+    transform: translateY(-5px) scale(1.005);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+
+/* =========================================================
+   2. TITLE ANIMATION
+========================================================= */
+
+.principal-title {
+  animation: principalTitleIn 1s ease-out 0.2s both;
+}
+
+@keyframes principalTitleIn {
+  0% {
+    opacity: 0;
+    transform: translateY(25px);
+    filter: blur(6px);
+  }
+
+  70% {
+    opacity: 1;
+    transform: translateY(-3px);
+    filter: blur(0);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+/* =========================================================
+   3. PRINCIPAL IMAGE POP
+========================================================= */
+
+.principal-photo-wrapper {
+  animation:
+    principalPhotoIn 1s cubic-bezier(0.22, 1, 0.36, 1) 0.35s both,
+    principalPhotoFloat 4s ease-in-out 1.5s infinite;
+}
+
+@keyframes principalPhotoIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.65) rotate(-8deg);
+  }
+
+  60% {
+    opacity: 1;
+    transform: scale(1.06) rotate(2deg);
+  }
+
+  80% {
+    transform: scale(0.98) rotate(-1deg);
+  }
+
+  100% {
+    opacity: 1;
+    transform: scale(1) rotate(0);
+  }
+}
+
+
+/* =========================================================
+   4. PRINCIPAL PHOTO FLOAT
+========================================================= */
+
+@keyframes principalPhotoFloat {
+  0% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-8px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+
+/* =========================================================
+   5. PHOTO SOFT GLOW
+========================================================= */
+
+.principal-photo {
+  animation: principalPhotoGlow 3s ease-in-out 2s infinite;
+}
+
+@keyframes principalPhotoGlow {
+  0% {
+    box-shadow: 0 0 0 rgba(130, 198, 63, 0);
+  }
+
+  50% {
+    box-shadow: 0 0 25px rgba(130, 198, 63, 0.20);
+  }
+
+  100% {
+    box-shadow: 0 0 0 rgba(130, 198, 63, 0);
+  }
+}
+
+
+/* =========================================================
+   6. TEXT STAGGER ANIMATION
+========================================================= */
+
+.principal-text p {
+  opacity: 0;
+  animation: principalParagraphIn 0.8s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+.principal-text p:nth-child(1) {
+  animation-delay: 0.5s;
+}
+
+.principal-text p:nth-child(2) {
+  animation-delay: 0.65s;
+}
+
+.principal-text p:nth-child(3) {
+  animation-delay: 0.80s;
+}
+
+.principal-text p:nth-child(4) {
+  animation-delay: 0.95s;
+}
+
+.principal-text p:nth-child(5) {
+  animation-delay: 1.10s;
+}
+
+.principal-text p:nth-child(6) {
+  animation-delay: 1.25s;
+}
+
+.principal-text p:nth-child(7) {
+  animation-delay: 1.40s;
+}
+
+@keyframes principalParagraphIn {
+  0% {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+/* =========================================================
+   7. GREEN "DEAR PARENTS" SOFT PULSE
+========================================================= */
+
+.dear-parents {
+  animation:
+    principalParagraphIn 0.8s ease 0.5s both,
+    greenTextPulse 3s ease-in-out 2s infinite !important;
+}
+
+@keyframes greenTextPulse {
+  0% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0.72;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+
+/* =========================================================
+   8. PURPLE MESSAGE
+========================================================= */
+
+.purple-message {
+  animation:
+    principalParagraphIn 0.8s ease 0.65s both,
+    purpleTextGlow 4s ease-in-out 2s infinite !important;
+}
+
+@keyframes purpleTextGlow {
+  0% {
+    text-shadow: 0 0 0 rgba(48, 26, 162, 0);
+  }
+
+  50% {
+    text-shadow: 0 0 10px rgba(48, 26, 162, 0.10);
+  }
+
+  100% {
+    text-shadow: 0 0 0 rgba(48, 26, 162, 0);
+  }
+}
+
+
+/* =========================================================
+   9. SIGNATURE
+========================================================= */
+
+.principal-signature {
+  animation:
+    principalParagraphIn 0.8s ease 1.4s both,
+    signatureFloat 3s ease-in-out 2.5s infinite !important;
+}
+
+@keyframes signatureFloat {
+  0% {
+    transform: translateX(0);
+  }
+
+  50% {
+    transform: translateX(4px);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}
+
+
+/* =========================================================
+   10. SUN ENTRANCE
+========================================================= */
+
+.principal-sun {
+  animation:
+    sunEntrance 1.2s cubic-bezier(0.22, 1, 0.36, 1) both,
+    sunFloat 6s ease-in-out 1.3s infinite;
+}
+
+@keyframes sunEntrance {
+  0% {
+    opacity: 0;
+    transform: translate(-45px, -30px) scale(0.65);
+  }
+
+  70% {
+    opacity: 1;
+    transform: translate(5px, 5px) scale(1.04);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translate(0, 0) scale(1);
+  }
+}
+
+
+/* =========================================================
+   11. SUN FLOAT
+========================================================= */
+
+@keyframes sunFloat {
+  0% {
+    transform: translate(0, 0);
+  }
+
+  25% {
+    transform: translate(4px, -5px);
+  }
+
+  50% {
+    transform: translate(7px, 4px);
+  }
+
+  75% {
+    transform: translate(2px, 7px);
+  }
+
+  100% {
+    transform: translate(0, 0);
+  }
+}
+
+
+/* =========================================================
+   12. SUN RAYS ROTATION
+========================================================= */
+
+.principal-sun img {
+  animation: sunRayRotate 18s linear infinite;
+}
+
+@keyframes sunRayRotate {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+
+/* =========================================================
+   13. CLOUD ENTRANCE
+========================================================= */
+
+.principal-cloud {
+  animation:
+    cloudEntrance 1.2s cubic-bezier(0.22, 1, 0.36, 1) 0.3s both,
+    cloudFloat 7s ease-in-out 1.5s infinite;
+}
+
+@keyframes cloudEntrance {
+  0% {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+
+  70% {
+    opacity: 1;
+    transform: translateX(-5px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+
+/* =========================================================
+   14. CLOUD FLOAT
+========================================================= */
+
+@keyframes cloudFloat {
+  0% {
+    transform: translate(0, 0);
+  }
+
+  50% {
+    transform: translate(-12px, -8px);
+  }
+
+  100% {
+    transform: translate(0, 0);
+  }
+}
+
+
+/* =========================================================
+   15. RAINBOW ENTRANCE
+========================================================= */
+
+.rainbow {
+  animation:
+    rainbowEntrance 1.3s cubic-bezier(0.22, 1, 0.36, 1) 0.5s both,
+    rainbowFloat 5s ease-in-out 1.8s infinite;
+}
+
+@keyframes rainbowEntrance {
+  0% {
+    opacity: 0;
+    transform: translate(50px, 30px) rotate(-1deg);
+  }
+
+  70% {
+    opacity: 1;
+    transform: translate(-5px, -5px) rotate(-1deg);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translate(0, 0) rotate(-1deg);
+  }
+}
+
+
+/* =========================================================
+   16. RAINBOW FLOAT
+========================================================= */
+
+@keyframes rainbowFloat {
+  0% {
+    transform: translateY(0) rotate(-1deg);
+  }
+
+  50% {
+    transform: translateY(-9px) rotate(-1deg);
+  }
+
+  100% {
+    transform: translateY(0) rotate(-1deg);
+  }
+}
+
+
+/* =========================================================
+   17. RAINBOW SWING
+========================================================= */
+
+.rainbow img {
+  animation: rainbowSwing 4s ease-in-out 1.8s infinite;
+  transform-origin: center bottom;
+}
+
+@keyframes rainbowSwing {
+  0% {
+    transform: rotate(40deg);
+  }
+
+  50% {
+    transform: rotate(34deg);
+  }
+
+  100% {
+    transform: rotate(40deg);
+  }
+}
+
+
+/* =========================================================
+   18. CARD HOVER
+   Desktop only
+========================================================= */
+
+@media (min-width: 701px) {
+
+  .principal-card {
+    transition:
+      transform 0.4s ease,
+      box-shadow 0.4s ease;
+  }
+
+  .principal-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 15px 35px rgba(57, 32, 143, 0.07);
+  }
+
+}
+
+
+/* =========================================================
+   19. PHOTO HOVER
+========================================================= */
+
+@media (min-width: 701px) {
+
+  .principal-photo-wrapper {
+    transition: transform 0.4s ease;
+  }
+
+  .principal-photo-wrapper:hover {
+    transform: scale(1.04);
+  }
+
+}
+
+
+/* =========================================================
+   20. BUTTON ANIMATION
+========================================================= */
+
+.arabic-button {
+  animation: buttonEntrance 0.8s cubic-bezier(0.22, 1, 0.36, 1) 1.5s both;
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease,
+    background 0.3s ease;
+}
+
+@keyframes buttonEntrance {
+  0% {
+    opacity: 0;
+    transform: translateY(15px) scale(0.85);
+  }
+
+  70% {
+    opacity: 1;
+    transform: translateY(-3px) scale(1.03);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.arabic-button:hover {
+  transform: translateY(-3px) scale(1.04);
+
+  box-shadow:
+    0 8px 20px rgba(134, 196, 64, 0.25);
+}
+
+
+/* =========================================================
+   21. CARD SOFT BREATHING EFFECT
+========================================================= */
+
+.principal-card::before {
+  content: "";
+
+  position: absolute;
+
+  inset: 0;
+
+  border-radius: inherit;
+
+  pointer-events: none;
+
+  box-shadow:
+    0 0 0 rgba(130, 198, 63, 0);
+
+  animation: cardBreathing 5s ease-in-out 2s infinite;
+}
+
+@keyframes cardBreathing {
+
+  0% {
+    box-shadow:
+      0 0 0 rgba(130, 198, 63, 0);
+  }
+
+  50% {
+    box-shadow:
+      0 0 28px rgba(130, 198, 63, 0.06);
+  }
+
+  100% {
+    box-shadow:
+      0 0 0 rgba(130, 198, 63, 0);
+  }
+
+}
+
+
+/* =========================================================
+   22. MOBILE ANIMATION ADJUSTMENTS
+   Positions remain unchanged
+========================================================= */
+
+@media (max-width: 700px) {
+
+  .principal-card {
+    animation-duration: 0.8s;
+  }
+
+  .principal-title {
+    animation-duration: 0.8s;
+  }
+
+  .principal-photo-wrapper {
+    animation-duration: 0.8s, 4s;
+  }
+
+  .principal-sun {
+    animation-duration: 1s, 6s;
+  }
+
+  .principal-cloud {
+    animation-duration: 1s, 7s;
+  }
+
+  .rainbow {
+    animation-duration: 1s, 5s;
+  }
+
+}
+
+
+/* =========================================================
+   23. SMALL MOBILE
+========================================================= */
+
+@media (max-width: 420px) {
+
+  .principal-photo-wrapper {
+    animation-duration: 0.8s, 4.5s;
+  }
+
+  .principal-sun img {
+    animation-duration: 20s;
+  }
+
+  .principal-cloud {
+    animation-duration: 1s, 8s;
+  }
+
+  .rainbow img {
+    animation-duration: 5s;
+  }
+
+}
+
+
+/* =========================================================
+   24. ACCESSIBILITY
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .principal-card,
+  .principal-title,
+  .principal-photo-wrapper,
+  .principal-photo,
+  .principal-text p,
+  .dear-parents,
+  .purple-message,
+  .principal-signature,
+  .principal-sun,
+  .principal-sun img,
+  .principal-cloud,
+  .rainbow,
+  .rainbow img,
+  .arabic-button,
+  .principal-card::before {
+    animation: none !important;
+    transition: none !important;
+  }
+
 }

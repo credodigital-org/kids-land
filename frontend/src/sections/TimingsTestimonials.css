@@ -155,27 +155,69 @@
   display: flex;
   align-items: center;
   gap: 11px;
+
+    position: relative;
 }
 
-.timing-icon {
-  /* width: 63px;
-  height: 63px; */
+/* .timing-icon {
+  width: 63px;
+  height: 63px;
 
-  /* flex: 0 0 53px; */
+  flex: 0 0 53px;
 
   display: flex;
   align-items: center;
   justify-content: center;
 
   border-radius: 50%;
-  /* background: #ead8ff; */
+  background: #ead8ff;
+} */
+
+/* SAME SIZE + SAME POSITION FOR BOTH ICONS */
+.timing-icon,
+.calendar-icon,
+.party-icon {
+  width: 63px;
+  height: 63px;
+
+  min-width: 63px;
+  flex: 0 0 63px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  overflow: hidden;
+
+  position: relative;
+  top: 0;
 }
 
-.timing-icon img {
+/* .timing-icon img {
   width: 63px;
   height: 63px;
 
   object-fit: contain;
+} */
+
+/* IMAGE */
+.timing-icon img,
+.calendar-icon img,
+.party-icon img {
+  display: block;
+
+  width: 63px;
+  height: 63px;
+
+  object-fit: contain;
+  object-position: center;
+
+  margin: 0;
+  padding: 0;
+
+  transform: translateY(0);
 }
 
 .timing-card-top h3 {
@@ -290,6 +332,30 @@
 
 .to-text::after {
   left: 100%;
+}
+
+/* =========================================
+   DECORATIVE IMAGE
+========================================= */
+
+.timings-testimonials {
+  position: relative;
+}
+
+.timings-decoration {
+  position: absolute;
+
+  right: 0;
+  top: 310px;
+
+  width: 75px;
+  height: auto;
+
+  object-fit: contain;
+
+  z-index: 5;
+
+  pointer-events: none;
 }
 
 /* =========================================
@@ -546,7 +612,7 @@
    MOBILE
 ========================================= */
 
-@media (max-width: 650px) {
+/* @media (max-width: 650px) {
 
   .timings-container {
     padding: 55px 22px 55px;
@@ -584,6 +650,12 @@
     max-width: 367px;
     text-align: center;
   }
+  
+  .timings-decoration {
+    width: 55px;
+    right: 0;
+    top: 680px;
+  }
 
   .testimonials-heading {
     margin-bottom: 40px;
@@ -600,12 +672,12 @@
   .testimonial-card {
     width: 100%;
   }
-}
+} */
 
 /* =========================================
    SMALL MOBILE
 ========================================= */
-
+/* 
 @media (max-width: 400px) {
 
   .timings-container {
@@ -628,5 +700,1545 @@
   .testimonial-text {
     font-size: 14px;
     line-height: 22px;
+  }
+} */
+
+/* =========================================
+   MOBILE VIEW
+========================================= */
+
+@media (max-width: 650px) {
+
+  /* MAIN SECTION */
+  .timings-testimonials {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+  }
+
+
+  /* =========================================
+     TIMINGS CONTAINER
+  ========================================= */
+
+  .timings-container {
+    width: 100%;
+    max-width: 100%;
+
+    padding: 35px 20px 25px;
+
+    margin: 0;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    box-sizing: border-box;
+  }
+
+
+  /* =========================================
+     INTRO
+  ========================================= */
+
+  .timings-intro {
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    text-align: center;
+  }
+
+
+  /* =========================================
+     TITLE
+  ========================================= */
+
+  .timings-title {
+    width: 100%;
+
+    margin: 0 !important;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 6px;
+
+    font-size: 24px;
+    line-height: 30px;
+
+    letter-spacing: -0.4px;
+  }
+
+  .timings-clock-icon {
+    width: 28px !important;
+    height: 28px !important;
+
+    font-size: 34px !important;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+
+  /* =========================================
+     DESCRIPTION
+  ========================================= */
+
+  .timings-description {
+    width: 100%;
+    max-width: 290px;
+
+    margin: 8px auto 0;
+
+    font-size: 14px;
+    line-height: 19px;
+
+    text-align: center;
+
+    letter-spacing: 0;
+  }
+
+  .timings-description br {
+    display: none;
+  }
+
+
+  /* =========================================
+     RAINBOW
+  ========================================= */
+
+  .timings-rainbow {
+    width: 160px;
+    height: 75px;
+
+    margin: 12px auto 0;
+
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+  }
+
+  .timings-rainbow img {
+    display: block;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: contain;
+    object-position: center bottom;
+  }
+
+
+  /* =========================================
+     TIMING CARDS
+  ========================================= */
+
+  .timing-cards {
+    width: 100%;
+
+    margin-top: 10px;
+
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+
+    gap: 16px;
+  }
+
+
+  /* =========================================
+     CARD
+  ========================================= */
+
+  .timing-card {
+    width: 100%;
+    max-width: 285px;
+
+    height: 205px;
+
+    padding: 22px 20px 18px;
+
+    box-sizing: border-box;
+
+    border-radius: 16px;
+
+    text-align: left;
+  }
+
+
+  /* =========================================
+     CARD TOP
+  ========================================= */
+
+  .timing-card-top {
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+
+    gap: 13px;
+
+    position: relative;
+  }
+
+
+  /* =========================================
+     CARD ICONS
+  ========================================= */
+
+  .timing-icon,
+  .calendar-icon,
+  .party-icon {
+    width: 52px;
+    height: 52px;
+
+    min-width: 52px;
+    flex: 0 0 52px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    overflow: hidden;
+
+    position: relative;
+    top: 0;
+  }
+
+  .timing-icon img,
+  .calendar-icon img,
+  .party-icon img {
+    display: block;
+
+    width: 52px;
+    height: 52px;
+
+    object-fit: contain;
+    object-position: center;
+
+    margin: 0;
+    padding: 0;
+
+    transform: none;
+  }
+
+
+  /* =========================================
+     CARD TITLE
+  ========================================= */
+
+  .timing-card-top h3 {
+    margin: 0;
+
+    font-size: 20px;
+    line-height: 22px;
+
+    font-weight: 700;
+  }
+
+  .timing-card-top p {
+    margin: 3px 0 0;
+
+    font-size: 12px;
+    line-height: 15px;
+
+    white-space: nowrap;
+  }
+
+
+  /* =========================================
+     TIME AREA
+  ========================================= */
+
+  .timing-hours {
+    margin-top: 20px;
+
+    display: flex;
+    align-items: center;
+
+    gap: 18px;
+  }
+
+
+  /* TIME ICON */
+  .time-symbol {
+    width: 34px;
+    height: 34px;
+
+    min-width: 34px;
+    flex: 0 0 34px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .time-symbol img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: contain;
+  }
+
+
+  /* =========================================
+     TIME TEXT
+  ========================================= */
+
+  .time-value {
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: flex-start;
+
+    position: relative;
+  }
+
+  .time-value strong {
+    font-size: 20px;
+
+    line-height: 31px;
+
+    white-space: nowrap;
+  }
+
+
+  /* =========================================
+     TO
+  ========================================= */
+
+  .to-text {
+    left: 27px;
+
+    width: 27px;
+    height: 13px;
+
+    margin: -1px 0;
+
+    font-size: 8px;
+
+    border-radius: 7px;
+  }
+
+  .to-text::before,
+  .to-text::after {
+    width: 27px;
+  }
+
+
+  /* =========================================
+     DECORATION IMAGE
+  ========================================= */
+
+  .timings-decoration {
+    position: absolute;
+
+    width: 48px;
+    height: auto;
+
+    right: 0;
+    top: 565px;
+
+    z-index: 10;
+
+    pointer-events: none;
+  }
+
+
+  /* =========================================
+     TESTIMONIALS
+  ========================================= */
+
+  .testimonials-container {
+    width: 100%;
+
+    padding: 0 0 60px;
+
+    box-sizing: border-box;
+  }
+
+  .testimonials-heading {
+    margin: 0 0 30px;
+
+    text-align: center;
+
+    font-size: 18px;
+    line-height: 22px;
+  }
+
+
+  /* =========================================
+     TESTIMONIAL GRID
+  ========================================= */
+
+  .testimonial-grid {
+    width: calc(100% - 32px);
+
+    margin: 0 auto;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 16px;
+  }
+
+
+  /* =========================================
+     TESTIMONIAL CARD
+  ========================================= */
+
+  .testimonial-card {
+    width: 100%;
+
+    min-height: auto;
+
+    padding: 24px 20px 25px;
+
+    box-sizing: border-box;
+
+    border-radius: 12px;
+  }
+
+
+  /* PERSON */
+  .testimonial-person {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .testimonial-avatar {
+    width: 58px;
+    height: 58px;
+
+    flex: 0 0 58px;
+
+    padding: 2px;
+  }
+
+  .testimonial-person h3 {
+    font-size: 17px;
+    line-height: 21px;
+  }
+
+  .testimonial-person p,
+  .testimonial-subtitle {
+    font-size: 12px;
+    line-height: 16px;
+  }
+
+
+  /* STARS */
+  .stars {
+    margin-top: 14px;
+
+    font-size: 16px;
+    letter-spacing: 2px;
+
+    line-height: 19px;
+  }
+
+
+  /* TESTIMONIAL TEXT */
+  .testimonial-text {
+    margin: 14px 0 0;
+
+    font-size: 14px;
+    line-height: 21px;
+  }
+}
+
+
+/* =========================================
+   SMALL MOBILE
+========================================= */
+
+@media (max-width: 400px) {
+
+  .timings-container {
+    padding: 30px 14px 22px;
+  }
+
+
+  /* TITLE */
+  .timings-title {
+    font-size: 22px;
+    line-height: 28px;
+  }
+
+  .timings-clock-icon {
+    font-size: 31px !important;
+  }
+
+
+  /* DESCRIPTION */
+  .timings-description {
+    max-width: 285px;
+
+    font-size: 13px;
+    line-height: 18px;
+  }
+
+
+  /* RAINBOW */
+  .timings-rainbow {
+    width: 150px;
+    height: 70px;
+
+    margin-top: 10px;
+  }
+
+
+  /* CARDS */
+  .timing-card {
+    width: 100%;
+    max-width: 285px;
+
+    height: 205px;
+
+    padding: 20px 18px 17px;
+  }
+
+
+  /* CARD ICON */
+  .timing-icon,
+  .calendar-icon,
+  .party-icon {
+    width: 50px;
+    height: 50px;
+
+    min-width: 50px;
+    flex-basis: 50px;
+  }
+
+  .timing-icon img,
+  .calendar-icon img,
+  .party-icon img {
+    width: 50px;
+    height: 50px;
+  }
+
+
+  /* CARD TEXT */
+  .timing-card-top {
+    gap: 11px;
+  }
+
+  .timing-card-top h3 {
+    font-size: 19px;
+    line-height: 21px;
+  }
+
+  .timing-card-top p {
+    font-size: 11px;
+    line-height: 14px;
+  }
+
+
+  /* TIME */
+  .timing-hours {
+    margin-top: 20px;
+    gap: 17px;
+  }
+
+  .time-value strong {
+    font-size: 19px;
+    line-height: 31px;
+  }
+
+
+  /* DECORATION */
+  .timings-decoration {
+    width: 42px;
+
+    right: 0;
+    top: 545px;
+  }
+
+
+  /* TESTIMONIAL */
+  .testimonial-grid {
+    width: calc(100% - 24px);
+  }
+
+  .testimonial-card {
+    padding: 22px 18px;
+  }
+
+  .testimonial-person h3 {
+    font-size: 16px;
+  }
+
+  .testimonial-text {
+    font-size: 13px;
+    line-height: 20px;
+  }
+}
+
+
+
+/* =========================================================
+   FULL ANIMATION SYSTEM
+   ADD THIS AT THE VERY BOTTOM
+========================================================= */
+
+
+/* =========================================================
+   1. MAIN SECTION REVEAL
+========================================================= */
+
+.timings-testimonials {
+  animation: sectionFadeIn 0.9s ease both;
+}
+
+@keyframes sectionFadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+
+/* =========================================================
+   2. TIMINGS INTRO ANIMATION
+========================================================= */
+
+.timings-intro {
+  animation: introSlideLeft 0.9s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+@keyframes introSlideLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-55px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+
+/* =========================================================
+   3. TIMINGS TITLE
+========================================================= */
+
+.timings-title {
+  animation: titleReveal 0.8s ease 0.15s both;
+}
+
+@keyframes titleReveal {
+  from {
+    opacity: 0;
+    transform: translateY(25px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+/* =========================================================
+   4. CLOCK ICON
+========================================================= */
+
+.timings-clock-icon {
+  display: inline-flex;
+  animation:
+    clockAppear 0.8s ease 0.35s both,
+    clockTick 3s ease-in-out 1.3s infinite;
+  transform-origin: center;
+}
+
+@keyframes clockAppear {
+  from {
+    opacity: 0;
+    transform: scale(0.4) rotate(-45deg);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1) rotate(0);
+  }
+}
+
+@keyframes clockTick {
+  0%,
+  100% {
+    transform: rotate(0deg);
+  }
+
+  10% {
+    transform: rotate(-8deg);
+  }
+
+  20% {
+    transform: rotate(8deg);
+  }
+
+  30% {
+    transform: rotate(-5deg);
+  }
+
+  40% {
+    transform: rotate(0deg);
+  }
+}
+
+
+/* =========================================================
+   5. DESCRIPTION
+========================================================= */
+
+.timings-description {
+  animation: descriptionReveal 0.8s ease 0.3s both;
+}
+
+@keyframes descriptionReveal {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+/* =========================================================
+   6. RAINBOW DECORATION
+========================================================= */
+
+.timings-rainbow {
+  animation:
+    rainbowReveal 1s cubic-bezier(0.22, 1, 0.36, 1) 0.45s both,
+    rainbowFloat 4s ease-in-out 1.5s infinite;
+}
+
+@keyframes rainbowReveal {
+  from {
+    opacity: 0;
+    transform: translateY(35px) scale(0.85);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes rainbowFloat {
+  0%,
+  100% {
+    transform: translateY(0) rotate(0deg);
+  }
+
+  50% {
+    transform: translateY(-8px) rotate(1deg);
+  }
+}
+
+
+/* =========================================================
+   7. TIMING CARDS CONTAINER
+========================================================= */
+
+.timing-cards {
+  animation: cardsContainerReveal 0.8s ease 0.25s both;
+}
+
+@keyframes cardsContainerReveal {
+  from {
+    opacity: 0;
+    transform: translateX(45px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+
+/* =========================================================
+   8. TIMING CARD ENTRANCE
+========================================================= */
+
+.timing-card {
+  animation:
+    timingCardReveal 0.8s cubic-bezier(0.22, 1, 0.36, 1) both,
+    cardSoftFloat 5s ease-in-out 1.5s infinite;
+  transition:
+    transform 0.35s ease,
+    box-shadow 0.35s ease;
+}
+
+.timing-card:nth-child(1) {
+  animation-delay: 0.25s, 1.5s;
+}
+
+.timing-card:nth-child(2) {
+  animation-delay: 0.45s, 1.8s;
+}
+
+@keyframes timingCardReveal {
+  from {
+    opacity: 0;
+    transform: translateY(45px) scale(0.94);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes cardSoftFloat {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-4px);
+  }
+}
+
+
+/* =========================================================
+   9. TIMING CARD HOVER
+========================================================= */
+
+.timing-card:hover {
+  transform: translateY(-10px) scale(1.015);
+  box-shadow:
+    0 16px 30px rgba(55, 32, 130, 0.14);
+}
+
+
+/* =========================================================
+   10. CARD TOP CONTENT
+========================================================= */
+
+.timing-card-top {
+  animation: cardTopReveal 0.7s ease 0.55s both;
+}
+
+@keyframes cardTopReveal {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+/* =========================================================
+   11. TIMING ICON
+========================================================= */
+
+.timing-icon {
+  animation:
+    iconPop 0.8s cubic-bezier(0.34, 1.56, 0.64, 1) 0.65s both,
+    iconFloat 3.5s ease-in-out 1.6s infinite;
+  transition:
+    transform 0.3s ease;
+}
+
+@keyframes iconPop {
+  from {
+    opacity: 0;
+    transform: scale(0.3) rotate(-20deg);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1) rotate(0);
+  }
+}
+
+@keyframes iconFloat {
+  0%,
+  100% {
+    transform: translateY(0) rotate(0);
+  }
+
+  50% {
+    transform: translateY(-6px) rotate(3deg);
+  }
+}
+
+.timing-card:hover .timing-icon {
+  transform: scale(1.08) rotate(5deg);
+}
+
+
+/* =========================================================
+   12. ICON IMAGES
+========================================================= */
+
+.timing-icon img {
+  transition:
+    transform 0.4s ease,
+    filter 0.4s ease;
+}
+
+.timing-card:hover .timing-icon img {
+  transform: scale(1.08);
+}
+
+
+/* =========================================================
+   13. HOURS AREA
+========================================================= */
+
+.timing-hours {
+  animation: hoursReveal 0.8s ease 0.75s both;
+}
+
+@keyframes hoursReveal {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+/* =========================================================
+   14. CLOCK / SUN SYMBOL
+========================================================= */
+
+.time-symbol {
+  animation:
+    symbolPop 0.7s ease 0.85s both,
+    symbolPulse 3s ease-in-out 1.6s infinite;
+}
+
+@keyframes symbolPop {
+  from {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes symbolPulse {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.08);
+  }
+}
+
+
+/* =========================================================
+   15. TIME VALUES
+========================================================= */
+
+.time-value {
+  animation: timeValueReveal 0.7s ease 0.95s both;
+}
+
+@keyframes timeValueReveal {
+  from {
+    opacity: 0;
+    transform: translateX(15px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.time-value strong {
+  transition:
+    transform 0.25s ease,
+    color 0.25s ease;
+}
+
+.timing-card:hover .time-value strong {
+  transform: scale(1.04);
+}
+
+
+/* =========================================================
+   16. "TO" TEXT
+========================================================= */
+
+.to-text {
+  animation: toPulse 2.5s ease-in-out 1.5s infinite;
+}
+
+@keyframes toPulse {
+  0%,
+  100% {
+    opacity: 0.7;
+  }
+
+  50% {
+    opacity: 1;
+  }
+}
+
+
+/* =========================================================
+   17. DECORATIVE CLOCK IMAGE
+========================================================= */
+
+.timings-decoration {
+  animation:
+    decorationEntrance 1s cubic-bezier(0.22, 1, 0.36, 1) 0.3s both,
+    decorationFloat 5s ease-in-out 1.5s infinite;
+  transform-origin: center;
+}
+
+@keyframes decorationEntrance {
+  from {
+    opacity: 0;
+    transform: scale(0.5) rotate(-25deg);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1) rotate(0);
+  }
+}
+
+@keyframes decorationFloat {
+  0%,
+  100% {
+    transform: translateY(0) rotate(0);
+  }
+
+  50% {
+    transform: translateY(-10px) rotate(4deg);
+  }
+}
+
+
+/* =========================================================
+   18. TESTIMONIAL SECTION
+========================================================= */
+
+.testimonials-container {
+  animation: testimonialsReveal 0.9s ease 0.35s both;
+}
+
+@keyframes testimonialsReveal {
+  from {
+    opacity: 0;
+    transform: translateY(35px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+/* =========================================================
+   19. TESTIMONIAL HEADING
+========================================================= */
+
+.testimonials-heading {
+  animation: headingPop 0.8s cubic-bezier(0.22, 1, 0.36, 1) 0.5s both;
+}
+
+@keyframes headingPop {
+  from {
+    opacity: 0;
+    transform: translateY(25px) scale(0.96);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+
+/* =========================================================
+   20. TESTIMONIAL CARDS
+========================================================= */
+
+.testimonial-card {
+  animation:
+    testimonialCardReveal 0.8s cubic-bezier(0.22, 1, 0.36, 1) both;
+  transition:
+    transform 0.35s ease,
+    box-shadow 0.35s ease;
+}
+
+.testimonial-card:nth-child(1) {
+  animation-delay: 0.25s;
+}
+
+.testimonial-card:nth-child(2) {
+  animation-delay: 0.4s;
+}
+
+.testimonial-card:nth-child(3) {
+  animation-delay: 0.55s;
+}
+
+.testimonial-card:nth-child(4) {
+  animation-delay: 0.7s;
+}
+
+.testimonial-card:nth-child(5) {
+  animation-delay: 0.85s;
+}
+
+@keyframes testimonialCardReveal {
+  from {
+    opacity: 0;
+    transform: translateY(45px) scale(0.95);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+
+/* =========================================================
+   21. TESTIMONIAL HOVER
+========================================================= */
+
+.testimonial-card:hover {
+  transform: translateY(-9px) scale(1.015);
+
+  box-shadow:
+    0 16px 30px rgba(55, 32, 130, 0.16);
+}
+
+
+/* =========================================================
+   22. PERSON AREA
+========================================================= */
+
+.testimonial-person {
+  animation: personReveal 0.7s ease 0.6s both;
+}
+
+@keyframes personReveal {
+  from {
+    opacity: 0;
+    transform: translateX(-15px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+
+/* =========================================================
+   23. AVATAR
+========================================================= */
+
+.testimonial-avatar {
+  transition:
+    transform 0.35s ease,
+    box-shadow 0.35s ease;
+}
+
+.testimonial-card:hover .testimonial-avatar {
+  transform: scale(1.08) rotate(-3deg);
+
+  box-shadow:
+    0 7px 15px rgba(55, 32, 130, 0.18);
+}
+
+.testimonial-avatar img {
+  transition:
+    transform 0.4s ease;
+}
+
+.testimonial-card:hover .testimonial-avatar img {
+  transform: scale(1.08);
+}
+
+
+/* =========================================================
+   24. STARS
+========================================================= */
+
+.stars {
+  animation: starsReveal 0.7s ease 0.8s both;
+}
+
+@keyframes starsReveal {
+  from {
+    opacity: 0;
+    transform: scale(0.7);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.star {
+  display: inline-block;
+  transition:
+    transform 0.2s ease;
+}
+
+.star-full {
+  animation: starGlow 2.5s ease-in-out infinite;
+}
+
+.star:nth-child(1) {
+  animation-delay: 0s;
+}
+
+.star:nth-child(2) {
+  animation-delay: 0.1s;
+}
+
+.star:nth-child(3) {
+  animation-delay: 0.2s;
+}
+
+.star:nth-child(4) {
+  animation-delay: 0.3s;
+}
+
+.star:nth-child(5) {
+  animation-delay: 0.4s;
+}
+
+@keyframes starGlow {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.13);
+  }
+}
+
+.testimonial-card:hover .star {
+  transform: scale(1.12);
+}
+
+
+/* =========================================================
+   25. TESTIMONIAL TEXT
+========================================================= */
+
+.testimonial-text {
+  animation: textReveal 0.8s ease 0.9s both;
+}
+
+@keyframes textReveal {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+/* =========================================================
+   26. SUBTITLE
+========================================================= */
+
+.testimonial-subtitle {
+  animation: subtitleFade 0.7s ease 0.75s both;
+}
+
+@keyframes subtitleFade {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+
+/* =========================================================
+   27. PURPLE CARD GLOW
+========================================================= */
+
+.testimonial-purple {
+  transition:
+    box-shadow 0.35s ease,
+    transform 0.35s ease;
+}
+
+.testimonial-purple:hover {
+  box-shadow:
+    0 16px 32px rgba(95, 50, 190, 0.22);
+}
+
+
+/* =========================================================
+   28. GREEN CARD GLOW
+========================================================= */
+
+.testimonial-green {
+  transition:
+    box-shadow 0.35s ease,
+    transform 0.35s ease;
+}
+
+.testimonial-green:hover {
+  box-shadow:
+    0 16px 32px rgba(20, 150, 85, 0.18);
+}
+
+
+/* =========================================================
+   29. CORAL CARD GLOW
+========================================================= */
+
+.testimonial-coral {
+  transition:
+    box-shadow 0.35s ease,
+    transform 0.35s ease;
+}
+
+.testimonial-coral:hover {
+  box-shadow:
+    0 16px 32px rgba(235, 90, 80, 0.18);
+}
+
+
+/* =========================================================
+   30. IMAGE FLOATING EFFECT
+========================================================= */
+
+.timing-icon img,
+.time-symbol img {
+  animation: imageFloat 4s ease-in-out infinite;
+}
+
+@keyframes imageFloat {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-4px);
+  }
+}
+
+
+/* =========================================================
+   31. MOBILE ANIMATION OPTIMIZATION
+========================================================= */
+
+@media (max-width: 768px) {
+
+  .timings-intro {
+    animation-name: mobileIntroReveal;
+  }
+
+  .timing-cards {
+    animation-name: mobileCardsReveal;
+  }
+
+  .timing-card {
+    animation-name: mobileCardReveal;
+  }
+
+  .testimonial-card {
+    animation-name: mobileCardReveal;
+  }
+
+  .timings-decoration {
+    animation-duration: 4s;
+  }
+
+  .timings-rainbow {
+    animation-duration: 4s;
+  }
+}
+
+@keyframes mobileIntroReveal {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes mobileCardsReveal {
+  from {
+    opacity: 0;
+    transform: translateY(35px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes mobileCardReveal {
+  from {
+    opacity: 0;
+    transform: translateY(35px) scale(0.96);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+
+/* =========================================================
+   32. MOBILE HOVER / TAP FEEL
+========================================================= */
+
+@media (max-width: 600px) {
+
+  .timing-card:active,
+  .testimonial-card:active {
+    transform: scale(0.98);
+  }
+
+  .timing-card:hover {
+    transform: translateY(-5px);
+  }
+
+  .testimonial-card:hover {
+    transform: translateY(-5px);
+  }
+
+  .timing-icon {
+    animation-duration: 4s;
+  }
+
+  .star-full {
+    animation-duration: 3s;
+  }
+}
+
+
+/* =========================================================
+   33. ARABIC RTL ANIMATION FIX
+========================================================= */
+
+[dir="rtl"] .timings-intro {
+  animation-name: introSlideRight;
+}
+
+@keyframes introSlideRight {
+  from {
+    opacity: 0;
+    transform: translateX(55px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+
+/* =========================================================
+   34. SMOOTH PERFORMANCE
+========================================================= */
+
+.timing-card,
+.testimonial-card,
+.timing-icon,
+.time-symbol,
+.timings-rainbow,
+.timings-decoration,
+.testimonial-avatar {
+  will-change: transform;
+}
+
+
+/* =========================================================
+   35. ACCESSIBILITY
+   Disable heavy animation for users who prefer reduced motion
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .timings-testimonials,
+  .timings-intro,
+  .timings-title,
+  .timings-clock-icon,
+  .timings-description,
+  .timings-rainbow,
+  .timing-cards,
+  .timing-card,
+  .timing-card-top,
+  .timing-icon,
+  .timing-hours,
+  .time-symbol,
+  .time-value,
+  .to-text,
+  .timings-decoration,
+  .testimonials-container,
+  .testimonials-heading,
+  .testimonial-card,
+  .testimonial-person,
+  .testimonial-avatar,
+  .stars,
+  .star,
+  .testimonial-text,
+  .testimonial-subtitle,
+  .timing-icon img,
+  .time-symbol img {
+    animation: none !important;
+    transition: none !important;
   }
 }

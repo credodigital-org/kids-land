@@ -322,3 +322,531 @@
   }
 
 }
+
+
+
+/* =========================================================
+   FULL SOCIAL SECTION ANIMATIONS
+   ADD THIS AT THE VERY BOTTOM
+========================================================= */
+
+/* -----------------------------------------
+   SECTION FADE + SLIDE
+----------------------------------------- */
+
+.social-section {
+  animation: socialSectionReveal 1s ease both;
+}
+
+@keyframes socialSectionReveal {
+  from {
+    opacity: 0;
+    transform: translateY(35px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+/* -----------------------------------------
+   HEADING ANIMATION
+----------------------------------------- */
+
+.social-heading h2 {
+  animation: socialTitleReveal 0.9s ease 0.15s both;
+}
+
+@keyframes socialTitleReveal {
+  from {
+    opacity: 0;
+    transform: translateY(25px) scale(0.96);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+
+/* -----------------------------------------
+   DESCRIPTION ANIMATION
+----------------------------------------- */
+
+.social-heading p {
+  animation: socialTextReveal 0.9s ease 0.3s both;
+}
+
+@keyframes socialTextReveal {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+/* -----------------------------------------
+   DECORATIVE IMAGE FLOATING
+----------------------------------------- */
+
+.social-heading-image {
+  animation:
+    socialDecorReveal 0.8s ease 0.25s both,
+    socialDecorFloat 3.5s ease-in-out 1.2s infinite;
+}
+
+@keyframes socialDecorReveal {
+  from {
+    opacity: 0;
+    transform: scale(0.5) rotate(-25deg);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1) rotate(0);
+  }
+}
+
+@keyframes socialDecorFloat {
+  0%,
+  100% {
+    transform: translateY(0) rotate(0deg);
+  }
+
+  50% {
+    transform: translateY(-8px) rotate(5deg);
+  }
+}
+
+
+/* -----------------------------------------
+   SOCIAL LINKS CONTAINER
+----------------------------------------- */
+
+.social-links {
+  animation: socialLinksReveal 0.9s ease 0.4s both;
+}
+
+@keyframes socialLinksReveal {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+/* -----------------------------------------
+   INDIVIDUAL SOCIAL BUTTONS
+----------------------------------------- */
+
+.social-button {
+  position: relative;
+  overflow: hidden;
+
+  animation: socialButtonReveal 0.7s ease both;
+
+  transition:
+    transform 0.35s cubic-bezier(0.22, 1, 0.36, 1),
+    box-shadow 0.35s ease;
+}
+
+
+/* Staggered entrance */
+
+.social-button:nth-child(1) {
+  animation-delay: 0.45s;
+}
+
+.social-button:nth-child(2) {
+  animation-delay: 0.55s;
+}
+
+.social-button:nth-child(3) {
+  animation-delay: 0.65s;
+}
+
+.social-button:nth-child(4) {
+  animation-delay: 0.75s;
+}
+
+.social-button:nth-child(5) {
+  animation-delay: 0.85s;
+}
+
+.social-button:nth-child(6) {
+  animation-delay: 0.95s;
+}
+
+
+@keyframes socialButtonReveal {
+  from {
+    opacity: 0;
+    transform: translateY(35px) scale(0.92);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+
+/* -----------------------------------------
+   BUTTON SHINE EFFECT
+----------------------------------------- */
+
+.social-button::before {
+  content: "";
+
+  position: absolute;
+
+  top: 0;
+  left: -120%;
+
+  width: 70%;
+  height: 100%;
+
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.65),
+    transparent
+  );
+
+  transform: skewX(-20deg);
+
+  transition: left 0.65s ease;
+
+  pointer-events: none;
+}
+
+.social-button:hover::before {
+  left: 140%;
+}
+
+
+/* -----------------------------------------
+   BUTTON HOVER
+----------------------------------------- */
+
+.social-button:hover {
+  transform: translateY(-8px) scale(1.035);
+
+  box-shadow:
+    0 15px 30px rgba(72, 47, 130, 0.18);
+}
+
+
+/* -----------------------------------------
+   BUTTON ACTIVE
+----------------------------------------- */
+
+.social-button:active {
+  transform: translateY(-2px) scale(0.98);
+}
+
+
+/* -----------------------------------------
+   SOCIAL ICON ANIMATION
+----------------------------------------- */
+
+.social-button img {
+  transition:
+    transform 0.4s cubic-bezier(0.22, 1, 0.36, 1),
+    filter 0.3s ease;
+}
+
+.social-button:hover img {
+  transform: scale(1.18) rotate(8deg);
+}
+
+
+/* Different icon movement */
+
+.instagram-button:hover img {
+  transform: scale(1.2) rotate(-8deg);
+}
+
+.facebook-button:hover img {
+  transform: scale(1.2) rotate(8deg);
+}
+
+.whatsapp-button:hover img {
+  transform: scale(1.2) rotate(-8deg);
+}
+
+.snapchat-button:hover img {
+  transform: scale(1.2) rotate(8deg);
+}
+
+.tiktok-button:hover img {
+  transform: scale(1.2) rotate(-8deg);
+}
+
+.youtube-button:hover img {
+  transform: scale(1.2) rotate(8deg);
+}
+
+
+/* -----------------------------------------
+   ICON CONTINUOUS FLOAT
+   Starts after entrance animation
+----------------------------------------- */
+
+.social-button:nth-child(odd) img {
+  animation: socialIconFloat 3.5s ease-in-out 2s infinite;
+}
+
+.social-button:nth-child(even) img {
+  animation: socialIconFloatReverse 3.8s ease-in-out 2.2s infinite;
+}
+
+@keyframes socialIconFloat {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-3px);
+  }
+}
+
+@keyframes socialIconFloatReverse {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(3px);
+  }
+}
+
+
+/* -----------------------------------------
+   STOP FLOATING WHEN HOVERING
+----------------------------------------- */
+
+.social-button:hover img {
+  animation: none;
+}
+
+
+/* -----------------------------------------
+   TEXT HOVER
+----------------------------------------- */
+
+.social-button span {
+  transition:
+    transform 0.3s ease,
+    letter-spacing 0.3s ease;
+}
+
+.social-button:hover span {
+  transform: translateX(2px);
+  letter-spacing: 0.4px;
+}
+
+
+/* -----------------------------------------
+   INDIVIDUAL PLATFORM HOVER
+----------------------------------------- */
+
+.instagram-button:hover {
+  box-shadow:
+    0 15px 30px rgba(99, 52, 201, 0.22);
+}
+
+.facebook-button:hover {
+  box-shadow:
+    0 15px 30px rgba(24, 119, 242, 0.22);
+}
+
+.whatsapp-button:hover {
+  box-shadow:
+    0 15px 30px rgba(37, 169, 90, 0.22);
+}
+
+.snapchat-button:hover {
+  box-shadow:
+    0 15px 30px rgba(208, 170, 0, 0.22);
+}
+
+.tiktok-button:hover {
+  box-shadow:
+    0 15px 30px rgba(23, 23, 23, 0.20);
+}
+
+.youtube-button:hover {
+  box-shadow:
+    0 15px 30px rgba(227, 38, 38, 0.22);
+}
+
+
+/* -----------------------------------------
+   SUBTLE CARD PULSE
+----------------------------------------- */
+
+@keyframes socialCardPulse {
+  0%,
+  100% {
+    box-shadow:
+      0 7px 20px rgba(72, 47, 130, 0.08);
+  }
+
+  50% {
+    box-shadow:
+      0 10px 25px rgba(72, 47, 130, 0.12);
+  }
+}
+
+.social-button {
+  animation-name: socialButtonReveal, socialCardPulse;
+  animation-duration: 0.7s, 4s;
+  animation-timing-function: ease, ease-in-out;
+  animation-iteration-count: 1, infinite;
+}
+
+
+/* Keep staggered entrance while pulse starts later */
+
+.social-button:nth-child(1) {
+  animation-delay: 0.45s, 2s;
+}
+
+.social-button:nth-child(2) {
+  animation-delay: 0.55s, 2.3s;
+}
+
+.social-button:nth-child(3) {
+  animation-delay: 0.65s, 2.6s;
+}
+
+.social-button:nth-child(4) {
+  animation-delay: 0.75s, 2.9s;
+}
+
+.social-button:nth-child(5) {
+  animation-delay: 0.85s, 3.2s;
+}
+
+.social-button:nth-child(6) {
+  animation-delay: 0.95s, 3.5s;
+}
+
+
+/* -----------------------------------------
+   ACCESSIBILITY
+----------------------------------------- */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .social-section,
+  .social-heading h2,
+  .social-heading p,
+  .social-heading-image,
+  .social-links,
+  .social-button,
+  .social-button img {
+    animation: none !important;
+    transition: none !important;
+  }
+
+  .social-button:hover {
+    transform: none;
+  }
+}
+
+
+/* =========================================================
+   TABLET ANIMATION ADJUSTMENTS
+========================================================= */
+
+@media (max-width: 900px) {
+
+  .social-button:hover {
+    transform: translateY(-6px) scale(1.02);
+  }
+
+  .social-heading-image {
+    animation-duration: 0.8s, 4s;
+  }
+}
+
+
+/* =========================================================
+   MOBILE ANIMATION
+========================================================= */
+
+@media (max-width: 600px) {
+
+  .social-section {
+    animation: socialSectionMobileReveal 0.8s ease both;
+  }
+
+  @keyframes socialSectionMobileReveal {
+    from {
+      opacity: 0;
+      transform: translateY(25px);
+    }
+
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+
+  .social-button:hover {
+    transform: translateY(-5px) scale(1.015);
+  }
+
+  .social-button:active {
+    transform: scale(0.97);
+  }
+
+  .social-heading-image {
+    animation:
+      socialDecorReveal 0.7s ease 0.2s both,
+      socialDecorFloat 3.5s ease-in-out 1s infinite;
+  }
+
+  .social-button img {
+    transition:
+      transform 0.3s ease;
+  }
+
+  .social-button:hover img {
+    transform: scale(1.12) rotate(5deg);
+  }
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 400px) {
+
+  .social-button:hover {
+    transform: translateY(-4px) scale(1.01);
+  }
+
+  .social-heading-image {
+    animation-duration: 0.6s, 4s;
+  }
+}

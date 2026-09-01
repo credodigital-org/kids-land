@@ -6,7 +6,7 @@
   width: 100%;
     /* width: 100%; */
   min-height: 100vh;
-  padding-top: 0px;
+  padding-top: 127px;
   box-sizing: border-box;
   overflow: hidden;
   background: #ffffff;
@@ -1315,6 +1315,1176 @@
 
   .services-grid {
     grid-template-columns: 1fr 1fr;
+  }
+
+}
+
+
+
+/* =========================================================
+   ✨ FULL ABOUT PAGE ANIMATIONS
+   Add this at the VERY BOTTOM of About.css
+========================================================= */
+
+
+/* =========================================================
+   GLOBAL ANIMATION SETTINGS
+========================================================= */
+
+.about-page {
+  --animation-ease: cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+@keyframes aboutFadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(45px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes aboutFadeDown {
+  from {
+    opacity: 0;
+    transform: translateY(-35px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes aboutFadeLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-55px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes aboutFadeRight {
+  from {
+    opacity: 0;
+    transform: translateX(55px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes aboutZoom {
+  from {
+    opacity: 0;
+    transform: scale(0.82);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes aboutPop {
+  0% {
+    opacity: 0;
+    transform: scale(0.7);
+  }
+
+  70% {
+    transform: scale(1.05);
+  }
+
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes aboutFloat {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-12px);
+  }
+}
+
+@keyframes aboutSoftFloat {
+  0%,
+  100% {
+    transform: translateY(0) rotate(0deg);
+  }
+
+  50% {
+    transform: translateY(-8px) rotate(1deg);
+  }
+}
+
+@keyframes aboutPulse {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.08);
+  }
+}
+
+@keyframes aboutShine {
+  0% {
+    transform: translateX(-120%);
+  }
+
+  100% {
+    transform: translateX(120%);
+  }
+}
+
+@keyframes aboutLineGrow {
+  from {
+    width: 0;
+    opacity: 0;
+  }
+
+  to {
+    width: 30px;
+    opacity: 1;
+  }
+}
+
+
+/* =========================================================
+   HERO ANIMATION
+========================================================= */
+
+.about-hero-left h1 {
+  animation: aboutFadeLeft 0.9s var(--animation-ease) both;
+}
+
+.hero-description {
+  animation: aboutFadeLeft 1s var(--animation-ease) 0.15s both;
+}
+
+.why-section {
+  animation: aboutFadeLeft 1s var(--animation-ease) 0.3s both;
+}
+
+.why-section h2 {
+  animation: aboutFadeUp 0.8s var(--animation-ease) 0.4s both;
+}
+
+.why-section p {
+  animation: aboutFadeUp 0.8s var(--animation-ease) 0.5s both;
+}
+
+.about-hero-image-wrapper {
+  animation: aboutFadeRight 1s var(--animation-ease) 0.2s both;
+}
+
+.about-building-image {
+  animation:
+    aboutZoom 1s var(--animation-ease) 0.2s both,
+    aboutSoftFloat 5s ease-in-out 1.3s infinite;
+  transition:
+    transform 0.4s ease,
+    filter 0.4s ease;
+}
+
+.about-building-image:hover {
+  transform: scale(1.04) rotate(1deg);
+  filter: brightness(1.04);
+}
+
+
+/* =========================================================
+   SECTION TITLES
+========================================================= */
+
+.values-section .section-title,
+.eyfs-section .section-title,
+.team-section .section-title,
+.services-section .section-title,
+.facilities-title {
+  animation: aboutFadeUp 0.8s var(--animation-ease) both;
+}
+
+
+/* =========================================================
+   VALUES SECTION
+========================================================= */
+
+.values-slider {
+  scroll-behavior: smooth;
+}
+
+.value-card {
+  position: relative;
+  overflow: hidden;
+
+  animation: aboutFadeUp 0.8s var(--animation-ease) both;
+
+  transition:
+    transform 0.35s var(--animation-ease),
+    box-shadow 0.35s ease;
+}
+
+
+/* Stagger value cards */
+
+.value-card:nth-child(1) {
+  animation-delay: 0.1s;
+}
+
+.value-card:nth-child(2) {
+  animation-delay: 0.18s;
+}
+
+.value-card:nth-child(3) {
+  animation-delay: 0.26s;
+}
+
+.value-card:nth-child(4) {
+  animation-delay: 0.34s;
+}
+
+.value-card:nth-child(5) {
+  animation-delay: 0.42s;
+}
+
+.value-card:nth-child(6) {
+  animation-delay: 0.50s;
+}
+
+.value-card:nth-child(7) {
+  animation-delay: 0.58s;
+}
+
+
+/* Hover */
+
+.value-card:hover {
+  transform: translateY(-10px) scale(1.025);
+
+  box-shadow:
+    0 15px 30px rgba(70, 40, 120, 0.14);
+}
+
+.value-icon {
+  transition:
+    transform 0.4s var(--animation-ease),
+    box-shadow 0.3s ease;
+}
+
+.value-card:hover .value-icon {
+  transform: translateY(-4px) rotate(6deg) scale(1.08);
+
+  box-shadow:
+    0 8px 18px rgba(80, 50, 120, 0.12);
+}
+
+.value-card:hover .value-line {
+  animation: aboutLineGrow 0.5s var(--animation-ease) both;
+}
+
+
+/* =========================================================
+   EYFS ANIMATION
+========================================================= */
+
+.eyfs-description {
+  animation: aboutFadeUp 0.9s var(--animation-ease) 0.15s both;
+}
+
+.curriculum-card {
+  position: relative;
+  overflow: hidden;
+
+  animation: aboutFadeUp 0.8s var(--animation-ease) both;
+
+  transition:
+    transform 0.35s var(--animation-ease),
+    box-shadow 0.35s ease;
+}
+
+.curriculum-card:nth-child(1) {
+  animation-delay: 0.15s;
+}
+
+.curriculum-card:nth-child(2) {
+  animation-delay: 0.28s;
+}
+
+.curriculum-card:nth-child(3) {
+  animation-delay: 0.41s;
+}
+
+.curriculum-card:nth-child(4) {
+  animation-delay: 0.54s;
+}
+
+.curriculum-card:hover {
+  transform: translateY(-8px);
+
+  box-shadow:
+    5px 12px 25px rgba(70, 40, 120, 0.15);
+}
+
+.curriculum-card h3 {
+  transition:
+    transform 0.3s ease,
+    color 0.3s ease;
+}
+
+.curriculum-card:hover h3 {
+  transform: translateY(-3px);
+}
+
+
+/* =========================================================
+   TEAM ANIMATION
+========================================================= */
+
+.team-description {
+  animation: aboutFadeUp 0.8s var(--animation-ease) 0.1s both;
+}
+
+.team-card {
+  animation: aboutFadeUp 0.8s var(--animation-ease) both;
+
+  transition:
+    transform 0.35s var(--animation-ease),
+    box-shadow 0.35s ease;
+}
+
+.team-card:nth-child(1) {
+  animation-delay: 0.1s;
+}
+
+.team-card:nth-child(2) {
+  animation-delay: 0.22s;
+}
+
+.team-card:nth-child(3) {
+  animation-delay: 0.34s;
+}
+
+.team-card:nth-child(4) {
+  animation-delay: 0.46s;
+}
+
+.team-card:hover {
+  transform: translateY(-8px) scale(1.015);
+
+  box-shadow:
+    0 14px 30px rgba(60, 40, 100, 0.15);
+}
+
+
+/* Team icon */
+
+.team-icon {
+  transition:
+    transform 0.4s var(--animation-ease),
+    box-shadow 0.3s ease;
+}
+
+.team-card:hover .team-icon {
+  transform: rotate(-6deg) scale(1.1);
+
+  box-shadow:
+    0 7px 15px rgba(60, 40, 100, 0.12);
+}
+
+
+/* Team tags */
+
+.team-tags span,
+.specialist-grid span,
+.support-list span {
+  transition:
+    transform 0.25s ease,
+    background 0.25s ease;
+}
+
+.team-tags span:hover,
+.specialist-grid span:hover,
+.support-list span:hover {
+  transform: translateX(4px);
+}
+
+
+/* =========================================================
+   SERVICES ANIMATION
+========================================================= */
+
+.services-description {
+  animation: aboutFadeUp 0.8s var(--animation-ease) 0.15s both;
+}
+
+.service-card {
+  animation: aboutFadeUp 0.8s var(--animation-ease) both;
+
+  transition:
+    transform 0.35s var(--animation-ease);
+}
+
+.service-card:nth-child(1) {
+  animation-delay: 0.1s;
+}
+
+.service-card:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.service-card:nth-child(3) {
+  animation-delay: 0.3s;
+}
+
+.service-card:nth-child(4) {
+  animation-delay: 0.4s;
+}
+
+.service-card:nth-child(5) {
+  animation-delay: 0.5s;
+}
+
+.service-card:hover {
+  transform: translateY(-10px);
+}
+
+
+/* Service image */
+
+.service-card img {
+  transition:
+    transform 0.45s var(--animation-ease),
+    box-shadow 0.35s ease;
+}
+
+.service-card:hover img {
+  transform: scale(1.06) rotate(1deg);
+
+  box-shadow:
+    0 14px 28px rgba(60, 40, 100, 0.16);
+}
+
+.service-card h3 {
+  transition:
+    transform 0.3s ease,
+    color 0.3s ease;
+}
+
+.service-card:hover h3 {
+  transform: translateY(-3px);
+}
+
+
+/* =========================================================
+   FACILITIES ANIMATION
+========================================================= */
+
+.facility-card {
+  animation: aboutFadeUp 0.8s var(--animation-ease) both;
+}
+
+.facility-card:nth-child(1) {
+  animation-delay: 0.08s;
+}
+
+.facility-card:nth-child(2) {
+  animation-delay: 0.16s;
+}
+
+.facility-card:nth-child(3) {
+  animation-delay: 0.24s;
+}
+
+.facility-card:nth-child(4) {
+  animation-delay: 0.32s;
+}
+
+.facility-card:nth-child(5) {
+  animation-delay: 0.40s;
+}
+
+.facility-card:nth-child(6) {
+  animation-delay: 0.48s;
+}
+
+.facility-card:nth-child(7) {
+  animation-delay: 0.56s;
+}
+
+.facility-card:nth-child(8) {
+  animation-delay: 0.64s;
+}
+
+.facility-card:nth-child(9) {
+  animation-delay: 0.72s;
+}
+
+.facility-card:nth-child(10) {
+  animation-delay: 0.80s;
+}
+
+
+/* Facility hover */
+
+.facility-card:hover {
+  transform: translateY(-9px) scale(1.015);
+}
+
+.facility-image {
+  transition:
+    transform 0.6s var(--animation-ease),
+    filter 0.4s ease;
+}
+
+.facility-card:hover .facility-image {
+  transform: scale(1.08);
+
+  filter: brightness(1.04);
+}
+
+.facility-content h3 {
+  transition:
+    transform 0.3s ease,
+    color 0.3s ease;
+}
+
+.facility-card:hover .facility-content h3 {
+  transform: translateX(3px);
+}
+
+
+/* =========================================================
+   IMAGE SHINE EFFECT
+========================================================= */
+
+.service-card img,
+.facility-image-wrapper {
+  position: relative;
+}
+
+.service-card {
+  overflow: hidden;
+}
+
+
+/* =========================================================
+   GENTLE CONTINUOUS FLOATING
+========================================================= */
+
+.value-card:nth-child(odd) {
+  animation-name: aboutFadeUp;
+}
+
+.team-card {
+  overflow: hidden;
+}
+
+
+/* =========================================================
+   SCROLLBAR FOR VALUES
+========================================================= */
+
+.values-slider::-webkit-scrollbar {
+  height: 6px;
+}
+
+.values-slider::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background: rgba(56, 34, 154, 0.35);
+}
+
+.values-slider::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.5);
+}
+
+
+/* =========================================================
+   MOBILE ANIMATIONS
+========================================================= */
+
+@media (max-width: 700px) {
+
+  .about-hero-left h1 {
+    animation: aboutFadeUp 0.8s var(--animation-ease) both;
+  }
+
+  .hero-description {
+    animation: aboutFadeUp 0.9s var(--animation-ease) 0.15s both;
+  }
+
+  .why-section {
+    animation: aboutFadeUp 0.9s var(--animation-ease) 0.25s both;
+  }
+
+  .about-hero-image-wrapper {
+    animation: aboutZoom 0.9s var(--animation-ease) both;
+  }
+
+  .about-building-image {
+    animation:
+      aboutZoom 0.9s var(--animation-ease) both,
+      aboutSoftFloat 5s ease-in-out 1s infinite;
+  }
+
+  .value-card:hover {
+    transform: translateY(-6px);
+  }
+
+  .curriculum-card:hover {
+    transform: translateY(-5px);
+  }
+
+  .team-card:hover {
+    transform: translateY(-5px);
+  }
+
+  .service-card:hover {
+    transform: translateY(-6px);
+  }
+
+  .facility-card:hover {
+    transform: translateY(-6px);
+  }
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 450px) {
+
+  .about-building-image {
+    animation:
+      aboutZoom 0.8s var(--animation-ease) both,
+      aboutSoftFloat 5s ease-in-out 1s infinite;
+  }
+
+  .value-card:hover,
+  .curriculum-card:hover,
+  .team-card:hover,
+  .service-card:hover,
+  .facility-card:hover {
+    transform: translateY(-4px);
+  }
+}
+
+
+/* =========================================================
+   ACCESSIBILITY
+   Disable motion when user prefers reduced motion
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .about-page *,
+  .about-page *::before,
+  .about-page *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+
+}
+
+/* =========================================================
+   🔄 3D FLIP + FLOP CARD ANIMATIONS
+   Add at the VERY BOTTOM of About.css
+========================================================= */
+
+
+/* =========================================================
+   3D CARD BASE
+========================================================= */
+
+.value-card,
+.curriculum-card,
+.team-card,
+.service-card,
+.facility-card {
+  transform-style: preserve-3d;
+  perspective: 1000px;
+  will-change: transform;
+
+  transition:
+    transform 0.7s cubic-bezier(0.22, 1, 0.36, 1),
+    box-shadow 0.4s ease;
+}
+
+
+/* =========================================================
+   VALUE CARD - 3D FLIP
+========================================================= */
+
+.value-card:hover {
+  transform:
+    perspective(1000px)
+    rotateY(8deg)
+    rotateX(4deg)
+    translateY(-12px)
+    scale(1.035);
+
+  box-shadow:
+    0 20px 35px rgba(56, 34, 154, 0.20);
+}
+
+
+/* =========================================================
+   CURRICULUM CARD - FLIP + FLOP
+========================================================= */
+
+.curriculum-card:hover {
+  transform:
+    perspective(1000px)
+    rotateY(-5deg)
+    rotateX(3deg)
+    translateY(-10px)
+    scale(1.02);
+
+  box-shadow:
+    0 18px 35px rgba(56, 34, 154, 0.18);
+}
+
+
+/* Alternate direction */
+
+.curriculum-card:nth-child(even):hover {
+  transform:
+    perspective(1000px)
+    rotateY(5deg)
+    rotateX(-3deg)
+    translateY(-10px)
+    scale(1.02);
+}
+
+
+/* =========================================================
+   TEAM CARD - DEEP 3D
+========================================================= */
+
+.team-card:hover {
+  transform:
+    perspective(1200px)
+    rotateY(6deg)
+    rotateX(3deg)
+    translateY(-10px)
+    scale(1.025);
+
+  box-shadow:
+    0 22px 40px rgba(50, 30, 100, 0.22);
+}
+
+
+/* Alternate team cards */
+
+.team-card:nth-child(even):hover {
+  transform:
+    perspective(1200px)
+    rotateY(-6deg)
+    rotateX(3deg)
+    translateY(-10px)
+    scale(1.025);
+}
+
+
+/* =========================================================
+   SERVICE CARD - 3D POP
+========================================================= */
+
+.service-card:hover {
+  transform:
+    perspective(1000px)
+    rotateY(7deg)
+    rotateX(-4deg)
+    translateY(-12px)
+    scale(1.04);
+
+  z-index: 5;
+}
+
+
+/* Alternate service direction */
+
+.service-card:nth-child(even):hover {
+  transform:
+    perspective(1000px)
+    rotateY(-7deg)
+    rotateX(4deg)
+    translateY(-12px)
+    scale(1.04);
+}
+
+
+/* =========================================================
+   SERVICE IMAGE 3D
+========================================================= */
+
+.service-card img {
+  transform-style: preserve-3d;
+
+  transition:
+    transform 0.7s cubic-bezier(0.22, 1, 0.36, 1),
+    filter 0.4s ease,
+    box-shadow 0.4s ease;
+}
+
+.service-card:hover img {
+  transform:
+    translateZ(25px)
+    scale(1.08)
+    rotateZ(1deg);
+
+  filter: brightness(1.05);
+
+  box-shadow:
+    0 18px 30px rgba(50, 30, 100, 0.18);
+}
+
+
+/* =========================================================
+   FACILITY CARD - FLIP
+========================================================= */
+
+.facility-card:hover {
+  transform:
+    perspective(1100px)
+    rotateY(-6deg)
+    rotateX(3deg)
+    translateY(-11px)
+    scale(1.025);
+
+  z-index: 5;
+
+  box-shadow:
+    0 20px 35px rgba(70, 45, 100, 0.20);
+}
+
+
+/* Alternate facilities */
+
+.facility-card:nth-child(even):hover {
+  transform:
+    perspective(1100px)
+    rotateY(6deg)
+    rotateX(-3deg)
+    translateY(-11px)
+    scale(1.025);
+}
+
+
+/* =========================================================
+   FACILITY IMAGE - 3D PUSH
+========================================================= */
+
+.facility-image {
+  transform-style: preserve-3d;
+
+  transition:
+    transform 0.7s cubic-bezier(0.22, 1, 0.36, 1),
+    filter 0.4s ease;
+}
+
+.facility-card:hover .facility-image {
+  transform:
+    translateZ(20px)
+    scale(1.10);
+
+  filter: brightness(1.06);
+}
+
+
+/* =========================================================
+   ICON 3D FLIP
+========================================================= */
+
+.value-icon,
+.team-icon {
+  transform-style: preserve-3d;
+
+  transition:
+    transform 0.6s cubic-bezier(0.22, 1, 0.36, 1),
+    box-shadow 0.4s ease;
+}
+
+.value-card:hover .value-icon {
+  transform:
+    translateZ(35px)
+    rotateY(180deg)
+    rotateX(10deg)
+    scale(1.12);
+
+  box-shadow:
+    0 12px 25px rgba(50, 30, 100, 0.18);
+}
+
+.team-card:hover .team-icon {
+  transform:
+    translateZ(30px)
+    rotateY(180deg)
+    scale(1.12);
+
+  box-shadow:
+    0 10px 22px rgba(50, 30, 100, 0.18);
+}
+
+
+/* =========================================================
+   TEXT POP FOR CARDS
+========================================================= */
+
+.value-card h3,
+.value-card p,
+.curriculum-card h3,
+.curriculum-card p,
+.team-card h3,
+.team-tags,
+.specialist-grid,
+.support-list,
+.service-card h3,
+.facility-content {
+  transition:
+    transform 0.55s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.value-card:hover h3,
+.curriculum-card:hover h3,
+.team-card:hover h3,
+.service-card:hover h3,
+.facility-card:hover .facility-content {
+  transform: translateZ(25px);
+}
+
+
+/* =========================================================
+   FLOATING CARD EFFECT
+========================================================= */
+
+@keyframes cardFloat {
+
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-5px);
+  }
+
+}
+
+
+/* =========================================================
+   SHINE EFFECT
+========================================================= */
+
+.value-card::after,
+.curriculum-card::after,
+.team-card::after,
+.service-card::after,
+.facility-card::after {
+  content: "";
+
+  position: absolute;
+
+  top: 0;
+  left: -120%;
+
+  width: 60%;
+  height: 100%;
+
+  background:
+    linear-gradient(
+      90deg,
+      transparent,
+      rgba(255, 255, 255, 0.35),
+      transparent
+    );
+
+  transform: skewX(-20deg);
+
+  pointer-events: none;
+}
+
+
+/* Shine on hover */
+
+.value-card:hover::after,
+.curriculum-card:hover::after,
+.team-card:hover::after,
+.service-card:hover::after,
+.facility-card:hover::after {
+  animation: cardShine 0.8s ease;
+}
+
+@keyframes cardShine {
+
+  from {
+    left: -120%;
+  }
+
+  to {
+    left: 150%;
+  }
+
+}
+
+
+/* =========================================================
+   CARD BORDER GLOW
+========================================================= */
+
+.value-card:hover {
+  box-shadow:
+    0 20px 35px rgba(56, 34, 154, 0.18),
+    0 0 0 2px rgba(255, 255, 255, 0.5);
+}
+
+.curriculum-card:hover {
+  box-shadow:
+    0 20px 35px rgba(56, 34, 154, 0.16);
+}
+
+.service-card:hover img {
+  box-shadow:
+    0 15px 30px rgba(56, 34, 154, 0.20);
+}
+
+
+/* =========================================================
+   MOBILE
+   Keep animation softer on touch devices
+========================================================= */
+
+@media (max-width: 700px) {
+
+  .value-card:hover {
+    transform:
+      perspective(900px)
+      rotateY(4deg)
+      rotateX(2deg)
+      translateY(-7px)
+      scale(1.015);
+  }
+
+  .curriculum-card:hover,
+  .team-card:hover,
+  .facility-card:hover {
+    transform:
+      perspective(900px)
+      rotateY(3deg)
+      rotateX(2deg)
+      translateY(-7px)
+      scale(1.015);
+  }
+
+  .curriculum-card:nth-child(even):hover,
+  .team-card:nth-child(even):hover,
+  .facility-card:nth-child(even):hover {
+    transform:
+      perspective(900px)
+      rotateY(-3deg)
+      rotateX(2deg)
+      translateY(-7px)
+      scale(1.015);
+  }
+
+  .service-card:hover {
+    transform:
+      perspective(900px)
+      rotateY(4deg)
+      rotateX(-2deg)
+      translateY(-7px)
+      scale(1.02);
+  }
+
+  .service-card:nth-child(even):hover {
+    transform:
+      perspective(900px)
+      rotateY(-4deg)
+      rotateX(2deg)
+      translateY(-7px)
+      scale(1.02);
+  }
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 450px) {
+
+  .value-card:hover,
+  .curriculum-card:hover,
+  .team-card:hover,
+  .service-card:hover,
+  .facility-card:hover {
+    transform:
+      perspective(800px)
+      rotateY(2deg)
+      translateY(-5px)
+      scale(1.01);
+  }
+
+  .curriculum-card:nth-child(even):hover,
+  .team-card:nth-child(even):hover,
+  .service-card:nth-child(even):hover,
+  .facility-card:nth-child(even):hover {
+    transform:
+      perspective(800px)
+      rotateY(-2deg)
+      translateY(-5px)
+      scale(1.01);
+  }
+
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .value-card,
+  .curriculum-card,
+  .team-card,
+  .service-card,
+  .facility-card,
+  .value-icon,
+  .team-icon,
+  .service-card img,
+  .facility-image {
+    transition: none !important;
+    animation: none !important;
+  }
+
+  .value-card:hover,
+  .curriculum-card:hover,
+  .team-card:hover,
+  .service-card:hover,
+  .facility-card:hover {
+    transform: none !important;
   }
 
 }

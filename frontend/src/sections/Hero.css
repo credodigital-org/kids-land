@@ -59,8 +59,8 @@ header {
 .hero-section {
   position: relative;
   width: 100%;
-  min-height: 890px;
-  padding-top: 0px;
+  min-height: 590px;
+  padding-top: 127px;
 
   background: #ffffff;
 
@@ -80,8 +80,9 @@ header {
   position: relative;
 
   width: 100%;
+  /* max-width: 1102px; */
   max-width: 1102px;
-  height: 967px;
+  height: 670px;
 
   margin: 0 auto;
 
@@ -107,14 +108,15 @@ header {
    LEFT WELCOME CARD
 ========================================= */
 
+
 .hero-card {
   position: absolute;
   left: 0; /* explicit, so this never depends on text direction */
 
   margin-top: 10px;
-  margin-left: -100px;
-  width: 682px;
-  height: 680px;
+  margin-left: 10px;
+  width: 500px;
+  height: 500px;
 
   flex-shrink: 0;
 
@@ -124,7 +126,6 @@ header {
 
   z-index: 3;
 }
-
 
 /* =========================================
    WELCOME CARD IMAGE
@@ -156,7 +157,7 @@ header {
 .hero-cta-btn {
   position: absolute;
 
-  left: 230px;
+  left: 130px;
   bottom: 56px;
 
   width: 246px;
@@ -235,8 +236,10 @@ header {
   top: 80px;
   right: -100px;
 
-  width: 530px;
-  height: 600px;
+  /* width: 530px;
+  height: 600px; */
+  width: 630px;
+  height: 500px;
 
   display: block;
 
@@ -259,6 +262,8 @@ header {
 }
 
 .hero-photo {
+  /* width: 456px;
+  height: 823px; */
   width: 456px;
   height: 823px;
 
@@ -276,10 +281,11 @@ header {
   position: absolute;
 
   left: 0;
-  top: 70px;
+  top: -30px;
+  margin-left: -40px;
 
-  width: 255px;
-  height: 405px;
+  width: 355px;
+  height: 355px;
 
   z-index: 2;
 }
@@ -294,9 +300,10 @@ header {
 
   right: 0;
   top: 70px;
+  left: 245px;
 
-  width: 255px;
-  height: 590px;
+  width: 295px;
+  height: 280px;
 
   z-index: 3;
 }
@@ -317,8 +324,8 @@ header {
 
 /* Paper plane */
 .doodle-plane {
-  top: -44px;
-  left: 70px;
+  top: -78px;
+  left: 140px;
 
   color: #9d83df;
 
@@ -357,11 +364,12 @@ header {
 
   .hero-stats {
   width: 100%;
-  max-width: 1247px;
+  max-width: 805px;
   height: 160px;
-  margin: 80px auto 0;
+  margin: -120px auto 0;
   position: relative;
   z-index: 10;
+  margin-left: 60px;
   
   display: flex;
   flex-direction: row;
@@ -473,7 +481,7 @@ header {
 @media (max-width: 1024px) {
   .hero-section {
     min-height: auto;
-    padding: 40px 0;
+    padding: 78px 0;
   }
 
   .hero-content {
@@ -497,14 +505,16 @@ header {
 
     width: 100%;
     max-width: 480px;
-    aspect-ratio: 682 / 680;
+    aspect-ratio: 682 / 690;
     height: auto;
   }
 
   .hero-cta-btn {
-    left: 50%;
+    left: 20%;
     transform: translateX(-50%);
-    bottom: 28px;
+    bottom: 48px;
+    width: 60px;
+    height: 45px;
 
     width: 90%;
     max-width: 246px;
@@ -537,7 +547,7 @@ header {
   .hero-img-box {
     position: static;
   }
-
+/* 
   .img-flower,
   .img-combined {
     position: static;
@@ -545,6 +555,7 @@ header {
     left: auto;
     right: auto;
     top: auto;
+    margin-left: -30px;
 
     width: 45%;
     height: auto;
@@ -570,7 +581,7 @@ header {
 
     flex-wrap: wrap;
     row-gap: 16px;
-  }
+  } */
 
   .hero-arabic-button {
     position: static;
@@ -581,7 +592,7 @@ header {
 }
 
 
-@media (max-width: 768px) {
+/* @media (max-width: 768px) {
   .doodle-plane,
   .doodle-star-top {
     display: none;
@@ -601,10 +612,253 @@ header {
     justify-content: center;
     width: 100%;
   }
+} */
+
+
+/* =========================================================
+   MOBILE STATS - HORIZONTAL
+========================================================= */
+
+@media (max-width: 768px) {
+
+  .hero-collage {
+    position: relative;
+
+    width: 100%;
+    max-width: 300px;
+
+    height: 190px;
+
+    margin: 0 auto;
+
+    display: block;
+
+    right: auto;
+    top: auto;
+
+    z-index: 5;
+  }
+
+  /* Remove static positioning from image boxes */
+  .hero-img-box {
+    position: absolute;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    overflow: visible;
+  }
+
+  /* =====================================================
+     FLOWER / CHILD IMAGE
+  ===================================================== */
+
+  .img-flower {
+    position: absolute;
+
+    left: -22px;
+    top: -39px;
+
+    width: 255px;
+    height: 205px;
+
+    max-width: none;
+
+    margin: 0;
+
+    z-index: 2;
+  }
+
+  /* =====================================================
+     JUMPING + PAINTING IMAGES
+  ===================================================== */
+
+  .img-combined {
+    position: absolute;
+
+    left: 107px;
+    top: -50px;
+
+    width: 192px;
+    height: 248px;
+
+    max-width: none;
+
+    margin: 0;
+
+    z-index: 3;
+  }
+
+  /* Actual images */
+  .img-flower .hero-photo,
+  .img-combined .hero-photo {
+    width: 100%;
+    height: 100%;
+
+    object-fit: contain;
+
+    display: block;
+  }
+
+  /* Hide desktop doodles */
+  .doodle-plane,
+  .doodle-star-top,
+  .doodle-star-right {
+    display: none;
+  }
+
+
+  .hero-stats {
+    width: calc(100% - 24px) !important;
+    max-width: 350px !important;
+
+    height: 52px !important;
+
+    margin: 8px auto 0 !important;
+
+    padding: 5px 7px !important;
+
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+
+    flex-wrap: nowrap !important;
+
+    gap: 0 !important;
+
+    border-radius: 13px !important;
+
+    background: #ffffff;
+
+    border: 1px solid #f2f2f2;
+
+    box-shadow: 0 5px 18px rgba(0, 0, 0, 0.07);
+
+    box-sizing: border-box;
+  }
+
+
+  /* =====================================================
+     EACH STAT ITEM
+  ===================================================== */
+
+  .stat-box {
+    width: auto !important;
+    flex: 1 1 0 !important;
+
+    min-width: 0 !important;
+
+    display: flex !important;
+    flex-direction: row !important;
+
+    align-items: center !important;
+    justify-content: center !important;
+
+    gap: 4px !important;
+
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+
+  /* =====================================================
+     STAT ICON CIRCLE
+  ===================================================== */
+
+  .stat-circle {
+    width: 28px !important;
+    height: 28px !important;
+
+    min-width: 28px !important;
+    max-width: 28px !important;
+
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .stat-circle img {
+    width: 25px !important;
+    height: 25px !important;
+
+    object-fit: contain;
+  }
+
+
+  /* =====================================================
+     STAT TEXT
+  ===================================================== */
+
+  .stat-meta {
+    min-width: 0 !important;
+
+    display: flex !important;
+    flex-direction: column !important;
+
+    align-items: flex-start !important;
+    justify-content: center !important;
+  }
+
+  .stat-num {
+    margin: 0 !important;
+
+    font-size: 10px !important;
+    line-height: 1 !important;
+
+    font-weight: 900 !important;
+  }
+
+  .stat-text {
+    margin: 2px 0 0 !important;
+
+    font-size: 4.5px !important;
+
+    line-height: 1.15 !important;
+
+    letter-spacing: 0 !important;
+
+    white-space: normal !important;
+  }
+
+
+  /* =====================================================
+     VERTICAL SEPARATOR
+  ===================================================== */
+
+  .stat-line {
+    width: 1px !important;
+    min-width: 1px !important;
+
+    height: 26px !important;
+
+    margin: 0 3px !important;
+
+    flex: 0 0 1px !important;
+
+    background: #ebebeb;
+  }
+
+
+  /* =====================================================
+     HIDE DOODLES ON MOBILE
+  ===================================================== */
+
+  .doodle-plane,
+  .doodle-star-top {
+    display: none;
+  }
+
+  .doodle-star-right {
+    display: none;
+  }
 }
 
 
-@media (max-width: 576px) {
+/* @media (max-width: 576px) {
   .hero-card {
     max-width: 100%;
   }
@@ -649,10 +903,64 @@ header {
     height: 40px;
     line-height: 40px;
   }
+} */
+
+
+@media (max-width: 576px) {
+
+  .hero-stats {
+    width: calc(100% - 20px) !important;
+    max-width: 290px !important;
+
+    height: 50px !important;
+
+    padding: 5px 6px !important;
+
+    margin: 6px auto 0 !important;
+
+    flex-direction: row !important;
+    flex-wrap: nowrap !important;
+  }
+
+  .stat-box {
+    flex: 1 1 0 !important;
+    width: auto !important;
+
+    flex-direction: row !important;
+
+    gap: 3px !important;
+  }
+
+  .stat-circle {
+    width: 27px !important;
+    height: 27px !important;
+
+    min-width: 27px !important;
+  }
+
+  .stat-circle img {
+    width: 24px !important;
+    height: 24px !important;
+  }
+
+  .stat-num {
+    font-size: 10px !important;
+  }
+
+  .stat-text {
+    font-size: 4px !important;
+    line-height: 1.15 !important;
+  }
+
+  .stat-line {
+    width: 1px !important;
+    height: 24px !important;
+
+    margin: 0 2px !important;
+  }
 }
 
-
-@media (max-width: 380px) {
+/* @media (max-width: 380px) {
   .img-flower,
   .img-combined {
     max-width: 130px;
@@ -679,4 +987,644 @@ header {
     width: 42px;
     height: 42px;
   }
+} */
+
+
+@media (max-width: 380px) {
+
+  .hero-stats {
+    width: calc(100% - 18px) !important;
+    max-width: 280px !important;
+
+    height: 48px !important;
+
+    padding: 4px 5px !important;
+
+    flex-direction: row !important;
+    flex-wrap: nowrap !important;
+  }
+
+  .stat-box {
+    flex: 1 1 0 !important;
+    gap: 2px !important;
+  }
+
+  .stat-circle {
+    width: 24px !important;
+    height: 24px !important;
+
+    min-width: 24px !important;
+  }
+
+  .stat-circle img {
+    width: 21px !important;
+    height: 21px !important;
+  }
+
+  .stat-num {
+    font-size: 8px !important;
+  }
+
+  .stat-text {
+    font-size: 3.5px !important;
+  }
+
+  .stat-line {
+    height: 22px !important;
+    margin: 0 2px !important;
+  }
+}
+
+
+
+
+/* =========================================================
+   HERO ANIMATION SYSTEM
+   Position / size NOT changed
+========================================================= */
+
+
+/* =========================================================
+   CARD ENTRANCE
+========================================================= */
+
+.hero-card-animate {
+  animation:
+    heroCardEntrance 1s cubic-bezier(0.22, 1, 0.36, 1)
+    both;
+}
+
+@keyframes heroCardEntrance {
+
+  0% {
+    opacity: 0;
+    transform: translateY(35px) scale(0.96);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+
+}
+
+
+/* =========================================================
+   HERO CARD IMAGE
+========================================================= */
+
+.card-bg-img {
+  animation:
+    heroImageReveal 1.2s ease-out both;
+}
+
+@keyframes heroImageReveal {
+
+  0% {
+    opacity: 0;
+    transform: scale(1.04);
+  }
+
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+
+}
+
+
+/* =========================================================
+   CTA BUTTON ENTRANCE
+========================================================= */
+
+.hero-cta-btn {
+  animation:
+    ctaEntrance 1s cubic-bezier(0.22, 1, 0.36, 1)
+    0.55s both;
+
+  animation-delay: 0.55s;
+}
+
+@keyframes ctaEntrance {
+
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  70% {
+    opacity: 1;
+    transform: translateY(-3px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+}
+
+
+/* =========================================================
+   CTA ARROW PULSE
+========================================================= */
+
+.cta-arrow {
+  animation:
+    arrowPulse 2s ease-in-out infinite;
+}
+
+@keyframes arrowPulse {
+
+  0%,
+  100% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.08);
+  }
+
+}
+
+
+/* =========================================================
+   CTA HOVER
+========================================================= */
+
+.hero-cta-btn:hover {
+  transform: translateY(-3px) !important;
+
+  box-shadow:
+    0 8px 18px rgba(142, 195, 62, 0.30);
+}
+
+
+/* =========================================================
+   FLOWER CHILD ENTRANCE
+========================================================= */
+
+.img-flower {
+  animation:
+    flowerEntrance 1.2s cubic-bezier(0.22, 1, 0.36, 1)
+    0.25s both,
+    flowerFloat 4s ease-in-out 1.5s infinite;
+}
+
+@keyframes flowerEntrance {
+
+  0% {
+    opacity: 0;
+    transform: translateY(30px) scale(0.88);
+  }
+
+  70% {
+    opacity: 1;
+    transform: translateY(-5px) scale(1.02);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+
+}
+
+
+/* =========================================================
+   FLOWER FLOAT
+========================================================= */
+
+@keyframes flowerFloat {
+
+  0%,
+  100% {
+    transform: translateY(0) rotate(0deg);
+  }
+
+  50% {
+    transform: translateY(-8px) rotate(1deg);
+  }
+
+}
+
+
+/* =========================================================
+   COMBINED IMAGE ENTRANCE
+========================================================= */
+
+.img-combined {
+  animation:
+    combinedEntrance 1.2s cubic-bezier(0.22, 1, 0.36, 1)
+    0.45s both,
+    combinedFloat 4.5s ease-in-out 1.7s infinite;
+}
+
+@keyframes combinedEntrance {
+
+  0% {
+    opacity: 0;
+    transform: translateY(35px) scale(0.88);
+  }
+
+  70% {
+    opacity: 1;
+    transform: translateY(-5px) scale(1.02);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+
+}
+
+
+/* =========================================================
+   COMBINED IMAGE FLOAT
+========================================================= */
+
+@keyframes combinedFloat {
+
+  0%,
+  100% {
+    transform: translateY(0) rotate(0deg);
+  }
+
+  50% {
+    transform: translateY(-10px) rotate(-1deg);
+  }
+
+}
+
+
+/* =========================================================
+   PAPER PLANE
+========================================================= */
+
+.doodle-plane {
+  animation:
+    planeEntrance 1s ease-out 0.7s both,
+    planeFloat 5s ease-in-out 1.7s infinite;
+}
+
+@keyframes planeEntrance {
+
+  0% {
+    opacity: 0;
+    transform:
+      rotate(7deg)
+      translate(-20px, 15px);
+  }
+
+  100% {
+    opacity: 1;
+    transform:
+      rotate(7deg)
+      translate(0, 0);
+  }
+
+}
+
+
+/* =========================================================
+   PAPER PLANE FLOAT
+========================================================= */
+
+@keyframes planeFloat {
+
+  0%,
+  100% {
+    transform:
+      rotate(7deg)
+      translate(0, 0);
+  }
+
+  50% {
+    transform:
+      rotate(11deg)
+      translate(8px, -8px);
+  }
+
+}
+
+
+/* =========================================================
+   STAR / SPARKLES
+========================================================= */
+
+.doodle-star-right {
+  animation:
+    starEntrance 0.8s ease-out 0.9s both,
+    starFloat 3s ease-in-out 1.7s infinite;
+}
+
+@keyframes starEntrance {
+
+  0% {
+    opacity: 0;
+    transform: scale(0) rotate(-90deg);
+  }
+
+  70% {
+    opacity: 1;
+    transform: scale(1.15) rotate(10deg);
+  }
+
+  100% {
+    opacity: 1;
+    transform: scale(1) rotate(0deg);
+  }
+
+}
+
+@keyframes starFloat {
+
+  0%,
+  100% {
+    transform: scale(1) rotate(0deg);
+  }
+
+  50% {
+    transform: scale(1.12) rotate(12deg);
+  }
+
+}
+
+
+/* =========================================================
+   STATISTICS CARD ENTRANCE
+========================================================= */
+
+.hero-stats {
+  animation:
+    statsEntrance 1s cubic-bezier(0.22, 1, 0.36, 1)
+    0.8s both;
+}
+
+@keyframes statsEntrance {
+
+  0% {
+    opacity: 0;
+    transform: translateY(35px);
+  }
+
+  70% {
+    opacity: 1;
+    transform: translateY(-5px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+}
+
+
+/* =========================================================
+   STAT ITEMS
+========================================================= */
+
+.stat-item-1 {
+  animation:
+    statItemReveal 0.8s ease-out 1s both;
+}
+
+.stat-item-2 {
+  animation:
+    statItemReveal 0.8s ease-out 1.15s both;
+}
+
+.stat-item-3 {
+  animation:
+    statItemReveal 0.8s ease-out 1.3s both;
+}
+
+@keyframes statItemReveal {
+
+  0% {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+}
+
+
+/* =========================================================
+   STAT ICON CIRCLES
+========================================================= */
+
+.stat-circle {
+  animation:
+    statCirclePop 0.8s cubic-bezier(0.34, 1.56, 0.64, 1)
+    both;
+}
+
+.stat-item-1 .stat-circle {
+  animation-delay: 1.05s;
+}
+
+.stat-item-2 .stat-circle {
+  animation-delay: 1.2s;
+}
+
+.stat-item-3 .stat-circle {
+  animation-delay: 1.35s;
+}
+
+@keyframes statCirclePop {
+
+  0% {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+
+  70% {
+    opacity: 1;
+    transform: scale(1.12);
+  }
+
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+
+}
+
+
+/* =========================================================
+   STAT ICON FLOAT
+========================================================= */
+
+.stat-circle img {
+  animation:
+    statIconFloat 3s ease-in-out infinite;
+}
+
+@keyframes statIconFloat {
+
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-3px);
+  }
+
+}
+
+
+/* =========================================================
+   STAT NUMBERS
+========================================================= */
+
+.stat-num {
+  display: inline-block;
+
+  transform-origin: center;
+
+  animation:
+    numberPop 0.8s cubic-bezier(0.34, 1.56, 0.64, 1)
+    both;
+}
+
+@keyframes numberPop {
+
+  0% {
+    opacity: 0;
+    transform: scale(0.6);
+  }
+
+  70% {
+    opacity: 1;
+    transform: scale(1.12);
+  }
+
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+
+}
+
+
+/* =========================================================
+   STAT SEPARATORS
+========================================================= */
+
+.stat-line {
+  transform-origin: center;
+
+  animation:
+    lineReveal 0.8s ease-out 1.1s both;
+}
+
+@keyframes lineReveal {
+
+  0% {
+    opacity: 0;
+    transform: scaleY(0);
+  }
+
+  100% {
+    opacity: 1;
+    transform: scaleY(1);
+  }
+
+}
+
+
+/* =========================================================
+   STAT TEXT
+========================================================= */
+
+.stat-text {
+  animation:
+    statTextReveal 0.8s ease-out 1.4s both;
+}
+
+@keyframes statTextReveal {
+
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+
+}
+
+
+/* =========================================================
+   STAT HOVER
+========================================================= */
+
+.stat-box {
+  transition:
+    transform 0.3s ease,
+    filter 0.3s ease;
+}
+
+.stat-box:hover {
+  transform: translateY(-4px);
+}
+
+.stat-box:hover .stat-circle {
+  transform: scale(1.08);
+}
+
+
+/* =========================================================
+   STAT NUMBER GLOW / ATTENTION
+========================================================= */
+
+.stat-num:hover {
+  transform: scale(1.08);
+}
+
+
+/* =========================================================
+   HERO CONTINUOUS VERY-SUBTLE MOTION
+========================================================= */
+
+.hero-collage {
+  animation:
+    collageEntrance 1s ease-out 0.15s both;
+}
+
+@keyframes collageEntrance {
+
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+
+}
+
+
+/* =========================================================
+   ACCESSIBILITY
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .hero-section *,
+  .hero-section *::before,
+  .hero-section *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+
 }

@@ -503,3 +503,660 @@
     right: 15px;
   }
 }
+
+
+
+
+
+/* =========================================================
+   FULL ANIMATION
+   ADMISSION SECTION
+========================================================= */
+
+/* -----------------------------------------
+   MAIN SECTION
+----------------------------------------- */
+
+.admission-section {
+  animation: admissionSectionReveal 1s ease-out both;
+}
+
+@keyframes admissionSectionReveal {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+
+/* -----------------------------------------
+   CONTENT ANIMATION
+----------------------------------------- */
+
+.admission-container {
+  animation: admissionContentReveal 1s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+.admission-label {
+  animation: admissionLabelReveal 0.8s ease-out 0.15s both;
+}
+
+.admission-title {
+  animation: admissionTitleReveal 1s cubic-bezier(0.22, 1, 0.36, 1) 0.25s both;
+}
+
+.admission-description {
+  animation: admissionDescriptionReveal 0.9s ease-out 0.4s both;
+}
+
+.admission-button {
+  animation:
+    admissionButtonReveal 0.8s cubic-bezier(0.22, 1, 0.36, 1) 0.55s both,
+    admissionButtonFloat 3s ease-in-out 1.5s infinite;
+}
+
+
+/* -----------------------------------------
+   CONTENT KEYFRAMES
+----------------------------------------- */
+
+@keyframes admissionContentReveal {
+  from {
+    opacity: 0;
+    transform: translateY(35px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes admissionLabelReveal {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+    letter-spacing: 5px;
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+    letter-spacing: 1.8px;
+  }
+}
+
+@keyframes admissionTitleReveal {
+  from {
+    opacity: 0;
+    transform: translateY(35px) scale(0.94);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes admissionDescriptionReveal {
+  from {
+    opacity: 0;
+    transform: translateY(22px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes admissionButtonReveal {
+  from {
+    opacity: 0;
+    transform: translateY(25px) scale(0.9);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes admissionButtonFloat {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-5px);
+  }
+}
+
+
+/* =========================================================
+   BUTTON HOVER ANIMATION
+========================================================= */
+
+.admission-button {
+  position: relative;
+  overflow: hidden;
+  transition:
+    transform 0.3s ease,
+    background 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.admission-button::before {
+  content: "";
+
+  position: absolute;
+  top: 0;
+  left: -120%;
+
+  width: 80%;
+  height: 100%;
+
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.25),
+    transparent
+  );
+
+  transform: skewX(-20deg);
+  transition: left 0.6s ease;
+}
+
+.admission-button:hover::before {
+  left: 140%;
+}
+
+.admission-button:hover {
+  transform: translateY(-5px) scale(1.03);
+
+  box-shadow:
+    0 12px 25px rgba(60, 30, 150, 0.28);
+}
+
+.admission-button svg {
+  transition:
+    transform 0.3s ease;
+}
+
+.admission-button:hover svg {
+  transform: translateX(5px);
+}
+
+
+/* =========================================================
+   CHARACTER / GLOBE ANIMATION
+========================================================= */
+
+.admission-character {
+  animation:
+    characterEntrance 1.2s cubic-bezier(0.22, 1, 0.36, 1) 0.3s both,
+    characterFloat 4s ease-in-out 1.5s infinite;
+  transform-origin: center bottom;
+}
+
+@keyframes characterEntrance {
+  from {
+    opacity: 0;
+    transform: translateX(-80px) translateY(40px) scale(0.85);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0) translateY(0) scale(1);
+  }
+}
+
+@keyframes characterFloat {
+  0%,
+  100% {
+    transform: translateY(0) rotate(0deg);
+  }
+
+  25% {
+    transform: translateY(-6px) rotate(-1deg);
+  }
+
+  50% {
+    transform: translateY(-10px) rotate(1deg);
+  }
+
+  75% {
+    transform: translateY(-5px) rotate(-1deg);
+  }
+}
+
+
+/* =========================================================
+   GLOBE IMAGE
+========================================================= */
+
+.character-globe img {
+  animation: globeGentleMove 5s ease-in-out infinite;
+  transform-origin: center bottom;
+}
+
+@keyframes globeGentleMove {
+  0%,
+  100% {
+    transform: rotate(0deg) scale(1);
+  }
+
+  50% {
+    transform: rotate(2deg) scale(1.02);
+  }
+}
+
+
+/* =========================================================
+   PAPER AIRPLANE
+========================================================= */
+
+.admission-plane {
+  animation:
+    planeEntrance 1s cubic-bezier(0.22, 1, 0.36, 1) 0.7s both,
+    planeFly 5s ease-in-out 1.7s infinite;
+  transform-origin: center;
+}
+
+@keyframes planeEntrance {
+  from {
+    opacity: 0;
+    transform: translate(-50px, 40px) rotate(-25deg) scale(0.7);
+  }
+
+  to {
+    opacity: 1;
+    transform: translate(0, 0) rotate(0deg) scale(1);
+  }
+}
+
+@keyframes planeFly {
+  0% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+
+  20% {
+    transform: translate(10px, -8px) rotate(-4deg);
+  }
+
+  40% {
+    transform: translate(22px, -2px) rotate(3deg);
+  }
+
+  60% {
+    transform: translate(12px, -12px) rotate(-2deg);
+  }
+
+  80% {
+    transform: translate(3px, -5px) rotate(2deg);
+  }
+
+  100% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+}
+
+
+/* =========================================================
+   PLANE IMAGE
+========================================================= */
+
+.admission-plane img {
+  animation: planeTilt 2.5s ease-in-out infinite;
+}
+
+@keyframes planeTilt {
+  0%,
+  100% {
+    transform: rotate(0deg);
+  }
+
+  50% {
+    transform: rotate(5deg);
+  }
+}
+
+
+/* =========================================================
+   SUN ANIMATION
+========================================================= */
+
+.admission-sun {
+  animation:
+    sunEntrance 1s ease-out 0.8s both,
+    sunFloat 4s ease-in-out 1.8s infinite;
+  transform-origin: center;
+}
+
+@keyframes sunEntrance {
+  from {
+    opacity: 0;
+    transform: scale(0) rotate(-90deg);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1) rotate(0deg);
+  }
+}
+
+@keyframes sunFloat {
+  0%,
+  100% {
+    transform: translateY(0) rotate(0deg) scale(1);
+  }
+
+  25% {
+    transform: translateY(-5px) rotate(4deg) scale(1.03);
+  }
+
+  50% {
+    transform: translateY(-9px) rotate(0deg) scale(1.06);
+  }
+
+  75% {
+    transform: translateY(-5px) rotate(-4deg) scale(1.03);
+  }
+}
+
+
+/* =========================================================
+   SUN IMAGE
+========================================================= */
+
+.admission-sun img {
+  animation: sunPulse 2.5s ease-in-out infinite;
+}
+
+@keyframes sunPulse {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.08);
+  }
+}
+
+
+/* =========================================================
+   RESOURCE CARDS
+   Works automatically if you enable the cards later
+========================================================= */
+
+.admission-resources {
+  animation: resourcesReveal 1s ease-out 0.7s both;
+}
+
+.resource-card {
+  transition:
+    transform 0.35s ease,
+    box-shadow 0.35s ease;
+}
+
+.resource-card:hover {
+  transform: translateY(-8px);
+
+  box-shadow:
+    0 18px 35px rgba(60, 30, 150, 0.12);
+}
+
+.resource-icon {
+  transition:
+    transform 0.4s ease;
+}
+
+.resource-card:hover .resource-icon {
+  transform: rotate(-8deg) scale(1.1);
+}
+
+.resource-button {
+  transition:
+    transform 0.3s ease,
+    background 0.3s ease;
+}
+
+.resource-button:hover {
+  transform: translateY(-3px);
+}
+
+@keyframes resourcesReveal {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+/* =========================================================
+   EXTRA FLOATING MOTION
+========================================================= */
+
+.admission-section::before {
+  content: "";
+
+  position: absolute;
+
+  width: 14px;
+  height: 14px;
+
+  left: 15%;
+  top: 35%;
+
+  border-radius: 50%;
+
+  background: rgba(61, 32, 157, 0.08);
+
+  animation: floatingDot 5s ease-in-out infinite;
+  pointer-events: none;
+}
+
+.admission-section::after {
+  content: "";
+
+  position: absolute;
+
+  width: 9px;
+  height: 9px;
+
+  right: 18%;
+  bottom: 22%;
+
+  border-radius: 50%;
+
+  background: rgba(10, 170, 89, 0.1);
+
+  animation: floatingDotTwo 4s ease-in-out infinite;
+  pointer-events: none;
+}
+
+@keyframes floatingDot {
+  0%,
+  100% {
+    transform: translate(0, 0) scale(1);
+    opacity: 0.4;
+  }
+
+  50% {
+    transform: translate(15px, -25px) scale(1.4);
+    opacity: 0.8;
+  }
+}
+
+@keyframes floatingDotTwo {
+  0%,
+  100% {
+    transform: translate(0, 0);
+    opacity: 0.3;
+  }
+
+  50% {
+    transform: translate(-15px, -20px);
+    opacity: 0.8;
+  }
+}
+
+
+/* =========================================================
+   MOBILE ANIMATIONS
+========================================================= */
+
+@media (max-width: 600px) {
+
+  .admission-container {
+    animation-duration: 0.8s;
+  }
+
+  .admission-title {
+    animation-delay: 0.2s;
+  }
+
+  .admission-description {
+    animation-delay: 0.35s;
+  }
+
+  .admission-button {
+    animation-delay: 0.45s;
+  }
+
+  .admission-character {
+    animation:
+      characterEntranceMobile 0.9s ease-out 0.2s both,
+      characterFloatMobile 4s ease-in-out 1.2s infinite;
+  }
+
+  @keyframes characterEntranceMobile {
+    from {
+      opacity: 0;
+      transform: translateX(-50px) translateY(30px) scale(0.8);
+    }
+
+    to {
+      opacity: 1;
+      transform: translateX(0) translateY(0) scale(1);
+    }
+  }
+
+  @keyframes characterFloatMobile {
+    0%,
+    100% {
+      transform: translateY(0);
+    }
+
+    50% {
+      transform: translateY(-7px);
+    }
+  }
+
+  .admission-plane {
+    animation:
+      planeEntranceMobile 0.9s ease-out 0.5s both,
+      planeFlyMobile 4s ease-in-out 1.4s infinite;
+  }
+
+  @keyframes planeEntranceMobile {
+    from {
+      opacity: 0;
+      transform: translate(-30px, 25px) rotate(-20deg);
+    }
+
+    to {
+      opacity: 1;
+      transform: translate(0, 0) rotate(0);
+    }
+  }
+
+  @keyframes planeFlyMobile {
+    0%,
+    100% {
+      transform: translate(0, 0) rotate(0);
+    }
+
+    50% {
+      transform: translate(12px, -8px) rotate(4deg);
+    }
+  }
+
+  .admission-sun {
+    animation:
+      sunEntrance 0.8s ease-out 0.5s both,
+      sunFloat 3.5s ease-in-out 1.3s infinite;
+  }
+
+  .admission-section::before {
+    left: 10%;
+    top: 45%;
+  }
+
+  .admission-section::after {
+    right: 10%;
+    bottom: 15%;
+  }
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 400px) {
+
+  .admission-character {
+    animation-duration: 0.8s;
+  }
+
+  .admission-plane {
+    animation-duration: 3.5s;
+  }
+
+  .admission-sun {
+    animation-duration: 3.2s;
+  }
+
+  .admission-button:hover {
+    transform: translateY(-3px) scale(1.02);
+  }
+}
+
+
+/* =========================================================
+   ACCESSIBILITY
+   Disable motion for users who prefer reduced motion
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .admission-section,
+  .admission-container,
+  .admission-label,
+  .admission-title,
+  .admission-description,
+  .admission-button,
+  .admission-character,
+  .character-globe img,
+  .admission-plane,
+  .admission-plane img,
+  .admission-sun,
+  .admission-sun img,
+  .admission-resources,
+  .admission-section::before,
+  .admission-section::after {
+    animation: none !important;
+    transition: none !important;
+  }
+}
