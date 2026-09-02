@@ -66,12 +66,21 @@
 
   padding: 30px 28px;
 }
-
+/* 
 .parent-content {
   width: 100%;
   text-align: center;
 
   padding-right: 105px;
+} */
+ .parent-content {
+  width: 100%;
+  text-align: center;
+  padding-right: 105px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .parent-content h2,
@@ -98,7 +107,7 @@
   line-height: 1.65;
   font-family: "Work Sans",sans-serif;
   font-style: Regular;
-
+min-height: 35px;
   max-width: 410px;
 }
 
@@ -153,13 +162,32 @@
   padding: 30px;
 }
 
-.calendar-content {
+/* .calendar-content {
   width: 100%;
 
   text-align: center;
 
   padding-left: 38px;
   padding-right: 5px;
+} */
+
+/* .calendar-content {
+  width: 100%;
+  text-align: center;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.calendar-content h2 {
+  margin-top: -15px;
+  font-size: 35px;
+} */
+
+.calendar-content {
+  width: 100%;
+  text-align: center;
+  padding-left: 0;
+  padding-right: 0;
 }
 
 .calendar-content h2 {
@@ -210,7 +238,7 @@
    PURPLE BUTTON
 ========================================================= */
 
-.purple-btn {
+/* .purple-btn {
   border: none;
   outline: none;
 
@@ -241,6 +269,119 @@
     0 4px 8px rgba(45, 25, 120, 0.25);
 
   transition: all 0.25s ease;
+} */
+
+/* .purple-btn {
+  border: none;
+  outline: none;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 8px;
+
+  width: 180px;
+  height: 48px;
+
+  padding: 0;
+
+  border-radius: 30px;
+
+  background: #39219c;
+  color: white;
+
+  font-family: inherit;
+  font-size: 12px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  box-shadow:
+    0 4px 8px rgba(45, 25, 120, 0.25);
+
+  transition: all 0.25s ease;
+} */
+ /* .purple-btn {
+  border: none;
+  outline: none;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+
+  width: 180px;
+  height: 48px;
+  padding: 0;
+
+  border-radius: 30px;
+
+  background: #39219c;
+  color: white;
+
+  font-family: inherit;
+  font-size: 12px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  box-shadow:
+    0 4px 8px rgba(45, 25, 120, 0.25);
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease,
+    background 0.3s ease;
+
+  position: absolute;
+  left: 50%;
+  bottom: 58px;
+  margin-left: -90px;
+} */
+
+
+.purple-btn {
+  border: none;
+  outline: none;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+
+  width: 180px;
+  height: 48px;
+  padding: 0;
+
+  /* margin-top: 13px; */
+  margin-top: 13px;
+
+  border-radius: 30px;
+
+  background: #39219c;
+  color: white;
+
+  font-family: inherit;
+  font-size: 12px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  box-shadow:
+    0 4px 8px rgba(45, 25, 120, 0.25);
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease,
+    background 0.3s ease;
+}
+.parent-content h3,
+.calendar-content h3 {
+  min-height: 21px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .purple-btn:hover {
@@ -412,16 +553,25 @@
 
     padding: 30px 18px;
   }
+  .purple-btn {
+  width: 170px;
+  height: 46px;
+}
 
 
   /* Parent */
-
+/* 
   .parent-content {
     padding-right: 0;
     padding-bottom: 75px;
-  }
+  } */
 
-  .parent-content h2,
+  .parent-content {
+  width: 100%;
+  text-align: center;
+  padding-right: 0;
+}
+  /* .parent-content h2,
   .calendar-content h2 {
     font-size: 25px;
   }
@@ -436,7 +586,28 @@
   .parent-content h3,
   .calendar-content h3 {
     font-size: 13px;
-  }
+  } */
+
+  .parent-content h2,
+.calendar-content h2 {
+  font-size: 25px;
+  margin-bottom: 8px;
+  min-height: 54px;
+}
+
+.parent-content p,
+.calendar-content p {
+  font-size: 12px;
+  line-height: 1.5;
+  max-width: 100%;
+}
+
+.parent-content h3,
+.calendar-content h3 {
+  font-size: 13px;
+  margin: 5px 0 0;
+  min-height: 0;
+}
 
   .parent-image {
     width: 95px;

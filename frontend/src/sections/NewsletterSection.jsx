@@ -23,7 +23,56 @@ const MONTH_NAMES_AR = [
 
 function Resources() {
   const { language } = useLanguage();
-  const c = language === "ar" ? { guide: "دليل أولياء الأمور", guideText: "حمّلوا دليلنا الكامل لمعرفة المزيد عن برامجنا وسياساتنا وروتيننا اليومي وكيف نعتني بأطفالكم.", guideDownload: "تحميل إرشادات أولياء الأمور", pdf: "احصلوا على الدليل الكامل بصيغة PDF", downloadPdf: "تحميل PDF", calendar: "التقويم الأكاديمي", calendarText: "اطّلعوا على التواريخ الدراسية المهمة والعطلات والفعاليات الخاصة طوال العام. خططوا مسبقًا ولا تفوتوا أي لحظة من رحلة تعلم طفلكم.", downloadCalendar: "تحميل التقويم", newsletter: "النشرة الإخبارية", updated: "ابقوا على اطلاع", newsletterText: "اشتركوا في نشرتنا الإخبارية لتصلكم أحدث الأخبار والفعاليات والنصائح التعليمية من حضانة كيدز لاند.", download: "تحميل", downloadNewsletter: "تحميل النشرة", browseHeading: "تصفح وحمّل النشرات السابقة", footnote: "يمكنكم عرض وتحميل النشرات من أي سنة وتاريخ سابق", comingSoon: "قريبًا", month: "الشهر", year: "السنة", noEditions: "لا توجد نشرات متاحة بعد" } : { guide: "Parent’s Guide", guideText: "Download our complete guide to know more about our programs, policies, daily routines, and how we care for your little ones.", guideDownload: "Download Parent’s Guideline", pdf: "Get the complete guide in PDF format", downloadPdf: "Download PDF", calendar: "Academic Calendar", calendarText: "Stay updated with important school dates, holidays, and special events throughout the year. Plan ahead and never miss a moment of your child’s learning journey.", downloadCalendar: "Download Calendar", newsletter: "NEWSLETTER", updated: "Stay Updated", newsletterText: "Subscribe to our newsletter for the latest news, events, and educational tips from Kids Land Nursery.", download: "Download", downloadNewsletter: "Download Newsletter", browseHeading: "Browse & Download Past Newsletters", footnote: "You can view and download newsletters from any past year date", comingSoon: "Coming soon", month: "Month", year: "Year", noEditions: "No newsletters available yet" };
+
+  const c =
+  language === "ar"
+    ? {
+        guide: "دليل أولياء الأمور",
+        guideText:
+          "حمّلوا دليلنا الكامل لمعرفة المزيد عن برامجنا وسياساتنا وروتيننا اليومي وكيف نعتني بأطفالكم.",
+        guideDownload: "تحميل إرشادات أولياء الأمور",
+        downloadPdf: "تحميل PDF",
+        calendar: "التقويم الأكاديمي",
+        calendarText:
+          "اطّلعوا على التواريخ الدراسية المهمة والعطلات والفعاليات الخاصة طوال العام. خططوا مسبقًا ولا تفوتوا أي لحظة من رحلة تعلم طفلكم.",
+        downloadCalendar: "تحميل التقويم",
+        newsletter: "النشرة الإخبارية",
+        updated: "ابقوا على اطلاع",
+        newsletterText:
+          "اشتركوا في نشرتنا الإخبارية لتصلكم أحدث الأخبار والفعاليات والنصائح التعليمية من حضانة كيدز لاند.",
+        download: "تحميل",
+        downloadNewsletter: "تحميل النشرة",
+        browseHeading: "تصفح وحمّل النشرات السابقة",
+        footnote: "يمكنكم عرض وتحميل النشرات من أي سنة وتاريخ سابق",
+        comingSoon: "قريبًا",
+        month: "الشهر",
+        year: "السنة",
+        noEditions: "لا توجد نشرات متاحة بعد",
+      }
+    : {
+        guide: "Parent’s Guide",
+        guideText:
+          "Download our complete guide to know more about our programs, policies, daily routines, and how we care for your little ones.",
+        guideDownload: "Download Parent’s Guideline",
+        downloadPdf: "Download PDF",
+        calendar: "Academic Calendar",
+        calendarText:
+          "Stay updated with important school dates, holidays, and special events throughout the year. Plan ahead and never miss a moment of your child’s learning journey.",
+        downloadCalendar: "Download Calendar",
+        newsletter: "NEWSLETTER",
+        updated: "Stay Updated",
+        newsletterText:
+          "Subscribe to our newsletter for the latest news, events, and educational tips from Kids Land Nursery.",
+        download: "Download",
+        downloadNewsletter: "Download Newsletter",
+        browseHeading: "Browse & Download Past Newsletters",
+        footnote: "You can view and download newsletters from any past year date",
+        comingSoon: "Coming soon",
+        month: "Month",
+        year: "Year",
+        noEditions: "No newsletters available yet",
+      };
+  // const c = language === "ar" ? { guide: "دليل أولياء الأمور", guideText: "حمّلوا دليلنا الكامل لمعرفة المزيد عن برامجنا وسياساتنا وروتيننا اليومي وكيف نعتني بأطفالكم.", guideDownload: "تحميل إرشادات أولياء الأمور", pdf: "احصلوا على الدليل الكامل بصيغة PDF", downloadPdf: "تحميل PDF", calendar: "التقويم الأكاديمي", calendarText: "اطّلعوا على التواريخ الدراسية المهمة والعطلات والفعاليات الخاصة طوال العام. خططوا مسبقًا ولا تفوتوا أي لحظة من رحلة تعلم طفلكم.", downloadCalendar: "تحميل التقويم", newsletter: "النشرة الإخبارية", updated: "ابقوا على اطلاع", newsletterText: "اشتركوا في نشرتنا الإخبارية لتصلكم أحدث الأخبار والفعاليات والنصائح التعليمية من حضانة كيدز لاند.", download: "تحميل", downloadNewsletter: "تحميل النشرة", browseHeading: "تصفح وحمّل النشرات السابقة", footnote: "يمكنكم عرض وتحميل النشرات من أي سنة وتاريخ سابق", comingSoon: "قريبًا", month: "الشهر", year: "السنة", noEditions: "لا توجد نشرات متاحة بعد" } : { guide: "Parent’s Guide", guideText: "Download our complete guide to know more about our programs, policies, daily routines, and how we care for your little ones.", guideDownload: "Download Parent’s Guideline", pdf: "Get the complete guide in PDF format", downloadPdf: "Download PDF", calendar: "Academic Calendar", calendarText: "Stay updated with important school dates, holidays, and special events throughout the year. Plan ahead and never miss a moment of your child’s learning journey.", downloadCalendar: "Download Calendar", newsletter: "NEWSLETTER", updated: "Stay Updated", newsletterText: "Subscribe to our newsletter for the latest news, events, and educational tips from Kids Land Nursery.", download: "Download", downloadNewsletter: "Download Newsletter", browseHeading: "Browse & Download Past Newsletters", footnote: "You can view and download newsletters from any past year date", comingSoon: "Coming soon", month: "Month", year: "Year", noEditions: "No newsletters available yet" };
   const monthNames = language === "ar" ? MONTH_NAMES_AR : MONTH_NAMES_EN;
 
   // Whatever the admin currently has uploaded for guideline/calendar -
@@ -103,7 +152,7 @@ function Resources() {
             <p>
               {c.guideText}
             </p>
-
+{/* 
             <h3>{c.guideDownload}</h3>
 
             <span className="file-text">
@@ -114,7 +163,15 @@ function Resources() {
               className="purple-btn"
               onClick={() => openFile(guideline?.file)}
               disabled={!guideline}
-            >
+            > */}
+
+            <h3>{c.guideDownload}</h3>
+
+<button
+  className="purple-btn"
+  onClick={() => openFile(guideline?.file)}
+  disabled={!guideline}
+>
               <Download size={12} />
               {guideline ? c.downloadPdf : c.comingSoon}
             </button>

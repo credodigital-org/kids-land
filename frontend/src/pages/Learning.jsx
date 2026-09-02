@@ -289,7 +289,7 @@ export default function Learning() {
                   <p>{program.description}</p>
 
 
-                  <button
+                  {/* <button
                     type="button"
                     className={`learn-more ${color}`}
                   >
@@ -299,7 +299,7 @@ export default function Learning() {
                       {isArabic ? "←" : "→"}
                     </span>
 
-                  </button>
+                  </button> */}
 
                 </div>
 
