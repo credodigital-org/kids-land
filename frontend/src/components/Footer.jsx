@@ -508,7 +508,7 @@ function Footer() {
       {/* Copyright */}
       <div className="footer-bottom">
 
-        © 2024 Kids Land Nursery. All rights reserved.
+        © 2026 Kids Land Nursery. All rights reserved.
 
       </div>
 

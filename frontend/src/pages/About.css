@@ -124,11 +124,74 @@
   overflow: hidden;
 }
 
+.values-section {
+  position: relative;
+  width: 100%;
+  padding: 20px 0 70px;
+  background: #f5edf8;
+  border-radius: 32px;
+  overflow: hidden;
+}
+
+/* Right-side scroll hint */
+.values-section::after {
+  content: "→";
+  position: absolute;
+  right: 22px;
+  top: 50%;
+  transform: translateY(-50%);
+
+  width: 42px;
+  height: 42px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: rgba(255, 255, 255, 0.92);
+  color: #38229a;
+
+  border-radius: 50%;
+
+  font-size: 25px;
+  font-weight: 700;
+
+  box-shadow: 0 5px 15px rgba(56, 34, 154, 0.15);
+
+  z-index: 5;
+
+  pointer-events: none;
+}
+.values-section {
+  position: relative;
+}
+
+.values-section::before {
+  content: "";
+  position: absolute;
+
+  right: 0;
+  top: 70px;
+  bottom: 50px;
+
+  width: 90px;
+
+  background: linear-gradient(
+    to right,
+    rgba(245, 237, 248, 0),
+    rgba(245, 237, 248, 0.95)
+  );
+
+  z-index: 4;
+
+  pointer-events: none;
+}
+
 .values-section .section-title {
   margin-bottom: 20px;
 }
 
-.values-slider {
+/* .values-slider {
   width: max-content;
   max-width: 100%;
   display: flex;
@@ -139,6 +202,38 @@
   overflow-x: auto;
   -webkit-overflow-scrolling: touch;
   scrollbar-width: thin;
+} */
+
+.values-slider {
+  width: 100%;
+  max-width: 100%;
+
+  display: flex;
+  gap: 30px;
+
+  padding: 5px 70px 15px;
+
+  overflow-x: auto;
+  overflow-y: hidden;
+
+  -webkit-overflow-scrolling: touch;
+
+  scroll-behavior: smooth;
+  scroll-snap-type: x proximity;
+
+  cursor: grab;
+
+  /* Hide scrollbar */
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.values-slider::-webkit-scrollbar {
+  display: none;
+}
+
+.values-slider:active {
+  cursor: grabbing;
 }
 
 .value-card {
@@ -1902,7 +1997,7 @@
    SCROLLBAR FOR VALUES
 ========================================================= */
 
-.values-slider::-webkit-scrollbar {
+/* .values-slider::-webkit-scrollbar {
   height: 6px;
 }
 
@@ -1913,7 +2008,7 @@
 
 .values-slider::-webkit-scrollbar-track {
   background: rgba(255, 255, 255, 0.5);
-}
+} */
 
 
 /* =========================================================
