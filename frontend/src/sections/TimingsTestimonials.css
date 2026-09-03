@@ -175,7 +175,7 @@
 
 /* SAME SIZE + SAME POSITION FOR BOTH ICONS */
 .timing-icon,
-.calendar-icon,
+.calendars-icon,
 .party-icon {
   width: 63px;
   height: 63px;
@@ -204,7 +204,7 @@
 
 /* IMAGE */
 .timing-icon img,
-.calendar-icon img,
+.calendars-icon img,
 .party-icon img {
   display: block;
 
@@ -893,7 +893,7 @@
   ========================================= */
 
   .timing-icon,
-  .calendar-icon,
+  .calendars-icon,
   .party-icon {
     width: 52px;
     height: 52px;
@@ -914,7 +914,7 @@
   }
 
   .timing-icon img,
-  .calendar-icon img,
+  .calendars-icon img,
   .party-icon img {
     display: block;
 
@@ -1211,7 +1211,7 @@
 
   /* CARD ICON */
   .timing-icon,
-  .calendar-icon,
+  .calendars-icon,
   .party-icon {
     width: 50px;
     height: 50px;
@@ -1221,7 +1221,7 @@
   }
 
   .timing-icon img,
-  .calendar-icon img,
+  .calendars-icon img,
   .party-icon img {
     width: 50px;
     height: 50px;

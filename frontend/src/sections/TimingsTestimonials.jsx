@@ -104,7 +104,7 @@ function TimingsTestimonials() {
 
             <div className="timing-card-top">
 
-              <div className="timing-icon calendar-icon">
+              <div className="timing-icon calendars-icon">
                 <img src={calender}/>
               </div>
 

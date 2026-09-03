@@ -507,9 +507,18 @@ function Footer() {
 
       {/* Copyright */}
       <div className="footer-bottom">
+        <span className="footer-designed">
+          Designed &amp; Developed By
+        </span>
 
-        © 2026 Kids Land Nursery. All rights reserved.
-
+        <a
+          href="https://wa.me/message/ER4N3AB5IPPCC1"
+          target="_blank"
+          rel="noreferrer"
+          className="credo-link"
+        >
+          Credo Digital Designs LLC SPC
+        </a>
       </div>
 
     </footer>

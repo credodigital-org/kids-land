@@ -536,7 +536,7 @@
    TABLET LANDSCAPE
 ========================================================= */
 
-@media (max-width: 1024px) {
+/* @media (max-width: 1024px) {
 
   .navbar-container {
     width: calc(100% - 30px);
@@ -562,13 +562,13 @@
 
     padding: 0 5px;
   }
-}
+} */
 
 /* =========================================================
    TABLET
 ========================================================= */
 
-@media (max-width: 900px) {
+/* @media (max-width: 900px) {
 
   .site-header {
     min-height: 100px;
@@ -602,6 +602,283 @@
 
     padding: 0 4px;
   }
+} */
+
+/* =========================================================
+   IPAD / TABLET RESPONSIVE
+   iPad Air = 820px
+========================================================= */
+
+@media (max-width: 1024px) {
+
+  /* HEADER */
+  .site-header {
+    height: 90px;
+    min-height: 90px;
+
+    position: fixed !important;
+    top: 0;
+    left: 0;
+    right: 0;
+
+    z-index: 9999;
+
+    background: #ffffff;
+
+    box-shadow:
+      0 4px 16px rgba(44, 31, 92, 0.10);
+
+    transform: none !important;
+  }
+
+  /* CONTAINER */
+  .navbar-container {
+    width: calc(100% - 30px);
+
+    height: 90px;
+    min-height: 90px;
+
+    padding: 5px 0;
+
+    margin: 0 auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 0;
+
+    position: relative;
+  }
+
+  /* =====================================================
+     LOGO
+  ===================================================== */
+
+  .kids-logo {
+    width: 145px;
+    min-width: 145px;
+    height: 75px;
+
+    justify-content: flex-start;
+  }
+
+  .logo-image {
+    width: 140px;
+    max-width: 140px;
+    max-height: 70px;
+
+    object-fit: contain;
+  }
+
+  /* =====================================================
+     HAMBURGER BUTTON
+  ===================================================== */
+
+  .mobile-menu-button {
+    display: flex !important;
+
+    width: 48px;
+    height: 48px;
+
+    flex-shrink: 0;
+
+    align-items: center;
+    justify-content: center;
+
+    border: none;
+    border-radius: 12px;
+
+    background: #f5f2ff;
+    color: #6334c8;
+
+    cursor: pointer;
+
+    z-index: 10002;
+  }
+
+  /* =====================================================
+     HIDE DESKTOP LANGUAGE BUTTON
+  ===================================================== */
+
+  .nav-language-toggle-desktop {
+    display: none !important;
+  }
+
+  /* =====================================================
+     MOBILE / TABLET DROPDOWN
+  ===================================================== */
+
+  .main-navigation {
+    position: absolute;
+
+    top: 82px;
+    left: 0;
+
+    width: 100%;
+
+    min-height: auto;
+    height: auto;
+
+    padding: 10px;
+
+    display: flex;
+    flex-direction: column;
+
+    align-items: stretch;
+
+    gap: 4px;
+
+    background: #ffffff;
+
+    border: 1px solid #eeeeee;
+    border-radius: 18px;
+
+    box-shadow:
+      0 8px 25px rgba(0, 0, 0, 0.12);
+
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+
+    transform: translateY(-15px) scale(0.97);
+
+    transform-origin: top center;
+
+    transition:
+      opacity 0.3s ease,
+      transform 0.3s ease,
+      visibility 0.3s ease;
+
+    z-index: 10001;
+  }
+
+  /* OPEN MENU */
+
+  .main-navigation.show {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+
+    transform: translateY(0) scale(1);
+  }
+
+  /* =====================================================
+     NAV LINKS
+  ===================================================== */
+
+  .nav-link {
+    width: 100%;
+
+    min-height: 48px;
+    height: 48px;
+
+    flex: none;
+
+    justify-content: flex-start;
+
+    padding: 0 20px;
+
+    font-size: 15px;
+
+    border-radius: 12px;
+
+    opacity: 0;
+
+    transform: translateX(-15px);
+
+    transition:
+      color 0.25s ease,
+      background 0.25s ease,
+      transform 0.25s ease,
+      opacity 0.3s ease;
+  }
+
+  /* Show links when menu opens */
+
+  .main-navigation.show .nav-link {
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+  .main-navigation.show .nav-link:nth-child(1) {
+    transition-delay: 0.05s;
+  }
+
+  .main-navigation.show .nav-link:nth-child(2) {
+    transition-delay: 0.10s;
+  }
+
+  .main-navigation.show .nav-link:nth-child(3) {
+    transition-delay: 0.15s;
+  }
+
+  .main-navigation.show .nav-link:nth-child(4) {
+    transition-delay: 0.20s;
+  }
+
+  .main-navigation.show .nav-link:nth-child(5) {
+    transition-delay: 0.25s;
+  }
+
+  .main-navigation.show .nav-link:nth-child(6) {
+    transition-delay: 0.30s;
+  }
+
+  /* Remove desktop separators */
+
+  .nav-link:not(:last-child)::after {
+    display: none;
+  }
+
+  /* Active item */
+
+  .nav-link.active {
+    justify-content: flex-start;
+
+    border-radius: 12px;
+  }
+
+  /* Mobile language button */
+
+  .nav-language-toggle-mobile {
+    display: flex !important;
+
+    width: 100%;
+
+    justify-content: center;
+
+    margin-top: 10px;
+  }
+}
+
+
+/* =========================================================
+   iPAD AIR SPECIFIC
+   820px
+========================================================= */
+
+@media (min-width: 769px) and (max-width: 1024px) {
+
+  .kids-logo {
+    width: 150px;
+    min-width: 150px;
+  }
+
+  .logo-image {
+    width: 145px;
+    max-height: 72px;
+  }
+
+  .mobile-menu-button {
+    width: 50px;
+    height: 50px;
+  }
+
+  .main-navigation {
+    top: 82px;
+  }
+
 }
 
 /* =========================================================
