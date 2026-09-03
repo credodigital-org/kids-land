@@ -191,7 +191,7 @@ function Resources() {
           <img
             src={calendarImage}
             alt="Academic Calendar"
-            className="calendar-icon"
+            className="calendar-icon1"
           />
 
           <div className="calendar-content">

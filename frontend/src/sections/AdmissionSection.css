@@ -402,7 +402,8 @@
 @media (max-width: 600px) {
 
   .admission-section {
-    min-height: 280px;
+    min-height: 250px;
+    height: 280px;
   }
 
   .admission-container {
@@ -448,8 +449,8 @@
   }
 
   .admission-plane {
-    left: 115px;
-    top: 215px;
+    left: 50px;
+    top: 30px;
 
     width: 55px;
     height: 50px;
@@ -472,7 +473,7 @@
 @media (max-width: 400px) {
 
   .admission-section {
-    min-height: 450px;
+    min-height: 200px;
   }
 
   .admission-container {
@@ -496,7 +497,8 @@
   }
 
   .admission-plane {
-    left: 100px;
+    left: 50px;
+    top: 30px;
   }
 
   .admission-sun {

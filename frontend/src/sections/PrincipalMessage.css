@@ -538,7 +538,7 @@ transform: rotate(40deg);
   }
 
   .principal-sun {
-    top: 30px;
+    top: -70px;
     left: -28px;
 
     width: 105px;

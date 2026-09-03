@@ -57,12 +57,26 @@ function Admission() {
 
           <div className="admission-buttons">
 
-            <button className="apply-btn">
+            <button className="apply-btn"
+            onClick={() => {
+              document.getElementById("register-section")?.scrollIntoView({
+                behavior: "smooth",
+                block: "start",
+              });
+            }}
+          >
               {c.apply}
               <ArrowRight size={17} />
             </button>
 
-            <button className="enquire-btn">
+            <button className="enquire-btn"
+            onClick={() =>
+              window.open(
+                "https://wa.me/qr/T5VVIHFFWBXNB1",
+                "_blank"
+              )
+            }
+          >
               {c.enquire}
               <ArrowRight size={17} />
             </button>
@@ -157,7 +171,7 @@ function Admission() {
 
 
       {/* ================= REGISTER SECTION ================= */}
-      <section className="register-section">
+      <section id="register-section" className="register-section">
 
         <div className="register-card">
 
