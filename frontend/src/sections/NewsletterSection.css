@@ -2621,3 +2621,158 @@ min-height: 35px;
   }
 
 }
+/* =========================================================
+   CUSTOM MONTH DROPDOWN
+========================================================= */
+
+.newsletter-custom-select {
+  position: relative;
+  width: 100%;
+}
+
+.newsletter-custom-select-button {
+  position: relative;
+  width: 100%;
+  height: 54px;
+
+  border: none;
+  border-radius: 8px;
+
+  background: #ffffff;
+
+  padding: 0 38px 0 43px;
+
+  display: flex;
+  align-items: center;
+
+  font-family: inherit;
+  font-size: 18px;
+  font-weight: 700;
+
+  color: #111111;
+
+  cursor: pointer;
+
+  box-shadow: 0 6px 13px rgba(0, 0, 0, 0.14);
+
+  text-align: left;
+}
+
+.newsletter-custom-select-button .newsletter-select-icon {
+  position: absolute;
+  left: 13px;
+  top: 50%;
+  transform: translateY(-50%);
+
+  color: #20aa5a;
+}
+
+.newsletter-select-arrow {
+  position: absolute;
+  right: 13px;
+  top: 50%;
+  transform: translateY(-50%);
+
+  font-size: 17px;
+  color: #111111;
+}
+
+
+/* MONTH LIST */
+
+.newsletter-month-dropdown {
+  position: absolute;
+
+  left: 0;
+  right: 0;
+  top: calc(100% + 5px);
+
+  z-index: 1000;
+
+  max-height: 190px;
+  overflow-y: auto;
+
+  background: #ffffff;
+
+  border: 1px solid #eeeeee;
+  border-radius: 8px;
+
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.18);
+
+  padding: 5px 0;
+}
+
+
+/* SCROLLBAR */
+
+.newsletter-month-dropdown::-webkit-scrollbar {
+  width: 7px;
+}
+
+.newsletter-month-dropdown::-webkit-scrollbar-track {
+  background: #f2f2f2;
+}
+
+.newsletter-month-dropdown::-webkit-scrollbar-thumb {
+  background: #20aa5a;
+  border-radius: 10px;
+}
+
+
+/* MONTH OPTIONS */
+
+.newsletter-month-option {
+  width: 100%;
+
+  border: none;
+  background: #ffffff;
+
+  padding: 10px 15px;
+
+  font-family: inherit;
+  font-size: 16px;
+  font-weight: 600;
+
+  color: #222222;
+
+  text-align: left;
+
+  cursor: pointer;
+}
+
+.newsletter-month-option:hover {
+  background: #f0faf4;
+}
+
+.newsletter-month-option.selected {
+  background: #e5f7ec;
+  color: #168b4a;
+  font-weight: 800;
+}
+
+
+/* MAKE YEAR BOX A LITTLE SMALLER TOO */
+
+.newsletter-select-wrapper {
+  height: 54px;
+}
+
+.newsletter-select-wrapper select {
+  font-size: 18px;
+}
+
+
+/* MOBILE */
+
+@media (max-width: 600px) {
+
+  .newsletter-custom-select-button {
+    height: 50px;
+    font-size: 17px;
+  }
+
+  .newsletter-month-dropdown {
+    max-height: 180px;
+  }
+
+}

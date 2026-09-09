@@ -84,9 +84,13 @@ function Resources() {
   // The full newsletter archive, plus which year/month the visitor has
   // picked. Defaults to the most recent edition (the archive comes back
   // ordered by -edition_date, so editions[0] is the latest).
+  // const [editions, setEditions] = useState([]);
+  // const [selectedYear, setSelectedYear] = useState(null);
+  // const [selectedMonth, setSelectedMonth] = useState(null);
   const [editions, setEditions] = useState([]);
-  const [selectedYear, setSelectedYear] = useState(null);
-  const [selectedMonth, setSelectedMonth] = useState(null);
+const [selectedYear, setSelectedYear] = useState(null);
+const [selectedMonth, setSelectedMonth] = useState(null);
+const [monthDropdownOpen, setMonthDropdownOpen] = useState(false);
 
   useEffect(() => {
     guidelinesService.getCurrentGuideline().then(setGuideline).catch(() => setGuideline(null));
@@ -299,7 +303,7 @@ function Resources() {
 
 
       {/* MONTH */}
-      <div className="newsletter-select-field">
+      {/* <div className="newsletter-select-field">
 
         <label>
           {c.month}
@@ -329,7 +333,67 @@ function Resources() {
 
         </div>
 
+      </div> */}
+
+      {/* MONTH */}
+<div className="newsletter-select-field">
+
+  <label>
+    {c.month}
+  </label>
+
+  <div className="newsletter-custom-select">
+
+    <button
+      type="button"
+      className="newsletter-custom-select-button"
+      onClick={() =>
+        setMonthDropdownOpen((prev) => !prev)
+      }
+    >
+      <CalendarDays
+        size={17}
+        className="newsletter-select-icon"
+      />
+
+      <span>
+        {selectedMonth
+          ? monthNames[selectedMonth - 1]
+          : c.month}
+      </span>
+
+      <span className="newsletter-select-arrow">
+        ▾
+      </span>
+    </button>
+
+    {monthDropdownOpen && (
+      <div className="newsletter-month-dropdown">
+
+        {availableMonthsForYear.map((m) => (
+          <button
+            key={m}
+            type="button"
+            className={
+              selectedMonth === m
+                ? "newsletter-month-option selected"
+                : "newsletter-month-option"
+            }
+            onClick={() => {
+              setSelectedMonth(m);
+              setMonthDropdownOpen(false);
+            }}
+          >
+            {monthNames[m - 1]}
+          </button>
+        ))}
+
       </div>
+    )}
+
+  </div>
+
+</div>
 
 
       {/* DOWNLOAD BUTTON */}
