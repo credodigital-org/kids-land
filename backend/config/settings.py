@@ -107,9 +107,21 @@ DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 # ------------------------------------------------------------------
 # CORS - only the frontend origin(s) may call this API
 # ------------------------------------------------------------------
-CORS_ALLOWED_ORIGINS = os.environ.get(
-    "CORS_ALLOWED_ORIGINS", "http://localhost:5173"
-).split(",")
+# CORS_ALLOWED_ORIGINS = os.environ.get(
+#     "CORS_ALLOWED_ORIGINS", "http://localhost:5173"
+# ).split(",")
+# ------------------------------------------------------------------
+# CORS - only the frontend origin(s) may call this API
+# ------------------------------------------------------------------
+CORS_ALLOWED_ORIGINS = [
+    origin.strip()
+    for origin in os.environ.get(
+        "CORS_ALLOWED_ORIGINS",
+        "http://localhost:5173"
+    ).split(",")
+    if origin.strip()
+]
+
 
 # ------------------------------------------------------------------
 # DRF + JWT
