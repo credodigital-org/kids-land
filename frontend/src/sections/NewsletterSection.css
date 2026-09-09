@@ -2446,107 +2446,98 @@ min-height: 35px;
    MOBILE
    ========================================================= */
 
+/* =========================================================
+   MOBILE - NEWSLETTER
+   ========================================================= */
+
 @media (max-width: 600px) {
 
   .newsletter-card {
     width: 100%;
-
     margin-top: 35px;
-
     padding: 28px 20px 25px;
-
     border-radius: 22px;
+    box-sizing: border-box;
   }
-
 
   .newsletter-label {
     font-size: 12px;
-
     letter-spacing: 1.5px;
   }
 
-
   .newsletter-card h2 {
     font-size: 30px;
-
+    line-height: 1.15;
     margin-bottom: 14px;
   }
 
-
   .newsletter-card > p {
     font-size: 14px;
-
     line-height: 1.6;
   }
 
-
   .newsletter-divider-wrapper {
     gap: 8px;
-
     margin: 25px 0 24px;
   }
 
-
   .newsletter-browse-heading {
     font-size: 12px;
-
     white-space: normal;
-
     text-align: center;
   }
 
-
+  /* YEAR + MONTH */
   .newsletter-selectors {
     grid-template-columns: 1fr;
-
-    gap: 20px;
-
+    gap: 16px;
     align-items: stretch;
   }
 
+  .newsletter-select-field {
+    width: 100%;
+  }
 
   .newsletter-select-field label {
-    font-size: 20px;
-
-    margin-bottom: 8px;
+    font-size: 18px;
+    margin-bottom: 6px;
   }
-
 
   .newsletter-select-wrapper {
-    height: 54px;
+    width: 100%;
+    height: 52px;
   }
-
 
   .newsletter-select-wrapper select {
-    font-size: 18px;
+    width: 100%;
+    height: 52px;
+    font-size: 16px;
+    padding: 0 38px 0 42px;
   }
 
-
+  /* DOWNLOAD */
   .newsletter-selectors .download-btn {
-    grid-column: auto;
-
     width: 100%;
-
-    height: 56px;
-
+    height: 52px;
     margin: 0;
-
     font-size: 15px;
   }
 
-
+  /* FOOTNOTE */
   .newsletter-footnote {
-    margin-top: 28px;
-
+    margin: 20px 0 0;
+    padding: 0 5px;
     font-size: 12px;
-
-    flex-wrap: wrap;
-
+    line-height: 1.5;
     text-align: center;
+    flex-wrap: wrap;
   }
-
 }
 
+
+/* =========================================================
+   SMALL MOBILE
+   ========================================================= */
 
 /* =========================================================
    SMALL MOBILE
@@ -2555,35 +2546,40 @@ min-height: 35px;
 @media (max-width: 480px) {
 
   .newsletter-card {
-    padding: 25px 16px 23px;
+    padding: 24px 16px 24px;
   }
-
 
   .newsletter-card h2 {
     font-size: 27px;
   }
 
-
   .newsletter-card > p {
     font-size: 13px;
   }
 
-
   .newsletter-select-field {
     width: 100%;
-
-    max-width: none;
   }
 
+  .newsletter-select-wrapper {
+    height: 50px;
+  }
+
+  .newsletter-select-wrapper select {
+    height: 50px;
+    font-size: 16px;
+  }
 
   .newsletter-selectors .download-btn {
     width: 100%;
-
-    height: 52px;
+    height: 50px;
+    font-size: 14px;
   }
 
+  .newsletter-footnote {
+    font-size: 11px;
+  }
 }
-
 
 /* =========================================================
    VERY SMALL MOBILE
@@ -2621,9 +2617,10 @@ min-height: 35px;
   }
 
 }
+
 /* =========================================================
    CUSTOM MONTH DROPDOWN
-========================================================= */
+   ========================================================= */
 
 .newsletter-custom-select {
   position: relative;
@@ -2631,148 +2628,234 @@ min-height: 35px;
 }
 
 .newsletter-custom-select-button {
-  position: relative;
   width: 100%;
-  height: 54px;
+  height: 58px;
+
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+
+  position: relative;
 
   border: none;
   border-radius: 8px;
 
   background: #ffffff;
 
-  padding: 0 38px 0 43px;
-
-  display: flex;
-  align-items: center;
+  padding: 0 42px 0 46px;
 
   font-family: inherit;
-  font-size: 18px;
+  font-size: 20px;
   font-weight: 700;
-
   color: #111111;
 
   cursor: pointer;
 
-  box-shadow: 0 6px 13px rgba(0, 0, 0, 0.14);
+  box-shadow:
+    0 7px 14px rgba(0, 0, 0, 0.16);
 
-  text-align: left;
+  transition:
+    box-shadow 0.3s ease,
+    transform 0.3s ease;
+}
+
+.newsletter-custom-select-button:hover {
+  transform: translateY(-1px);
+
+  box-shadow:
+    0 9px 16px rgba(0, 0, 0, 0.18);
 }
 
 .newsletter-custom-select-button .newsletter-select-icon {
   position: absolute;
-  left: 13px;
+  left: 14px;
   top: 50%;
   transform: translateY(-50%);
 
   color: #20aa5a;
+
+  pointer-events: none;
 }
 
 .newsletter-select-arrow {
   position: absolute;
-  right: 13px;
+
+  right: 16px;
   top: 50%;
+
   transform: translateY(-50%);
 
-  font-size: 17px;
-  color: #111111;
+  font-size: 18px;
+  color: #555;
+
+  pointer-events: none;
 }
-
-
-/* MONTH LIST */
 
 .newsletter-month-dropdown {
   position: absolute;
 
+  top: calc(100% + 6px);
   left: 0;
-  right: 0;
-  top: calc(100% + 5px);
 
-  z-index: 1000;
+  width: 100%;
 
-  max-height: 190px;
+  max-height: 250px;
+
   overflow-y: auto;
 
   background: #ffffff;
 
-  border: 1px solid #eeeeee;
-  border-radius: 8px;
-
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.18);
-
-  padding: 5px 0;
-}
-
-
-/* SCROLLBAR */
-
-.newsletter-month-dropdown::-webkit-scrollbar {
-  width: 7px;
-}
-
-.newsletter-month-dropdown::-webkit-scrollbar-track {
-  background: #f2f2f2;
-}
-
-.newsletter-month-dropdown::-webkit-scrollbar-thumb {
-  background: #20aa5a;
   border-radius: 10px;
+
+  box-shadow:
+    0 8px 20px rgba(0, 0, 0, 0.18);
+
+  padding: 6px 0;
+
+  z-index: 1000;
 }
-
-
-/* MONTH OPTIONS */
 
 .newsletter-month-option {
   width: 100%;
 
+  display: block;
+
   border: none;
   background: #ffffff;
 
-  padding: 10px 15px;
+  padding: 12px 18px;
+
+  text-align: left;
 
   font-family: inherit;
   font-size: 16px;
   font-weight: 600;
 
-  color: #222222;
-
-  text-align: left;
+  color: #222;
 
   cursor: pointer;
 }
 
 .newsletter-month-option:hover {
-  background: #f0faf4;
+  background: #f1ebff;
 }
 
 .newsletter-month-option.selected {
-  background: #e5f7ec;
-  color: #168b4a;
+  background: #e8d8ff;
+  color: #38219a;
   font-weight: 800;
 }
 
 
-/* MAKE YEAR BOX A LITTLE SMALLER TOO */
-
-.newsletter-select-wrapper {
-  height: 54px;
-}
-
-.newsletter-select-wrapper select {
-  font-size: 18px;
-}
-
-
-/* MOBILE */
+/* =========================================================
+   CUSTOM MONTH DROPDOWN - MOBILE
+   ========================================================= */
 
 @media (max-width: 600px) {
 
   .newsletter-custom-select-button {
-    height: 50px;
+    height: 52px;
+
+    font-size: 16px;
+
+    padding: 0 38px 0 42px;
+  }
+
+  .newsletter-custom-select-button .newsletter-select-icon {
+    left: 14px;
+  }
+
+  .newsletter-select-arrow {
+    right: 14px;
     font-size: 17px;
   }
 
   .newsletter-month-dropdown {
-    max-height: 180px;
+    max-height: 220px;
+
+    border-radius: 9px;
   }
 
+  .newsletter-month-option {
+    padding: 11px 16px;
+
+    font-size: 15px;
+  }
+}
+
+
+/* =========================================================
+   CUSTOM MONTH DROPDOWN - SMALL MOBILE
+   ========================================================= */
+
+@media (max-width: 480px) {
+
+  .newsletter-custom-select-button {
+    height: 50px;
+
+    font-size: 16px;
+  }
+
+  .newsletter-month-dropdown {
+    max-height: 200px;
+  }
+
+  .newsletter-month-option {
+    padding: 10px 14px;
+
+    font-size: 14px;
+  }
+}
+
+/* =========================================================
+   FIX - MONTH DROPDOWN ABOVE DOWNLOAD BUTTON
+   ========================================================= */
+
+.newsletter-selectors {
+  position: relative;
+  z-index: 10;
+}
+
+.newsletter-select-field {
+  position: relative;
+  z-index: 20;
+}
+
+.newsletter-custom-select {
+  position: relative;
+  z-index: 30;
+}
+
+.newsletter-month-dropdown {
+  position: absolute;
+  z-index: 9999;
+}
+
+/* =========================================================
+   FIX - MONTH DROPDOWN ABOVE DOWNLOAD BUTTON
+   ========================================================= */
+
+.newsletter-selectors {
+  position: relative;
+  z-index: 10;
+}
+
+.newsletter-select-field {
+  position: relative;
+  z-index: 20;
+}
+
+.newsletter-custom-select {
+  position: relative;
+  z-index: 30;
+}
+
+.newsletter-month-dropdown {
+  position: absolute;
+  z-index: 9999;
+}
+
+.newsletter-selectors .download-btn {
+  position: relative;
+  z-index: 1;
 }
