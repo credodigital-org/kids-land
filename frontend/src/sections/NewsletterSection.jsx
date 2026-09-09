@@ -224,75 +224,152 @@ function Resources() {
 
 
       {/* ================= NEWSLETTER ================= */}
-      <div className="newsletter-card">
+      {/* ================= NEWSLETTER ================= */}
+<div className="newsletter-card">
 
-        <div className="newsletter-label">
-          {c.newsletter}
+  {/* Small green label */}
+  <div className="newsletter-label">
+    {c.newsletter}
+  </div>
+
+  {/* Main heading */}
+  <h2 className="newsletter-title">
+    {c.updated}
+  </h2>
+
+  {/* Description */}
+  <p className="newsletter-description">
+    {c.newsletterText}
+  </p>
+
+  {/* Divider with centered text */}
+  <div className="newsletter-divider-wrapper">
+    <div className="newsletter-divider-line"></div>
+
+    <div className="newsletter-browse-heading">
+      {c.browseHeading}
+    </div>
+
+    <div className="newsletter-divider-line"></div>
+  </div>
+
+  {/* Newsletter content */}
+  {editions.length === 0 ? (
+
+    <div className="newsletter-empty">
+      {c.noEditions}
+    </div>
+
+  ) : (
+
+    <div className="newsletter-selectors">
+
+      {/* YEAR */}
+      <div className="newsletter-select-field">
+
+        <label>
+          {c.year}
+        </label>
+
+        <div className="newsletter-select-wrapper">
+
+          <CalendarDays
+            size={18}
+            className="newsletter-select-icon"
+          />
+
+          <select
+            value={selectedYear ?? ""}
+            onChange={(e) =>
+              handleYearChange(
+                parseInt(e.target.value, 10)
+              )
+            }
+          >
+            {availableYears.map((y) => (
+              <option key={y} value={y}>
+                {y}
+              </option>
+            ))}
+          </select>
+
         </div>
-
-        <h2>{c.updated}</h2>
-
-        <p>
-          {c.newsletterText}
-        </p>
-
-        <div className="newsletter-divider" />
-
-        <div className="newsletter-browse-heading">
-          {c.browseHeading}
-        </div>
-
-        {editions.length === 0 ? (
-          <span className="newsletter-empty">{c.noEditions}</span>
-        ) : (
-          <div className="newsletter-selectors">
-            <div className="newsletter-select-field">
-              <label>{c.year}</label>
-              <div className="newsletter-select-wrapper">
-                <CalendarDays size={15} className="newsletter-select-icon" />
-                <select
-                  value={selectedYear ?? ""}
-                  onChange={(e) => handleYearChange(parseInt(e.target.value, 10))}
-                >
-                  {availableYears.map((y) => (
-                    <option key={y} value={y}>{y}</option>
-                  ))}
-                </select>
-              </div>
-            </div>
-
-            <div className="newsletter-select-field">
-              <label>{c.month}</label>
-              <div className="newsletter-select-wrapper">
-                <CalendarDays size={15} className="newsletter-select-icon" />
-                <select
-                  value={selectedMonth ?? ""}
-                  onChange={(e) => setSelectedMonth(parseInt(e.target.value, 10))}
-                >
-                  {availableMonthsForYear.map((m) => (
-                    <option key={m} value={m}>{monthNames[m - 1]}</option>
-                  ))}
-                </select>
-              </div>
-            </div>
-
-            <button
-              className="download-btn"
-              onClick={() => openFile(selectedEdition?.file)}
-              disabled={!selectedEdition}
-            >
-              <Download size={14} />
-              {selectedEdition ? c.downloadNewsletter : c.comingSoon}
-            </button>
-          </div>
-        )}
-
-        <p className="newsletter-footnote">
-          <FileText size={13} />
-          {c.footnote}
-        </p>
 
       </div>
+
+
+      {/* MONTH */}
+      <div className="newsletter-select-field">
+
+        <label>
+          {c.month}
+        </label>
+
+        <div className="newsletter-select-wrapper">
+
+          <CalendarDays
+            size={18}
+            className="newsletter-select-icon"
+          />
+
+          <select
+            value={selectedMonth ?? ""}
+            onChange={(e) =>
+              setSelectedMonth(
+                parseInt(e.target.value, 10)
+              )
+            }
+          >
+            {availableMonthsForYear.map((m) => (
+              <option key={m} value={m}>
+                {monthNames[m - 1]}
+              </option>
+            ))}
+          </select>
+
+        </div>
+
+      </div>
+
+
+      {/* DOWNLOAD BUTTON */}
+      <button
+        className="download-btn"
+        onClick={() =>
+          openFile(selectedEdition?.file)
+        }
+        disabled={!selectedEdition}
+      >
+
+        <Download size={17} />
+
+        <span>
+          {selectedEdition
+            ? c.downloadNewsletter
+            : c.comingSoon}
+        </span>
+
+      </button>
+
+    </div>
+
+  )}
+
+
+  {/* Bottom note */}
+  <p className="newsletter-footnote">
+
+    <span className="newsletter-footnote-icon">
+      <FileText size={16} />
+    </span>
+
+    <span>
+      {c.footnote}
+    </span>
+
+  </p>
+
+</div>
 
     </section>
   );
