@@ -254,7 +254,7 @@ function Hero() {
             <div className="stat-meta">
 
               <AnimatedNumber
-                target={10}
+                target={20}
                 suffix="+"
                 duration={1600}
               />

@@ -8,7 +8,7 @@ import { useLanguage } from "../context/LanguageContext";
 
 function LocationSection() {
   const { language } = useLanguage();
-  const c = language === "ar" ? { title: "موقعنا", address: "العنوان", addressText: "العين، أبوظبي، الإمارات العربية المتحدة", phone: "رقم الهاتف", maps: "فتح في خرائط Google" } : { title: "Our Location", address: "Physical Address", addressText: "123 Learning Lane, Playtown, PT 56789", phone: "Phone Number", maps: "Open in Google Maps" };
+  const c = language === "ar" ? { title: "موقعنا", address: "العنوان", addressText: "العين، أبوظبي، الإمارات العربية المتحدة", phone: "رقم الهاتف", maps: "فتح في خرائط Google" } : { title: "Our Location", address: "Physical Address", addressText: "Al Muwaij'i - Oud Bin Sag-han - Abu Dhabi", phone: "Phone Number", maps: "Open in Google Maps" };
   const openGoogleMaps = () => {
     window.open(
       " https://maps.app.goo.gl/PPyuBRYmgXsog6Te8?g_st=iw",
