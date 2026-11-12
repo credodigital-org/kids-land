@@ -15,7 +15,7 @@ const translations = {
       toggle: "اقرأ بالعربية",
     },
     footer: {
-      name: "Kids Land Nursery", description: "Providing a warm, caring, and inspiring environment for your little ones to learn and grow.", quickLinks: "Quick Links", programs: "Programs", contactUs: "Contact Us", letsConnect: "Let's Connect", location: "Al Ain, Abu Dhabi, United Arab Emirates", phone: "0503222033 / 0544556479 / 0562999771", copyright: "© 2024 Kids Land Nursery. All rights reserved.",
+      name: "Kids Land Nursery", description: "Providing a warm, caring, and inspiring environment for your little ones to learn and grow.", quickLinks: "Quick Links", programs: "Programs", contactUs: "Contact Us", letsConnect: "Let's Connect", location: "Al Ain, Abu Dhabi, United Arab Emirates", phone: "0503222033 / 0544556479 ", copyright: "© 2024 Kids Land Nursery. All rights reserved.",
     },
     homeAbout: {
       label: "ABOUT US", description1: "At Kids Land Nursery, we believe childhood is a time of wonder, discovery and limitless possibility.", description2: "Our nurturing environment, enriched curriculum and caring educators help every child build the confidence and skills for a brighter future.", feature1: "Child-centered approach", feature2: "Focus on social, emotional & cognitive development", feature3: "Strong parent partnership", learnMore: "Learn More About Us",
@@ -209,7 +209,7 @@ const translations = {
       toggle: "Read in English",
     },
     footer: {
-      name: "حضانة كيدز لاند", description: "نوفّر بيئة دافئة ومحبة وملهمة تساعد أطفالكم على التعلّم والنمو.", quickLinks: "روابط سريعة", programs: "البرامج", contactUs: "تواصل معنا", letsConnect: "لنتواصل", location: "العين، أبوظبي، الإمارات العربية المتحدة", phone: "0503222033 / 0544556479 / 0562999771", copyright: "© 2024 حضانة كيدز لاند. جميع الحقوق محفوظة.",
+      name: "حضانة كيدز لاند", description: "نوفّر بيئة دافئة ومحبة وملهمة تساعد أطفالكم على التعلّم والنمو.", quickLinks: "روابط سريعة", programs: "البرامج", contactUs: "تواصل معنا", letsConnect: "لنتواصل", location: "العين، أبوظبي، الإمارات العربية المتحدة", phone: "0503222033 / 0544556479", copyright: "© 2024 حضانة كيدز لاند. جميع الحقوق محفوظة.",
     },
     homeAbout: {
       label: "من نحن", description1: "في حضانة كيدز لاند، نؤمن بأن الطفولة وقت للدهشة والاكتشاف والإمكانات اللامحدودة.", description2: "بيئتنا الداعمة ومنهجنا الغني ومربياتنا المحبات تساعد كل طفل على بناء الثقة والمهارات لمستقبل أكثر إشراقًا.", feature1: "منهج يركز على الطفل", feature2: "التركيز على النمو الاجتماعي والعاطفي والمعرفي", feature3: "شراكة قوية مع أولياء الأمور", learnMore: "اعرف المزيد عنا",
