@@ -93,7 +93,7 @@ function LocationSection() {
                 </h3>
 
                 <p>
-                  0503222033
+                   0544556479
                 </p>
 
               </div>
