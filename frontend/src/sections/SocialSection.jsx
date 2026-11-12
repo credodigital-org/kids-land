@@ -56,7 +56,7 @@ function SocialSection() {
 
           {/* WhatsApp */}
           <a
-            href="https://wa.me/qr/T5VVIHFFWBXNB1"
+            href="https://wa.me/971544556479"
             target="_blank"
             rel="noreferrer"
             className="social-button whatsapp-button"

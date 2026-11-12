@@ -72,7 +72,7 @@ function Admission() {
             <button className="enquire-btn"
             onClick={() =>
               window.open(
-                "https://wa.me/qr/T5VVIHFFWBXNB1",
+                "https://wa.me/971544556479",
                 "_blank"
               )
             }
